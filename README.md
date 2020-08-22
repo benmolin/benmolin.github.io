@@ -2,7 +2,7 @@
 
 # View Demo
 
-You can view a demo [here](benmolin.github.io/screener).
+You can view a demo [here](https://benmolin.github.io/screener).
 
 # Prototype: SNAP Eligibility in Javascript
 
