@@ -1,5 +1,9 @@
 :warning: Testing Repo, prototype only :warning:
 
+# View Demo
+
+You can view a demo [here](benmolin.github.io).
+
 # Prototype: SNAP Eligibility in Javascript
 
 This is a sketchpad prototyping repo being used by 18F's [Eligibility APIs Initiative](https://github.com/18F/eligibility-rules-service/blob/master/README.md) to explore expressing SNAP eligibility through a Javascript API.
