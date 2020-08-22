@@ -54,6 +54,7 @@ export class SnapEstimate {
     // State Options
     state_options: Object;
     gross_income_limit_factor: number;
+    gross_income_limit_factor_elderly_or_disabled: number;
     resource_limit_elderly_or_disabled: number;
     resource_limit_elderly_or_disabled_income_twice_fpl: number;
     resource_limit_non_elderly_or_disabled: number;
@@ -96,9 +97,17 @@ export class SnapEstimate {
         const state_options = STATE_OPTIONS[this.state_or_territory][2020];
         const uses_bbce = state_options.uses_bbce;
 
-        this.gross_income_limit_factor = (uses_bbce)
-            ? state_options['gross_income_limit_factor']
-            : DEFAULT_GROSS_INCOME_LIMIT_FACTOR;
+        // Some states (PA) have a different income limit factor for elderly_or_disabled
+        if (uses_bbce) {
+            if ((state_options['gross_income_limit_factor_elderly_or_disabled'] != null) & (this.household_includes_elderly_or_disabled)) {
+                this.gross_income_limit_factor = state_options['gross_income_limit_factor_elderly_or_disabled'];
+
+            } else {
+                this.gross_income_limit_factor = state_options['gross_income_limit_factor'];
+            };
+        } else {
+            this.gross_income_limit_factor = DEFAULT_GROSS_INCOME_LIMIT_FACTOR;
+        };
 
         this.resource_limit_elderly_or_disabled = (uses_bbce)
             ? state_options['resource_limit_elderly_or_disabled']
@@ -117,6 +126,7 @@ export class SnapEstimate {
         this.standard_medical_deduction_amount = state_options['standard_medical_deduction_amount'];
         this.standard_medical_deduction_ceiling = state_options['standard_medical_deduction_ceiling'];
         this.standard_utility_allowances = state_options['standard_utility_allowances'];
+        this.has_gross_income_test_elderly_or_disabled = state_options['has_gross_income_test_elderly_or_disabled'];
 
         this.net_monthly_income_limit = new FetchIncomeLimit({
             'state_or_territory': this.state_or_territory,
@@ -184,6 +194,7 @@ export class SnapEstimate {
                 'gross_income': this.gross_income,
                 'net_monthly_income_limit': this.net_monthly_income_limit,
                 'gross_income_limit_factor': this.gross_income_limit_factor,
+                'has_gross_income_test_elderly_or_disabled': this.has_gross_income_test_elderly_or_disabled,
             }),
             new NetIncomeTest({
                 'net_monthly_income_limit': this.net_monthly_income_limit,

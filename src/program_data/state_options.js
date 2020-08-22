@@ -11,8 +11,10 @@ type StateYearOption = {
 
 type IndividualStateOption = {
     uses_bbce: boolean;
+    has_gross_income_test_elderly_or_disabled: boolean;
     child_support_payments_treatment: string;
     gross_income_limit_factor?: number;
+    gross_income_limit_factor_elderly_or_disabled?: number,
     resource_limit_elderly_or_disabled?: ?number;
     resource_limit_elderly_or_disabled_income_twice_fpl?: ?number;
     resource_limit_non_elderly_or_disabled?: ?number;
@@ -38,6 +40,19 @@ type IndividualStateOption = {
 // https://www.fns.usda.gov/snap/eligibility/deduction/standard-utility-allowances
 
 export const STATE_OPTIONS /*: StateOptions */ = {
+
+    'PA': {
+        '2020':
+        {
+            'uses_bbce': true,
+            'resource_limit_elderly_or_disabled': null,
+            'resource_limit_elderly_or_disabled_income_twice_fpl': 3500,
+            'resource_limit_non_elderly_or_disabled': null,
+            'gross_income_limit_factor': 1.60,
+            'gross_income_limit_factor_elderly_or_disabled': 2.00,
+            'has_gross_income_test_elderly_or_disabled': true,
+        }
+    },
     'IL': {
         '2020': {
             // Broad-based categorical eligibility, resource and income limits:
@@ -46,6 +61,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             'resource_limit_elderly_or_disabled_income_twice_fpl': 3500,
             'resource_limit_non_elderly_or_disabled': null,
             'gross_income_limit_factor': 1.65,
+            'gross_income_limit_factor_elderly_or_disabled': 2.00,
+            'has_gross_income_test_elderly_or_disabled': true,
             // State deduction options:
             'child_support_payments_treatment': 'EXCLUDE',
             'standard_medical_deduction': true,
@@ -63,6 +80,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
         '2020': {
             // Broad-based categorical eligibility:
             'uses_bbce': false,
+            'has_gross_income_test_elderly_or_disabled': false,
+
             // State deduction options:
             'child_support_payments_treatment': 'EXCLUDE', // This matches materials provided by VPLC and VA DSS but not the latest USDA State Options Report
             'standard_medical_deduction': true,

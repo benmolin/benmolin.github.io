@@ -7,6 +7,7 @@ class GrossIncomeTest {
         this.gross_income = inputs.gross_income;
         this.net_monthly_income_limit = inputs.net_monthly_income_limit;
         this.gross_income_limit_factor = inputs.gross_income_limit_factor;
+        this.has_gross_income_test_elderly_or_disabled = inputs.has_gross_income_test_elderly_or_disabled;
 
         // Set gross monthly income limit; derived from net monthly income limit
         this.gross_monthly_income_limit = Math.round(
@@ -15,7 +16,7 @@ class GrossIncomeTest {
     }
 
     calculate() {
-        if (this.household_includes_elderly_or_disabled) {
+        if ((this.household_includes_elderly_or_disabled) & (this.has_gross_income_test_elderly_or_disabled == false)) {
             return {
                 'name': 'Gross Income Test',
                 'result': true,

@@ -1,0 +1,170 @@
+/* Styles for page area above calculator */
+
+.alert {
+  background-color: #e6e6e6;
+  padding: 8px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.alert div {
+  margin: 8px 0;
+}
+
+.title {
+  text-align: center;
+  margin: 20px 0 40px 0;
+  font-weight: normal;
+  font-size: 38px;
+}
+
+.subtitle {
+  text-align: center;
+  margin: 20px 0 40px 0;
+}
+
+/* Calculator-specific styles */
+
+.calculator {
+  padding: 16px 24px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+#errors, #errors-header {
+  color: #D63E04;
+}
+
+#errors-header .error-total {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#errors-header li {
+  font-style: italic;
+}
+
+#household-size-label {
+  margin-top: 8px;
+}
+
+/* Larger than default form */
+#prescreener-form.usa-form {
+  max-width: none;
+}
+
+/* Keep input fields the same max width */
+#prescreener-form.usa-form .usa-input, #prescreener-form.usa-form .usa-select {
+  max-width: 20rem;
+}
+
+fieldset.usa-fieldset:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+fieldset.usa-fieldset legend {
+  font-weight: bold;
+}
+
+.usa-label {
+  font-weight: bold;
+}
+
+.usa-radio {
+  margin-top: 8px;
+}
+
+.label-sub-text {
+  color: #2F4F4F;
+}
+
+.currency_field_wrapper {
+  position: relative;
+}
+
+.currency_field_wrapper input {
+  padding-left: 20px;
+}
+
+.dollar_sign {
+  position: absolute;
+  top: 9px;
+  left: 8px;
+}
+
+.field-required {
+  font-size: 1rem;
+  line-height: 1.625;
+  font-weight: 400;
+  font-style: italic;
+  color: #b50909;
+}
+
+/* Calculator results styles */
+#results-section-title {
+  margin-top: 1.5em;
+}
+
+.pass-green {
+  color: #00a91c;
+}
+
+.fail-red {
+  color: #d54309;
+}
+
+.explanation-link {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.explanation-link.clicked {
+  cursor: default;
+  font-style: italic;
+  color: black;
+  text-decoration: none;
+}
+
+.explanation-link.clicked:hover {
+  color: black;
+}
+
+/* Utility classes */
+
+.hidden {
+  display: none;
+}
+
+#main {
+  padding-bottom: 80px;
+}
+
+/* Footer styles */
+
+footer#snap-calculator-footer {
+  color: white;
+  background-color: #1B1349;
+  text-align: center;
+  width: 100%;
+  padding: 16px;
+}
+
+footer#snap-calculator-footer a {
+  color: white;
+}
+
+footer#snap-calculator-footer div {
+  margin: 16px 0;
+}
+
+
+/* Gross income dev table */
+#gross-income-table { 
+    width: 750px; 
+    border-collapse: collapse; 
+    margin:50px auto;
+    text-align: center;
+  }
+  
+  #gross-income-table tr,  #gross-income-table td {
+    text-align: center;
+  }
