@@ -1,51 +1,19 @@
-:warning: Testing Repo, prototype only :warning:
+ Testing Repo, prototype only 
 
-# View Demo
+# :warning: (Testing) SNAP Eligibility Prescreener :warning:
 
-You can view a demo [here](https://benmolin.github.io/screener).
+## Introduction
 
-# Prototype: SNAP Eligibility in Javascript
+This repo is a fork of [18F's Snap-JS-API-Prototype](https://github.com/18F/snap-js-api-prototype), with an HTML interface from [18'F Snap-JS-Prescreen-Prototypes](https://github.com/18F/snap-js-prescreener-prototypes) merged in to easily view and test the API.
 
-This is a sketchpad prototyping repo being used by 18F's [Eligibility APIs Initiative](https://github.com/18F/eligibility-rules-service/blob/master/README.md) to explore expressing SNAP eligibility through a Javascript API.
+## Demo
 
-:warning: ***None of the eligibility rules expressed in this repository should be considered official interpretations of SNAP rules or policy. This is a sketchpad prototyping repo only.*** :warning:
+This repo is named to allow deployment onto Github pages for easy testing. You can view a demo [here](https://benmolin.github.io/screener).
 
-# What does this API do?
-
-This prototype SNAP API calculates a household's estimated eligibility for the SNAP program. The API accepts inputs about a household and returns the following:
-
-+ an estimate of that household's SNAP eligibility
-+ an estimated benefit amount
-+ an explanation of the logic behind the API's decision-making
-
-## What problem does this aim to solve?
-
-* As a developer building a project that requires SNAP eligibility logic, I want to pull from an existing source of SNAP eligibility logic rather than reinventing for my own use case.
-
-# Development
-
-## Guides and more documentation
-
-See the [project wiki](https://github.com/18f/snap-js-api-prototype/wiki) for guides and project documentation, including API documentation.
-
-### Commands
-
-Run feature tests, unit tests, type checks (partially implemented), and linter:
-
-```
-npm check-all
-```
-
-Build minified, browser-ready Javascript:
+All files and scripts needed to run the UI for using the API are in the ```docs``` folder. Building the minified, browser-ready Javascript with the command
 
 ```
 npm run build
 ```
 
-See `package.json` for all developer commands.
-
-### Developer notes
-
-+ This project aims for the API itself to have no npm dependencies. The libraries included in `package.json` are used to compile and test the Javascript API, but none of them are bundled into the compiled API itself.
-
-+ This project is using [flow](https://flow.org/) for type checking, with flow checks being added incrementally file-by-file. Flow type checking coverage is currently low.
+will build the API into ```docs/api.js``` to place the API in a location accessible by Github pages.
