@@ -66,6 +66,7 @@ function downloadCSV(csv, sampleData = false) {
 
 // Convert to int ("$1,212.00" -> 1212)
 function int(v) {
+    v = v.split('.')[0]; // remove any decimals
     v = v.replace(/[^0-9]+/g, "");
     v = parseInt(v)
     return v
@@ -92,7 +93,7 @@ function sendToSnapAPI() {
     for (var i = 0; i < columns.length; i++) {
         if (csv[0].indexOf(columns[i]) == -1) {
             $('#error-message').removeClass('d-none');
-            document.getElementById('error-message').innerHTML = "Error, column missing: " + columns[i];
+            document.getElementById('error-message').innerHTML = "Error, column missing: " + columns[i] + '. Refresh page to try again.';
             return false;
         }
     }
@@ -112,11 +113,11 @@ function sendToSnapAPI() {
         var is_estimated_eligibility;
 
         // Get values for row
-        var val_state = csv[i][loc_state]
-        var val_household_size = csv[i][loc_household_size]
-        var val_monthly_job_income = csv[i][loc_monthly_job_income]
-        var val_HIEOD_1 = parseInt(csv[i][loc_household_includes_elderly_or_disabled_1])
-        var val_HIEOD_2 = parseInt(csv[i][loc_household_includes_elderly_or_disabled_2])
+        var val_state = csv[i][loc_state].trim()
+        var val_household_size = csv[i][loc_household_size].trim()
+        var val_monthly_job_income = csv[i][loc_monthly_job_income].trim()
+        var val_HIEOD_1 = parseInt(csv[i][loc_household_includes_elderly_or_disabled_1].trim())
+        var val_HIEOD_2 = parseInt(csv[i][loc_household_includes_elderly_or_disabled_2].trim())
 
         // Confirm State is valid
         if (validStates.includes(val_state) == false) {
