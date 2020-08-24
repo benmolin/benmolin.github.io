@@ -1,0 +1,65 @@
+h1{
+    color: #1a202c;
+    line-height: 1.25;
+    font-size: 2.0rem;
+    font-weight: 700;
+    margin-bottom: 1.0rem;
+}
+
+h2{
+    color: #1a202c;
+    font-weight: 700;
+    font-size: 1.60rem;
+    margin-bottom: 1.25rem;
+}
+
+h3 {
+    color: #4a5568;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    color: #4a5568;
+    font-size: 1.0rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Bulk */
+#main-bulk .step{
+    margin-bottom: 3em;
+    background: white;
+    padding: 40px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+}
+
+
+input,
+select {
+    cursor: pointer;
+}
+
+table{
+    border: 1px solid #cbd5e0;
+}
+
+th {
+    font-weight: bold;
+}
+
+tr:nth-child(even), th{
+    background-color: #F7FAFC;
+}
+tr:nth-child(odd), th{
+    background-color: white;
+}
+
+td, th{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}

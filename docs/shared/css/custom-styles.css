@@ -1,10 +1,11 @@
 /* Styles for page area above calculator */
 
 .alert {
-  background-color: #e6e6e6;
+  background-color: #F7FAFC;
   padding: 8px;
   text-align: center;
   margin-bottom: 40px;
+  border-bottom: 1px solid #cbd5e0;
 }
 
 .alert div {
@@ -161,10 +162,26 @@ footer#snap-calculator-footer div {
 #gross-income-table { 
     width: 750px; 
     border-collapse: collapse; 
-    margin:50px auto;
+    margin: 50px auto;
     text-align: center;
-  }
+    border: 1px solid #cbd5e0;
+}
   
-  #gross-income-table tr,  #gross-income-table td {
-    text-align: center;
-  }
+#gross-income-table tr,  #gross-income-table td, #gross-income-table th  {
+  text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+#gross-income-table th {
+  font-weight: bold;
+}
+
+#gross-income-table tr:nth-child(even), th{
+  background-color: #F7FAFC;
+}
+#gross-income-table tr:nth-child(odd), th{
+  background-color: white;
+}

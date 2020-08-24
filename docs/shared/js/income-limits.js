@@ -3,8 +3,8 @@ function showIncomeTable() {
     $('#gross-income-table').remove();
 
     // Get a table of income limits
-    var table = $('<table id="gross-income-table">');
-    var row = $('<tr>').html('<td>' + stateAbbr + ' Household Size</td><td>Gross Income Limit<td/>Gross Income Limit (Elderly/Disabled)');
+    var table = $('<table id="gross-income-table" class="table-auto mb-2 w-100 leading-relaxed">');
+    var row = $('<tr>').html('<th>' + stateAbbr + ' Household Size</th><th>Gross Income Limit<th/>Gross Income Limit (Elderly/Disabled)');
     table.append(row);
     for (var i = 1; i <= 5; i++) {
 

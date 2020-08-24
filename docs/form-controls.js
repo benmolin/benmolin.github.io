@@ -89,6 +89,16 @@
                     'description': "Find your state's application on the SNAP State Directory."
                 },
             ],
+            'other_resources': [
+                {
+                    'url': 'https://www.foodpantries.org/st/virginia',
+                    'description': 'Foodpantries.org',
+                },
+                {
+                    'url': 'https://www.feedingamerica.org/find-your-local-foodbank',
+                    'description': 'Feeding America',
+                }
+            ]
         },
         // 'VA': {
         //     'apply': [

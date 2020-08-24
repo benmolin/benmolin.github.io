@@ -1,5 +1,3 @@
- Testing Repo, prototype only 
-
 # :warning: (Testing) SNAP Eligibility Prescreener :warning:
 
 ## Introduction
@@ -8,7 +6,17 @@ This repo is a fork of [18F's Snap-JS-API-Prototype](https://github.com/18F/snap
 
 ## Demo
 
-This repo is named to allow deployment onto Github pages for easy testing. You can view a demo [here](https://benmolin.github.io/screener).
+This repo is named to allow deployment onto Github pages for easy testing. There are two pages to view:
+
+### Individual Screener
+
+You can view a demo for the [individual screener here](https://benmolin.github.io/screener). This allows an individual to get an estimate of whether they are likely eligable, their potential SNAP amount, and the factors behind their decision.
+
+### Bulk Screener
+
+For organizations that would like to screen client's in bulk, there is a [bulk screener here](https://benmolin.github.io/bulk-screener). This allows you to upload a full CSV of client profiles, and adds a new row stating whether clients are "likely eligable" or not.
+
+## Building API
 
 All files and scripts needed to run the UI for using the API are in the ```docs``` folder. Building the minified, browser-ready Javascript with the command
 
