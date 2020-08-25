@@ -48,9 +48,22 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             'resource_limit_elderly_or_disabled': null,
             'resource_limit_elderly_or_disabled_income_twice_fpl': 3500,
             'resource_limit_non_elderly_or_disabled': null,
+            // http://services.dpw.state.pa.us/oimpolicymanuals/snap/index.htm#t=512_Categorical_Eligibility%2F512_1_General_Policy.htm&rhsearch=income%20160&rhhlterm=income%20160&rhsyns=%20
             'gross_income_limit_factor': 1.60,
             'gross_income_limit_factor_elderly_or_disabled': 2.00,
             'has_gross_income_test_elderly_or_disabled': true,
+            // State deduction options:
+            // 2020 Options: http://services.dpw.state.pa.us/oimpolicymanuals/snap/560_Income_Deductions/560_Appendix_A.htm?rhhlterm=standard%20medical%20deduction&rhsyns=%20
+            'child_support_payments_treatment': 'DEDUCT',
+            'standard_medical_deduction': false,
+            'standard_medical_deduction_amount': null,
+            'standard_medical_deduction_ceiling': null,
+            'standard_utility_allowances': {
+                'BASIC_LIMITED_ALLOWANCE': 308,
+                'HEATING_AND_COOLING': 594,
+                'PHONE': 33,
+                'SINGLE_UTILITY_ALLOWANCE': 58,
+            }
         }
     },
     'IL': {
@@ -64,6 +77,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             'gross_income_limit_factor_elderly_or_disabled': 2.00,
             'has_gross_income_test_elderly_or_disabled': true,
             // State deduction options:
+            // https://www.dhs.state.il.us/OneNetLibrary/5/documents/WAG_25_03_02_uploads/2020_07_23_WAG_25_03_02_Final.pdf
             'child_support_payments_treatment': 'EXCLUDE',
             'standard_medical_deduction': true,
             'standard_medical_deduction_amount': 200,
