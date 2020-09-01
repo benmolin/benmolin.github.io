@@ -185,3 +185,7 @@ footer#snap-calculator-footer div {
 #gross-income-table tr:nth-child(odd), th{
   background-color: white;
 }
+
+.pointer{
+  cursor: pointer;
+}

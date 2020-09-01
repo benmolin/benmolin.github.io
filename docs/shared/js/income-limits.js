@@ -1,3 +1,4 @@
+var is_showIncomeTable = false;
 function showIncomeTable() {
 
     $('#gross-income-table').remove();
@@ -17,9 +18,9 @@ function showIncomeTable() {
                 // Our inputs
                 household_includes_elderly_or_disabled: elderly == 1,
                 household_size: i,
-                monthly_job_income: 1000,
+                monthly_job_income: 50000,
 
-                // TODO, add resources
+                // Resources
                 resources: 0,
 
                 // Constants here
@@ -30,11 +31,16 @@ function showIncomeTable() {
             // Get response
             var response = new SnapAPI.SnapEstimateEntrypoint(inputs).calculate();
             console.log(response);
-            var gross_income_limit = response['eligibility_factors'][3]['explanation'][1].split(' ').pop();
+            var gross_income_explain = response['eligibility_factors'][3]['explanation'][1];
+            var gross_income_limit = gross_income_explain.split(' ').pop();
             if (elderly == 1) {
-                limit_elderly = gross_income_limit;
+                if (gross_income_explain.search('200% of the federal poverty') > 0) {
+                    limit_elderly = gross_income_explain.split('(')[1].split(')')[0] + ' (or pass $3500 asset limit)';
+                } else {
+                    limit_elderly = gross_income_limit.replace('test.', 'None');
+                };
             } else {
-                limit = gross_income_limit;
+                limit = gross_income_limit.replace('.', '');
 
             };
         };
@@ -45,4 +51,5 @@ function showIncomeTable() {
 
     };
     $('#gross-income-limit-table').append(table);
+    is_showIncomeTable = true;
 };

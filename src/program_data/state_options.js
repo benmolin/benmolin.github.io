@@ -11,10 +11,9 @@ type StateYearOption = {
 
 type IndividualStateOption = {
     uses_bbce: boolean;
-    has_gross_income_test_elderly_or_disabled: boolean;
+    has_resource_limit_elderly_or_disabled_income_twice_fpl: boolean;
     child_support_payments_treatment: string;
     gross_income_limit_factor?: number;
-    gross_income_limit_factor_elderly_or_disabled?: number,
     resource_limit_elderly_or_disabled?: ?number;
     resource_limit_elderly_or_disabled_income_twice_fpl?: ?number;
     resource_limit_non_elderly_or_disabled?: ?number;
@@ -44,14 +43,12 @@ export const STATE_OPTIONS /*: StateOptions */ = {
     'PA': {
         '2020':
         {
-            'uses_bbce': true,
-            'resource_limit_elderly_or_disabled': null,
-            'resource_limit_elderly_or_disabled_income_twice_fpl': 3500,
-            'resource_limit_non_elderly_or_disabled': null,
             // http://services.dpw.state.pa.us/oimpolicymanuals/snap/index.htm#t=512_Categorical_Eligibility%2F512_1_General_Policy.htm&rhsearch=income%20160&rhhlterm=income%20160&rhsyns=%20
+            'uses_bbce': true,
+            'resource_limit_non_elderly_or_disabled': null,
+            'resource_limit_elderly_or_disabled': null,
+            'has_resource_limit_elderly_or_disabled_income_twice_fpl': true,
             'gross_income_limit_factor': 1.60,
-            'gross_income_limit_factor_elderly_or_disabled': 2.00,
-            'has_gross_income_test_elderly_or_disabled': true,
             // State deduction options:
             // 2020 Options: http://services.dpw.state.pa.us/oimpolicymanuals/snap/560_Income_Deductions/560_Appendix_A.htm?rhhlterm=standard%20medical%20deduction&rhsyns=%20
             'child_support_payments_treatment': 'DEDUCT',
@@ -66,16 +63,34 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             }
         }
     },
+    'MD': {
+        '2020':
+        {
+            'uses_bbce': true,
+            'resource_limit_non_elderly_or_disabled': null,
+            'resource_limit_elderly_or_disabled': null,
+            'has_resource_limit_elderly_or_disabled_income_twice_fpl': false,
+            'gross_income_limit_factor': 2.00,
+        }
+    },
+    'IN': {
+        '2020':
+        {
+            'uses_bbce': true,
+            'resource_limit_non_elderly_or_disabled': 5000,
+            'resource_limit_elderly_or_disabled': 5000,
+            'has_resource_limit_elderly_or_disabled_income_twice_fpl': false,
+            'gross_income_limit_factor': 1.30,
+        }
+    },
     'IL': {
         '2020': {
             // Broad-based categorical eligibility, resource and income limits:
             'uses_bbce': true,
-            'resource_limit_elderly_or_disabled': null,
-            'resource_limit_elderly_or_disabled_income_twice_fpl': 3500,
             'resource_limit_non_elderly_or_disabled': null,
+            'resource_limit_elderly_or_disabled': null,
+            'has_resource_limit_elderly_or_disabled_income_twice_fpl': true,
             'gross_income_limit_factor': 1.65,
-            'gross_income_limit_factor_elderly_or_disabled': 2.00,
-            'has_gross_income_test_elderly_or_disabled': true,
             // State deduction options:
             // https://www.dhs.state.il.us/OneNetLibrary/5/documents/WAG_25_03_02_uploads/2020_07_23_WAG_25_03_02_Final.pdf
             'child_support_payments_treatment': 'EXCLUDE',
@@ -94,7 +109,6 @@ export const STATE_OPTIONS /*: StateOptions */ = {
         '2020': {
             // Broad-based categorical eligibility:
             'uses_bbce': false,
-            'has_gross_income_test_elderly_or_disabled': false,
 
             // State deduction options:
             'child_support_payments_treatment': 'EXCLUDE', // This matches materials provided by VPLC and VA DSS but not the latest USDA State Options Report

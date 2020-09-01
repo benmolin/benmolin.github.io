@@ -82,4 +82,8 @@ changeState(stateAbbr);
 $('#dev-state-change').on('change', function () {
     stateAbbr = this.value;
     changeState(this.value);
+
+    if (is_showIncomeTable) {
+        showIncomeTable();
+    };
 });
