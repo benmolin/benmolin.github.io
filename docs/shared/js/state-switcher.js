@@ -67,17 +67,6 @@ function changeState(stateAbbr) {
     $('#main .title').text(stateFull + ', could you be eligible for help with your food budget?') // In the header
 };
 
-// Get the State
-var queryString = window.location.search;
-var urlParams = new URLSearchParams(queryString);
-var stateAbbr = urlParams.get('state');
-if (stateAbbr == null) {
-    stateAbbr = 'PA';
-};
-var stateFull;
-changeState(stateAbbr);
-
-
 // Dev state changer
 $('#dev-state-change').on('change', function () {
     stateAbbr = this.value;

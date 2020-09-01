@@ -12,6 +12,7 @@ History of changes to this repo since forked from [snap-js-api-prototype](https:
 ### Changed
 - Renamed ``resource_limit_elderly_or_disabled_income_twice_fpl`` to ``has_resource_limit_elderly_or_disabled_income_twice_fpl``
 - Improved dev tools gross income limits table
+- Merged some changes made in [main repo](https://github.com/18F/snap-js-prescreener-prototypes/commit/2162caea60b42318f4d21b7ca86ed1a7df85cc91) 
 
 ### Added
 - Created Changelog
@@ -22,6 +23,7 @@ History of changes to this repo since forked from [snap-js-api-prototype](https:
 - Pass ``uses_bbce`` into AssetTest and GrossIncomeTest in state_options.js
 - Created new rules in asset_test.js to account for 200% FPL asset test for HHEOD
 - Added Indiana and Maryland without state deductions
+- Added some iFrame customizations
 
 ### Summary
 - Added compatibility for footnote 2 (2FPL, $3500 asset test) from the BBCE PDF

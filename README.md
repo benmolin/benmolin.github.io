@@ -1,8 +1,10 @@
-# :warning: (Testing) SNAP Eligibility Prescreener :warning:
+# SNAP Eligibility Prescreener
+
+:warning: This is in development -- do not use this in production.
 
 ## Introduction
 
-This repo is a fork of [18F's Snap-JS-API-Prototype](https://github.com/18F/snap-js-api-prototype), with an HTML interface from [18F's Snap-JS-Prescreen-Prototypes](https://github.com/18F/snap-js-prescreener-prototypes) merged in to easily view and test the API.
+This repo is a fork of [18F's Snap-JS-API-Prototype](https://github.com/18F/snap-js-api-prototype), with an HTML interface from [18F's Snap-JS-Prescreen-Prototypes](https://github.com/18F/snap-js-prescreener-prototypes) merged in to easily view and test the API. 
 
 ## Demo
 
@@ -15,6 +17,30 @@ You can view a demo for the [individual screener here](https://benmolin.github.i
 ### Bulk Screener
 
 For organizations that would like to screen client's in bulk, there is a [bulk screener here](https://benmolin.github.io/bulk-screener). This allows you to upload a full CSV of client profiles, and adds a new row stating whether clients are "likely eligible" or not.
+
+### Embedding Screener
+
+The goal for this project is to make the prescreener embeddable on any website. You can embed the site using one line of code:
+
+```
+<iframe src="https://benmolin.github.io/screener?state=PA" title="SNAP Prescreener"></iframe>
+```
+
+There are few ways that you can customize the prescreener to best fit in with your website. To do so, you will want to edit the URL inside the ``iFrame``. For example:
+
+```
+<iframe src="https://benmolin.github.io/screener?state=IL&phone=555-555-5555&email=help@example.com&demo=false" title="SNAP Prescreener"></iframe>
+```
+
+Here all the attributes you can customize:
+
+| Attribute     | Description                                       | Required  |
+| ------------- |:------------------------------------------------- | :-----:|
+| `state`       | State for prescreener                             |   ✅   |
+| `email`       | Email address as the contact / support email      |   ❌   |
+| `phone`       | Phone number as the contact / support number      |   ❌   |
+| `demo`        | Hide the demo information at the top (demo=false) |   ❌   |
+
 
 ## Building API
 

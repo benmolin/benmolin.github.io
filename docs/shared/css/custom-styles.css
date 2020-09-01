@@ -93,7 +93,6 @@ fieldset.usa-fieldset legend {
 }
 
 .field-required {
-  font-size: 1rem;
   line-height: 1.625;
   font-weight: 400;
   font-style: italic;
@@ -188,4 +187,8 @@ footer#snap-calculator-footer div {
 
 .pointer{
   cursor: pointer;
+}
+
+.hotline-or, .hotline-number, .hotline-email{
+  display: inline;
 }

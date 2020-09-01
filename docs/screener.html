@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <div class="alert">
+  <div class="alert" id='demo-header'>
     <div><strong>This is a demonstration website only.</strong></div>
     <div><a href='https://github.com/benmolin/benmolin.github.io'>GitHub</a> forked from <a
         href='https://github.com/18F/snap-js-api-prototype'>snap-js-api-prototype</a> and <a
@@ -189,8 +189,12 @@
               <p class="usa-alert__text">
                 Your household may be eligible for SNAP, depending on your immigration status and the immigration status
                 of your household members.
-                Call for more info: <a href="tel:{{HOTLINE NUMBER}}">{{HOTLINE NUMBER}}</a>.</p>
-              <!-- FOR A PROD SITE: Replace {{HOTLINE NUMBER}} with a real SNAP assistance hotline number users can call. -->
+              <div class='hotline-wrapper'>
+                Contact for more info:
+                <div class='hotline-number'>{{HOTLINE_NUMBER}}</div>
+                <div class='hotline-or'> or </div>
+                <div class='hotline-email'>{{HOTLINE_EMAIL}}</div>
+              </div>
             </div>
           </div>
 
@@ -346,9 +350,12 @@
     </div>
   </div>
   <footer id="snap-calculator-footer">
-    Questions about your result? Confused about anything on this form? Reach out: <a
-      href="tel:{{HOTLINE NUMBER}}">{{HOTLINE NUMBER}}</a>.
-    <!-- FOR A PROD SITE: Replace {{HOTLINE NUMBER}} with a real SNAP assistance hotline number users can call. -->
+    <div class='hotline-wrapper'>
+      Questions about your result? Confused about anything on this form? Reach out:
+      <div class='hotline-number'>{{HOTLINE_NUMBER}}</div>
+      <div class='hotline-or'> or </div>
+      <div class='hotline-email'>{{HOTLINE_EMAIL}}</div>
+    </div>
   </footer>
 </body>
 <script type="text/javascript" src="shared/css/uswds-2.4.0/js/uswds.min.js"></script>
@@ -357,5 +364,7 @@
 <script type="text/javascript" src="shared/js/state-switcher.js"></script>
 <script type="text/javascript" src="form-controls.js"></script>
 <script type="text/javascript" src="shared/js/income-limits.js"></script>
+<script type="text/javascript" src="shared/js/iframing.js"></script>
+
 
 </html>
