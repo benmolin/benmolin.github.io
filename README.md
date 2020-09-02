@@ -29,17 +29,18 @@ The goal for this project is to make the prescreener embeddable on any website. 
 There are few ways that you can customize the prescreener to best fit in with your website. To do so, you will want to edit the URL inside the ``iFrame``. For example:
 
 ```
-<iframe src="https://benmolin.github.io/screener?state=IL&phone=555-555-5555&email=help@example.com&demo=false" title="SNAP Prescreener"></iframe>
+<iframe src="https://benmolin.github.io/screener?state=IL&phone=555-555-5555&email=help@example.com&demo=false&short=true" title="SNAP Prescreener"></iframe>
 ```
 
-Here all the attributes you can customize:
+All attributes are optional, with the exception of ``state``. Here all the attributes you can customize:
 
-| Attribute     | Description                                       | Required  |
-| ------------- |:------------------------------------------------- | :-----:|
-| `state`       | State for prescreener                             |   ✅   |
-| `email`       | Email address as the contact / support email      |   ❌   |
-| `phone`       | Phone number as the contact / support number      |   ❌   |
-| `demo`        | Hide the demo information at the top (demo=false) |   ❌   |
+| Attribute     | Description                                          | Required  |
+| ------------- |:---------------------------------------------------- | :-----:|
+| `state`       | State for prescreener                                |   ✅   |
+| `email`       | Email address as the contact / support email         |   ❌   |
+| `phone`       | Phone number as the contact / support number         |   ❌   |
+| `demo`        | Show the demo information at the top (default=true)  |   ❌   |
+| `short`       | Hide the non-required questions (default=false)      |   ❌   |
 
 
 ## Building API

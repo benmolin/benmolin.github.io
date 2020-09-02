@@ -35,3 +35,8 @@ if (isDemo == 'false') {
     document.getElementById('demo-header').style.display = 'none';
 };
 
+// Short form
+var isShort = urlParams.get('short');
+if (isShort == 'true') {
+    document.getElementById('non-required-questions').style.display = 'none';
+};

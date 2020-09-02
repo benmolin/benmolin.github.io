@@ -4,6 +4,10 @@ History of changes to this repo since forked from [snap-js-api-prototype](https:
 ### TODO
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 
+## 2020-09-02
+### Added
+- Added hiding of non-required questions as optional url parameter ``short=true``
+
 ## 2020-09-01
 ### Removed
 - Reverted a change in snap_estimate.js that created a new gross income house for HHEOD
