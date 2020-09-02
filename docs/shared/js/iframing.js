@@ -30,9 +30,9 @@ if ((contactPhone == '') && (contactEmail == '')) {
 };
 
 // Demo header
-var isDemo = urlParams.get('demo');
-if (isDemo == 'false') {
-    document.getElementById('demo-header').style.display = 'none';
+var isDebug = urlParams.get('debug');
+if (isDebug == 'false') {
+    document.getElementById('debug-header').style.display = 'none';
 };
 
 // Short form

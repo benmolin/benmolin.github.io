@@ -18,7 +18,7 @@ You can view a demo for the [individual screener here](https://benmolin.github.i
 
 For organizations that would like to screen client's in bulk, there is a [bulk screener here](https://benmolin.github.io/bulk-screener). This allows you to upload a full CSV of client profiles, and adds a new row stating whether clients are "likely eligible" or not.
 
-### Embedding Screener
+## Embedding Screener
 
 The goal for this project is to make the prescreener embeddable on any website. You can embed the site using one line of code:
 
@@ -29,7 +29,7 @@ The goal for this project is to make the prescreener embeddable on any website. 
 There are few ways that you can customize the prescreener to best fit in with your website. To do so, you will want to edit the URL inside the ``iFrame``. For example:
 
 ```
-<iframe src="https://benmolin.github.io/screener?state=IL&phone=555-555-5555&email=help@example.com&demo=false&short=true" title="SNAP Prescreener"></iframe>
+<iframe src="https://benmolin.github.io/screener?state=IL&phone=555-555-5555&email=help@example.com&debug=false&short=true" title="SNAP Prescreener"></iframe>
 ```
 
 All attributes are optional, with the exception of ``state``. Here all the attributes you can customize:
@@ -39,7 +39,7 @@ All attributes are optional, with the exception of ``state``. Here all the attri
 | `state`       | State for prescreener                                |   ✅   |
 | `email`       | Email address as the contact / support email         |   ❌   |
 | `phone`       | Phone number as the contact / support number         |   ❌   |
-| `demo`        | Show the demo information at the top (default=true)  |   ❌   |
+| `debug`       | Show the debug information at the top (default=true) |   ❌   |
 | `short`       | Hide the non-required questions (default=false)      |   ❌   |
 
 
