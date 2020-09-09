@@ -170,6 +170,9 @@
                     case 'select-one':
                         jsonData[elem.id] = elem.value;
                         break;
+                    case 'checkbox':
+                        jsonData[elem.id] = elem.checked;
+                        break;
                     case 'radio': {
                         let checked = document.querySelector(`input[name="${elem.name}"]:checked`);
                         (checked)

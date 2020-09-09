@@ -302,21 +302,43 @@
               <input id="homeowners_insurance_and_taxes" name="homeowners_insurance_and_taxes" class="usa-input" />
             </div>
 
+
+            <legend class="usa-label">Which of the following utility bills do you pay?</legend>
             <fieldset class="usa-fieldset">
-              <legend>Do you pay utility bills for air conditioning or heating?</legend>
-              <div class="usa-radio">
-                <input class="usa-radio__input" id="heating_cooling_true" type="radio" name="utility_allowance"
-                  value="HEATING_AND_COOLING">
-                <label id="label__heating_cooling_true" class="usa-radio__label" for="heating_cooling_true">
-                  Yes
-                </label>
+              <div class="usa-checkbox">
+                <input class="usa-checkbox__input" id="utility_heating" type="checkbox" name="utility_heating"
+                  value="utility_heating">
+                <label class="usa-checkbox__label" for="utility_heating">Heating and Cooling</label>
               </div>
-              <div class="usa-radio">
-                <input class="usa-radio__input" id="heating_cooling_false" type="radio" name="utility_allowance"
-                  value="NONE">
-                <label id="label__heating_cooling_false" class="usa-radio__label" for="heating_cooling_false">
-                  No
-                </label>
+              <div class="usa-checkbox">
+                <input class="usa-checkbox__input" id="utility_electricity" type="checkbox" name="utility_electricity"
+                  value="utility_electricity">
+                <label class="usa-checkbox__label" for="utility_electricity">Electricity</label>
+              </div>
+              <div class="usa-checkbox">
+                <input class="usa-checkbox__input" id="utility_gas" type="checkbox" name="utility_gas"
+                  value="utility_gas">
+                <label class="usa-checkbox__label" for="utility_gas">Gas and Fuel</label>
+              </div>
+              <div class="usa-checkbox">
+                <input class="usa-checkbox__input" id="utility_water" type="checkbox" name="utility_water"
+                  value="utility_water">
+                <label class="usa-checkbox__label" for="utility_water">Water</label>
+              </div>
+              <div class="usa-checkbox">
+                <input class="usa-checkbox__input" id="utility_sewage" type="checkbox" name="utility_sewage"
+                  value="utility_sewage">
+                <label class="usa-checkbox__label" for="utility_sewage">Sewage</label>
+              </div>
+              <div class="usa-checkbox">
+                <input class="usa-checkbox__input" id="utility_trash" type="checkbox" name="utility_trash"
+                  value="utility_trash">
+                <label class="usa-checkbox__label" for="utility_trash">Trash</label>
+              </div>
+              <div class="usa-checkbox">
+                <input class="usa-checkbox__input" id="utility_phone" type="checkbox" name="utility_phone"
+                  value="utility_phone">
+                <label class="usa-checkbox__label" for="utility_phone">Phone</label>
               </div>
             </fieldset>
           </div>

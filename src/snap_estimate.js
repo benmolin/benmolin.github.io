@@ -28,7 +28,13 @@ interface SnapEstimateInputs {
     medical_expenses_for_elderly_or_disabled?: ?number;
     rent_or_mortgage?: ?number;
     homeowners_insurance_and_taxes?: ?number;
-    utility_allowance?: ?string;
+    utility_electricity:  boolean;
+    utility_gas:  boolean;
+    utility_heating:  boolean;
+    utility_phone:  boolean;
+    utility_sewage:  boolean;
+    utility_trash:  boolean;
+    utility_water:  boolean;
     court_ordered_child_support_payments?: ?number;
     use_emergency_allotment: boolean;
 }
@@ -49,7 +55,13 @@ export class SnapEstimate {
     use_emergency_allotment: boolean;
     rent_or_mortgage: ?number;
     homeowners_insurance_and_taxes: ?number;
-    utility_allowance: ?string;
+    utility_electricity:  boolean;
+    utility_gas:  boolean;
+    utility_heating:  boolean;
+    utility_phone:  boolean;
+    utility_sewage:  boolean;
+    utility_trash:  boolean;
+    utility_water:  boolean;
 
     // State Options
     state_options: Object;
@@ -91,7 +103,14 @@ export class SnapEstimate {
         this.use_emergency_allotment = inputs.use_emergency_allotment;
         this.rent_or_mortgage = inputs.rent_or_mortgage;
         this.homeowners_insurance_and_taxes = inputs.homeowners_insurance_and_taxes;
-        this.utility_allowance = inputs.utility_allowance;
+
+        this.utility_electricity = inputs.utility_electricity;
+        this.utility_gas = inputs.utility_gas;
+        this.utility_heating = inputs.utility_heating;
+        this.utility_phone = inputs.utility_phone;
+        this.utility_sewage = inputs.utility_sewage;
+        this.utility_trash = inputs.utility_trash;
+        this.utility_water = inputs.utility_water;
 
         const state_options = STATE_OPTIONS[this.state_or_territory][2020];
         this.uses_bbce = state_options.uses_bbce;
@@ -230,7 +249,17 @@ export class SnapEstimate {
             'standard_medical_deduction_ceiling': this.standard_medical_deduction_ceiling,
             'rent_or_mortgage': this.rent_or_mortgage,
             'homeowners_insurance_and_taxes': this.homeowners_insurance_and_taxes,
-            'utility_allowance': this.utility_allowance,
+
+            'utility_electricity': this.utility_electricity,
+            'utility_gas': this.utility_gas,
+            'utility_heating': this.utility_heating,
+            'utility_phone': this.utility_phone,
+            'utility_sewage': this.utility_sewage,
+            'utility_trash': this.utility_trash,
+            'utility_water': this.utility_water,
+
+
+
             'standard_utility_allowances': this.standard_utility_allowances,
             'child_support_payments_treatment': this.child_support_payments_treatment,
             'court_ordered_child_support_payments': this.court_ordered_child_support_payments,

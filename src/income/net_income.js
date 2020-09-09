@@ -19,7 +19,13 @@ export class NetIncome {
         this.standard_medical_deduction_ceiling = inputs.standard_medical_deduction_ceiling;
         this.rent_or_mortgage = inputs.rent_or_mortgage;
         this.homeowners_insurance_and_taxes = inputs.homeowners_insurance_and_taxes;
-        this.utility_allowance = inputs.utility_allowance;
+        this.utility_electricity = inputs.utility_electricity;
+        this.utility_gas = inputs.utility_gas;
+        this.utility_heating = inputs.utility_heating;
+        this.utility_phone = inputs.utility_phone;
+        this.utility_sewage = inputs.utility_sewage;
+        this.utility_trash = inputs.utility_trash;
+        this.utility_water = inputs.utility_water;
         this.standard_utility_allowances = inputs.standard_utility_allowances;
         this.child_support_payments_treatment = inputs.child_support_payments_treatment;
         this.court_ordered_child_support_payments = inputs.court_ordered_child_support_payments;
@@ -105,7 +111,14 @@ export class NetIncome {
             'household_includes_elderly_or_disabled': this.household_includes_elderly_or_disabled,
             'rent_or_mortgage': this.rent_or_mortgage,
             'homeowners_insurance_and_taxes': this.homeowners_insurance_and_taxes,
-            'utility_allowance': this.utility_allowance,
+
+            'utility_electricity': this.utility_electricity,
+            'utility_gas': this.utility_gas,
+            'utility_heating': this.utility_heating,
+            'utility_phone': this.utility_phone,
+            'utility_sewage': this.utility_sewage,
+            'utility_trash': this.utility_trash,
+            'utility_water': this.utility_water,
             'standard_utility_allowances': this.standard_utility_allowances,
         }).calculate();
 

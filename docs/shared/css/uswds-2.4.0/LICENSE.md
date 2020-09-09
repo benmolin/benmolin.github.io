@@ -34,6 +34,10 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 ## The rest of this project is in the worldwide public domain
 
+### Project source
+
+[USA Design System](https://designsystem.digital.gov/about/releases/#version-240)
+
 ### CC0 1.0 Universal Summary
 
 This is a human-readable summary of the [Legal Code (read the full text)](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

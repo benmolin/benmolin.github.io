@@ -15,9 +15,16 @@ interface SnapEntrypointInputs {
     medical_expenses_for_elderly_or_disabled?: ?number;
     rent_or_mortgage?: ?number;
     homeowners_insurance_and_taxes?: ?number;
-    utility_allowance?: ?string;
     court_ordered_child_support_payments?: ?number;
     use_emergency_allotment: boolean;
+
+    utility_electricity:  boolean;
+    utility_gas:  boolean;
+    utility_heating:  boolean;
+    utility_phone:  boolean;
+    utility_sewage:  boolean;
+    utility_trash:  boolean;
+    utility_water:  boolean;
 }
 */
 
@@ -31,6 +38,8 @@ export class SnapEstimateEntrypoint {
     }
 
     calculate() {
+        console.log('----Inputs----');
+        console.log(this.raw_inputs);
         const parser = new ParseInputs(this.raw_inputs);
         const inputs_valid = parser.inputs_valid();
 

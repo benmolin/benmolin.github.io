@@ -1,8 +1,29 @@
 # Changelog
 History of changes to this repo since forked from [snap-js-api-prototype](https://github.com/18F/snap-js-api-prototype) and [snap-js-prescreener-prototypes](https://github.com/18F/snap-js-prescreener-prototypes) on 2020-08-20.
 
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project tries to adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+
 ### TODO
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
+
+## 2020-09-09
+### Added
+- Utility checkbox questions in form
+- Form controls for checkboxes
+- SVG image that was need for checkboxes
+- Utility calculations depending on which you already pay
+- Remapped the utility variables that are passed to ``shelter_deductions.js`` and ``net_income.js`
+- Added Maryland and Indiana
+
+### Removed
+- Utility boolean question
+- ``IL.feature`` and ``VA.feature`` Gherkin test files (and their parent folder)
+- Old utility allowance formulas in ``parse_input_data.js``
+
+### Changed
+- Reconfigured ``state_options.js`` utilities to align with new format (that not all states have same $ for basic utilities)
 
 ## 2020-09-02
 ### Added

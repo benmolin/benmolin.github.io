@@ -8,7 +8,13 @@ export class ShelterDeduction {
         this.household_includes_elderly_or_disabled = inputs.household_includes_elderly_or_disabled;
         this.state_or_territory = inputs.state_or_territory;
         this.household_size = inputs.household_size;
-        this.utility_allowance = inputs.utility_allowance;
+        this.utility_electricity = inputs.utility_electricity;
+        this.utility_gas = inputs.utility_gas;
+        this.utility_heating = inputs.utility_heating;
+        this.utility_phone = inputs.utility_phone;
+        this.utility_sewage = inputs.utility_sewage;
+        this.utility_trash = inputs.utility_trash;
+        this.utility_water = inputs.utility_water;
         this.standard_utility_allowances = inputs.standard_utility_allowances;
     }
 
@@ -117,8 +123,15 @@ export class ShelterDeduction {
     }
 
     calculate_utility_costs() {
+
         // State with Standard Utility Allowances, no utility allowance claimed
-        if (this.utility_allowance === null || this.utility_allowance === 'NONE') {
+        if (!this.utility_electricity &&
+            !this.utility_gas &&
+            !this.utility_heating &&
+            !this.utility_phone &&
+            !this.utility_sewage &&
+            !this.utility_trash &&
+            !this.utility_water) {
             // In this case the client has either:
             //
             // * Explicitly told us the end user does not qualify for a
@@ -139,7 +152,7 @@ export class ShelterDeduction {
         // VA is one of a few states that adjust standard utility allowances
         // based on household size
         if (this.state_or_territory === 'VA') {
-            if (this.utility_allowance === 'HEATING_AND_COOLING') {
+            if (this.utility_heating) {
                 const heating_cooling_allowances = this.standard_utility_allowances['HEATING_AND_COOLING'];
 
                 if (this.household_size >= 4) {
@@ -147,25 +160,76 @@ export class ShelterDeduction {
 
                     return {
                         'result': result,
-                        'explanation': `Virginia has a standard utility allowance of $${result} for households with four or more household members.`,
+                        'explanation': `Virginia has a heating utility allowance of $${result} for households with four or more household members.`,
                     };
                 } else {
                     let result = heating_cooling_allowances['below_four'];
 
                     return {
                         'result': result,
-                        'explanation': `Virginia has a standard utility allowance of $${result} for households with less than four household members.`,
+                        'explanation': `Virginia has a heating utility allowance of $${result} for households with less than four household members.`,
                     };
                 }
             }
         }
 
-        // State with Standard Utility Allowances, utility allowance claimed
-        const utility_allowance_amount = this.standard_utility_allowances[this.utility_allowance];
+        // Start by listing the different utility groups
+        // Our goal is to find out which the client is eligible for, then figure out which is the highest allowance
+        const utility_profiles = [
+            [this.utility_heating, 'HEATING_AND_COOLING', 'heating and cooling'],
+            [this.utility_electricity, 'ELECTRICITY', 'electricity'],
+            [this.utility_gas, 'GAS', 'gas and fuel'],
+            [this.utility_phone, 'PHONE', 'phone'],
+            [this.utility_sewage, 'SEWAGE', 'sewage'],
+            [this.utility_trash, 'TRASH', 'trash'],
+            [this.utility_water, 'WATER', 'water'],
+        ]
+
+        // Running list of qualified utility amounts
+        var qualified_utility_amounts = []
+
+        // If there are two or more utilities, basic utility allowance
+        var num_utilities_paid = 0;
+        for (var i = 0; i < utility_profiles.length; i++) {
+            num_utilities_paid += utility_profiles[i][0];
+        };
+        if (num_utilities_paid >= 2) {
+            qualified_utility_amounts.push(['BASIC_LIMITED_ALLOWANCE', this.standard_utility_allowances['BASIC_LIMITED_ALLOWANCE'], 'basic']);
+        };
+
+        // For the rest of the qualified utilities, add them to the qualified array
+        for (var i = 0; i < utility_profiles.length; i++) {
+            if (utility_profiles[i][0] == true) {
+                qualified_utility_amounts.push([utility_profiles[i][1], this.standard_utility_allowances[utility_profiles[i][1]], utility_profiles[i][2]]);
+            };
+        };
+
+        // Finally, find the highest utility deduction
+        // The reason we have to do this is some states do not have a BLA. Or the Phone is higher than the single utility.
+        var utility_deduction_title = "None";
+        var utility_deduction_amount = 0;
+
+        for (var i = 0; i < qualified_utility_amounts.length; i++) {
+            if (qualified_utility_amounts[i][1] > utility_deduction_amount) {
+                utility_deduction_title = qualified_utility_amounts[i][2];
+                utility_deduction_amount = qualified_utility_amounts[i][1];
+            };
+        };
+
+        // Some states the deduction might be $0. In this case, treat it as no utility deductions
+        if (utility_deduction_amount == 0) {
+            return {
+                'result': 0,
+                'explanation': (
+                    'In this case there is no deduction for utilities, likely ' +
+                    'because this state only allows deductions for some utilities.'
+                )
+            };
+        };
 
         return {
-            'result': utility_allowance_amount,
-            'explanation': `In this case, a standard utility deduction of $${utility_allowance_amount} applies, so total shelter plus utilities costs come to $${utility_allowance_amount + this.base_shelter_costs}.`
+            'result': utility_deduction_amount,
+            'explanation': `In this case, a ${utility_deduction_title} utility deduction of $${utility_deduction_amount} applies, so total shelter plus utilities costs come to $${utility_deduction_amount + this.base_shelter_costs}.`
         };
     }
 }

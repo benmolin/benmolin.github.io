@@ -49,7 +49,7 @@ export class ParseInputs {
             'homeowners_insurance_and_taxes',
         ];
 
-        const UTILITY_ALLOWANCE_INPUT = 'utility_allowance';
+
 
         for (const input_key of REQUIRED_NUMBER_INPUTS) {
             this.handle_required_integer_input(input_key);
@@ -63,7 +63,6 @@ export class ParseInputs {
         for (const input_key of OPTIONAL_BOOLEAN_INPUTS) {
             this.handle_optional_bool_input(input_key);
         }
-        this.handle_utility_allowance_input(UTILITY_ALLOWANCE_INPUT);
 
         return this.inputs;
     }
@@ -119,46 +118,6 @@ export class ParseInputs {
             this.inputs[input_key] = (input_value === 'true');
         } else {
             this.errors.push(`Unexpected value for ${input_key}`);
-        }
-    }
-
-    handle_utility_allowance_input(input_key) {
-        // Check if the key exists in the inputs object
-        if (!(input_key in this.inputs)) {
-            this.inputs[input_key] = 'NONE';
-            return true;
-        }
-
-        const input_value = this.inputs[input_key];
-
-        // Convert null, undefined, '', NaN values to 'NONE':
-        // https://developer.mozilla.org/en-US/docs/Glossary/Falsy
-        if (!input_value) {
-            this.inputs[input_key] = 'NONE';
-            return true;
-        }
-
-        const UTILITY_ALLOWANCES = [
-            'HEATING_AND_COOLING',
-            'BASIC_LIMITED_ALLOWANCE',
-            'SINGLE_UTILITY_ALLOWANCE',
-            'ELECTRICITY',
-            'GAS_AND_FUEL',
-            'PHONE',
-            'SEWAGE',
-            'TRASH',
-            'WATER',
-            // Clients can either explicitly specify that no SUA
-            // applies with 'NONE', or leave this optional field
-            // blank to the same effect.
-            'NONE',
-        ];
-
-        if (UTILITY_ALLOWANCES.indexOf(input_value) > -1) {
-            return true;
-        } else {
-            this.errors.push(`Unknown standard utility allowance: ${input_value}`);
-            return false;
         }
     }
 
