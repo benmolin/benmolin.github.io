@@ -8,7 +8,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ### TODO
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 
-## 2020-09-09
+## 2020-09-12
 ### Added
 - Added state demonyms
 - Added the selected form state switching for VA, depending on the household size
