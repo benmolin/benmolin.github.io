@@ -7,7 +7,7 @@ if (stateAbbr == null) {
     stateAbbr = 'PA';
 };
 var stateFull;
-changeState(stateAbbr);
+switchStateOnPage(stateAbbr);
 
 // Phone number and email
 var contactPhone = urlParams.get('phone');

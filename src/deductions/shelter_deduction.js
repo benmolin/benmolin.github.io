@@ -149,29 +149,6 @@ export class ShelterDeduction {
             };
         }
 
-        // VA is one of a few states that adjust standard utility allowances
-        // based on household size
-        if (this.state_or_territory === 'VA') {
-            if (this.utility_heating) {
-                const heating_cooling_allowances = this.standard_utility_allowances['HEATING_AND_COOLING'];
-
-                if (this.household_size >= 4) {
-                    let result = heating_cooling_allowances['four_or_more'];
-
-                    return {
-                        'result': result,
-                        'explanation': `Virginia has a heating utility allowance of $${result} for households with four or more household members.`,
-                    };
-                } else {
-                    let result = heating_cooling_allowances['below_four'];
-
-                    return {
-                        'result': result,
-                        'explanation': `Virginia has a heating utility allowance of $${result} for households with less than four household members.`,
-                    };
-                }
-            }
-        }
 
         // Start by listing the different utility groups
         // Our goal is to find out which the client is eligible for, then figure out which is the highest allowance
