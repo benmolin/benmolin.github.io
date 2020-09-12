@@ -25,19 +25,6 @@ type IndividualStateOption = {
 }
 */
 
-// DATA SOURCES:
-//
-// "Broad-Based Community Eligibility", USDA, last updated December 2019:
-// https://fns-prod.azureedge.net/sites/default/files/resource-files/BBCE2019%28December%29.pdf
-//
-// "State Options Report", USDA, Options as of October 1, 2017:
-//
-// https://fns-prod.azureedge.net/sites/default/files/snap/14-State-Options.pdf
-//
-// "Standard Utility Allowances", USDA:
-//
-// https://www.fns.usda.gov/snap/eligibility/deduction/standard-utility-allowances
-
 export const STATE_OPTIONS /*: StateOptions */ = {
     "CA": {
         "2020": {
@@ -70,8 +57,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
             "child_support_payments_treatment": "DEDUCT",
-            "standard_medical_deduction": true,
-            "standard_medical_deduction_amount": 35,
+            "standard_medical_deduction": false,
+            "standard_medical_deduction_amount": null,
             "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
                 "HEATING_AND_COOLING": 370,
@@ -92,7 +79,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
-            "child_support_payments_treatment": "DEDUCT",
+            "child_support_payments_treatment": "EXCLUDE",
             "standard_medical_deduction": true,
             "standard_medical_deduction_amount": 200,
             "standard_medical_deduction_ceiling": 200,

@@ -60,17 +60,27 @@ export class AssetTest {
         let resource_limit;
         let explanation;
 
-        if (this.household_includes_elderly_or_disabled) {
+        // If BBCE, there is no separate limit for HHEOD and non HHEOD resource limits
+        if (!this.uses_bbce) {
+            if (this.household_includes_elderly_or_disabled) {
+                resource_limit = this.resource_limit_elderly_or_disabled;
+                explanation = [
+                    `Since the household includes an elderly or disabled member, the resource limit is $${resource_limit}.`
+                ];
+            } else {
+                resource_limit = this.resource_limit_non_elderly_or_disabled;
+                explanation = [
+                    `Since the household does not include an elderly or disabled member, the resource limit is $${resource_limit}.`
+                ];
+            }
+        } else {
             resource_limit = this.resource_limit_elderly_or_disabled;
             explanation = [
-                `Since the household includes an elderly or disabled member, the resource limit is $${resource_limit}.`
+                `The resource limit is $${resource_limit}.`
             ];
-        } else {
-            resource_limit = this.resource_limit_non_elderly_or_disabled;
-            explanation = [
-                `Since the household does not include an elderly or disabled member, the resource limit is $${resource_limit}.`
-            ];
-        }
+        };
+
+
 
         const below_resource_limit = this.resources <= resource_limit;
         explanation.push(

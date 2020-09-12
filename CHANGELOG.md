@@ -13,11 +13,12 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Added state demonyms
 - Added the selected form state switching for VA, depending on the household size
 - Added the 2021 Alaska min and max deductions
-- Added NE, CA, FL in beta (not live)
+- Added NE, CA, FL live
 
 ### Changed
 - Moved the VA logic for utility deductions variance depending on household size to state options, instead of inside the API
 - New format for the state options. Now importing them directly from a Google Sheet, so the ``state_options.js`` file won't be edited directly anymore
+- Changed the asset test explainer for BBCE states as there is no difference between HHEOD and non households.
 
 ## 2020-09-09
 ### Added
