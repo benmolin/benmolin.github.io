@@ -55,9 +55,15 @@
 
         <div class='step'>
             <h2>Step 2: Make sure your CSV is formatted correctly</h2>
-            <h4>To use this calculator, you need the following five columns with these exact column names.</h4>
+            <h3 class='text-gray-900 font-semibold mt-5'>Required Inputs</h3>
+            <h4>To use this calculator, you need the following columns with these exact column names.</h4>
 
-            <table class="table-auto mb-2 leading-relaxed">
+            <!-- Checkbox to allow for hiding of table -->
+            <input class="bulk_checkbox" id="bs-checkbox-required" type="checkbox" name="bulk_checkbox_required"
+                onclick="showInputsTable('R')">
+            <label for="bulk_checkbox" class='ml-2 font-semibold'>Show Required Inputs</label>
+
+            <table id='bs-required-inputs-table' class="table-auto mb-2 leading-relaxed d-none">
                 <thead>
                     <tr>
                         <th>Column</th>
@@ -74,7 +80,7 @@
                     <tr>
                         <td>HH_SIZE</td>
                         <td>Household size (or use IRS Exemptions)</td>
-                        <td>A number >= 1, (e.g. 3)</td>
+                        <td>A number 1 or higher</td>
                     </tr>
                     <tr>
                         <td>SENIOR_IN_HOUSEHOLD</td>
@@ -94,15 +100,116 @@
                             not use
                             the accounting or currency formats which add commas.</td>
                     </tr>
+                    <tr>
+                        <td>MONTHLY_NON_JOB_INCOME</td>
+                        <td>Last months non-job income</td>
+                        <td>Number</td>
+                    </tr>
+                    <tr>
+                        <td>RESOURCES</td>
+                        <td>Liquid assets, like funds in a bank account</td>
+                        <td>Number</td>
+                    </tr>
                 </tbody>
             </table>
+
+
+            <h3 class='text-gray-900 font-semibold mt-5'>Optional Inputs</h3>
+            <h4>The following inputs are optional, and allow additional net income deductions.</h4>
+
+            <!-- Checkbox to allow for hiding of table -->
+            <input class="bulk_checkbox" id="bs-checkbox-optional" type="checkbox" name="bulk_checkbox_optional"
+                onclick="showInputsTable('O')">
+            <label for="bulk_checkbox" class='ml-2 font-semibold'>Show Optional Inputs</label>
+
+            <table id='bs-optional-inputs-table' class="table-auto mb-2 leading-relaxed d-none">
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Description</th>
+                        <th>Format</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DEPENDENT_CARE_COSTS</td>
+                        <td>Costs of daycare, babysitters, or other child care</td>
+                        <td>A number (e.g. 1200). Use the "number" column format in Excel. Do
+                            not use the accounting or currency formats which add commas.</td>
+                    </tr>
+                    <tr>
+                        <td>OUT_OF_POCKET_MEDICAL_HHEOD</td>
+                        <td>Monthly out of pocket medical expenses for household members who are age 60 or older or
+                            disabled</td>
+                        <td>Number</td>
+                    </tr>
+                    <tr>
+                        <td>CHILD_SUPPORT</td>
+                        <td>Monthly court-ordered child support payments</td>
+                        <td>Number</td>
+                    </tr>
+                    <tr>
+                        <td>RENT_OR_MORTGAGE</td>
+                        <td>Monthly rent or mortgage amount</td>
+                        <td>Number</td>
+                    </tr>
+                    <tr>
+                        <td>HOMEOWNERS_INSURANCE_AND_TAXES</td>
+                        <td>Monthly homeowners insurance and taxes</td>
+                        <td>Number</td>
+                    </tr>
+                    <tr>
+                        <td>HEATING_AND_COOLING</td>
+                        <td>If client pays for heating or cooling</td>
+                        <td>1 if true. All other values interpreted as false</td>
+                    </tr>
+                    <tr>
+                        <td>ELECTRICITY</td>
+                        <td>If client pays for electricity</td>
+                        <td>1 if true</td>
+                    </tr>
+                    <tr>
+                        <td>GAS_AND_FUEL</td>
+                        <td>If client pays for gas or fuel</td>
+                        <td>1 if true</td>
+                    </tr>
+                    <tr>
+                        <td>WATER</td>
+                        <td>If client pays for water</td>
+                        <td>1 if true</td>
+                    </tr>
+                    <tr>
+                        <td>SEWAGE</td>
+                        <td>If client pays for sewage</td>
+                        <td>1 if true</td>
+                    </tr>
+                    <tr>
+                        <td>TRASH</td>
+                        <td>If client pays for trash</td>
+                        <td>1 if true</td>
+                    </tr>
+                    <tr>
+                        <td>PHONE</td>
+                        <td>If client pays for phone</td>
+                        <td>1 if true</td>
+                    </tr>
+                </tbody>
+            </table>
+
             <small class="form-text text-muted">
-                It does not matter if you have other columns, however if you are running into errors you may want to
-                delete your other columns. There cannot be any "," or "#" characters in any of your column names, and
-                other non-letter characters may also break this calculator.
+
             </small>
 
-            <h4 class='mt-5'>
+            <h3 class='text-gray-900 font-semibold mt-5'>File Format Information</h3>
+            <input class="bulk_checkbox" id="bs-checkbox-file-format" type="checkbox" name="bulk_checkbox_file-format"
+                onclick="showInputsTable('F')">
+            <label for="bulk_checkbox" class='ml-2 font-semibold'>Show Information</label>
+            <h4 id='file-format-information' class='d-none'>
+                It does not matter if you have other columns than the columns above, however if you are running into
+                errors you may want to
+                delete your other columns. There cannot be any "," or "#" characters in any of your column names, and
+                other non-letter characters may also break this calculator.
+                <br><br>
                 Your file must be of type ".csv" (comma-separated-values), not an Excel file. You can
                 convert an Excel file to a csv file by clicking "save-as" and then choosing ".csv." If you are
                 converting
@@ -110,13 +217,12 @@
                 This will remove blank extra rows that sometimes get added below your data when saving Excel files.
                 <br><br>
                 If you need a sample CSV to test this with, download one here. You can also use this csv as a template
-                for your own data.
-                <br><br>
-                If no file is being downloaded when you click the button below, try clicking the button a few times or
+                for your own data. If no file is being downloaded when you click the button below, try clicking the
+                button a few times or
                 opening a new tab or browser.
             </h4>
-
-            <button type="button" class="btn btn-primary btn-md font-bold" id='sample-csv'>
+            <br>
+            <button type="button" class="btn btn-primary btn-md font-bold mt-3" id='sample-csv'>
                 Download Sample CSV
             </button>
 
@@ -141,7 +247,10 @@
                 Download Results CSV
             </button>
             <h4>There will be the following additional columns.</h4>
-            <table class="table-auto mb-2 leading-relaxed">
+            <input class="bulk_checkbox" id="bs-checkbox-output" type="checkbox" name="bulk_checkbox_output"
+                onclick="showInputsTable('OUT')">
+            <label for="bulk_checkbox" class='ml-2 font-semibold'>Show Information</label>
+            <table id='output-table' class="table-auto mb-2 leading-relaxed d-none">
                 <thead>
                     <tr>
                         <th>Column</th>

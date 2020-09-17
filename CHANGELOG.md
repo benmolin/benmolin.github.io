@@ -14,6 +14,10 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Added more output variables to bulk screener
 - Added VA HH_SIZE rules to bulk screener
 - Explanation of output variables to bulk screener
+- Added non-job and resource as required variables
+- Added all other optional variables to bulk screener
+- Added optional variables explanation and table
+- Enabled tables to hide/show
 
 ### Changed
 - Made bulk screener output dynamic for variables outputting

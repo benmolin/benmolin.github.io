@@ -11,6 +11,38 @@ var validStates = [
     'VA',
 ];
 
+
+// Show or hide the inputs
+function showInputsTable(TABLE) {
+
+    if (TABLE == 'O') {
+        if ($('#bs-checkbox-optional').prop('checked')) {
+            $('#bs-optional-inputs-table').removeClass('d-none');
+        } else {
+            $('#bs-optional-inputs-table').addClass('d-none');
+        };
+    } else if (TABLE == 'R') {
+        if ($('#bs-checkbox-required').prop('checked')) {
+            $('#bs-required-inputs-table').removeClass('d-none');
+        } else {
+            $('#bs-required-inputs-table').addClass('d-none');
+        };
+    } else if (TABLE == 'F') {
+        if ($('#bs-checkbox-file-format').prop('checked')) {
+            $('#file-format-information').removeClass('d-none');
+        } else {
+            $('#file-format-information').addClass('d-none');
+        };
+    } else if (TABLE == 'OUT') {
+        if ($('#bs-checkbox-output').prop('checked')) {
+            $('#output-table').removeClass('d-none');
+        } else {
+            $('#output-table').addClass('d-none');
+        };
+    }
+
+};
+
 // Get the CSV file when loaded
 // https://stackoverflow.com/questions/34494032/loading-a-csv-file-into-an-html-table-using-javascript
 var file = document.getElementById('csvUpload');
@@ -75,6 +107,9 @@ function downloadCSV(csv, sampleData = false) {
 
 // Convert to int ("$1,212.00" -> 1212)
 function int(v) {
+    if ((v == null) || (v == 0)) {
+        return 0;
+    };
     v = v.split('.')[0]; // remove any decimals
     v = v.replace(/[^0-9]+/g, "");
     v = parseInt(v)
@@ -96,23 +131,58 @@ function stateSpecialRules(stateAbbr, HH_SIZE) {
 };
 
 
+function bool(v) {
+    if ((v == '1') || (v == 1)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function trimNull(v) {
+    if (v == null) {
+        return 0;
+    } else {
+        return v.trim();
+    }
+}
+
 // Function that compiles and sends data out to snap API
 function sendToSnapAPI() {
 
     // Here we need to match the inputs to the CSV column names
+    // required
     var loc_state = csv[0].indexOf("STATE");
     var loc_household_size = csv[0].indexOf("HH_SIZE");
     var loc_household_includes_elderly_or_disabled_1 = csv[0].indexOf("SENIOR_IN_HOUSEHOLD");
     var loc_household_includes_elderly_or_disabled_2 = csv[0].indexOf("DISABILITY_IN_HOUSEHOLD");
     var loc_monthly_job_income = csv[0].indexOf("MONTHLY_JOB_INCOME");
+    var loc_monthly_non_job_income = csv[0].indexOf("MONTHLY_NON_JOB_INCOME");
+    var loc_resources = csv[0].indexOf("RESOURCES");
+    // not required
+    var loc_DEPENDENT_CARE_COSTS = csv[0].indexOf("DEPENDENT_CARE_COSTS");
+    var loc_OUT_OF_POCKET_MEDICAL_HHEOD = csv[0].indexOf("OUT_OF_POCKET_MEDICAL_HHEOD");
+    var loc_CHILD_SUPPORT = csv[0].indexOf("CHILD_SUPPORT");
+    var loc_RENT_OR_MORTGAGE = csv[0].indexOf("RENT_OR_MORTGAGE");
+    var loc_HOMEOWNERS_INSURANCE_AND_TAXES = csv[0].indexOf("HOMEOWNERS_INSURANCE_AND_TAXES");
+    var loc_HEATING_AND_COOLING = csv[0].indexOf("HEATING_AND_COOLING");
+    var loc_ELECTRICITY = csv[0].indexOf("ELECTRICITY");
+    var loc_GAS_AND_FUEL = csv[0].indexOf("GAS_AND_FUEL");
+    var loc_WATER = csv[0].indexOf("WATER");
+    var loc_SEWAGE = csv[0].indexOf("SEWAGE");
+    var loc_TRASH = csv[0].indexOf("TRASH");
+    var loc_PHONE = csv[0].indexOf("PHONE");
 
-    // Check to see all variables are in list
+
+    // Check to see all variables are in list (required variables only)
     var columns = [
         'STATE',
         'HH_SIZE',
         'SENIOR_IN_HOUSEHOLD',
         'DISABILITY_IN_HOUSEHOLD',
-        'MONTHLY_JOB_INCOME'
+        'MONTHLY_JOB_INCOME',
+        'MONTHLY_NON_JOB_INCOME',
+        'RESOURCES'
     ];
     for (var i = 0; i < columns.length; i++) {
         if (csv[0].indexOf(columns[i]) == -1) {
@@ -164,11 +234,27 @@ function sendToSnapAPI() {
     for (var i = 1; i < csv.length; i++) {
 
         // Get values for row
+        // required
         var val_state = csv[i][loc_state].trim()
         var val_household_size = csv[i][loc_household_size].trim()
         var val_monthly_job_income = csv[i][loc_monthly_job_income].trim()
+        var val_monthly_non_job_income = csv[i][loc_monthly_non_job_income].trim()
+        var val_monthly_resources = csv[i][loc_resources].trim()
         var val_HIEOD_1 = parseInt(csv[i][loc_household_includes_elderly_or_disabled_1].trim())
         var val_HIEOD_2 = parseInt(csv[i][loc_household_includes_elderly_or_disabled_2].trim())
+        // optional
+        var val_DEPENDENT_CARE_COSTS = trimNull(csv[i][loc_DEPENDENT_CARE_COSTS])
+        var val_OUT_OF_POCKET_MEDICAL_HHEOD = trimNull(csv[i][loc_OUT_OF_POCKET_MEDICAL_HHEOD])
+        var val_CHILD_SUPPORT = trimNull(csv[i][loc_CHILD_SUPPORT])
+        var val_RENT_OR_MORTGAGE = trimNull(csv[i][loc_RENT_OR_MORTGAGE])
+        var val_HOMEOWNERS_INSURANCE_AND_TAXES = trimNull(csv[i][loc_HOMEOWNERS_INSURANCE_AND_TAXES])
+        var val_HEATING_AND_COOLING = trimNull(csv[i][loc_HEATING_AND_COOLING])
+        var val_ELECTRICITY = trimNull(csv[i][loc_ELECTRICITY])
+        var val_GAS_AND_FUEL = trimNull(csv[i][loc_GAS_AND_FUEL])
+        var val_WATER = trimNull(csv[i][loc_WATER])
+        var val_SEWAGE = trimNull(csv[i][loc_SEWAGE])
+        var val_TRASH = trimNull(csv[i][loc_TRASH])
+        var val_PHONE = trimNull(csv[i][loc_PHONE])
 
         // Confirm State is valid
         if (validStates.includes(val_state) == false) {
@@ -195,16 +281,30 @@ function sendToSnapAPI() {
 
             // Create the input json with client's data
             var inputs = {
-                // Our inputs
-                household_includes_elderly_or_disabled: val_HIEOD,    // This is an either or
-                household_size: val_HH_SIZE, // Household size minimum 1
-                monthly_job_income: int(val_monthly_job_income),
 
-                // TODO, add resources
-                resources: 0,
+                // required
+                household_includes_elderly_or_disabled: val_HIEOD,
+                household_size: val_HH_SIZE,
+                monthly_job_income: int(val_monthly_job_income),
+                monthly_non_job_income: int(val_monthly_non_job_income),
+                resources: int(val_monthly_resources),
+
+                // optional
+                dependent_care_costs: int(val_DEPENDENT_CARE_COSTS),
+                medical_expenses_for_elderly_or_disabled: int(val_OUT_OF_POCKET_MEDICAL_HHEOD),
+                rent_or_mortgage: int(val_RENT_OR_MORTGAGE),
+                homeowners_insurance_and_taxes: int(val_HOMEOWNERS_INSURANCE_AND_TAXES),
+                court_ordered_child_support_payments: int(val_CHILD_SUPPORT),
+
+                utility_heating: bool(val_HEATING_AND_COOLING),
+                utility_electricity: bool(val_ELECTRICITY),
+                utility_gas: bool(val_GAS_AND_FUEL),
+                utility_phone: bool(val_PHONE),
+                utility_sewage: bool(val_SEWAGE),
+                utility_trash: bool(val_TRASH),
+                utility_water: bool(val_WATER),
 
                 // Constants here
-                monthly_non_job_income: 0,
                 state_or_territory: stateSpecialRules(val_state, val_HH_SIZE),
             };
 
@@ -280,16 +380,16 @@ function sendToSnapAPI() {
 
 // Set up sample download
 var sampleData = [
-    ["STATE", "HH_SIZE", "SENIOR_IN_HOUSEHOLD", "DISABILITY_IN_HOUSEHOLD", "MONTHLY_JOB_INCOME"],
-    ["PA", "2", "0", "0", "2000"],
-    ["PA", "3", "0", "0", "2000"],
-    ["PA", "4", "0", "0", "2000"],
-    ["PA", "5", "0", "0", "2000"],
-    ["PA", "2", "1", "0", "2300"],
-    ["CA", "2", "0", "1", "2300"],
-    ["IN", "2", "0", "0", "2300"],
-    ["IL", "3", "1", "0", "500"],
-    ["VA", "2", "0", "1", "4000"],
-    ["NV", "4", "0", "0", "9000"]
+    ["STATE", "HH_SIZE", "SENIOR_IN_HOUSEHOLD", "DISABILITY_IN_HOUSEHOLD", "MONTHLY_JOB_INCOME", "MONTHLY_NON_JOB_INCOME", "RESOURCES", "HEATING_AND_COOLING"],
+    ["PA", "2", "0", "0", "2000", "0", "0", "0"],
+    ["PA", "3", "0", "0", "2000", "0", "0", "0"],
+    ["PA", "4", "0", "0", "2000", "0", "30", "0"],
+    ["PA", "5", "0", "0", "2000", "50", "0", "1"],
+    ["PA", "2", "1", "0", "2300", "0", "2000", "0"],
+    ["CA", "2", "0", "1", "2300", "200", "0", "1"],
+    ["IN", "2", "0", "0", "2300", "0", "0", "0"],
+    ["IL", "3", "1", "0", "500", "50", "6000", "1"],
+    ["VA", "2", "0", "1", "4000", "0", "0", "1"],
+    ["NV", "4", "0", "0", "9000", "0", "1000", "1"],
 ];
 document.getElementById('sample-csv').onclick = function () { downloadCSV(sampleData, true) };
