@@ -9,6 +9,16 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 
 
+## 2020-09-17 (bulk screener)
+### Added
+- Added more output variables to bulk screener
+- Added VA HH_SIZE rules to bulk screener
+- Explanation of output variables to bulk screener
+
+### Changed
+- Made bulk screener output dynamic for variables outputting
+
+
 ## 2020-09-17
 ### Added
 - Added the net income and asset tests to the tests tables output

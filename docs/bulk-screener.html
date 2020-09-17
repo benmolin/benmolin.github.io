@@ -124,7 +124,9 @@
 
         <div class='step'>
             <h2>Step 3: Upload your CSV</h2>
-            <h4>Results will be calculated as soon as your file is uploaded.</h4>
+            <h4>Results will be calculated as soon as your file is uploaded. The table below only shows short responses,
+                and does not contain full HTML explanations. If HTML explanations are needed, download the result CSV.
+            </h4>
             <input type="file" name="File Upload" id="csvUpload" class='mb-4' accept=".csv" />
 
             <div id='error-message' class="alert alert-danger d-none" role='alert'></div>
@@ -135,11 +137,64 @@
 
         <div class='step'>
             <h2>Step 4: Download your results</h2>
-            <h4>There will be an extra column with the estimated eligibility.</h4>
-
-            <button type="button" class="btn btn-success btn-md font-bold" id='download-button' disabled>
+            <button type="button" class="btn btn-success btn-md font-bold mb-3" id='download-button' disabled>
                 Download Results CSV
             </button>
+            <h4>There will be the following additional columns.</h4>
+            <table class="table-auto mb-2 leading-relaxed">
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>estimated_eligibility</td>
+                        <td>If client is likely eligible for SNAP</td>
+                    </tr>
+                    <tr>
+                        <td>estimated_monthly_benefit</td>
+                        <td>Client's estimated monthly benefit</td>
+                    </tr>
+                    <tr>
+                        <td>GI_test</td>
+                        <td>Whether client passes gross income test</td>
+                    </tr>
+                    <tr>
+                        <td>NI_test</td>
+                        <td>Whether client passes net income test</td>
+                    </tr>
+                    <tr>
+                        <td>AL_test</td>
+                        <td>Whether client passes asset limit test</td>
+                    </tr>
+                    <tr>
+                        <td>EXPLAIN_GI</td>
+                        <td>Explanation for how the client's gross income was calculated (HTML)</td>
+                    </tr>
+                    <tr>
+                        <td>EXPLAIN_NI</td>
+                        <td>Explanation for how the client's net income was calculated (HTML)</td>
+                    </tr>
+                    <tr>
+                        <td>EXPLAIN_benefit</td>
+                        <td>Explanation for how the client's benefit amount was calculated (HTML)</td>
+                    </tr>
+                    <tr>
+                        <td>EXPLAIN_GI_test</td>
+                        <td>Explanation for the client's gross income test result (HTML)</td>
+                    </tr>
+                    <tr>
+                        <td>EXPLAIN_NI_test</td>
+                        <td>Explanation for the client's net income test result (HTML)</td>
+                    </tr>
+                    <tr>
+                        <td>EXPLAIN_AL_test</td>
+                        <td>Explanation for the client's asset limit test result (HTML)</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
     </main>
