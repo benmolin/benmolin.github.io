@@ -8,6 +8,17 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ### TODO
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 
+
+## 2020-09-17
+### Added
+- Added the net income and asset tests to the tests tables output
+
+### Changed
+- Updated the toggle to show/hide the test tables
+- Fixed a bug that wasn't showing VA test tables
+- Made test tables more mobile friendly
+
+
 ## 2020-09-12
 ### Added
 - Added state demonyms

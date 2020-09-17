@@ -78,10 +78,21 @@
       <!-- <option value="WY">Wyoming</option> -->
     </select>
 
-    <div id='set-default-1' class='pointer' onclick="setDefaultOne()">Set Profile 1</div>
-    <div id='set-default-2' class='pointer' onclick="setDefaultTwo()">Set Profile 2</div>
-    <div id='gross-income-limit-table' class='pointer' onclick="showIncomeTable()">Show Gross Income Limits</div>
+    <div id='set-default-1' class='pointer' onclick="setDefaultOne()">Set Sample Profile 1</div>
+    <div id='set-default-2' class='pointer' onclick="setDefaultTwo()">Set Sample Profile 2</div>
 
+    <fieldset class="usa-fieldset">
+      <div class="usa-checkbox">
+        <input class="usa-checkbox__input" id="show_test_limits" type="checkbox" name="show-test-limits" value="truth"
+          onclick="showTestLimitsTables()">
+        <label class="usa-checkbox__label" for="show_test_limits">Show Test Limits</label>
+      </div>
+    </fieldset>
+
+
+    <div id='test-tables'>
+
+    </div>
 
   </div>
   <div id="main" class="grid-container">

@@ -79,10 +79,7 @@ $('#dev-state-change').on('change', function () {
 
     applyStateRegionOrSizeRules();
     switchStateOnPage(this.value);
-
-    if (is_showIncomeTable) {
-        showIncomeTable();
-    };
+    showTestLimitsTables();
 });
 
 function applyStateRegionOrSizeRules() {
