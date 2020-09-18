@@ -20,7 +20,7 @@ For organizations that would like to screen client's in bulk, there is a [bulk s
 
 ## Embedding Screener
 
-The goal for this project is to make the prescreener embeddable on any website. You can embed the site using one line of code:
+The goal for this project is to make the prescreener embeddable on any website. You can embed the prescreener using one line of code:
 
 ```
 <iframe src="https://benmolin.github.io/screener?state=PA" title="SNAP Prescreener"></iframe>
