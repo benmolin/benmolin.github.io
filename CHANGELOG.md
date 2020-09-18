@@ -95,6 +95,37 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Added compatibility for footnote 2 (2FPL, $3500 asset test) from the BBCE PDF
 - Added Indiana and Maryland to complete the scenarios under BBCE PDF (blanket asset test, no 2FPL HHEOD asset test, 2FPL HHEOD asset test)
 
-## Changes before 2020-09-01
+## 2020-08-25
+### Added
+- Added state deductions for PA: before, it was just basic BBCE rules
 
-### Todo: Add a record of changes between 2020-08-20 and 2020-09-01
+## 2020-08-24
+### Changed
+- Merged small changes from the original repo
+
+### Added
+- Created bulk screener to allow for CSV uploads to screen clients in bulk
+- Created a new readme, different than the original project's readme
+
+## 2020-08-23
+### Removed
+- Removed some 18F specific contributing docs and mentions of this being a government project
+
+## 2020-08-22
+### Changed
+- Changed the format of some of the ``state_options.js`` options to account for a 2FPL asset limit for HHEOD
+- Changed the gross income test rules to better handle BBCE states + 2FPL limits
+- Changed folder format to allow for GitHub Pages (``docs/`` folder)
+- Changed build path of API to make building and testing new API easier 
+- Removed API dist from ``.gitignore`` allow easy exporting of bundled API
+
+### Added
+- Merged in [snap-js-api-prototype](https://github.com/18F/snap-js-api-prototype) and [snap-js-prescreener-prototypes](https://github.com/18F/snap-js-prescreener-prototypes) to create a repo with the prescreener and API together
+- Created a new UI for the "debug panel" on top of the individual screener. Allows for changing states, viewing test income limits
+- Added state switcher
+- Added basic version of PA
+
+## 2020-08-21
+### Added
+- Created REPO
+
