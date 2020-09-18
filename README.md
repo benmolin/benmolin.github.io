@@ -28,7 +28,7 @@ The goal for this project is to make the prescreener embeddable on any website. 
 
 There are few ways that you can customize the prescreener to best fit with your website. For example, if you wanted to embed the screener for PA on your website and link your organization's phone number and email, you could use the configuration here: 
 
-[Custom IL Prescreener](https://benmolin.github.io/screener?state=PA&phone=555-555-5555&email=help@example.com&debug=false&short=true)
+[Custom Pennsylvania Prescreener](https://benmolin.github.io/screener?state=PA&phone=555-555-5555&email=help@example.com&debug=false&short=true)
 
 To include this page directly on your website, you would place the URL into an iFrame:
 
