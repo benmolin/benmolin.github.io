@@ -7,6 +7,7 @@ var validStates = [
     'IN',
     'MD',
     'NE',
+    'NM',
     'PA',
     'VA',
 ];

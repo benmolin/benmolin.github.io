@@ -164,6 +164,29 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             }
         }
     },
+    "NM": {
+        "2020": {
+            "uses_bbce": true,
+            "gross_income_limit_factor": 1.65,
+            "resource_limit_non_elderly_or_disabled": null,
+            "resource_limit_elderly_or_disabled": null,
+            "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
+            "child_support_payments_treatment": "DEDUCT",
+            "standard_medical_deduction": false,
+            "standard_medical_deduction_amount": null,
+            "standard_medical_deduction_ceiling": null,
+            "standard_utility_allowances": {
+                "HEATING_AND_COOLING": 340,
+                "BASIC_LIMITED_ALLOWANCE": 136,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 44
+            }
+        }
+    },
     "PA": {
         "2020": {
             "uses_bbce": true,
