@@ -2,10 +2,9 @@
 History of changes to this repo since forked from [snap-js-api-prototype](https://github.com/18F/snap-js-api-prototype) and [snap-js-prescreener-prototypes](https://github.com/18F/snap-js-prescreener-prototypes) on 2020-08-20.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project tries to adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+and this project tries to adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html). No version numbers have yet to be included. 
 
-
-### TODO
+### Pending Tasks
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 - Check up on COVID Snap max allotments
 
@@ -96,3 +95,6 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Added compatibility for footnote 2 (2FPL, $3500 asset test) from the BBCE PDF
 - Added Indiana and Maryland to complete the scenarios under BBCE PDF (blanket asset test, no 2FPL HHEOD asset test, 2FPL HHEOD asset test)
 
+## Changes before 2020-09-01
+
+### Todo: Add a record of changes between 2020-08-20 and 2020-09-01
