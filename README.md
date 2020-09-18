@@ -26,10 +26,14 @@ The goal for this project is to make the prescreener embeddable on any website. 
 <iframe src="https://benmolin.github.io/screener?state=PA" title="SNAP Prescreener"></iframe>
 ```
 
-There are few ways that you can customize the prescreener to best fit in with your website. To do so, you will want to edit the URL inside the ``iFrame``. For example:
+There are few ways that you can customize the prescreener to best fit with your website. For example, if you wanted to embed the screener for PA on your website and link your organization's phone number and email, you could use the configuration here: 
+
+[Custom IL Prescreener](https://benmolin.github.io/screener?state=PA&phone=555-555-5555&email=help@example.com&debug=false&short=true)
+
+To include this page directly on your website, you would place the URL into an iFrame:
 
 ```
-<iframe src="https://benmolin.github.io/screener?state=IL&phone=555-555-5555&email=help@example.com&debug=false&short=true" title="SNAP Prescreener"></iframe>
+<iframe src="https://benmolin.github.io/screener?state=PA&phone=555-555-5555&email=help@example.com&debug=false&short=true" title="SNAP Prescreener"></iframe>
 ```
 
 All attributes are optional, with the exception of ``state``. Here all the attributes you can customize:

@@ -12,6 +12,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ## 2020-09-18
 ### Added
 - Added New Mexico
+- iFrame configuration example in Readme
 
 ## 2020-09-17 (bulk screener)
 ### Added
