@@ -394,3 +394,32 @@ var sampleData = [
     ["NV", "4", "0", "0", "9000", "0", "1000", "1"],
 ];
 document.getElementById('sample-csv').onclick = function () { downloadCSV(sampleData, true) };
+
+/*
+TESTING DATA DOWNLOAD
+*/
+
+// Get your state to populate testin data
+var queryString = window.location.search;
+var urlParams = new URLSearchParams(queryString);
+var stateAbbr = urlParams.get('state');
+if (stateAbbr == null) {
+    stateAbbr = 'PA';
+};
+// Create testing data
+var testingData = [
+    ['STATE', 'HH_SIZE', 'SENIOR_IN_HOUSEHOLD', 'DISABILITY_IN_HOUSEHOLD', 'MONTHLY_JOB_INCOME', 'MONTHLY_NON_JOB_INCOME', 'RESOURCES', 'DEPENDENT_CARE_COSTS', 'OUT_OF_POCKET_MEDICAL_HHEOD', 'CHILD_SUPPORT', 'RENT_OR_MORTGAGE', 'HOMEOWNERS_INSURANCE_AND_TAXES', 'HEATING_AND_COOLING', 'ELECTRICITY', 'GAS_AND_FUEL', 'WATER', 'SEWAGE', 'TRASH', 'PHONE'],
+    [stateAbbr, 1, 0, 0, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Simple
+    [stateAbbr, 1, 0, 0, 2000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Fail gross and net
+    [stateAbbr, 1, 0, 0, 1600, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Fail net
+    [stateAbbr, 1, 0, 0, 1600, 0, 0, 100, 0, 200, 300, 0, 0, 1, 0, 0, 1, 0, 1], // Additional deductions enable client to pass net
+    [stateAbbr, 2, 1, 0, 2000, 0, 1000, 0, 1700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Pass HHEOD
+    [stateAbbr, 2, 0, 1, 3000, 0, 1000, 0, 1700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Gross fail and asset pass HHEOD
+    [stateAbbr, 2, 1, 1, 3000, 0, 5000, 0, 1700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Gross fail and asset fail HHEOD
+    [stateAbbr, 2, 0, 1, 5000, 0, 5000, 0, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Fail gross and net HHEOD
+    [stateAbbr, 3, 1, 1, 2000, 2000, 0, 500, 1000, 200, 1000, 300, 1, 1, 1, 1, 1, 1, 1], // All deductions HHEOD
+    [stateAbbr, 3, 0, 0, 2000, 2000, 0, 500, 0, 200, 1000, 300, 1, 1, 1, 1, 1, 1, 1], // All deductions non-HHEOD
+    [stateAbbr, 6, 0, 0, 2000, 2000, 0, 500, 0, 200, 1000, 300, 1, 1, 1, 1, 1, 1, 1], // More people
+];
+document.getElementById('testing-csv').onclick = function () { downloadCSV(testingData, true) };
+

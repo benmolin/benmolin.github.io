@@ -8,6 +8,15 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 - Check up on COVID Snap max allotments
 
+
+## 2020-09-20
+### Added
+- Added another set of sample data (testing data) to Bulk Screener for use in validating prescreener
+- Bulk screener supports ``?state=PA`` config options for 2nd set of sample data
+
+### Changed
+- Edited bulk screener file formatting rules
+
 ## 2020-09-18
 ### Added
 - Added New Mexico

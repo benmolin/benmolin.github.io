@@ -205,26 +205,30 @@
                 onclick="showInputsTable('F')">
             <label for="bulk_checkbox" class='ml-2 font-semibold'>Show Information</label>
             <h4 id='file-format-information' class='d-none'>
-                It does not matter if you have other columns than the columns above, however if you are running into
+                There cannot be any "," or "#" or parenthesis in any of your cells. Other
+                non-letter characters may also break this calculator. It does not matter if you have other columns than
+                the columns above, however if you are running into
                 errors you may want to
-                delete your other columns. There cannot be any "," or "#" characters in any of your column names, and
-                other non-letter characters may also break this calculator.
+                delete your other columns, only keeping the essential data.
                 <br><br>
                 Your file must be of type ".csv" (comma-separated-values), not an Excel file. You can
                 convert an Excel file to a csv file by clicking "save-as" and then choosing ".csv." If you are
                 converting
                 the file from Excel, after saving it as a csv, close and re-open the new csv file and save it again.
                 This will remove blank extra rows that sometimes get added below your data when saving Excel files.
-                <br><br>
-                If you need a sample CSV to test this with, download one here. You can also use this csv as a template
-                for your own data. If no file is being downloaded when you click the button below, try clicking the
-                button a few times or
-                opening a new tab or browser.
             </h4>
             <br>
             <button type="button" class="btn btn-primary btn-md font-bold mt-3" id='sample-csv'>
                 Download Sample CSV
             </button>
+            <button type="button" class="btn btn-info btn-md font-bold mt-3" id='testing-csv'>
+                Download Testing CSV
+            </button>
+            <small class='d-block mt-3'>
+                If you need a sample CSV to test this with, download one here. You can also use this csv as a template
+                for your own data. If no file is being downloaded when you click the button above, try clicking the
+                button a few times or opening this page in a new tab or browser.
+            </small>
 
         </div>
 
