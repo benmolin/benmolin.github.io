@@ -11,6 +11,13 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ## 2020-09-20
 ### Added
+- Made note on ``screener.html`` that it has moved
+
+### Changed
+- Changed ``screener.html`` to ``index.html`` to allow for root folder
+
+## 2020-09-20
+### Added
 - Added another set of sample data (testing data) to Bulk Screener for use in validating prescreener
 - Bulk screener supports ``?state=PA`` config options for 2nd set of sample data
 
