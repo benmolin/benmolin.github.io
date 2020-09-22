@@ -8,7 +8,7 @@ This repo is a fork of [18F's Snap-JS-API-Prototype](https://github.com/18F/snap
 
 ## Demo
 
-This repo is named to allow deployment onto Github pages for easy testing. There are two pages to view:
+This repo is named to allow deployment onto Github pages for easy testing. There are two main pages to view:
 
 ### Individual Screener
 
@@ -16,7 +16,7 @@ You can view a demo for the [individual screener here](https://www.snapscreener.
 
 ### Bulk Screener
 
-For organizations that would like to screen client's in bulk, there is a [bulk screener here](https://www.snapscreener.com/bulk-screener). This allows you to upload a full CSV of client profiles, and adds a new row stating whether clients are "likely eligible" or not.
+For organizations that would like to screen clients in bulk, there is a [bulk screener here](https://www.snapscreener.com/bulk-screener). This allows you to upload a full CSV of client profiles, and adds a new column stating whether clients are "likely eligible" or not.
 
 ## Embedding Screener
 
