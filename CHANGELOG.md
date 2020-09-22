@@ -11,6 +11,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ## 2020-09-20
 ### Added
+- Moved domain to [https://www.snapscreener.com](https://www.snapscreener.com)
 - Made note on ``screener.html`` that it has moved
 - Added in iFrameResizer libraries
 - Added in a sample website to show how screener could be embedded with resizing
