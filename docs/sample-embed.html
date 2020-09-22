@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>Sample SNAP Embed</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="shared/iframe/iframeResizer.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Example Non-Profit Website</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">SNAP Screener <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Example</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Example
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Example</a>
+                        <a class="dropdown-item" href="#">Example</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Example</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Example</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Example</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <iframe id='snap-iframe' src="index.html" title="SNAP Prescreener"></iframe>
+
+    <footer>
+        Thank you for visiting our organization's website!
+    </footer>
+
+</body>
+
+</html>
+
+<style>
+    body,
+    footer {
+        padding: 20px;
+        text-align: center;
+        color: white;
+        background-color: #212529;
+    }
+
+    iframe {
+        margin-top: 100px;
+        width: 80%;
+        height: 100%;
+        border: none;
+    }
+</style>
+
+<script>
+    iFrameResize({
+        log: true
+    }, '#snap-iframe') 
+</script>

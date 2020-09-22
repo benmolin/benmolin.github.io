@@ -12,6 +12,8 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ## 2020-09-20
 ### Added
 - Made note on ``screener.html`` that it has moved
+- Added in iFrameResizer libraries
+- Added in a sample website to show how screener could be embedded with resizing
 
 ### Changed
 - Changed ``screener.html`` to ``index.html`` to allow for root folder
