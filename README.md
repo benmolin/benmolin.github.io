@@ -56,12 +56,13 @@ iFrames can be tricky to resize when embedded, and often result in double scroll
 
 The calculator is already configured to respond to an [iFrame Resizing Library](https://github.com/davidjbradshaw/iframe-resizer/). If you would like to automatically resize the iFrame as the screener expands, take the following steps:
 
-1. Link [this](https://raw.githubusercontent.com/davidjbradshaw/iframe-resizer/master/js/iframeResizer.min.js) script on the page you are embedding the screener
-2. Call the iFrame resizer script
+1. Link [this](https://www.snapscreener.com/shared/iframe/iframeResizer.min.js) script on the page you are embedding the screener
+2. Call the iFrame resizer script on your iFrame
+
 
 ```
 <iframe id='snap-iframe' src="https://www.snapscreener.com/?state=PA" title="SNAP Screener"></iframe>
-<script src="path/to/your/iframeResizer.min.js"></script>
+<script src="https://www.snapscreener.com/shared/iframe/iframeResizer.min.js"></script>
 <script>
     iFrameResize({
         log: true
