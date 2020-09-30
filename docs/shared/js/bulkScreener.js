@@ -9,7 +9,6 @@ var validStates = [
     'NE',
     'NM',
     'PA',
-    'VA',
 ];
 
 
@@ -115,20 +114,6 @@ function int(v) {
     v = v.replace(/[^0-9]+/g, "");
     v = parseInt(v)
     return v
-};
-
-// Apply state special rules
-function stateSpecialRules(stateAbbr, HH_SIZE) {
-    // Special rules
-    if (stateAbbr == 'VA') {
-        if (HH_SIZE <= 3) {
-            return 'VA_HH1_3';
-        } else {
-            return 'VA_HH4_X';
-        };
-    } else {
-        return stateAbbr;
-    };
 };
 
 

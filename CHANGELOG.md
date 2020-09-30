@@ -8,6 +8,25 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 - Check up on COVID Snap max allotments
 
+## 2020-09-30
+### Added
+- Added all states (minus HI and AK). States without advanced deductions configured only appear required questions
+- Added a few required questions for NH and NY that are important for determining relevant BBCE limits
+- Added more advanced options for determining state limit differences based on household size, location, and other factors
+- Added favicons 
+- Header and footer with disclaimer
+- Added all dependencies to ``license.md``
+- Added a contact email
+- Linked a getting started guide for non-profit organizations
+
+### Changed
+- Removed VA support from bulk screener
+- Made site more responsive on mobile by eliminating box around calculator
+- Changed license to MIT
+- Changed a resources link to not be VA specific
+
+### Deleted
+- Removed some unnecessary libraries that were linked (Bootstrap JS, Popper JS)
 
 ## 2020-09-20
 ### Added

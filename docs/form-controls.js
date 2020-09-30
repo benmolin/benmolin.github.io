@@ -91,7 +91,7 @@
             ],
             'other_resources': [
                 {
-                    'url': 'https://www.foodpantries.org/st/virginia',
+                    'url': 'https://www.foodpantries.org/',
                     'description': 'Foodpantries.org',
                 },
                 {

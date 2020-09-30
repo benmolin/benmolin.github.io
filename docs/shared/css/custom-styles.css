@@ -21,12 +21,18 @@
 
 .subtitle {
   text-align: center;
-  margin: 20px 0 40px 0;
+  margin: 20px 0 10px 0;
+}
+.third-title{
+  font-style: italic;
+  text-align: center;
+  margin: 0 0 0 0;
+  color: #718096;
 }
 
 /* Calculator-specific styles */
-
 .calculator {
+  margin-top: 40px;
   padding: 16px 24px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
 }
@@ -190,4 +196,107 @@ footer#snap-calculator-footer div {
 
 .hotline-or, .hotline-number, .hotline-email{
   display: inline;
+}
+
+/* Display */
+.d-none{
+  display: none;
+}
+
+
+/* Header */
+header{
+  margin-bottom: 20px;
+}
+#main-header{
+  background-color: #f7fafc;
+  border-bottom: 1px solid #cbd5e0;
+  padding: 25px 0px;
+}
+#project-title{
+  font-weight: bold;
+  font-size: 22px;
+}
+#project-subtitle{
+  font-style: italic;
+  font-size: 16px;
+  color: #718096;
+}
+
+#dev-state-change{
+  width: 220px;
+  margin-top: -44px;
+  float: right;
+}
+
+#sub-header-message{
+  background-color: #2d3748;
+  color: white;
+  padding: 12px 12px;
+  text-align: center;
+}
+
+#sub-header-message a{
+  color: white !important;
+}
+
+#sub-header-warning{
+  background-color: #E53E3E;
+  color: white;
+  padding: 12px 12px;
+  text-align: center;
+}
+
+.italic{
+  font-style: italic;
+}
+
+@media only screen and (max-width: 1023px) {
+  #main-header {
+    padding: 25px 20px;
+  }
+  #footer-disclaimer{
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #dev-state-change{
+    width: 160px;
+  }
+  .calculator {
+    padding: 0 0;
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  #dev-state-change{
+    margin-top: 12px;
+    width: 100%;
+    float: left;
+  }
+  #main-header {
+    height: 144px;
+  }
+}
+
+
+
+/* Footer overrides */
+/* Colors MIT license via https://tailwindcss.com/docs/background-color#app  */
+.usa-footer__primary-section{
+  background-color: #f7fafc;
+  border-top: 1px solid #cbd5e0;
+}
+
+#show-test-limits-footer{
+  font-weight: bold;
+}
+
+#footer-disclaimer{
+  font-style: italic;
+  font-size: 16px;
+  color: #4a5568;
+  padding-bottom: 30px;
 }

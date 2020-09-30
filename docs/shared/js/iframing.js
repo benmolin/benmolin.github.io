@@ -32,7 +32,7 @@ if ((contactPhone == '') && (contactEmail == '')) {
 // Demo header
 var isDebug = urlParams.get('debug');
 if (isDebug == 'false') {
-    document.getElementById('debug-header').style.display = 'none';
+    $('.debug-info').addClass('d-none');
 };
 
 // Short form
