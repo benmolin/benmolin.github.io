@@ -24,6 +24,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Made site more responsive on mobile by eliminating box around calculator
 - Changed license to MIT
 - Changed a resources link to not be VA specific
+- Moved the iFrame resizer activation script to a separate file
 
 ### Deleted
 - Removed some unnecessary libraries that were linked (Bootstrap JS, Popper JS)

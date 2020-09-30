@@ -54,20 +54,12 @@ All attributes are optional, with the exception of ``state``. Here all the attri
 
 iFrames can be tricky to resize when embedded, and often result in double scroll bars -- one for your main website, and one for the embedded page.
 
-The calculator is already configured to respond to an [iFrame Resizing Library](https://github.com/davidjbradshaw/iframe-resizer/). If you would like to automatically resize the iFrame as the screener expands, take the following steps:
-
-1. Link [this](https://www.snapscreener.com/shared/iframe/iframeResizer.min.js) script on the page you are embedding the screener
-2. Call the iFrame resizer script on your iFrame
-
+The calculator is already configured to respond to an [iFrame Resizing Library](https://github.com/davidjbradshaw/iframe-resizer/). If you would like to automatically resize the iFrame as the screener expands, link the following two additional files after the iFrame. The first file is a library that can interpret resizing instructions sent from the screener. The second file activates the library on the ``#snap-iframe``.
 
 ```
 <iframe id='snap-iframe' src="https://www.snapscreener.com/?state=PA" title="SNAP Screener"></iframe>
 <script src="https://www.snapscreener.com/shared/iframe/iframeResizer.min.js"></script>
-<script>
-    iFrameResize({
-        log: true
-    }, '#snap-iframe') 
-</script>
+<script src="https://www.snapscreener.com/shared/iframe/iframeResizer-screener.js"></script>
 ```
 
 ## Building API
