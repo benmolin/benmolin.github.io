@@ -54,7 +54,7 @@ export class SnapEstimateEntrypoint {
                     event: true,
                 })
             } catch (e) {
-                console.log(e);
+                console.log('Not tracking, likely due to ad blocker');
             }
 
             // Send "invalid inputs" errors to the front-end:
@@ -73,7 +73,7 @@ export class SnapEstimateEntrypoint {
                 event: true,
             })
         } catch (e) {
-            console.log(e);
+            console.log('Not tracking, likely due to ad blocker');
         }
 
         const inputs = parser.inputs;
