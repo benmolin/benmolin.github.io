@@ -49,8 +49,8 @@ export class SnapEstimateEntrypoint {
             // Wrapped in try to avoid site breaking with adblock
             try {
                 window.goatcounter.count({
-                    path: window.location.href,
-                    title: this.raw_inputs.state_or_territory.substring(0, 2) + ' Invalid Screen',
+                    path: this.raw_inputs.state_or_territory.substring(0, 2) + ' Invalid Screen',
+                    title: window.location.href,
                     event: true,
                 })
             } catch (e) {
@@ -68,8 +68,8 @@ export class SnapEstimateEntrypoint {
         // Wrapped in try to avoid site breaking with adblock
         try {
             window.goatcounter.count({
-                path: window.location.href,
-                title: this.raw_inputs.state_or_territory.substring(0, 2) + ' Screen',
+                path: this.raw_inputs.state_or_territory.substring(0, 2) + ' Screen',
+                title: window.location.href,
                 event: true,
             })
         } catch (e) {
