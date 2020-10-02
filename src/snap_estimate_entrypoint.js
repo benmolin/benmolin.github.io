@@ -46,11 +46,16 @@ export class SnapEstimateEntrypoint {
         if (!inputs_valid) {
 
             // Count invalid screen
-            window.goatcounter.count({
-                path: window.location.href,
-                title: this.raw_inputs.state_or_territory.substring(0, 2) + ' Invalid Screen',
-                event: true,
-            })
+            // Wrapped in try to avoid site breaking with adblock
+            try {
+                window.goatcounter.count({
+                    path: window.location.href,
+                    title: this.raw_inputs.state_or_territory.substring(0, 2) + ' Invalid Screen',
+                    event: true,
+                })
+            } catch (e) {
+                console.log(e);
+            }
 
             // Send "invalid inputs" errors to the front-end:
             return {
@@ -60,11 +65,16 @@ export class SnapEstimateEntrypoint {
         }
 
         // Count successful screen
-        window.goatcounter.count({
-            path: window.location.href,
-            title: this.raw_inputs.state_or_territory.substring(0, 2) + ' Screen',
-            event: true,
-        })
+        // Wrapped in try to avoid site breaking with adblock
+        try {
+            window.goatcounter.count({
+                path: window.location.href,
+                title: this.raw_inputs.state_or_territory.substring(0, 2) + ' Screen',
+                event: true,
+            })
+        } catch (e) {
+            console.log(e);
+        }
 
         const inputs = parser.inputs;
         return new SnapEstimate(inputs).calculate();
