@@ -44,12 +44,27 @@ export class SnapEstimateEntrypoint {
         const inputs_valid = parser.inputs_valid();
 
         if (!inputs_valid) {
+
+            // Count invalid screen
+            window.goatcounter.count({
+                path: window.location.href,
+                title: this.raw_inputs.state_or_territory.substring(0, 2) + ' Invalid Screen',
+                event: true,
+            })
+
             // Send "invalid inputs" errors to the front-end:
             return {
                 'status': 'ERROR',
                 'errors': parser.errors
             };
         }
+
+        // Count successful screen
+        window.goatcounter.count({
+            path: window.location.href,
+            title: this.raw_inputs.state_or_territory.substring(0, 2) + ' Screen',
+            event: true,
+        })
 
         const inputs = parser.inputs;
         return new SnapEstimate(inputs).calculate();

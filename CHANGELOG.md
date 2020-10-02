@@ -8,6 +8,11 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 - Check up on COVID Snap max allotments
 
+
+## 2020-10-02
+### Added
+- Added [GoatCounter](https://www.goatcounter.com) for privacy-friendly web analytics
+
 ## 2020-09-30
 ### Added
 - Added all states (minus HI and AK). States without advanced deductions configured only appear required questions
