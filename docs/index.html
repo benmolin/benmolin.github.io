@@ -152,6 +152,76 @@
             <option value="15">15 people</option>
           </select>
 
+
+          <!-- AK Only -->
+          <div id='ak_loc_field' class="d-none effects-state-rules">
+            <label class="usa-label" for="ak_loc" id="ak_loc-label">
+              Region
+              <span class="field-required">
+                *required
+              </span>
+              <div id="ak_loc_error_elem"></div>
+            </label>
+            <div class="label-sub-text">
+              Select which region of Alaska you live in. <a href='http://dpaweb.hss.state.ak.us/e-forms/pdf/FSP-76.pdf'
+                target='_blank' rel="nofollow noopener noreferrer">Not sure?</a>
+            </div>
+
+            <select class="usa-select effects-state-rules" id="ak_loc" name="ak_loc">
+              <option value>- Select -</option>
+              <option value="C">Central</option>
+              <option value="N">Northern</option>
+              <option value="NW">Northwest</option>
+              <option value="SC">Southcentral</option>
+              <option value="SE">Southeast</option>
+              <option value="SW">Southwest</option>
+            </select>
+          </div>
+
+          <!-- AK Only -->
+          <div id='ak_urban_field' class="d-none effects-state-rules">
+            <label class="usa-label" for="ak_urban" id="ak_urban-label">
+              Do you live in an urban or rural area?
+              <span class="field-required">
+                *required
+              </span>
+              <div id="ak_urban_error_elem"></div>
+            </label>
+            <div class="label-sub-text">
+              Select what type of city or village you live in. <a
+                href='http://dpaweb.hss.state.ak.us/main/manual/FSP/addendum1.pdf' target='_blank'
+                rel="nofollow noopener noreferrer">Not sure?</a>
+            </div>
+
+            <select class="usa-select effects-state-rules" id="ak_urban" name="ak_urban">
+              <option value>- Select -</option>
+              <option value="U">Urban</option>
+              <option value="R1">Rural 1</option>
+              <option value="R2">Rural 2</option>
+            </select>
+          </div>
+
+          <!-- NY Only -->
+          <div id='ny_loc_field' class="d-none effects-state-rules">
+            <label class="usa-label" for="ny_loc" id="ny_loc-label">
+              Region
+              <span class="field-required">
+                *required
+              </span>
+              <div id="ny_loc_error_elem"></div>
+            </label>
+            <div class="label-sub-text">
+              Select which region of New York you live in.
+            </div>
+
+            <select class="usa-select effects-state-rules" id="ny_loc" name="ny_loc">
+              <option value>- Select -</option>
+              <option value="NYC">New York City</option>
+              <option value="NAS">Nassau and Suffolk Counties</option>
+              <option value="ONY">Rest of New York State</option>
+            </select>
+          </div>
+
           <!-- NH only -->
           <fieldset id='household_includes_dependent_child_field' class="usa-fieldset d-none effects-state-rules">
             <legend>

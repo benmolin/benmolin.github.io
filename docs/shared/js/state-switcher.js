@@ -188,7 +188,19 @@ function stateSpecialRules(stateAbbr,
 
     // AK
     if (['AK'].indexOf(stateAbbr) > -1) {
+        $('#ak_loc_field').removeClass('d-none');
+        if ($('#ak_loc').val() != '') {
+            AK_AREA = $('#ak_loc').val();
+        };
+
+        $('#ak_urban_field').removeClass('d-none');
+        if ($('#ak_urban').val() != '') {
+            AK_URBAN = $('#ak_urban').val();
+        };
         return stateAbbr + '_' + AK_AREA + '_' + AK_URBAN;
+    } else {
+        $('#ak_loc_field').addClass('d-none');
+        $('#ak_urban_field').addClass('d-none');
     };
     // AZ, VA
     if (['AZ', 'VA'].indexOf(stateAbbr) > -1) {
@@ -230,6 +242,10 @@ function stateSpecialRules(stateAbbr,
     // NY
     if (['NY'].indexOf(stateAbbr) > -1) {
         $('#household_includes_dependent_child_field').removeClass('d-none');
+        $('#ny_loc_field').removeClass('d-none');
+        if ($('#ny_loc').val() != '') {
+            NY_AREA = $('#ny_loc').val();
+        };
         var HAS_EARNED_INCOME = parseInt($('#monthly_job_income').val()) > 0;
         if (HAS_DEPENDENT_CHILD) {
             return 'NY_' + NY_AREA + '_DC';
@@ -238,6 +254,8 @@ function stateSpecialRules(stateAbbr,
         } else {
             return 'NY_' + NY_AREA + '_XX';
         };
+    } else {
+        $('#ny_loc_field').addClass('d-none');
     };
     // NC
     if (['NC'].indexOf(stateAbbr) > -1) {

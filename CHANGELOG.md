@@ -13,6 +13,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Full data for all states (usually 2021)
 - Max/min allotments, shelter deduction, FPL info for 2021
 - Added the Alaska Urban / Rural designation inside API for max/min allotments
+- Added HTML fields for area for AK and NY, asking for the region client lives in
 
 ### Changed
 - Made the year a variable, re [pull request 33 from main](https://github.com/18F/snap-js-api-prototype/commit/e60b6453f7f3ce85d68ac51b7f0bbac9df1db48c)

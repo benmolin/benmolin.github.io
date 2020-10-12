@@ -27,8 +27,6 @@ export class FetchMaxAllotment {
             this.state_or_territory = this.state_or_territory.substring(0, 2);
         };
 
-        console.log(this.state_or_territory);
-
         return (NON_DEFAULT_STATES_TERRITORIES.indexOf(this.state_or_territory) > -1)
             ? this.state_or_territory
             : 'DEFAULT';
