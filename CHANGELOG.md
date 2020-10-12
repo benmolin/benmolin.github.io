@@ -20,6 +20,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Max/min allotments, shelter deduction: changed Guam and Virgin Islands to GU and VI
 - Fixed a couple typos
 - Changed ``MatchShelterDeduction`` to ``MaxShelterDeduction``
+- Note that pandemic increase might not apply [full list of states](https://www.cbpp.org/research/food-assistance/states-are-using-much-needed-temporary-flexibility-in-snap-to-respond-to)
 
 ### Deleted
 - Removed ``standard_medical_deduction_ceiling`` as it is a constant $35 above the amount (redundant)

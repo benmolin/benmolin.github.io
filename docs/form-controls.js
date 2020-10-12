@@ -433,7 +433,7 @@
                 const additional_amount = emergency_allotment_estimated_benefit - estimated_monthly_benefit;
 
                 html += (
-                    `<p>If you apply and are approved, your benefit may be $${estimated_monthly_benefit} per month.</p><p>Due to the current pandemic, you could receive an additional $${additional_amount} per month. (This additional amount is temporary.)</p>`
+                    `<p>If you apply and are approved, your benefit may be $${estimated_monthly_benefit} per month.</p><p>Due to the current pandemic, you could receive an additional $${additional_amount} per month. (This additional amount is temporary, and this benefit may have expired in your state.)</p>`
                 );
                 // If no emergency allotments, or EA is the same as regular benefit amount:
             } else {
