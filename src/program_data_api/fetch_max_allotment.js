@@ -7,17 +7,27 @@ export class FetchMaxAllotment {
     constructor(inputs) {
         this.state_or_territory = inputs.state_or_territory;
         this.household_size = inputs.household_size;
+        this.target_year = inputs.target_year;
     }
 
     state_lookup_key() {
         const NON_DEFAULT_STATES_TERRITORIES = [
-            'AK_URBAN', // TODO (ARS): Handle AK regions.
-            'AK_RURAL_1', // TODO (ARS): Handle AK regions.
-            'AK_RURAL_2', // TODO (ARS): Handle AK regions.
+            'AK__U',
+            'AK_R1',
+            'AK_R2',
             'HI',
-            'GUAM',
-            'VIRGIN_ISLANDS',
+            'GU',
+            'VI',
         ];
+
+        // If AK, add the region
+        if (this.state_or_territory.substring(0, 2) == 'AK') {
+            this.state_or_territory = this.state_or_territory.substring(0, 2) + '_' + this.state_or_territory.substring(this.state_or_territory.length - 2, this.state_or_territory.length);
+        } else {
+            this.state_or_territory = this.state_or_territory.substring(0, 2);
+        };
+
+        console.log(this.state_or_territory);
 
         return (NON_DEFAULT_STATES_TERRITORIES.indexOf(this.state_or_territory) > -1)
             ? this.state_or_territory
@@ -26,7 +36,7 @@ export class FetchMaxAllotment {
 
     calculate() {
         const state_lookup_key = this.state_lookup_key();
-        const scale = MAX_ALLOTMENTS[state_lookup_key][2020];
+        const scale = MAX_ALLOTMENTS[state_lookup_key][this.target_year];
 
         if (0 < this.household_size && this.household_size < 9) {
             return scale[this.household_size];

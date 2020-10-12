@@ -7,10 +7,13 @@ export class MedicalExpensesDeduction {
         this.medical_expenses_for_elderly_or_disabled = inputs.medical_expenses_for_elderly_or_disabled;
         this.standard_medical_deduction = inputs.standard_medical_deduction;
         this.standard_medical_deduction_amount = inputs.standard_medical_deduction_amount;
-        this.standard_medical_deduction_ceiling = inputs.standard_medical_deduction_ceiling;
     }
 
     calculate() {
+        if (this.standard_medical_deduction) {
+            this.standard_medical_deduction_ceiling = this.standard_medical_deduction_amount + 35;
+        }
+
         const explanation = [
             'Next, deduct monthly medical expenses for elderly or disabled household members beyond $35. '
         ];

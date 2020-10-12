@@ -1,6 +1,6 @@
 export const MAX_ALLOTMENTS = {
-    // http://dpaweb.hss.state.ak.us/e-forms/pdf/FSP%2076%20(06-4127)%20rev%2009.20%20ADA.pdf
-    'AK_RURAL_1': {
+    // https://www.fns.usda.gov/snap/allotment/COLA
+    'AK_R1': {
         '2021': {
             '1': 320,
             '2': 587,
@@ -13,7 +13,7 @@ export const MAX_ALLOTMENTS = {
             'each_additional': 240
         }
     },
-    'AK_RURAL_2': {
+    'AK_R2': {
         '2021': {
             '1': 390,
             '2': 715,
@@ -26,7 +26,7 @@ export const MAX_ALLOTMENTS = {
             'each_additional': 293
         }
     },
-    'AK_URBAN': {
+    'AK__U': {
         '2021': {
             '1': 251,
             '2': 460,
@@ -40,6 +40,17 @@ export const MAX_ALLOTMENTS = {
         }
     },
     'DEFAULT': {
+        '2021': {
+            '1': 204,
+            '2': 374,
+            '3': 535,
+            '4': 680,
+            '5': 807,
+            '6': 969,
+            '7': 1071,
+            '8': 1224,
+            'each_additional': 153
+        },
         '2020': {
             '1': 194,
             '2': 355,
@@ -52,43 +63,43 @@ export const MAX_ALLOTMENTS = {
             'each_additional': 146
         }
     },
-    'GUAM': {
-        '2020': {
-            '1': null,
-            '2': null,
-            '3': null,
-            '4': null,
-            '5': null,
-            '6': null,
-            '7': null,
-            '8': null,
-            'each_additional': null
+    'GU': {
+        '2021': {
+            '1': 300,
+            '2': 551,
+            '3': 789,
+            '4': 1002,
+            '5': 1190,
+            '6': 1428,
+            '7': 1579,
+            '8': 1804,
+            'each_additional': 226
         }
     },
     'HI': {
-        '2020': {
-            '1': null,
-            '2': null,
-            '3': null,
-            '4': null,
-            '5': null,
-            '6': null,
-            '7': null,
-            '8': null,
-            'each_additional': null
+        '2021': {
+            '1': 375,
+            '2': 688,
+            '3': 986,
+            '4': 1252,
+            '5': 1487,
+            '6': 1784,
+            '7': 1972,
+            '8': 2254,
+            'each_additional': 282
         }
     },
-    'VIRGIN_ISLANDS': {
-        '2020': {
-            '1': null,
-            '2': null,
-            '3': null,
-            '4': null,
-            '5': null,
-            '6': null,
-            '7': null,
-            '8': null,
-            'each_additional': null
+    'VI': {
+        '2021': {
+            '1': 262,
+            '2': 481,
+            '3': 688,
+            '4': 874,
+            '5': 1038,
+            '6': 1246,
+            '7': 1377,
+            '8': 1574,
+            'each_additional': 197,
         }
     }
 };

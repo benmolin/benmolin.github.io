@@ -35,7 +35,7 @@ export class AssetTest {
                 'name': 'Asset Test',
                 'result': below_resource_limit,
                 'explanation': [
-                    `Since the household includes an elderly or disabled member and has gross income above 200% of the federal poverty guidelines, ${this.state_or_territory} requires the household pass a $3500 asset limit. ` + explanation
+                    `Since the household includes an elderly or disabled member and has gross income above 200% of the federal poverty guidelines, ${this.state_or_territory.substring(0, 2)} requires the household pass a $3500 asset limit. ` + explanation
                 ],
                 'sort_order': 4,
                 'type': 'test'
@@ -50,7 +50,7 @@ export class AssetTest {
                 'name': 'Asset Test',
                 'result': true,
                 'explanation': [
-                    `${this.state_or_territory} does not have an asset test for SNAP eligibility.`
+                    `${this.state_or_territory.substring(0, 2)} does not have an asset test for SNAP eligibility.`
                 ],
                 'sort_order': 4,
                 'type': 'test'

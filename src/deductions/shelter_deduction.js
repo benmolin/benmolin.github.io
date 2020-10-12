@@ -1,7 +1,8 @@
-import { FetchMatchShelterDeductions } from '../program_data_api/fetch_max_shelter_deductions.js';
+import { FetchMaxShelterDeductions } from '../program_data_api/fetch_max_shelter_deductions.js';
 
 export class ShelterDeduction {
     constructor(inputs) {
+        this.target_year = inputs.target_year;
         this.adjusted_income = inputs.adjusted_income;
         this.rent_or_mortgage = inputs.rent_or_mortgage;
         this.homeowners_insurance_and_taxes = inputs.homeowners_insurance_and_taxes;
@@ -98,9 +99,10 @@ export class ShelterDeduction {
 
         // If household does not include an elderly or disabled person,
         // check to see if the deduction amount would be above the limit.
-        const maximum_shelter_deduction = new FetchMatchShelterDeductions({
+        const maximum_shelter_deduction = new FetchMaxShelterDeductions({
             'state_or_territory': this.state_or_territory,
             'household_size': this.household_size,
+            'target_year': this.target_year,
         }).calculate();
 
         if (raw_deduction_amount > maximum_shelter_deduction) {

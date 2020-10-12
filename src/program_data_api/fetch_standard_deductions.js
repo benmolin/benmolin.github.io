@@ -5,8 +5,9 @@ export class FetchStandardDeductions {
     // and fiscal year.
 
     constructor(inputs) {
-        this.state_or_territory = inputs.state_or_territory;
+        this.state_or_territory = inputs.state_or_territory.substring(0, 2);
         this.household_size = inputs.household_size;
+        this.target_year = inputs.target_year;
     }
 
     state_lookup_key() {
@@ -14,8 +15,8 @@ export class FetchStandardDeductions {
             'AK',
             'HI',
             'IL',
-            'GUAM',
-            'VIRGIN_ISLANDS',
+            'GU',
+            'VI',
         ];
 
         return (NON_DEFAULT_STATES_TERRITORIES.indexOf(this.state_or_territory) > -1)
@@ -25,7 +26,7 @@ export class FetchStandardDeductions {
 
     calculate() {
         const state_lookup_key = this.state_lookup_key();
-        const scale = STANDARD_DEDUCTIONS[state_lookup_key][2020];
+        const scale = STANDARD_DEDUCTIONS[state_lookup_key][this.target_year];
 
         if (0 < this.household_size && this.household_size < 7) {
             return scale[this.household_size];

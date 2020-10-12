@@ -8,6 +8,20 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 - Check up on COVID Snap max allotments
 
+# 2020-10-12
+### Added 
+- Full data for all states (usually 2021)
+- Max/min allotments, shelter deduction, FPL info for 2021
+- Added the Alaska Urban / Rural designation inside API for max/min allotments
+
+### Changed
+- Made the year a variable, re [pull request 33 from main](https://github.com/18F/snap-js-api-prototype/commit/e60b6453f7f3ce85d68ac51b7f0bbac9df1db48c)
+- Max/min allotments, shelter deduction: changed Guam and Virgin Islands to GU and VI
+- Fixed a couple typos
+- Changed ``MatchShelterDeduction`` to ``MaxShelterDeduction``
+
+### Deleted
+- Removed ``standard_medical_deduction_ceiling`` as it is a constant $35 above the amount (redundant)
 
 ## 2020-10-02
 ### Added

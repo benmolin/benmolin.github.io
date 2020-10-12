@@ -37,6 +37,7 @@ interface SnapEstimateInputs {
     utility_water:  boolean;
     court_ordered_child_support_payments?: ?number;
     use_emergency_allotment: boolean;
+    target_year: ?number;
 }
 */
 
@@ -62,6 +63,7 @@ export class SnapEstimate {
     utility_sewage:  boolean;
     utility_trash:  boolean;
     utility_water:  boolean;
+    target_year: ?number;
 
     // State Options
     state_options: Object;
@@ -73,7 +75,6 @@ export class SnapEstimate {
     net_monthly_income_limit: number;
     standard_medical_deduction: boolean;
     standard_medical_deduction_amount: number;
-    standard_medical_deduction_ceiling: number;
     standard_utility_allowances: Object;
 
     // Calculated
@@ -111,8 +112,9 @@ export class SnapEstimate {
         this.utility_sewage = inputs.utility_sewage;
         this.utility_trash = inputs.utility_trash;
         this.utility_water = inputs.utility_water;
+        this.target_year = 2021;
 
-        const state_options = STATE_OPTIONS[this.state_or_territory][2020];
+        const state_options = STATE_OPTIONS[this.state_or_territory][this.target_year];
         this.uses_bbce = state_options.uses_bbce;
         const uses_bbce = state_options.uses_bbce;
 
@@ -135,13 +137,13 @@ export class SnapEstimate {
         this.child_support_payments_treatment = state_options['child_support_payments_treatment'];
         this.standard_medical_deduction = state_options['standard_medical_deduction'];
         this.standard_medical_deduction_amount = state_options['standard_medical_deduction_amount'];
-        this.standard_medical_deduction_ceiling = state_options['standard_medical_deduction_ceiling'];
         this.standard_utility_allowances = state_options['standard_utility_allowances'];
         this.has_resource_limit_elderly_or_disabled_income_twice_fpl = state_options['has_resource_limit_elderly_or_disabled_income_twice_fpl'];
 
         this.net_monthly_income_limit = new FetchIncomeLimit({
             'state_or_territory': this.state_or_territory,
             'household_size': this.household_size,
+            'target_year': this.target_year,
         }).income_limit_lookup();
     }
 
@@ -174,6 +176,7 @@ export class SnapEstimate {
             'is_eligible': this.estimated_eligibility,
             'net_income': this.net_income,
             'use_emergency_allotment': (this.use_emergency_allotment || false),
+            'target_year': this.target_year,
         });
 
         const benefit_amount_calculation = benefit_amount_estimate.calculate();
@@ -237,6 +240,7 @@ export class SnapEstimate {
 
     calculate_net_income() {
         return new NetIncome({
+            'target_year': this.target_year,
             'household_includes_elderly_or_disabled': this.household_includes_elderly_or_disabled,
             'gross_income': this.gross_income,
             'state_or_territory': this.state_or_territory,
@@ -246,7 +250,6 @@ export class SnapEstimate {
             'medical_expenses_for_elderly_or_disabled': this.medical_expenses_for_elderly_or_disabled,
             'standard_medical_deduction': this.standard_medical_deduction,
             'standard_medical_deduction_amount': this.standard_medical_deduction_amount,
-            'standard_medical_deduction_ceiling': this.standard_medical_deduction_ceiling,
             'rent_or_mortgage': this.rent_or_mortgage,
             'homeowners_insurance_and_taxes': this.homeowners_insurance_and_taxes,
 

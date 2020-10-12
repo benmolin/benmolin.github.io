@@ -6,7 +6,7 @@ type StateOptions = {
 }
 
 type StateYearOption = {
-    '2020': IndividualStateOption;
+    '2021': IndividualStateOption;
 }
 
 type IndividualStateOption = {
@@ -20,497 +20,475 @@ type IndividualStateOption = {
     child_support_payments_treatment: string;
     standard_medical_deduction: boolean;
     standard_medical_deduction_amount: number;
-    standard_medical_deduction_ceiling: number;
     standard_utility_allowances: {};
 }
 */
 
 export const STATE_OPTIONS /*: StateOptions */ = {
     "AK_C_U": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 397,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 100,
+                "GAS": 0,
+                "WATER": 51,
+                "SEWAGE": 53,
+                "TRASH": 0,
+                "PHONE": 34
             }
         }
     },
     "AK_N_U": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 624,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 149,
+                "GAS": 0,
+                "WATER": 33,
+                "SEWAGE": 39,
+                "TRASH": 0,
+                "PHONE": 24
             }
         }
     },
     "AK_NW_U": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 850,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 158,
+                "GAS": 0,
+                "WATER": 68,
+                "SEWAGE": 58,
+                "TRASH": 0,
+                "PHONE": 31
             }
         }
     },
     "AK_SC_U": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 511,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 145,
+                "GAS": 0,
+                "WATER": 55,
+                "SEWAGE": 71,
+                "TRASH": 0,
+                "PHONE": 23
             }
         }
     },
     "AK_SE_U": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 407,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 88,
+                "GAS": 0,
+                "WATER": 46,
+                "SEWAGE": 74,
+                "TRASH": 0,
+                "PHONE": 21
             }
         }
     },
     "AK_SW_U": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 809,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 218,
+                "GAS": 0,
+                "WATER": 58,
+                "SEWAGE": 62,
+                "TRASH": 0,
+                "PHONE": 20
             }
         }
     },
     "AK_C_R1": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 397,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 100,
+                "GAS": 0,
+                "WATER": 51,
+                "SEWAGE": 53,
+                "TRASH": 0,
+                "PHONE": 34
             }
         }
     },
     "AK_N_R1": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 624,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 149,
+                "GAS": 0,
+                "WATER": 33,
+                "SEWAGE": 39,
+                "TRASH": 0,
+                "PHONE": 24
             }
         }
     },
     "AK_NW_R1": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 850,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 158,
+                "GAS": 0,
+                "WATER": 68,
+                "SEWAGE": 58,
+                "TRASH": 0,
+                "PHONE": 31
             }
         }
     },
     "AK_SC_R1": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 511,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 145,
+                "GAS": 0,
+                "WATER": 55,
+                "SEWAGE": 71,
+                "TRASH": 0,
+                "PHONE": 23
             }
         }
     },
     "AK_SE_R1": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 407,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 88,
+                "GAS": 0,
+                "WATER": 46,
+                "SEWAGE": 74,
+                "TRASH": 0,
+                "PHONE": 21
             }
         }
     },
     "AK_SW_R1": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 809,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 218,
+                "GAS": 0,
+                "WATER": 58,
+                "SEWAGE": 62,
+                "TRASH": 0,
+                "PHONE": 20
             }
         }
     },
     "AK_C_R2": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 397,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 100,
+                "GAS": 0,
+                "WATER": 51,
+                "SEWAGE": 53,
+                "TRASH": 0,
+                "PHONE": 34
             }
         }
     },
     "AK_N_R2": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 624,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 149,
+                "GAS": 0,
+                "WATER": 33,
+                "SEWAGE": 39,
+                "TRASH": 0,
+                "PHONE": 24
             }
         }
     },
     "AK_NW_R2": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 850,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 158,
+                "GAS": 0,
+                "WATER": 68,
+                "SEWAGE": 58,
+                "TRASH": 0,
+                "PHONE": 31
             }
         }
     },
     "AK_SC_R2": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 511,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 145,
+                "GAS": 0,
+                "WATER": 55,
+                "SEWAGE": 71,
+                "TRASH": 0,
+                "PHONE": 23
             }
         }
     },
     "AK_SE_R2": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 407,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 88,
+                "GAS": 0,
+                "WATER": 46,
+                "SEWAGE": 74,
+                "TRASH": 0,
+                "PHONE": 21
             }
         }
     },
     "AK_SW_R2": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 809,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 218,
+                "GAS": 0,
+                "WATER": 58,
+                "SEWAGE": 62,
+                "TRASH": 0,
+                "PHONE": 20
             }
         }
     },
-    "AR_HH1_3": {
-        "2020": {
+    "AZ_HH1_3": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.85,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 295,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 41
             }
         }
     },
-    "AR_HH4_X": {
-        "2020": {
+    "AZ_HH4_X": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.85,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 399,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 41
             }
         }
     },
-    "AK": {
-        "2020": {
+    "AR": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 284,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 50
             }
         }
     },
     "CA": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
@@ -519,10 +497,9 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "child_support_payments_treatment": "EXCLUDE",
             "standard_medical_deduction": true,
             "standard_medical_deduction_amount": 120,
-            "standard_medical_deduction_ceiling": 155,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 432,
-                "BASIC_LIMITED_ALLOWANCE": 135,
+                "HEATING_AND_COOLING": 438,
+                "BASIC_LIMITED_ALLOWANCE": 139,
                 "ELECTRICITY": 0,
                 "GAS": 0,
                 "WATER": 0,
@@ -533,99 +510,95 @@ export const STATE_OPTIONS /*: StateOptions */ = {
         }
     },
     "CO": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
-            "child_support_payments_treatment": null,
-            "standard_medical_deduction": false,
-            "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
+            "child_support_payments_treatment": "EXCLUDE",
+            "standard_medical_deduction": true,
+            "standard_medical_deduction_amount": 165,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 486,
+                "BASIC_LIMITED_ALLOWANCE": 310,
+                "ELECTRICITY": 58,
+                "GAS": 58,
+                "WATER": 58,
+                "SEWAGE": 58,
+                "TRASH": 58,
+                "PHONE": 79
             }
         }
     },
     "CT": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.85,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 736,
+                "BASIC_LIMITED_ALLOWANCE": 324,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 27
             }
         }
     },
     "DE": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "EXCLUDE",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 417,
+                "BASIC_LIMITED_ALLOWANCE": 289,
+                "ELECTRICITY": 78,
+                "GAS": 78,
+                "WATER": 78,
+                "SEWAGE": 78,
+                "TRASH": 78,
+                "PHONE": 37
             }
         }
     },
     "undefined": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
-            "gross_income_limit_factor": 1.75,
+            "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
-            "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
-            "child_support_payments_treatment": null,
+            "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 331,
+                "BASIC_LIMITED_ALLOWANCE": 276,
+                "ELECTRICITY": 69,
+                "GAS": 69,
+                "WATER": 69,
+                "SEWAGE": 69,
+                "TRASH": 69,
+                "PHONE": 69
             }
         }
     },
     "FL": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
@@ -634,7 +607,6 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
                 "HEATING_AND_COOLING": 370,
                 "BASIC_LIMITED_ALLOWANCE": 293,
@@ -648,467 +620,447 @@ export const STATE_OPTIONS /*: StateOptions */ = {
         }
     },
     "GA": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.3,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 378,
+                "BASIC_LIMITED_ALLOWANCE": 329,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 43
             }
         }
     },
     "GU_HH1": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.65,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 133,
+                "GAS": 30,
+                "WATER": 38,
+                "SEWAGE": 28,
+                "TRASH": 30,
+                "PHONE": 27
             }
         }
     },
     "GU_HH2": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.65,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 153,
+                "GAS": 30,
+                "WATER": 50,
+                "SEWAGE": 28,
+                "TRASH": 30,
+                "PHONE": 27
             }
         }
     },
     "GU_HH3": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.65,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 153,
+                "GAS": 30,
+                "WATER": 50,
+                "SEWAGE": 28,
+                "TRASH": 30,
+                "PHONE": 27
             }
         }
     },
     "GU_HH4": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.65,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 183,
+                "GAS": 60,
+                "WATER": 69,
+                "SEWAGE": 28,
+                "TRASH": 30,
+                "PHONE": 27
             }
         }
     },
     "GU_HH5": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.65,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 207,
+                "GAS": 60,
+                "WATER": 85,
+                "SEWAGE": 28,
+                "TRASH": 30,
+                "PHONE": 27
             }
         }
     },
     "GU_HH6": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.65,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 237,
+                "GAS": 60,
+                "WATER": 111,
+                "SEWAGE": 28,
+                "TRASH": 30,
+                "PHONE": 27
             }
         }
     },
     "GU_HH7": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.65,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 269,
+                "GAS": 90,
+                "WATER": 136,
+                "SEWAGE": 28,
+                "TRASH": 30,
+                "PHONE": 27
             }
         }
     },
     "GU_HH8": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.65,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 281,
+                "GAS": 90,
+                "WATER": 150,
+                "SEWAGE": 28,
+                "TRASH": 30,
+                "PHONE": 27
             }
         }
     },
     "GU_HH9": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.65,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 301,
+                "GAS": 90,
+                "WATER": 171,
+                "SEWAGE": 28,
+                "TRASH": 30,
+                "PHONE": 27
             }
         }
     },
     "GU_HH10": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.65,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 301,
+                "GAS": 90,
+                "WATER": 171,
+                "SEWAGE": 28,
+                "TRASH": 30,
+                "PHONE": 27
             }
         }
     },
     "GU_HH11": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.65,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 309,
+                "GAS": 90,
+                "WATER": 178,
+                "SEWAGE": 28,
+                "TRASH": 30,
+                "PHONE": 27
             }
         }
     },
     "GU_HH12_X": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.65,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 309,
+                "GAS": 90,
+                "WATER": 178,
+                "SEWAGE": 28,
+                "TRASH": 30,
+                "PHONE": 27
             }
         }
     },
     "HI_HH1": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 193,
+                "GAS": 0,
+                "WATER": 45,
+                "SEWAGE": 88,
+                "TRASH": 0,
+                "PHONE": 27
             }
         }
     },
     "HI_HH2": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 209,
+                "GAS": 0,
+                "WATER": 50,
+                "SEWAGE": 88,
+                "TRASH": 0,
+                "PHONE": 27
             }
         }
     },
     "HI_HH3": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 240,
+                "GAS": 0,
+                "WATER": 55,
+                "SEWAGE": 88,
+                "TRASH": 0,
+                "PHONE": 27
             }
         }
     },
     "HI_HH_4_5": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 297,
+                "GAS": 0,
+                "WATER": 65,
+                "SEWAGE": 88,
+                "TRASH": 0,
+                "PHONE": 27
             }
         }
     },
     "HI_HH_6": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 349,
+                "GAS": 0,
+                "WATER": 75,
+                "SEWAGE": 88,
+                "TRASH": 0,
+                "PHONE": 27
             }
         }
     },
     "HI_HH_7_X": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 394,
+                "GAS": 0,
+                "WATER": 90,
+                "SEWAGE": 88,
+                "TRASH": 0,
+                "PHONE": 27
             }
         }
     },
     "ID": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.3,
             "resource_limit_non_elderly_or_disabled": 5000,
             "resource_limit_elderly_or_disabled": 5000,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
-            "standard_medical_deduction": false,
-            "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
+            "child_support_payments_treatment": "DEDUCT",
+            "standard_medical_deduction": true,
+            "standard_medical_deduction_amount": 144,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 368,
+                "BASIC_LIMITED_ALLOWANCE": 303,
+                "ELECTRICITY": 134,
+                "GAS": 134,
+                "WATER": 134,
+                "SEWAGE": 134,
+                "TRASH": 134,
+                "PHONE": 35
             }
         }
     },
     "IL": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.65,
             "resource_limit_non_elderly_or_disabled": null,
@@ -1117,7 +1069,6 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "child_support_payments_treatment": "EXCLUDE",
             "standard_medical_deduction": true,
             "standard_medical_deduction_amount": 200,
-            "standard_medical_deduction_ceiling": 200,
             "standard_utility_allowances": {
                 "HEATING_AND_COOLING": 478,
                 "BASIC_LIMITED_ALLOWANCE": 328,
@@ -1131,7 +1082,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
         }
     },
     "IN": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.3,
             "resource_limit_non_elderly_or_disabled": 5000,
@@ -1140,7 +1091,6 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
                 "HEATING_AND_COOLING": 412,
                 "BASIC_LIMITED_ALLOWANCE": 250,
@@ -1154,122 +1104,117 @@ export const STATE_OPTIONS /*: StateOptions */ = {
         }
     },
     "IA": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.6,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
-            "standard_medical_deduction": false,
-            "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
+            "child_support_payments_treatment": "EXCLUDE",
+            "standard_medical_deduction": true,
+            "standard_medical_deduction_amount": 110,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 496,
+                "BASIC_LIMITED_ALLOWANCE": 316,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 29
             }
         }
     },
     "KS": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
-            "standard_medical_deduction": false,
-            "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
+            "child_support_payments_treatment": "DEDUCT",
+            "standard_medical_deduction": true,
+            "standard_medical_deduction_amount": 140,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 357,
+                "BASIC_LIMITED_ALLOWANCE": 243,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 36
             }
         }
     },
     "KY": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 329,
+                "BASIC_LIMITED_ALLOWANCE": 281,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 45
             }
         }
     },
     "LA": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.3,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "EXCLUDE",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 356,
+                "BASIC_LIMITED_ALLOWANCE": 196,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 43
             }
         }
     },
     "ME": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.85,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "EXCLUDE",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 782,
+                "BASIC_LIMITED_ALLOWANCE": 264,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 45
             }
         }
     },
     "MD": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
@@ -1278,7 +1223,6 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
                 "HEATING_AND_COOLING": 392,
                 "BASIC_LIMITED_ALLOWANCE": 240,
@@ -1292,145 +1236,139 @@ export const STATE_OPTIONS /*: StateOptions */ = {
         }
     },
     "MA": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
-            "child_support_payments_treatment": null,
-            "standard_medical_deduction": false,
-            "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
+            "child_support_payments_treatment": "DEDUCT",
+            "standard_medical_deduction": true,
+            "standard_medical_deduction_amount": 155,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 646,
+                "BASIC_LIMITED_ALLOWANCE": 396,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 45
             }
         }
     },
     "MI": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": 15000,
             "resource_limit_elderly_or_disabled": 15000,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 543,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 135,
+                "GAS": 44,
+                "WATER": 91,
+                "SEWAGE": 91,
+                "TRASH": 19,
+                "PHONE": 31
             }
         }
     },
     "MN": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.65,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 496,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 154,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 56
             }
         }
     },
     "MS": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 278,
+                "BASIC_LIMITED_ALLOWANCE": 206,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 31
             }
         }
     },
     "MO": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
-            "standard_medical_deduction": false,
-            "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
+            "child_support_payments_treatment": "DEDUCT",
+            "standard_medical_deduction": true,
+            "standard_medical_deduction_amount": 170,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 404,
+                "BASIC_LIMITED_ALLOWANCE": 319,
+                "ELECTRICITY": 131,
+                "GAS": 131,
+                "WATER": 131,
+                "SEWAGE": 131,
+                "TRASH": 131,
+                "PHONE": 65
             }
         }
     },
     "MT": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 546,
+                "BASIC_LIMITED_ALLOWANCE": 198,
+                "ELECTRICITY": 167,
+                "GAS": 167,
+                "WATER": 167,
+                "SEWAGE": 167,
+                "TRASH": 167,
+                "PHONE": 31
             }
         }
     },
     "NE": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.3,
             "resource_limit_non_elderly_or_disabled": 25000,
@@ -1439,7 +1377,6 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
                 "HEATING_AND_COOLING": 490,
                 "BASIC_LIMITED_ALLOWANCE": 256,
@@ -1453,66 +1390,63 @@ export const STATE_OPTIONS /*: StateOptions */ = {
         }
     },
     "NV": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 285,
+                "BASIC_LIMITED_ALLOWANCE": 252,
+                "ELECTRICITY": 56,
+                "GAS": 56,
+                "WATER": 56,
+                "SEWAGE": 56,
+                "TRASH": 56,
+                "PHONE": 29
             }
         }
     },
     "NH_DC_T": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.85,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 718,
+                "BASIC_LIMITED_ALLOWANCE": 262,
+                "ELECTRICITY": 154,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 28
             }
         }
     },
     "NH_DC_F": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
+                "HEATING_AND_COOLING": 718,
+                "BASIC_LIMITED_ALLOWANCE": 262,
+                "ELECTRICITY": 154,
                 "GAS": null,
                 "WATER": null,
                 "SEWAGE": null,
@@ -1522,30 +1456,29 @@ export const STATE_OPTIONS /*: StateOptions */ = {
         }
     },
     "NJ": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.85,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "EXCLUDE",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 542,
+                "BASIC_LIMITED_ALLOWANCE": 316,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 29
             }
         }
     },
     "NM": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.65,
             "resource_limit_non_elderly_or_disabled": null,
@@ -1554,435 +1487,416 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 340,
-                "BASIC_LIMITED_ALLOWANCE": 136,
+                "HEATING_AND_COOLING": 348,
+                "BASIC_LIMITED_ALLOWANCE": 140,
                 "ELECTRICITY": 0,
                 "GAS": 0,
                 "WATER": 0,
                 "SEWAGE": 0,
                 "TRASH": 0,
-                "PHONE": 44
+                "PHONE": 48
             }
         }
     },
     "NY_NAS_DC": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "EXCLUDE",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 744,
+                "BASIC_LIMITED_ALLOWANCE": 292,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 30
             }
         }
     },
     "NY_NYC_DC": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "EXCLUDE",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 801,
+                "BASIC_LIMITED_ALLOWANCE": 316,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 30
             }
         }
     },
     "NY_ONY_DC": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "EXCLUDE",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 661,
+                "BASIC_LIMITED_ALLOWANCE": 268,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 30
             }
         }
     },
     "NY_NAS_EI": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.5,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "EXCLUDE",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 744,
+                "BASIC_LIMITED_ALLOWANCE": 292,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 30
             }
         }
     },
     "NY_NYC_EI": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.5,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "EXCLUDE",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 801,
+                "BASIC_LIMITED_ALLOWANCE": 316,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 30
             }
         }
     },
     "NY_ONY_EI": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.5,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "EXCLUDE",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 661,
+                "BASIC_LIMITED_ALLOWANCE": 268,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 30
             }
         }
     },
     "NY_NAS_XX": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "EXCLUDE",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 744,
+                "BASIC_LIMITED_ALLOWANCE": 292,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 30
             }
         }
     },
     "NY_NYC_XX": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "EXCLUDE",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 801,
+                "BASIC_LIMITED_ALLOWANCE": 316,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 30
             }
         }
     },
     "NY_ONY_XX": {
-        "2020": {
-            "uses_bbce": true,
-            "gross_income_limit_factor": 1.65,
+        "2021": {
+            "uses_bbce": false,
+            "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
-            "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
+            "child_support_payments_treatment": "EXCLUDE",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 661,
+                "BASIC_LIMITED_ALLOWANCE": 268,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 30
             }
         }
     },
     "NC_HH1": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 440,
+                "BASIC_LIMITED_ALLOWANCE": 263,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 31
             }
         }
     },
     "NC_HH2": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 483,
+                "BASIC_LIMITED_ALLOWANCE": 289,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 31
             }
         }
     },
     "NC_HH3": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 531,
+                "BASIC_LIMITED_ALLOWANCE": 318,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 31
             }
         }
     },
     "NC_HH4": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 579,
+                "BASIC_LIMITED_ALLOWANCE": 347,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 31
             }
         }
     },
     "NC_HH5_X": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 631,
+                "BASIC_LIMITED_ALLOWANCE": 378,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 31
             }
         }
     },
     "ND": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
-            "standard_medical_deduction": false,
-            "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
+            "child_support_payments_treatment": "DEDUCT",
+            "standard_medical_deduction": true,
+            "standard_medical_deduction_amount": 165,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 616,
+                "BASIC_LIMITED_ALLOWANCE": 236,
+                "ELECTRICITY": 204,
+                "GAS": 204,
+                "WATER": 204,
+                "SEWAGE": 204,
+                "TRASH": 204,
+                "PHONE": 32
             }
         }
     },
     "OH": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.3,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 548,
+                "BASIC_LIMITED_ALLOWANCE": 355,
+                "ELECTRICITY": 79,
+                "GAS": 79,
+                "WATER": 79,
+                "SEWAGE": 79,
+                "TRASH": 79,
+                "PHONE": 38
             }
         }
     },
     "OK": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.3,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 355,
+                "BASIC_LIMITED_ALLOWANCE": 305,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 48
             }
         }
     },
     "OR": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.85,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
-            "standard_medical_deduction": false,
-            "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
+            "child_support_payments_treatment": "DEDUCT",
+            "standard_medical_deduction": true,
+            "standard_medical_deduction_amount": 170,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 442,
+                "BASIC_LIMITED_ALLOWANCE": 341,
+                "ELECTRICITY": 68,
+                "GAS": 68,
+                "WATER": 68,
+                "SEWAGE": 68,
+                "TRASH": 68,
+                "PHONE": 55
             }
         }
     },
     "PA": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.6,
             "resource_limit_non_elderly_or_disabled": null,
@@ -1991,389 +1905,394 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
                 "HEATING_AND_COOLING": 594,
                 "BASIC_LIMITED_ALLOWANCE": 308,
-                "ELECTRICITY": 58,
-                "GAS": 58,
-                "WATER": 58,
-                "SEWAGE": 58,
-                "TRASH": 58,
+                "ELECTRICITY": 59,
+                "GAS": 59,
+                "WATER": 59,
+                "SEWAGE": 59,
+                "TRASH": 59,
                 "PHONE": 33
             }
         }
     },
     "RI": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.85,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
-            "child_support_payments_treatment": null,
-            "standard_medical_deduction": false,
-            "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
+            "child_support_payments_treatment": "EXCLUDE",
+            "standard_medical_deduction": true,
+            "standard_medical_deduction_amount": 141,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 638,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 23
             }
         }
     },
     "SC": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.3,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
-            "child_support_payments_treatment": null,
-            "standard_medical_deduction": false,
-            "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
+            "child_support_payments_treatment": "DEDUCT",
+            "standard_medical_deduction": true,
+            "standard_medical_deduction_amount": 170,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 302,
+                "BASIC_LIMITED_ALLOWANCE": 215,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 25
             }
         }
     },
     "SD": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
-            "standard_medical_deduction": false,
-            "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
+            "child_support_payments_treatment": "EXCLUDE",
+            "standard_medical_deduction": true,
+            "standard_medical_deduction_amount": 165,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 732,
+                "BASIC_LIMITED_ALLOWANCE": 206,
+                "ELECTRICITY": 85,
+                "GAS": 85,
+                "WATER": 85,
+                "SEWAGE": 85,
+                "TRASH": 85,
+                "PHONE": 49
             }
         }
     },
     "TN_HH1": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 317,
+                "BASIC_LIMITED_ALLOWANCE": 136,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 28
             }
         }
     },
     "TN_HH2": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 328,
+                "BASIC_LIMITED_ALLOWANCE": 136,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 28
             }
         }
     },
     "TN_HH3": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 341,
+                "BASIC_LIMITED_ALLOWANCE": 136,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 28
             }
         }
     },
     "TN_HH4": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 353,
+                "BASIC_LIMITED_ALLOWANCE": 136,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 28
             }
         }
     },
     "TN_HH5": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 364,
+                "BASIC_LIMITED_ALLOWANCE": 136,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 28
             }
         }
     },
     "TN_HH6": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 376,
+                "BASIC_LIMITED_ALLOWANCE": 136,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 28
             }
         }
     },
     "TN_HH7": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 387,
+                "BASIC_LIMITED_ALLOWANCE": 136,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 28
             }
         }
     },
     "TN_HH8": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 399,
+                "BASIC_LIMITED_ALLOWANCE": 136,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 28
             }
         }
     },
     "TN_HH9": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 413,
+                "BASIC_LIMITED_ALLOWANCE": 136,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 28
             }
         }
     },
     "TN_HH10_X": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 423,
+                "BASIC_LIMITED_ALLOWANCE": 136,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 28
             }
         }
     },
     "TX": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.65,
             "resource_limit_non_elderly_or_disabled": 5000,
             "resource_limit_elderly_or_disabled": 5000,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
-            "standard_medical_deduction": false,
-            "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
+            "child_support_payments_treatment": "DEDUCT",
+            "standard_medical_deduction": true,
+            "standard_medical_deduction_amount": 137,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 360,
+                "BASIC_LIMITED_ALLOWANCE": 331,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 38
             }
         }
     },
     "UT": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 360,
+                "BASIC_LIMITED_ALLOWANCE": 283,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 64
             }
         }
     },
     "VT": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 1.85,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
+            "standard_medical_deduction": true,
+            "standard_medical_deduction_amount": 138,
+            "standard_utility_allowances": {
+                "HEATING_AND_COOLING": 822,
+                "BASIC_LIMITED_ALLOWANCE": 235,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 36
+            }
+        }
+    },
+    "VI": {
+        "2021": {
+            "uses_bbce": true,
+            "gross_income_limit_factor": 1.75,
+            "resource_limit_non_elderly_or_disabled": null,
+            "resource_limit_elderly_or_disabled": null,
+            "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 0,
+                "BASIC_LIMITED_ALLOWANCE": 0,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 32
             }
         }
     },
     "VA_HH1_3": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
@@ -2382,7 +2301,6 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": true,
             "standard_medical_deduction_amount": 200,
-            "standard_medical_deduction_ceiling": 235,
             "standard_utility_allowances": {
                 "HEATING_AND_COOLING": 303,
                 "BASIC_LIMITED_ALLOWANCE": 0,
@@ -2396,7 +2314,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
         }
     },
     "VA_HH4_X": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
@@ -2405,7 +2323,6 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": true,
             "standard_medical_deduction_amount": 200,
-            "standard_medical_deduction_ceiling": 235,
             "standard_utility_allowances": {
                 "HEATING_AND_COOLING": 379,
                 "BASIC_LIMITED_ALLOWANCE": 0,
@@ -2419,94 +2336,90 @@ export const STATE_OPTIONS /*: StateOptions */ = {
         }
     },
     "WA": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "EXCLUDE",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 430,
+                "BASIC_LIMITED_ALLOWANCE": 336,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 58
             }
         }
     },
     "WV": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 428,
+                "BASIC_LIMITED_ALLOWANCE": 281,
+                "ELECTRICITY": 76,
+                "GAS": 76,
+                "WATER": 76,
+                "SEWAGE": 76,
+                "TRASH": 76,
+                "PHONE": 76
             }
         }
     },
     "WI": {
-        "2020": {
+        "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": false,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 456,
+                "BASIC_LIMITED_ALLOWANCE": 318,
+                "ELECTRICITY": 141,
+                "GAS": 36,
+                "WATER": 87,
+                "SEWAGE": 0,
+                "TRASH": 22,
+                "PHONE": 30
             }
         }
     },
     "WY": {
-        "2020": {
+        "2021": {
             "uses_bbce": false,
             "gross_income_limit_factor": null,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
-            "child_support_payments_treatment": null,
+            "child_support_payments_treatment": "DEDUCT",
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
-            "standard_medical_deduction_ceiling": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": null,
-                "BASIC_LIMITED_ALLOWANCE": null,
-                "ELECTRICITY": null,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 399,
+                "BASIC_LIMITED_ALLOWANCE": 281,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 53
             }
         }
     }

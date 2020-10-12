@@ -1,5 +1,13 @@
 export const STANDARD_DEDUCTIONS = {
     'AK': {
+        '2021': {
+            '1': 286,
+            '2': 286,
+            '3': 286,
+            '4': 286,
+            '5': 286,
+            '6': 304
+        },
         '2020': {
             '1': 286,
             '2': 286,
@@ -10,6 +18,14 @@ export const STANDARD_DEDUCTIONS = {
         }
     },
     'DEFAULT': {
+        '2021': {
+            '1': 167,
+            '2': 167,
+            '3': 167,
+            '4': 181,
+            '5': 212,
+            '6': 243
+        },
         '2020': {
             '1': 167,
             '2': 167,
@@ -19,7 +35,15 @@ export const STANDARD_DEDUCTIONS = {
             '6': 240
         }
     },
-    'GUAM': {
+    'GU': {
+        '2021': {
+            '1': 336,
+            '2': 336,
+            '3': 336,
+            '4': 363,
+            '5': 425,
+            '6': 487
+        },
         '2020': {
             '1': 336,
             '2': 336,
@@ -30,6 +54,14 @@ export const STANDARD_DEDUCTIONS = {
         }
     },
     'HI': {
+        '2021': {
+            '1': 236,
+            '2': 236,
+            '3': 236,
+            '4': 236,
+            '5': 244,
+            '6': 280
+        },
         '2020': {
             '1': 236,
             '2': 236,
@@ -39,23 +71,15 @@ export const STANDARD_DEDUCTIONS = {
             '6': 275
         }
     },
-    // Why IL seems to use different deductions from the rest of the continental
-    // US isn't clear to me. I can't find anything about this in federal sources,
-    // but it seems to be confirmed by two different IL sources (IDHS and Legal
-    // Aid Chicago.)
-    'IL': {
-        '2020': {
-            '1': 160,
-            '2': 160,
-            '3': 160,
-            '4': 171,
-            '5': 202,
-            '6': 233,
-            '7': 233,
-            '8': 233
-        }
-    },
-    'VIRGIN_ISLANDS': {
+    'VI': {
+        '2021': {
+            '1': 147,
+            '2': 147,
+            '3': 150,
+            '4': 181,
+            '5': 212,
+            '6': 243
+        },
         '2020': {
             '1': 147,
             '2': 147,

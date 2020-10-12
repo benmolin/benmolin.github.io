@@ -1,6 +1,6 @@
 export const MIN_ALLOTMENTS = {
-    // http://dpaweb.hss.state.ak.us/e-forms/pdf/FSP%2076%20(06-4127)%20rev%2009.20%20ADA.pdf
-    'AK_RURAL_1': {
+    // https://www.fns.usda.gov/snap/allotment/COLA
+    'AK_R1': {
         '2021': {
             '1': 26,
             '2': 26
@@ -10,7 +10,7 @@ export const MIN_ALLOTMENTS = {
             '2': 24
         }
     },
-    'AK_RURAL_2': {
+    'AK_R2': {
         '2021': {
             '1': 31,
             '2': 31
@@ -20,7 +20,7 @@ export const MIN_ALLOTMENTS = {
             '2': 30
         }
     },
-    'AK_URBAN': {
+    'AK__U': {
         '2021': {
             '1': 20,
             '2': 20
@@ -31,24 +31,40 @@ export const MIN_ALLOTMENTS = {
         }
     },
     'DEFAULT': {
+        '2021': {
+            '1': 16,
+            '2': 16
+        },
         '2020': {
             '1': 16,
             '2': 16
         }
     },
-    'GUAM': {
+    'GU': {
+        '2021': {
+            '1': 24,
+            '2': 24
+        },
         '2020': {
             '1': 23,
             '2': 23
         }
     },
     'HI': {
+        '2021': {
+            '1': 30,
+            '2': 30
+        },
         '2020': {
             '1': 29,
             '2': 29
         }
     },
-    'VIRGIN_ISLANDS': {
+    'VI': {
+        '2021': {
+            '1': 21,
+            '2': 21
+        },
         '2020': {
             '1': 20,
             '2': 20

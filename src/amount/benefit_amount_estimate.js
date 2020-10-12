@@ -13,6 +13,7 @@ export class BenefitAmountEstimate {
         this.is_eligible = inputs.is_eligible;
         this.net_income = inputs.net_income;
         this.use_emergency_allotment = inputs.use_emergency_allotment;
+        this.target_year = inputs.target_year;
     }
 
     calculate() {
@@ -36,6 +37,7 @@ export class BenefitAmountEstimate {
         const max_allotment = new FetchMaxAllotment({
             'state_or_territory': this.state_or_territory,
             'household_size': this.household_size,
+            'target_year': this.target_year,
         }).calculate();
 
         const max_allotment_explanation = `The maximum allotment for this household is $${max_allotment}.`;
@@ -54,13 +56,14 @@ export class BenefitAmountEstimate {
         const min_allotment = new FetchMinAllotment({
             'state_or_territory': this.state_or_territory,
             'household_size': this.household_size,
+            'target_year': this.target_year,
         }).calculate();
 
         // Check if minimum allotment should be applied.
         if (min_allotment && min_allotment > estimated_benefit) {
             estimated_benefit = min_allotment;
 
-            const min_allotment_explanation = `There is a minimum monthly allotmnet for this household of $${min_allotment}.`;
+            const min_allotment_explanation = `There is a minimum monthly allotment for this household of $${min_allotment}.`;
             explanation.push(min_allotment_explanation);
             const min_allotment_applied_explanation = (
                 `Since the calculated benefit amount would be below the minimum allotment, apply the minimum allotment amount of $${min_allotment} instead.`
@@ -73,7 +76,7 @@ export class BenefitAmountEstimate {
             estimated_benefit = 0;
 
             const zero_benefit_explanation = (
-                'In this case, although the household is eligible, because of their income the calcuation results in zero estimated monthly benefit.'
+                'In this case, although the household is eligible, because of their income the calculation results in zero estimated monthly benefit.'
             );
             explanation.push(zero_benefit_explanation);
         }

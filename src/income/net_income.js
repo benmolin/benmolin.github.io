@@ -7,6 +7,7 @@ import { ChildSupportPaymentsDeduction } from '../deductions/child_support_payme
 
 export class NetIncome {
     constructor(inputs) {
+        this.target_year = inputs.target_year;
         this.household_includes_elderly_or_disabled = inputs.household_includes_elderly_or_disabled;
         this.gross_income = inputs.gross_income;
         this.state_or_territory = inputs.state_or_territory;
@@ -16,7 +17,6 @@ export class NetIncome {
         this.medical_expenses_for_elderly_or_disabled = inputs.medical_expenses_for_elderly_or_disabled;
         this.standard_medical_deduction = inputs.standard_medical_deduction;
         this.standard_medical_deduction_amount = inputs.standard_medical_deduction_amount;
-        this.standard_medical_deduction_ceiling = inputs.standard_medical_deduction_ceiling;
         this.rent_or_mortgage = inputs.rent_or_mortgage;
         this.homeowners_insurance_and_taxes = inputs.homeowners_insurance_and_taxes;
         this.utility_electricity = inputs.utility_electricity;
@@ -58,6 +58,7 @@ export class NetIncome {
         const standard_deduction = new StandardDeduction({
             'state_or_territory': this.state_or_territory,
             'household_size': this.household_size,
+            'target_year': this.target_year,
         }).calculate();
 
         const earned_income_deduction = new EarnedIncomeDeduction({
@@ -73,7 +74,6 @@ export class NetIncome {
             'medical_expenses_for_elderly_or_disabled': this.medical_expenses_for_elderly_or_disabled,
             'standard_medical_deduction': this.standard_medical_deduction,
             'standard_medical_deduction_amount': this.standard_medical_deduction_amount,
-            'standard_medical_deduction_ceiling': this.standard_medical_deduction_ceiling,
         }).calculate();
 
         const child_support_payments_deduction = new ChildSupportPaymentsDeduction({
@@ -105,6 +105,7 @@ export class NetIncome {
         );
 
         const shelter_deduction_calculation = new ShelterDeduction({
+            'target_year': this.target_year,
             'adjusted_income': adjusted_income_before_excess_shelter,
             'state_or_territory': this.state_or_territory,
             'household_size': this.household_size,
