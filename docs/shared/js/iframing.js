@@ -2,12 +2,18 @@ var queryString = window.location.search;
 var urlParams = new URLSearchParams(queryString);
 
 // State
-var stateAbbr = urlParams.get('state');
-if (stateAbbr == null) {
-    stateAbbr = 'PA';
-};
 var stateFull;
-switchStateOnPage(stateAbbr);
+var stateAbbr = urlParams.get('state');
+if (stateAbbr != null) {
+    switchStateOnPage(stateAbbr);
+} else {
+    $('.calculator').addClass('d-none');
+    $('#no-state-selected').removeClass('d-none');
+    $('#no-state-selector').on('change', function () {
+        var new_url = window.location.href + '?state=' + $('#no-state-selector').val();
+        window.location.replace(new_url);
+    });
+};
 
 // Phone number and email
 var contactPhone = urlParams.get('phone');

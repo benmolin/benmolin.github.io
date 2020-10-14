@@ -12,6 +12,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 # 2020-10-13
 ### Changed
 - Updated the learn more link
+- If you visit the page without selecting a state, it will have you select a state to be redirected to (SEO)
 
 # 2020-10-12
 ### Added 

@@ -300,3 +300,23 @@ header{
   color: #4a5568;
   padding-bottom: 30px;
 }
+
+#no-state-selected-title{
+  text-align: center;
+}
+
+#no-state-selected{
+  margin-top: 40px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+#no-state-selector{
+  margin-left: 5%;
+  width: 90%;
+  cursor: pointer;
+  margin: 0 auto;
+}
