@@ -13,6 +13,10 @@ if (stateAbbr != null) {
         var new_url = window.location.href + '?state=' + $('#no-state-selector').val();
         window.location.replace(new_url);
     });
+    $('#dev-state-change').on('change', function () {
+        var new_url = window.location.href + '?state=' + $('#dev-state-change').val();
+        window.location.replace(new_url);
+    });
 };
 
 // Phone number and email

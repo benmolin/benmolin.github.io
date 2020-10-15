@@ -9,6 +9,10 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Check up on COVID Snap max allotments
 
 
+# 2020-10-14
+### Added
+- Made the other state changer update the page as well (when the base page is visited)
+
 # 2020-10-13
 ### Changed
 - Updated the learn more link
