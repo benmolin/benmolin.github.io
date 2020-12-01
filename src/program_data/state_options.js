@@ -25,6 +25,28 @@ type IndividualStateOption = {
 */
 
 export const STATE_OPTIONS /*: StateOptions */ = {
+    "AL": {
+        "2021": {
+            "uses_bbce": true,
+            "gross_income_limit_factor": 1.3,
+            "resource_limit_non_elderly_or_disabled": null,
+            "resource_limit_elderly_or_disabled": null,
+            "has_resource_limit_elderly_or_disabled_income_twice_fpl": true,
+            "child_support_payments_treatment": "DEDUCT",
+            "standard_medical_deduction": false,
+            "standard_medical_deduction_amount": null,
+            "standard_utility_allowances": {
+                "HEATING_AND_COOLING": 374,
+                "BASIC_LIMITED_ALLOWANCE": 357,
+                "ELECTRICITY": 0,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 39
+            }
+        }
+    },
     "AK_C_U": {
         "2021": {
             "uses_bbce": false,
@@ -575,7 +597,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             }
         }
     },
-    "undefined": {
+    "DC": {
         "2021": {
             "uses_bbce": true,
             "gross_income_limit_factor": 2,

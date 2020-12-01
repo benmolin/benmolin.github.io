@@ -38,8 +38,13 @@ export class SnapEstimateEntrypoint {
     }
 
     calculate() {
-        console.log('----Inputs----');
-        console.log(this.raw_inputs);
+
+        var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+        if (urlParams.get('test') != 'true') {
+            console.log('----Inputs----');
+            console.log(this.raw_inputs);
+        };
         const parser = new ParseInputs(this.raw_inputs);
         const inputs_valid = parser.inputs_valid();
 

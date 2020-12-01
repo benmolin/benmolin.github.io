@@ -26,7 +26,7 @@ var states = [
     ['Colorado', 'CO', 'Coloradan'],
     ['Connecticut', 'CT', 'Connecticuter'],
     ['Delaware', 'DE', 'Delawarean'],
-    ['District Of Columbia', 'DC', 'Washingtonian'],
+    ['District of Columbia', 'DC', 'Washingtonian'],
     ['Florida', 'FL', 'Floridian'],
     ['Georgia', 'GA', 'Georgian'],
     ['Guam', 'GU_HH1', 'Guamanian'],
@@ -163,7 +163,6 @@ function applyStateRegionOrSizeRules() {
 
     // Get dependent children boolean
     var HAS_DEPENDENT_CHILD = $('#input__household_includes_dependent_child_true').is(':checked');
-
 
     // Special rules
     var stateKey = stateSpecialRules(stateAbbr, HH_SIZE, HAS_DEPENDENT_CHILD);

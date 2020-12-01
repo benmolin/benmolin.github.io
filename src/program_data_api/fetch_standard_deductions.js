@@ -14,7 +14,7 @@ export class FetchStandardDeductions {
         const NON_DEFAULT_STATES_TERRITORIES = [
             'AK',
             'HI',
-            'IL',
+            // 'IL', Just use defaults for now
             'GU',
             'VI',
         ];

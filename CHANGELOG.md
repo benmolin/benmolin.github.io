@@ -8,6 +8,17 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 - Check up on COVID Snap max allotments
 
+# 2020-11-30
+### Added
+- Added a testing function, so we can make sure all states are working with no errors
+
+### Changed
+- Changed casing of "District of Columbia" as it needs to match for excel import
+- Changed excel importing function to allow AL to be imported as well
+
+### Deleted
+- Removed IL standard deductions variations
+- Added an option so that the inputs dont get printed if ``&test=true``
 
 # 2020-10-14
 ### Added
