@@ -113,6 +113,7 @@ export class SnapEstimate {
         this.utility_trash = inputs.utility_trash;
         this.utility_water = inputs.utility_water;
         this.target_year = 2021;
+        this.covid = inputs.covid;
 
         const state_options = STATE_OPTIONS[this.state_or_territory][this.target_year];
         this.uses_bbce = state_options.uses_bbce;
@@ -177,6 +178,7 @@ export class SnapEstimate {
             'net_income': this.net_income,
             'use_emergency_allotment': (this.use_emergency_allotment || false),
             'target_year': this.target_year,
+            'covid': this.covid,
         });
 
         const benefit_amount_calculation = benefit_amount_estimate.calculate();

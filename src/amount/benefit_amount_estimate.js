@@ -14,6 +14,7 @@ export class BenefitAmountEstimate {
         this.net_income = inputs.net_income;
         this.use_emergency_allotment = inputs.use_emergency_allotment;
         this.target_year = inputs.target_year;
+        this.covid = inputs.covid;
     }
 
     calculate() {
@@ -99,9 +100,15 @@ export class BenefitAmountEstimate {
             );
         } else {
             // With emergency allotments, household not already receiving max benefit:
-            explanation.push(
-                `This gives us an estimated monthly benefit of $${estimated_benefit}. However, because SNAP emergency allotments are active in your state, if approved your benefit could be as much as $${max_allotment} per month.`
-            );
+            if (this.covid) {
+                explanation.push(
+                    `This gives us an estimated monthly benefit of $${estimated_benefit}. SNAP emergency allotments appear to be active in your state, so if approved your benefit could temporarily be as much as $${max_allotment} per month.`
+                );
+            } else {
+                explanation.push(
+                    `This gives us an estimated monthly benefit of $${estimated_benefit}. SNAP emergency allotments appear to have expired in your state.`
+                );
+            };
         }
 
         return {

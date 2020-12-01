@@ -6,11 +6,11 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ### Pending Tasks
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
-- Check up on COVID Snap max allotments
 
 # 2020-12-01
 ### Added
 - Added meta description
+- COVID allotments by state
 
 ### Changed
 - Merged $35 standard medical deduction changes from [snap-js-api-prototype](https://github.com/18F/snap-js-api-prototype/commit/bd6b857a662b02a8dfc6b47a77736ec581f748c8)

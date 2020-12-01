@@ -44,7 +44,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 39
-            }
+            },
+            "covid": true
         }
     },
     "AK_C_U": {
@@ -66,7 +67,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 53,
                 "TRASH": 0,
                 "PHONE": 34
-            }
+            },
+            "covid": true
         }
     },
     "AK_N_U": {
@@ -88,7 +90,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 39,
                 "TRASH": 0,
                 "PHONE": 24
-            }
+            },
+            "covid": true
         }
     },
     "AK_NW_U": {
@@ -110,7 +113,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 58,
                 "TRASH": 0,
                 "PHONE": 31
-            }
+            },
+            "covid": true
         }
     },
     "AK_SC_U": {
@@ -132,7 +136,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 71,
                 "TRASH": 0,
                 "PHONE": 23
-            }
+            },
+            "covid": true
         }
     },
     "AK_SE_U": {
@@ -154,7 +159,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 74,
                 "TRASH": 0,
                 "PHONE": 21
-            }
+            },
+            "covid": true
         }
     },
     "AK_SW_U": {
@@ -176,7 +182,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 62,
                 "TRASH": 0,
                 "PHONE": 20
-            }
+            },
+            "covid": true
         }
     },
     "AK_C_R1": {
@@ -198,7 +205,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 53,
                 "TRASH": 0,
                 "PHONE": 34
-            }
+            },
+            "covid": true
         }
     },
     "AK_N_R1": {
@@ -220,7 +228,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 39,
                 "TRASH": 0,
                 "PHONE": 24
-            }
+            },
+            "covid": true
         }
     },
     "AK_NW_R1": {
@@ -242,7 +251,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 58,
                 "TRASH": 0,
                 "PHONE": 31
-            }
+            },
+            "covid": true
         }
     },
     "AK_SC_R1": {
@@ -264,7 +274,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 71,
                 "TRASH": 0,
                 "PHONE": 23
-            }
+            },
+            "covid": true
         }
     },
     "AK_SE_R1": {
@@ -286,7 +297,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 74,
                 "TRASH": 0,
                 "PHONE": 21
-            }
+            },
+            "covid": true
         }
     },
     "AK_SW_R1": {
@@ -308,7 +320,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 62,
                 "TRASH": 0,
                 "PHONE": 20
-            }
+            },
+            "covid": true
         }
     },
     "AK_C_R2": {
@@ -330,7 +343,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 53,
                 "TRASH": 0,
                 "PHONE": 34
-            }
+            },
+            "covid": true
         }
     },
     "AK_N_R2": {
@@ -352,7 +366,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 39,
                 "TRASH": 0,
                 "PHONE": 24
-            }
+            },
+            "covid": true
         }
     },
     "AK_NW_R2": {
@@ -374,7 +389,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 58,
                 "TRASH": 0,
                 "PHONE": 31
-            }
+            },
+            "covid": true
         }
     },
     "AK_SC_R2": {
@@ -396,7 +412,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 71,
                 "TRASH": 0,
                 "PHONE": 23
-            }
+            },
+            "covid": true
         }
     },
     "AK_SE_R2": {
@@ -418,7 +435,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 74,
                 "TRASH": 0,
                 "PHONE": 21
-            }
+            },
+            "covid": true
         }
     },
     "AK_SW_R2": {
@@ -440,7 +458,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 62,
                 "TRASH": 0,
                 "PHONE": 20
-            }
+            },
+            "covid": true
         }
     },
     "AZ_HH1_3": {
@@ -462,7 +481,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 41
-            }
+            },
+            "covid": true
         }
     },
     "AZ_HH4_X": {
@@ -484,7 +504,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 41
-            }
+            },
+            "covid": true
         }
     },
     "AR": {
@@ -506,7 +527,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 50
-            }
+            },
+            "covid": true
         }
     },
     "CA": {
@@ -528,7 +550,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 18
-            }
+            },
+            "covid": true
         }
     },
     "CO": {
@@ -550,7 +573,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 58,
                 "TRASH": 58,
                 "PHONE": 79
-            }
+            },
+            "covid": true
         }
     },
     "CT": {
@@ -572,7 +596,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "DE": {
@@ -594,7 +619,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 78,
                 "TRASH": 78,
                 "PHONE": 37
-            }
+            },
+            "covid": true
         }
     },
     "DC": {
@@ -616,7 +642,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 69,
                 "TRASH": 69,
                 "PHONE": 69
-            }
+            },
+            "covid": true
         }
     },
     "FL": {
@@ -638,7 +665,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 48
-            }
+            },
+            "covid": true
         }
     },
     "GA": {
@@ -660,7 +688,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 43
-            }
+            },
+            "covid": true
         }
     },
     "GU_HH1": {
@@ -682,7 +711,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 28,
                 "TRASH": 30,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "GU_HH2": {
@@ -704,7 +734,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 28,
                 "TRASH": 30,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "GU_HH3": {
@@ -726,7 +757,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 28,
                 "TRASH": 30,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "GU_HH4": {
@@ -748,7 +780,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 28,
                 "TRASH": 30,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "GU_HH5": {
@@ -770,7 +803,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 28,
                 "TRASH": 30,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "GU_HH6": {
@@ -792,7 +826,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 28,
                 "TRASH": 30,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "GU_HH7": {
@@ -814,7 +849,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 28,
                 "TRASH": 30,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "GU_HH8": {
@@ -836,7 +872,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 28,
                 "TRASH": 30,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "GU_HH9": {
@@ -858,7 +895,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 28,
                 "TRASH": 30,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "GU_HH10": {
@@ -880,7 +918,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 28,
                 "TRASH": 30,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "GU_HH11": {
@@ -902,7 +941,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 28,
                 "TRASH": 30,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "GU_HH12_X": {
@@ -924,7 +964,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 28,
                 "TRASH": 30,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "HI_HH1": {
@@ -946,7 +987,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 88,
                 "TRASH": 0,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "HI_HH2": {
@@ -968,7 +1010,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 88,
                 "TRASH": 0,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "HI_HH3": {
@@ -990,7 +1033,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 88,
                 "TRASH": 0,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "HI_HH_4_5": {
@@ -1012,7 +1056,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 88,
                 "TRASH": 0,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "HI_HH_6": {
@@ -1034,7 +1079,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 88,
                 "TRASH": 0,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "HI_HH_7_X": {
@@ -1056,7 +1102,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 88,
                 "TRASH": 0,
                 "PHONE": 27
-            }
+            },
+            "covid": true
         }
     },
     "ID": {
@@ -1078,7 +1125,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 134,
                 "TRASH": 134,
                 "PHONE": 35
-            }
+            },
+            "covid": true
         }
     },
     "IL": {
@@ -1100,7 +1148,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 74,
                 "TRASH": 74,
                 "PHONE": 30
-            }
+            },
+            "covid": true
         }
     },
     "IN": {
@@ -1122,7 +1171,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 55,
                 "TRASH": 55,
                 "PHONE": 31
-            }
+            },
+            "covid": true
         }
     },
     "IA": {
@@ -1144,7 +1194,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 29
-            }
+            },
+            "covid": true
         }
     },
     "KS": {
@@ -1166,7 +1217,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 36
-            }
+            },
+            "covid": true
         }
     },
     "KY": {
@@ -1188,7 +1240,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 45
-            }
+            },
+            "covid": true
         }
     },
     "LA": {
@@ -1210,7 +1263,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 43
-            }
+            },
+            "covid": true
         }
     },
     "ME": {
@@ -1232,7 +1286,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 45
-            }
+            },
+            "covid": true
         }
     },
     "MD": {
@@ -1254,7 +1309,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 40
-            }
+            },
+            "covid": true
         }
     },
     "MA": {
@@ -1276,7 +1332,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 45
-            }
+            },
+            "covid": true
         }
     },
     "MI": {
@@ -1298,7 +1355,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 91,
                 "TRASH": 19,
                 "PHONE": 31
-            }
+            },
+            "covid": true
         }
     },
     "MN": {
@@ -1320,7 +1378,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 56
-            }
+            },
+            "covid": true
         }
     },
     "MS": {
@@ -1342,7 +1401,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 31
-            }
+            },
+            "covid": true
         }
     },
     "MO": {
@@ -1364,7 +1424,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 131,
                 "TRASH": 131,
                 "PHONE": 65
-            }
+            },
+            "covid": true
         }
     },
     "MT": {
@@ -1386,7 +1447,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 167,
                 "TRASH": 167,
                 "PHONE": 31
-            }
+            },
+            "covid": true
         }
     },
     "NE": {
@@ -1408,7 +1470,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 52,
                 "TRASH": 52,
                 "PHONE": 46
-            }
+            },
+            "covid": false
         }
     },
     "NV": {
@@ -1430,7 +1493,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 56,
                 "TRASH": 56,
                 "PHONE": 29
-            }
+            },
+            "covid": true
         }
     },
     "NH_DC_T": {
@@ -1452,7 +1516,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 28
-            }
+            },
+            "covid": true
         }
     },
     "NH_DC_F": {
@@ -1474,7 +1539,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": null,
                 "TRASH": null,
                 "PHONE": null
-            }
+            },
+            "covid": true
         }
     },
     "NJ": {
@@ -1496,7 +1562,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 29
-            }
+            },
+            "covid": true
         }
     },
     "NM": {
@@ -1518,7 +1585,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 48
-            }
+            },
+            "covid": true
         }
     },
     "NY_NAS_DC": {
@@ -1540,7 +1608,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 30
-            }
+            },
+            "covid": true
         }
     },
     "NY_NYC_DC": {
@@ -1562,7 +1631,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 30
-            }
+            },
+            "covid": true
         }
     },
     "NY_ONY_DC": {
@@ -1584,7 +1654,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 30
-            }
+            },
+            "covid": true
         }
     },
     "NY_NAS_EI": {
@@ -1606,7 +1677,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 30
-            }
+            },
+            "covid": true
         }
     },
     "NY_NYC_EI": {
@@ -1628,7 +1700,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 30
-            }
+            },
+            "covid": true
         }
     },
     "NY_ONY_EI": {
@@ -1650,7 +1723,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 30
-            }
+            },
+            "covid": true
         }
     },
     "NY_NAS_XX": {
@@ -1672,7 +1746,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 30
-            }
+            },
+            "covid": true
         }
     },
     "NY_NYC_XX": {
@@ -1694,7 +1769,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 30
-            }
+            },
+            "covid": true
         }
     },
     "NY_ONY_XX": {
@@ -1716,7 +1792,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 30
-            }
+            },
+            "covid": true
         }
     },
     "NC_HH1": {
@@ -1738,7 +1815,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 31
-            }
+            },
+            "covid": true
         }
     },
     "NC_HH2": {
@@ -1760,7 +1838,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 31
-            }
+            },
+            "covid": true
         }
     },
     "NC_HH3": {
@@ -1782,7 +1861,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 31
-            }
+            },
+            "covid": true
         }
     },
     "NC_HH4": {
@@ -1804,7 +1884,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 31
-            }
+            },
+            "covid": true
         }
     },
     "NC_HH5_X": {
@@ -1826,7 +1907,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 31
-            }
+            },
+            "covid": true
         }
     },
     "ND": {
@@ -1848,7 +1930,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 204,
                 "TRASH": 204,
                 "PHONE": 32
-            }
+            },
+            "covid": true
         }
     },
     "OH": {
@@ -1870,7 +1953,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 79,
                 "TRASH": 79,
                 "PHONE": 38
-            }
+            },
+            "covid": true
         }
     },
     "OK": {
@@ -1892,7 +1976,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 48
-            }
+            },
+            "covid": true
         }
     },
     "OR": {
@@ -1914,7 +1999,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 68,
                 "TRASH": 68,
                 "PHONE": 55
-            }
+            },
+            "covid": true
         }
     },
     "PA": {
@@ -1936,7 +2022,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 59,
                 "TRASH": 59,
                 "PHONE": 33
-            }
+            },
+            "covid": false
         }
     },
     "RI": {
@@ -1958,7 +2045,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 23
-            }
+            },
+            "covid": true
         }
     },
     "SC": {
@@ -1980,7 +2068,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 25
-            }
+            },
+            "covid": true
         }
     },
     "SD": {
@@ -2002,7 +2091,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 85,
                 "TRASH": 85,
                 "PHONE": 49
-            }
+            },
+            "covid": true
         }
     },
     "TN_HH1": {
@@ -2024,7 +2114,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 28
-            }
+            },
+            "covid": true
         }
     },
     "TN_HH2": {
@@ -2046,7 +2137,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 28
-            }
+            },
+            "covid": true
         }
     },
     "TN_HH3": {
@@ -2068,7 +2160,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 28
-            }
+            },
+            "covid": true
         }
     },
     "TN_HH4": {
@@ -2090,7 +2183,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 28
-            }
+            },
+            "covid": true
         }
     },
     "TN_HH5": {
@@ -2112,7 +2206,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 28
-            }
+            },
+            "covid": true
         }
     },
     "TN_HH6": {
@@ -2134,7 +2229,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 28
-            }
+            },
+            "covid": true
         }
     },
     "TN_HH7": {
@@ -2156,7 +2252,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 28
-            }
+            },
+            "covid": true
         }
     },
     "TN_HH8": {
@@ -2178,7 +2275,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 28
-            }
+            },
+            "covid": true
         }
     },
     "TN_HH9": {
@@ -2200,7 +2298,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 28
-            }
+            },
+            "covid": true
         }
     },
     "TN_HH10_X": {
@@ -2222,7 +2321,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 28
-            }
+            },
+            "covid": true
         }
     },
     "TX": {
@@ -2244,7 +2344,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 38
-            }
+            },
+            "covid": true
         }
     },
     "UT": {
@@ -2266,7 +2367,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 64
-            }
+            },
+            "covid": true
         }
     },
     "VT": {
@@ -2288,7 +2390,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 36
-            }
+            },
+            "covid": true
         }
     },
     "VI": {
@@ -2310,7 +2413,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 32
-            }
+            },
+            "covid": true
         }
     },
     "VA_HH1_3": {
@@ -2332,7 +2436,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 61
-            }
+            },
+            "covid": true
         }
     },
     "VA_HH4_X": {
@@ -2354,7 +2459,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 61
-            }
+            },
+            "covid": true
         }
     },
     "WA": {
@@ -2376,7 +2482,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 58
-            }
+            },
+            "covid": true
         }
     },
     "WV": {
@@ -2398,7 +2505,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 76,
                 "TRASH": 76,
                 "PHONE": 76
-            }
+            },
+            "covid": true
         }
     },
     "WI": {
@@ -2420,7 +2528,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 22,
                 "PHONE": 30
-            }
+            },
+            "covid": true
         }
     },
     "WY": {
@@ -2442,7 +2551,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "SEWAGE": 0,
                 "TRASH": 0,
                 "PHONE": 53
-            }
+            },
+            "covid": true
         }
     }
 };
