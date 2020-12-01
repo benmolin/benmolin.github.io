@@ -9,6 +9,9 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Check up on COVID Snap max allotments
 
 # 2020-12-01
+### Added
+- Added meta description
+
 ### Changed
 - Merged $35 standard medical deduction changes from [snap-js-api-prototype](https://github.com/18F/snap-js-api-prototype/commit/bd6b857a662b02a8dfc6b47a77736ec581f748c8)
 
