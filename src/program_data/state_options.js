@@ -36,14 +36,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 374,
-                "BASIC_LIMITED_ALLOWANCE": 357,
+                "HEATING_AND_COOLING": 393,
+                "BASIC_LIMITED_ALLOWANCE": 381,
                 "ELECTRICITY": 0,
                 "GAS": 0,
                 "WATER": 0,
                 "SEWAGE": 0,
                 "TRASH": 0,
-                "PHONE": 39
+                "PHONE": 41
             },
             "covid": true
         }
@@ -62,10 +62,10 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "HEATING_AND_COOLING": 397,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 100,
-                "GAS": 0,
+                "GAS": 120,
                 "WATER": 51,
                 "SEWAGE": 53,
-                "TRASH": 0,
+                "TRASH": 39,
                 "PHONE": 34
             },
             "covid": true
@@ -82,13 +82,13 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 624,
+                "HEATING_AND_COOLING": 324,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 149,
-                "GAS": 0,
+                "GAS": 295,
                 "WATER": 33,
                 "SEWAGE": 39,
-                "TRASH": 0,
+                "TRASH": 84,
                 "PHONE": 24
             },
             "covid": true
@@ -108,10 +108,10 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "HEATING_AND_COOLING": 850,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 158,
-                "GAS": 0,
+                "GAS": 512,
                 "WATER": 68,
                 "SEWAGE": 58,
-                "TRASH": 0,
+                "TRASH": 23,
                 "PHONE": 31
             },
             "covid": true
@@ -131,10 +131,10 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "HEATING_AND_COOLING": 511,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 145,
-                "GAS": 0,
+                "GAS": 170,
                 "WATER": 55,
                 "SEWAGE": 71,
-                "TRASH": 0,
+                "TRASH": 47,
                 "PHONE": 23
             },
             "covid": true
@@ -154,10 +154,10 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "HEATING_AND_COOLING": 407,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 88,
-                "GAS": 0,
+                "GAS": 151,
                 "WATER": 46,
                 "SEWAGE": 74,
-                "TRASH": 0,
+                "TRASH": 27,
                 "PHONE": 21
             },
             "covid": true
@@ -177,10 +177,10 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "HEATING_AND_COOLING": 809,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 218,
-                "GAS": 0,
+                "GAS": 438,
                 "WATER": 58,
                 "SEWAGE": 62,
-                "TRASH": 0,
+                "TRASH": 13,
                 "PHONE": 20
             },
             "covid": true
@@ -200,10 +200,10 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "HEATING_AND_COOLING": 397,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 100,
-                "GAS": 0,
+                "GAS": 120,
                 "WATER": 51,
                 "SEWAGE": 53,
-                "TRASH": 0,
+                "TRASH": 39,
                 "PHONE": 34
             },
             "covid": true
@@ -220,13 +220,13 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 624,
+                "HEATING_AND_COOLING": 324,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 149,
-                "GAS": 0,
+                "GAS": 295,
                 "WATER": 33,
                 "SEWAGE": 39,
-                "TRASH": 0,
+                "TRASH": 84,
                 "PHONE": 24
             },
             "covid": true
@@ -246,10 +246,10 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "HEATING_AND_COOLING": 850,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 158,
-                "GAS": 0,
+                "GAS": 512,
                 "WATER": 68,
                 "SEWAGE": 58,
-                "TRASH": 0,
+                "TRASH": 23,
                 "PHONE": 31
             },
             "covid": true
@@ -269,10 +269,10 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "HEATING_AND_COOLING": 511,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 145,
-                "GAS": 0,
+                "GAS": 170,
                 "WATER": 55,
                 "SEWAGE": 71,
-                "TRASH": 0,
+                "TRASH": 47,
                 "PHONE": 23
             },
             "covid": true
@@ -292,10 +292,10 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "HEATING_AND_COOLING": 407,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 88,
-                "GAS": 0,
+                "GAS": 151,
                 "WATER": 46,
                 "SEWAGE": 74,
-                "TRASH": 0,
+                "TRASH": 27,
                 "PHONE": 21
             },
             "covid": true
@@ -315,10 +315,10 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "HEATING_AND_COOLING": 809,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 218,
-                "GAS": 0,
+                "GAS": 438,
                 "WATER": 58,
                 "SEWAGE": 62,
-                "TRASH": 0,
+                "TRASH": 13,
                 "PHONE": 20
             },
             "covid": true
@@ -338,10 +338,10 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "HEATING_AND_COOLING": 397,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 100,
-                "GAS": 0,
+                "GAS": 120,
                 "WATER": 51,
                 "SEWAGE": 53,
-                "TRASH": 0,
+                "TRASH": 39,
                 "PHONE": 34
             },
             "covid": true
@@ -358,13 +358,13 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 624,
+                "HEATING_AND_COOLING": 324,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 149,
-                "GAS": 0,
+                "GAS": 295,
                 "WATER": 33,
                 "SEWAGE": 39,
-                "TRASH": 0,
+                "TRASH": 84,
                 "PHONE": 24
             },
             "covid": true
@@ -384,10 +384,10 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "HEATING_AND_COOLING": 850,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 158,
-                "GAS": 0,
+                "GAS": 512,
                 "WATER": 68,
                 "SEWAGE": 58,
-                "TRASH": 0,
+                "TRASH": 23,
                 "PHONE": 31
             },
             "covid": true
@@ -407,10 +407,10 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "HEATING_AND_COOLING": 511,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 145,
-                "GAS": 0,
+                "GAS": 170,
                 "WATER": 55,
                 "SEWAGE": 71,
-                "TRASH": 0,
+                "TRASH": 47,
                 "PHONE": 23
             },
             "covid": true
@@ -430,10 +430,10 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "HEATING_AND_COOLING": 407,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 88,
-                "GAS": 0,
+                "GAS": 151,
                 "WATER": 46,
                 "SEWAGE": 74,
-                "TRASH": 0,
+                "TRASH": 27,
                 "PHONE": 21
             },
             "covid": true
@@ -453,10 +453,10 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "HEATING_AND_COOLING": 809,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 218,
-                "GAS": 0,
+                "GAS": 438,
                 "WATER": 58,
                 "SEWAGE": 62,
-                "TRASH": 0,
+                "TRASH": 13,
                 "PHONE": 20
             },
             "covid": true
@@ -519,7 +519,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 284,
+                "HEATING_AND_COOLING": 283,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 0,
                 "GAS": 0,
@@ -611,14 +611,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 417,
-                "BASIC_LIMITED_ALLOWANCE": 289,
-                "ELECTRICITY": 78,
-                "GAS": 78,
-                "WATER": 78,
-                "SEWAGE": 78,
-                "TRASH": 78,
-                "PHONE": 37
+                "HEATING_AND_COOLING": 407,
+                "BASIC_LIMITED_ALLOWANCE": 282,
+                "ELECTRICITY": 70,
+                "GAS": 70,
+                "WATER": 70,
+                "SEWAGE": 70,
+                "TRASH": 70,
+                "PHONE": 36
             },
             "covid": true
         }
@@ -634,13 +634,13 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 331,
-                "BASIC_LIMITED_ALLOWANCE": 276,
-                "ELECTRICITY": 69,
-                "GAS": 69,
-                "WATER": 69,
-                "SEWAGE": 69,
-                "TRASH": 69,
+                "HEATING_AND_COOLING": 310,
+                "BASIC_LIMITED_ALLOWANCE": 281,
+                "ELECTRICITY": 71,
+                "GAS": 71,
+                "WATER": 71,
+                "SEWAGE": 71,
+                "TRASH": 71,
                 "PHONE": 69
             },
             "covid": true
@@ -680,14 +680,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 378,
-                "BASIC_LIMITED_ALLOWANCE": 329,
+                "HEATING_AND_COOLING": 367,
+                "BASIC_LIMITED_ALLOWANCE": 323,
                 "ELECTRICITY": 0,
                 "GAS": 0,
                 "WATER": 0,
                 "SEWAGE": 0,
                 "TRASH": 0,
-                "PHONE": 43
+                "PHONE": 47
             },
             "covid": true
         }
@@ -710,7 +710,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "WATER": 38,
                 "SEWAGE": 28,
                 "TRASH": 30,
-                "PHONE": 27
+                "PHONE": 28
             },
             "covid": true
         }
@@ -733,7 +733,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "WATER": 50,
                 "SEWAGE": 28,
                 "TRASH": 30,
-                "PHONE": 27
+                "PHONE": 28
             },
             "covid": true
         }
@@ -756,7 +756,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "WATER": 50,
                 "SEWAGE": 28,
                 "TRASH": 30,
-                "PHONE": 27
+                "PHONE": 28
             },
             "covid": true
         }
@@ -779,7 +779,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "WATER": 69,
                 "SEWAGE": 28,
                 "TRASH": 30,
-                "PHONE": 27
+                "PHONE": 28
             },
             "covid": true
         }
@@ -802,7 +802,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "WATER": 85,
                 "SEWAGE": 28,
                 "TRASH": 30,
-                "PHONE": 27
+                "PHONE": 28
             },
             "covid": true
         }
@@ -825,7 +825,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "WATER": 111,
                 "SEWAGE": 28,
                 "TRASH": 30,
-                "PHONE": 27
+                "PHONE": 28
             },
             "covid": true
         }
@@ -848,7 +848,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "WATER": 136,
                 "SEWAGE": 28,
                 "TRASH": 30,
-                "PHONE": 27
+                "PHONE": 28
             },
             "covid": true
         }
@@ -871,7 +871,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "WATER": 150,
                 "SEWAGE": 28,
                 "TRASH": 30,
-                "PHONE": 27
+                "PHONE": 28
             },
             "covid": true
         }
@@ -894,7 +894,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "WATER": 171,
                 "SEWAGE": 28,
                 "TRASH": 30,
-                "PHONE": 27
+                "PHONE": 28
             },
             "covid": true
         }
@@ -917,7 +917,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "WATER": 171,
                 "SEWAGE": 28,
                 "TRASH": 30,
-                "PHONE": 27
+                "PHONE": 28
             },
             "covid": true
         }
@@ -940,7 +940,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "WATER": 178,
                 "SEWAGE": 28,
                 "TRASH": 30,
-                "PHONE": 27
+                "PHONE": 28
             },
             "covid": true
         }
@@ -963,7 +963,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "WATER": 178,
                 "SEWAGE": 28,
                 "TRASH": 30,
-                "PHONE": 27
+                "PHONE": 28
             },
             "covid": true
         }
@@ -981,12 +981,12 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_utility_allowances": {
                 "HEATING_AND_COOLING": 0,
                 "BASIC_LIMITED_ALLOWANCE": 0,
-                "ELECTRICITY": 193,
+                "ELECTRICITY": 220,
                 "GAS": 0,
-                "WATER": 45,
-                "SEWAGE": 88,
+                "WATER": 46,
+                "SEWAGE": 92,
                 "TRASH": 0,
-                "PHONE": 27
+                "PHONE": 30
             },
             "covid": true
         }
@@ -1004,12 +1004,12 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_utility_allowances": {
                 "HEATING_AND_COOLING": 0,
                 "BASIC_LIMITED_ALLOWANCE": 0,
-                "ELECTRICITY": 209,
+                "ELECTRICITY": 240,
                 "GAS": 0,
-                "WATER": 50,
-                "SEWAGE": 88,
+                "WATER": 51,
+                "SEWAGE": 92,
                 "TRASH": 0,
-                "PHONE": 27
+                "PHONE": 30
             },
             "covid": true
         }
@@ -1027,12 +1027,12 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_utility_allowances": {
                 "HEATING_AND_COOLING": 0,
                 "BASIC_LIMITED_ALLOWANCE": 0,
-                "ELECTRICITY": 240,
+                "ELECTRICITY": 276,
                 "GAS": 0,
-                "WATER": 55,
-                "SEWAGE": 88,
+                "WATER": 57,
+                "SEWAGE": 92,
                 "TRASH": 0,
-                "PHONE": 27
+                "PHONE": 30
             },
             "covid": true
         }
@@ -1050,12 +1050,12 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_utility_allowances": {
                 "HEATING_AND_COOLING": 0,
                 "BASIC_LIMITED_ALLOWANCE": 0,
-                "ELECTRICITY": 297,
+                "ELECTRICITY": 342,
                 "GAS": 0,
-                "WATER": 65,
-                "SEWAGE": 88,
+                "WATER": 67,
+                "SEWAGE": 92,
                 "TRASH": 0,
-                "PHONE": 27
+                "PHONE": 30
             },
             "covid": true
         }
@@ -1073,12 +1073,12 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_utility_allowances": {
                 "HEATING_AND_COOLING": 0,
                 "BASIC_LIMITED_ALLOWANCE": 0,
-                "ELECTRICITY": 349,
+                "ELECTRICITY": 402,
                 "GAS": 0,
-                "WATER": 75,
-                "SEWAGE": 88,
+                "WATER": 77,
+                "SEWAGE": 92,
                 "TRASH": 0,
-                "PHONE": 27
+                "PHONE": 30
             },
             "covid": true
         }
@@ -1096,12 +1096,12 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_utility_allowances": {
                 "HEATING_AND_COOLING": 0,
                 "BASIC_LIMITED_ALLOWANCE": 0,
-                "ELECTRICITY": 394,
+                "ELECTRICITY": 455,
                 "GAS": 0,
-                "WATER": 90,
-                "SEWAGE": 88,
+                "WATER": 92,
+                "SEWAGE": 92,
                 "TRASH": 0,
-                "PHONE": 27
+                "PHONE": 30
             },
             "covid": true
         }
@@ -1117,14 +1117,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": true,
             "standard_medical_deduction_amount": 144,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 368,
-                "BASIC_LIMITED_ALLOWANCE": 303,
-                "ELECTRICITY": 134,
-                "GAS": 134,
-                "WATER": 134,
-                "SEWAGE": 134,
-                "TRASH": 134,
-                "PHONE": 35
+                "HEATING_AND_COOLING": 352,
+                "BASIC_LIMITED_ALLOWANCE": 292,
+                "ELECTRICITY": 128,
+                "GAS": 128,
+                "WATER": 128,
+                "SEWAGE": 128,
+                "TRASH": 128,
+                "PHONE": 37
             },
             "covid": true
         }
@@ -1140,14 +1140,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": true,
             "standard_medical_deduction_amount": 200,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 478,
-                "BASIC_LIMITED_ALLOWANCE": 328,
-                "ELECTRICITY": 74,
-                "GAS": 74,
-                "WATER": 74,
-                "SEWAGE": 74,
-                "TRASH": 74,
-                "PHONE": 30
+                "HEATING_AND_COOLING": 496,
+                "BASIC_LIMITED_ALLOWANCE": 356,
+                "ELECTRICITY": 81,
+                "GAS": 81,
+                "WATER": 81,
+                "SEWAGE": 81,
+                "TRASH": 81,
+                "PHONE": 31
             },
             "covid": true
         }
@@ -1209,14 +1209,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": true,
             "standard_medical_deduction_amount": 140,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 357,
-                "BASIC_LIMITED_ALLOWANCE": 243,
+                "HEATING_AND_COOLING": 359,
+                "BASIC_LIMITED_ALLOWANCE": 246,
                 "ELECTRICITY": 0,
                 "GAS": 0,
                 "WATER": 0,
                 "SEWAGE": 0,
                 "TRASH": 0,
-                "PHONE": 36
+                "PHONE": 35
             },
             "covid": true
         }
@@ -1255,14 +1255,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 356,
-                "BASIC_LIMITED_ALLOWANCE": 196,
+                "HEATING_AND_COOLING": 350,
+                "BASIC_LIMITED_ALLOWANCE": 193,
                 "ELECTRICITY": 0,
                 "GAS": 0,
                 "WATER": 0,
                 "SEWAGE": 0,
                 "TRASH": 0,
-                "PHONE": 43
+                "PHONE": 46
             },
             "covid": true
         }
@@ -1347,14 +1347,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 543,
+                "HEATING_AND_COOLING": 547,
                 "BASIC_LIMITED_ALLOWANCE": 0,
-                "ELECTRICITY": 135,
-                "GAS": 44,
-                "WATER": 91,
-                "SEWAGE": 91,
-                "TRASH": 19,
-                "PHONE": 31
+                "ELECTRICITY": 126,
+                "GAS": 36,
+                "WATER": 97,
+                "SEWAGE": 97,
+                "TRASH": 23,
+                "PHONE": 29
             },
             "covid": true
         }
@@ -1393,14 +1393,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 278,
-                "BASIC_LIMITED_ALLOWANCE": 206,
+                "HEATING_AND_COOLING": 277,
+                "BASIC_LIMITED_ALLOWANCE": 203,
                 "ELECTRICITY": 0,
                 "GAS": 0,
                 "WATER": 0,
                 "SEWAGE": 0,
                 "TRASH": 0,
-                "PHONE": 31
+                "PHONE": 34
             },
             "covid": true
         }
@@ -1439,14 +1439,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 546,
-                "BASIC_LIMITED_ALLOWANCE": 198,
-                "ELECTRICITY": 167,
-                "GAS": 167,
-                "WATER": 167,
-                "SEWAGE": 167,
-                "TRASH": 167,
-                "PHONE": 31
+                "HEATING_AND_COOLING": 563,
+                "BASIC_LIMITED_ALLOWANCE": 203,
+                "ELECTRICITY": 171,
+                "GAS": 171,
+                "WATER": 171,
+                "SEWAGE": 171,
+                "TRASH": 171,
+                "PHONE": 32
             },
             "covid": true
         }
@@ -1462,8 +1462,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 490,
-                "BASIC_LIMITED_ALLOWANCE": 256,
+                "HEATING_AND_COOLING": 491,
+                "BASIC_LIMITED_ALLOWANCE": 257,
                 "ELECTRICITY": 52,
                 "GAS": 52,
                 "WATER": 52,
@@ -1485,14 +1485,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 285,
-                "BASIC_LIMITED_ALLOWANCE": 252,
-                "ELECTRICITY": 56,
-                "GAS": 56,
-                "WATER": 56,
-                "SEWAGE": 56,
-                "TRASH": 56,
-                "PHONE": 29
+                "HEATING_AND_COOLING": 275,
+                "BASIC_LIMITED_ALLOWANCE": 233,
+                "ELECTRICITY": 52,
+                "GAS": 52,
+                "WATER": 52,
+                "SEWAGE": 52,
+                "TRASH": 52,
+                "PHONE": 25
             },
             "covid": true
         }
@@ -1508,14 +1508,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 718,
-                "BASIC_LIMITED_ALLOWANCE": 262,
-                "ELECTRICITY": 154,
+                "HEATING_AND_COOLING": 701,
+                "BASIC_LIMITED_ALLOWANCE": 256,
+                "ELECTRICITY": 150,
                 "GAS": 0,
                 "WATER": 0,
                 "SEWAGE": 0,
                 "TRASH": 0,
-                "PHONE": 28
+                "PHONE": 27
             },
             "covid": true
         }
@@ -1531,14 +1531,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 718,
-                "BASIC_LIMITED_ALLOWANCE": 262,
-                "ELECTRICITY": 154,
-                "GAS": null,
-                "WATER": null,
-                "SEWAGE": null,
-                "TRASH": null,
-                "PHONE": null
+                "HEATING_AND_COOLING": 701,
+                "BASIC_LIMITED_ALLOWANCE": 256,
+                "ELECTRICITY": 150,
+                "GAS": 0,
+                "WATER": 0,
+                "SEWAGE": 0,
+                "TRASH": 0,
+                "PHONE": 27
             },
             "covid": true
         }
@@ -1554,8 +1554,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 542,
-                "BASIC_LIMITED_ALLOWANCE": 316,
+                "HEATING_AND_COOLING": 548,
+                "BASIC_LIMITED_ALLOWANCE": 338,
                 "ELECTRICITY": 0,
                 "GAS": 0,
                 "WATER": 0,
@@ -1922,7 +1922,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": true,
             "standard_medical_deduction_amount": 165,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 616,
+                "HEATING_AND_COOLING": 606,
                 "BASIC_LIMITED_ALLOWANCE": 236,
                 "ELECTRICITY": 204,
                 "GAS": 204,
@@ -1945,14 +1945,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 548,
-                "BASIC_LIMITED_ALLOWANCE": 355,
-                "ELECTRICITY": 79,
-                "GAS": 79,
-                "WATER": 79,
-                "SEWAGE": 79,
-                "TRASH": 79,
-                "PHONE": 38
+                "HEATING_AND_COOLING": 553,
+                "BASIC_LIMITED_ALLOWANCE": 362,
+                "ELECTRICITY": 80,
+                "GAS": 80,
+                "WATER": 80,
+                "SEWAGE": 80,
+                "TRASH": 80,
+                "PHONE": 40
             },
             "covid": true
         }
@@ -1968,8 +1968,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 355,
-                "BASIC_LIMITED_ALLOWANCE": 305,
+                "HEATING_AND_COOLING": 341,
+                "BASIC_LIMITED_ALLOWANCE": 293,
                 "ELECTRICITY": 0,
                 "GAS": 0,
                 "WATER": 0,
@@ -1993,12 +1993,12 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_utility_allowances": {
                 "HEATING_AND_COOLING": 442,
                 "BASIC_LIMITED_ALLOWANCE": 341,
-                "ELECTRICITY": 68,
-                "GAS": 68,
-                "WATER": 68,
-                "SEWAGE": 68,
-                "TRASH": 68,
-                "PHONE": 55
+                "ELECTRICITY": 55,
+                "GAS": 55,
+                "WATER": 55,
+                "SEWAGE": 55,
+                "TRASH": 55,
+                "PHONE": 68
             },
             "covid": true
         }
@@ -2037,7 +2037,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": true,
             "standard_medical_deduction_amount": 141,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 638,
+                "HEATING_AND_COOLING": 636,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 0,
                 "GAS": 0,
@@ -2083,14 +2083,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": true,
             "standard_medical_deduction_amount": 165,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 732,
-                "BASIC_LIMITED_ALLOWANCE": 206,
-                "ELECTRICITY": 85,
-                "GAS": 85,
-                "WATER": 85,
-                "SEWAGE": 85,
-                "TRASH": 85,
-                "PHONE": 49
+                "HEATING_AND_COOLING": 752,
+                "BASIC_LIMITED_ALLOWANCE": 211,
+                "ELECTRICITY": 87,
+                "GAS": 87,
+                "WATER": 87,
+                "SEWAGE": 87,
+                "TRASH": 87,
+                "PHONE": 48
             },
             "covid": true
         }
@@ -2359,14 +2359,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 360,
-                "BASIC_LIMITED_ALLOWANCE": 283,
+                "HEATING_AND_COOLING": 386,
+                "BASIC_LIMITED_ALLOWANCE": 310,
                 "ELECTRICITY": 0,
                 "GAS": 0,
                 "WATER": 0,
                 "SEWAGE": 0,
                 "TRASH": 0,
-                "PHONE": 64
+                "PHONE": 74
             },
             "covid": true
         }
@@ -2412,7 +2412,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "WATER": 0,
                 "SEWAGE": 0,
                 "TRASH": 0,
-                "PHONE": 32
+                "PHONE": 36
             },
             "covid": true
         }
@@ -2428,7 +2428,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": true,
             "standard_medical_deduction_amount": 200,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 303,
+                "HEATING_AND_COOLING": 302,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 0,
                 "GAS": 0,
@@ -2451,7 +2451,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": true,
             "standard_medical_deduction_amount": 200,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 379,
+                "HEATING_AND_COOLING": 377,
                 "BASIC_LIMITED_ALLOWANCE": 0,
                 "ELECTRICITY": 0,
                 "GAS": 0,
@@ -2474,14 +2474,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 430,
-                "BASIC_LIMITED_ALLOWANCE": 336,
+                "HEATING_AND_COOLING": 449,
+                "BASIC_LIMITED_ALLOWANCE": 352,
                 "ELECTRICITY": 0,
                 "GAS": 0,
                 "WATER": 0,
                 "SEWAGE": 0,
                 "TRASH": 0,
-                "PHONE": 58
+                "PHONE": 59
             },
             "covid": true
         }
@@ -2520,14 +2520,14 @@ export const STATE_OPTIONS /*: StateOptions */ = {
             "standard_medical_deduction": false,
             "standard_medical_deduction_amount": null,
             "standard_utility_allowances": {
-                "HEATING_AND_COOLING": 456,
-                "BASIC_LIMITED_ALLOWANCE": 318,
+                "HEATING_AND_COOLING": 462,
+                "BASIC_LIMITED_ALLOWANCE": 320,
                 "ELECTRICITY": 141,
-                "GAS": 36,
-                "WATER": 87,
-                "SEWAGE": 0,
-                "TRASH": 22,
-                "PHONE": 30
+                "GAS": 37,
+                "WATER": 90,
+                "SEWAGE": 90,
+                "TRASH": 23,
+                "PHONE": 29
             },
             "covid": true
         }

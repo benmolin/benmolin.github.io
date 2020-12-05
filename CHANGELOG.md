@@ -7,6 +7,10 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ### Pending Tasks
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 
+# 2020-12-05
+### Changed
+- Updated all the utility amounts to 2021 from [USDA Source](https://www.fns.usda.gov/snap/eligibility/deduction/standard-utility-allowances)
+
 # 2020-12-01
 ### Added
 - Added meta description
