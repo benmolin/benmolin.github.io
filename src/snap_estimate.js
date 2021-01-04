@@ -113,9 +113,9 @@ export class SnapEstimate {
         this.utility_trash = inputs.utility_trash;
         this.utility_water = inputs.utility_water;
         this.target_year = 2021;
-        this.covid = inputs.covid;
 
         const state_options = STATE_OPTIONS[this.state_or_territory][this.target_year];
+        this.covid = state_options.covid;
         this.uses_bbce = state_options.uses_bbce;
         const uses_bbce = state_options.uses_bbce;
 

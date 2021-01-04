@@ -15,8 +15,8 @@
 .title {
   text-align: center;
   margin: 20px 0 20px 0;
-  font-weight: normal;
-  font-size: 34px;
+  font-weight: bold;
+  font-size: 22px;
 }
 
 .subtitle {
@@ -209,9 +209,15 @@ header{
   margin-bottom: 20px;
 }
 #main-header{
-  background-color: #f7fafc;
+  background-color: #F1F5F9;
   border-bottom: 1px solid #cbd5e0;
   padding: 25px 0px;
+}
+#project-logo{
+  float: left;
+  padding-top: 2px;
+  width: 42px;
+  margin-right: 8px;
 }
 #project-title{
   font-weight: bold;

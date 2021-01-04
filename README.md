@@ -1,7 +1,5 @@
 # SNAP Eligibility Prescreener
 
-:warning: This is in development -- do not use this in production.
-
 ## Introduction
 
 This repo is a fork of [18F's Snap-JS-API-Prototype](https://github.com/18F/snap-js-api-prototype), with an HTML interface from [18F's Snap-JS-Prescreen-Prototypes](https://github.com/18F/snap-js-prescreener-prototypes) merged in to easily view and test the API. 

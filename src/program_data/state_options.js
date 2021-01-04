@@ -1471,7 +1471,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 52,
                 "PHONE": 46
             },
-            "covid": false
+            "covid": true
         }
     },
     "NV": {
@@ -2023,7 +2023,7 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 59,
                 "PHONE": 33
             },
-            "covid": false
+            "covid": true
         }
     },
     "RI": {

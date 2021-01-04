@@ -7,6 +7,23 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ### Pending Tasks
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 
+
+# 2021-01-03
+### Removed
+- Removed the "not ready" warning
+
+### Changed
+- Minor CSS adjustments
+- Fixed potential bug where ```state=AZ.``` with a period wouldn't work
+- Updated December COVID state max allotments
+- Updated github repo name
+- Fixed something where the COVID allotment states weren't showing up
+
+### Added
+- Food logo top left
+
+
+
 # 2020-12-05
 ### Changed
 - Updated all the utility amounts to 2021 from [USDA Source](https://www.fns.usda.gov/snap/eligibility/deduction/standard-utility-allowances)

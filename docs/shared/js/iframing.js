@@ -3,8 +3,9 @@ var urlParams = new URLSearchParams(queryString);
 
 // State
 var stateFull;
-var stateAbbr = urlParams.get('state');
+var stateAbbr = urlParams.get('state')
 if (stateAbbr != null) {
+    stateAbbr = stateAbbr.substr(0,2);
     switchStateOnPage(stateAbbr);
 } else {
     $('.calculator').addClass('d-none');
