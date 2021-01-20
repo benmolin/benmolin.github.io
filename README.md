@@ -2,19 +2,11 @@
 
 ## Introduction
 
-This repo is a fork of [18F's Snap-JS-API-Prototype](https://github.com/18F/snap-js-api-prototype), with an HTML interface from [18F's Snap-JS-Prescreen-Prototypes](https://github.com/18F/snap-js-prescreener-prototypes) merged in to easily view and test the API. 
+This repo is a fork of [18F's Snap-JS-API-Prototype](https://github.com/18F/snap-js-api-prototype), with an HTML interface from [18F's Snap-JS-Prescreen-Prototypes](https://github.com/18F/snap-js-prescreener-prototypes) merged in to easily view and test the API.
 
-## Demo
+## Individual Screener
 
-This repo is named to allow deployment onto Github pages for easy testing. There are two main pages to view:
-
-### Individual Screener
-
-You can view a demo for the [individual screener here](https://www.snapscreener.com/). This allows an individual to get an estimate of whether they are likely eligible, their potential SNAP amount, and the factors behind their decision.
-
-### Bulk Screener
-
-For organizations that would like to screen clients in bulk, there is a [bulk screener here](https://www.snapscreener.com/bulk-screener). This allows you to upload a full CSV of client profiles, and adds a new column stating whether clients are "likely eligible" or not.
+You can view a demo for the [screener here](https://www.snapscreener.com/). This allows an individual to get an estimate of whether they are likely eligible, their potential SNAP amount, and the factors behind their decision.
 
 ## Embedding Screener
 
@@ -69,3 +61,13 @@ npm run build
 ```
 
 will build the API into ```docs/api.js``` to place the API in a location accessible by Github pages.
+
+## Bulk Screener [Beta]
+
+For organizations that would like to screen clients in bulk, there is a [bulk screener here](https://www.snapscreener.com/bulk-screener). This allows you to upload a full CSV of client profiles, and adds a new column stating whether clients are "likely eligible" or not.
+
+The bulk screener is in beta mode and only supports some states. Please contact us if you are interested in this use case.
+
+## Questions / Issues
+
+Please feel free to create an issue if need. Alternatively, you can email at info@snapscreener.com

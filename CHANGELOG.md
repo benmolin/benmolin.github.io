@@ -7,6 +7,11 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ### Pending Tasks
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 
+# 2021-01-20
+
+### Added
+- 15% increase to SNAP [USDA](https://www.fns.usda.gov/snap/temporary-increase-maximum-allotments-due-covid-19-revised-12282020)
+
 
 # 2021-01-03
 ### Removed
