@@ -7,6 +7,16 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ### Pending Tasks
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 
+
+# 2021-01-23
+
+### Added
+- New landing page
+
+### Changed
+- Moved screener to -> /screener
+
+
 # 2021-01-20
 
 ### Added
