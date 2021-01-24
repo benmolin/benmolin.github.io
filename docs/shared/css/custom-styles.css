@@ -222,6 +222,7 @@ header{
 #project-title{
   font-weight: bold;
   font-size: 22px;
+  color: #000000;
 }
 #project-subtitle{
   font-style: italic;
@@ -325,4 +326,8 @@ header{
   width: 90%;
   cursor: pointer;
   margin: 0 auto;
+}
+
+.no-underline{
+  text-decoration: none;
 }
