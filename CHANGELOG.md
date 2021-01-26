@@ -8,6 +8,19 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 
 
+
+# 2021-01-25
+
+### Added
+- Added LogRocket. Best way to debug.
+
+### Changed
+- New elements to privacy policy
+
+### Removed
+- Removed question about US Citizenship from prescreener. Makes more sense to put it as an optional question later, along with something like "are you a student?"
+
+
 # 2021-01-23
 
 ### Added
