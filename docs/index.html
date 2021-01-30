@@ -201,6 +201,31 @@
               </div>
         </main>
 
+        <!-- Table Page -->
+        <main id='p-table' class="hidden flex-grow bg-white">
+            <div class="pt-12 pb-16 xl:pb-36 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+                <div class="w-full lg:max-w-7xl mx-auto">
+
+                    <!-- Header -->
+                    <div class="pb-5 border-b border-gray-200 sm:flex sm:items-center sm:justify-between">
+                        <div class="-ml-2 -mt-2 flex flex-wrap items-baseline">
+                            <h3 class="ml-2 mt-2 text-2xl leading-6 font-semibold text-gray-900">
+                              SNAP Eligibility Parameters
+                            </h3>
+                            <p class="ml-2 mt-1 text-sm text-gray-500 truncate">See data page for legend</p>
+                          </div>
+                        <button id='show-data-button' type="button" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Show Data
+                        </button>
+                        </div>
+                    </div>
+
+                    <!-- Table -->
+                    <div id='table-placeholder' class='mt-12'></div>
+
+                </div>  
+            </div>  
+        </main>
 
         <!-- DATA PAGE -->
         <main id='p-data' class="hidden flex-grow bg-white">
@@ -235,14 +260,14 @@
                 </div>
                 <div class="mt-8">
                     <h3 class="text-lg font-medium">
-                    <a href="/" class="focus:outline-none">
+                    <a href="?p=table" class="focus:outline-none">
                         <!-- Extend touch target to entire panel -->
                         <span class="absolute inset-0" aria-hidden="true"></span>
-                        SNAP Screener Compiled Data (Coming Soon)
+                        SNAP Screener Compiled Data
                     </a>
                     </h3>
                     <p class="mt-2 text-sm text-gray-500">
-                    Eligibility rules merged into Google Sheets.
+                        Eligibility paramater rules in a sortable table
                     </p>
                 </div>
                 <span class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400" aria-hidden="true">
@@ -1235,6 +1260,8 @@ if (page == 'index'){
     $( "#p-index" ).show();
 } else if (page == 'data'){
     $( "#p-data" ).show();
+} else if (page == 'table'){
+    $( "#p-table" ).show();
 } else if (page == 'about'){
     $( "#p-about" ).show();
 } else{
@@ -1242,4 +1269,106 @@ if (page == 'index'){
 };
 
 
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
+<script src="data.js"></script>>
+<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+<script>
+$("#show-data-button").click(function(){
+    $("#show-data-button").hide();
+    var td = '<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">'
+    var th = '<th class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">'
+    var table = $('<table id="snap-table">').addClass('table-fixed min-w-full divide-y divide-gray-200 border border-gray-200 rounded-lg mt-12');
+    var counter = 1;
+
+
+    // Table Header
+    var row_data = th + 'State' + '</th>';
+    row_data +=  th + 'BBCE' + '</th>';
+    row_data +=  th + 'FPL Factor' + '</th>';
+    row_data +=  th + 'RL Non-HHEOD' + '</th>';
+    row_data +=  th + 'RL HHEOD' + '</th>';
+    row_data +=  th + 'HHEOD 2FPL' + '</th>';
+    row_data +=  th + 'Child Support' + '</th>';
+    row_data +=  th + 'ST MED DED' + '</th>';
+    row_data +=  th + 'ST MED DED AMT' + '</th>';
+    row_data +=  th + 'SUA' + '</th>';
+    row_data +=  th + 'BUA' + '</th>';
+    row_data +=  th + 'ELECTRICITY' + '</th>';
+    row_data +=  th + 'GAS' + '</th>';
+    row_data +=  th + 'WATER' + '</th>';
+    row_data +=  th + 'SEWAGE' + '</th>';
+    row_data +=  th + 'TRASH' + '</th>';
+    row_data +=  th + 'PHONE' + '</th>';
+    row_data +=  th + 'COVID' + '</th>';
+    table.append('<thead><tr class="bg-gray-50 uppercase">' + row_data + '</tr></thead><tbody>');
+    
+    function formatBoolean(x){
+        if (x == '-'){
+            return x
+        }else if (x){
+            return '<span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">' + x + '</span>';
+        }else{
+            return '<span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">' + x + '</span>';
+        };
+    };
+
+    function formatNull(x){
+        if (x == null){
+            return '-';
+        }else{
+            return x;
+        }
+    }
+        
+    for (var state in STATE_OPTIONS) {
+
+        var json = STATE_OPTIONS[state]['2021']
+        var util = json['standard_utility_allowances']
+
+        var row_data = td + state + '</td>';
+        row_data +=  td + formatBoolean(json['uses_bbce']) + '</td>';
+        row_data +=  td + formatNull(json['gross_income_limit_factor']) + '</td>';
+        row_data +=  td + formatNull(json['resource_limit_non_elderly_or_disabled']) + '</td>';
+        row_data +=  td + formatNull(json['resource_limit_elderly_or_disabled']) + '</td>';
+        row_data +=  td + formatBoolean(formatNull(json['has_resource_limit_elderly_or_disabled_income_twice_fpl'])) + '</td>';
+        row_data +=  td + json['child_support_payments_treatment'] + '</td>';
+        row_data +=  td + formatBoolean(json['standard_medical_deduction']) + '</td>';
+        row_data +=  td + formatNull(json['standard_medical_deduction_amount']) + '</td>';
+        row_data +=  td + util['HEATING_AND_COOLING'] + '</td>';
+        row_data +=  td + util['BASIC_LIMITED_ALLOWANCE'] + '</td>';
+        row_data +=  td + util['ELECTRICITY'] + '</td>';
+        row_data +=  td + util['GAS'] + '</td>';
+        row_data +=  td + util['WATER'] + '</td>';
+        row_data +=  td + util['SEWAGE'] + '</td>';
+        row_data +=  td + util['TRASH'] + '</td>';
+        row_data +=  td + util['PHONE'] + '</td>';
+        row_data +=  td + formatBoolean(json['covid']) + '</td>';
+
+
+        if (counter % 2 == 0){
+            var row = '<tr class="bg-gray-50">' + row_data + '</tr>';
+        }else{
+            var row = '<tr>' + row_data + '</tr>';
+        };
+
+        table.append(row);
+        counter++;
+    }
+
+    $('#table-placeholder').append(table);
+    $('#snap-table').DataTable( {
+        scrollX: true,
+        paging: false,
+        oLanguage: {
+            "sSearch": "Search States:",
+        },
+        "columnDefs": [
+            { "targets": [1,2,3,4,5,6,7,8,9,10], "searchable": false }
+        ]
+    });
+
+});
 </script>

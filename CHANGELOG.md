@@ -8,6 +8,10 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 
 
+# 2021-01-30
+
+### Added
+- Put SNAP parameter data in table
 
 # 2021-01-25
 

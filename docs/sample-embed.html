@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <script src="shared/iframe/iframeResizer.min.js"></script>
 
 </head>
 
@@ -26,31 +25,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Example</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Example
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Example</a>
-                        <a class="dropdown-item" href="#">Example</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Example</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Example</a>
-                </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Example</button>
-            </form>
         </div>
     </nav>
 
 
-    <iframe id='snap-iframe' src="index.html?debug=false&state=PA" title="SNAP Prescreener"></iframe>
+    <script src="shared/iframe/iframeResizer.min.js"></script>
+    <iframe id='snap-iframe' src="screener.html?debug=false&state=PA" title="SNAP Prescreener"></iframe>
+    <script src="shared/iframe/iframeResizer-screener.js"></script>
 
     <footer>
         Thank you for visiting our organization's website!
@@ -61,20 +43,25 @@
 </html>
 
 <style>
-    body,
-    footer {
-        padding: 20px;
+    body{
         text-align: center;
         color: white;
-        background-color: #212529;
+    }
+
+    
+
+    footer{
+        border-top: 1px solid gray;
+        padding-top: 12px;
+        margin-top: 12px;
+        color: black;
+        padding-bottom: 20px;
     }
 
     iframe {
         margin-top: 100px;
-        width: 80%;
+        width: 100%;
         height: 100%;
         border: none;
     }
 </style>
-
-<script src="shared/iframe/iframeResizer-screener.js"></script>
