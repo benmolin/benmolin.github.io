@@ -6,7 +6,13 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ### Pending Tasks
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
+- Single utility allowance for states with no BUA
 
+
+# 2021-01-31
+
+### Added
+- SNAP Parameter definitions
 
 # 2021-01-30
 

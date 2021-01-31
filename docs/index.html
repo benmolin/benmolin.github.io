@@ -26,11 +26,6 @@
         src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossorigin="anonymous"></script>
-
-
-        <!-- Logrocket -->
-        <script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
-        <script>window.LogRocket && window.LogRocket.init('rbzjjs/snap-screener');</script>
         
 
     </head>
@@ -428,17 +423,9 @@
       </div>
       <div class="mt-6">
         <dl class="space-y-8 divide-y divide-gray-200">
-          <div class="pt-6 md:grid md:grid-cols-12 md:gap-8">
-            <dt class="text-base font-medium text-gray-900 md:col-span-5">
-              BBCE (Broad Based Categorical Eligibility)
-            </dt>
-            <dd class="mt-2 md:mt-0 md:col-span-7">
-              <p class="text-base text-gray-500">
-                Coming Soon.
-              </p>
-            </dd>
-          </div>
-  
+
+            <div id='data-definitions'></div>
+ 
          
         </dl>
       </div>
@@ -1268,12 +1255,39 @@ if (page == 'index'){
     $( "#p-index" ).show();
 };
 
+// Show definitions
+var definitions_text = '';
+var definitions = [
+    ['Broad-Based Categorical Eligibility (BBCE)', "A policy that most states use to expand SNAP eligibility. Using BBCE, households can be approved for a low-value benefit (like a brochure) using a higher income limit ceiling. If the household is approved for the brochure, they are automatically eligible for SNAP and do not have to meet the federal SNAP gross income limit.", "https://fas.org/sgp/crs/misc/R42054.pdf"],
+    ['Federal Poverty Guideline Income Limit Factor (FPL Factor)', "For states using BBCE, this is the percentage of the Federal Poverty Guidelines that a household's gross income must be under to be categorically eligible. The default for non-BBCE states is 130%.", "https://www.fns.usda.gov/snap/recipient/eligibility"],
+    ['Resource / Asset Limit for Households Without Elderly or Disabled Members (RL NON-HHEOD)', "For states using BBCE, the maximum assets that a household can have to be categorically eligible. Most BBCE states do not have an asset test. Non-BBCE states have a $2250 asset limit for non-HHEOD.", "https://fns-prod.azureedge.net/sites/default/files/resource-files/BBCEStatesChart%28May2020%29.pdf"],
+    ['Resource / Asset Limit for Households With Elderly or Disabled Members (RL HHEOD)', "For states using BBCE, the maximum assets that a HHEOD can have to be categorically eligible. Most BBCE states do not have an asset test. Non-BBCE states have a $3500 asset limit for HHEOD.", "https://fns-prod.azureedge.net/sites/default/files/resource-files/BBCEStatesChart%28May2020%29.pdf"],
+    ['$3500 Asset Limit for HHEOD with Gross Income > 2x FPL (HHEOD 2FPL)', "HHEOD do not have to meet the Gross Income Test in any state. For some states using BBCE that do not typically have an asset test, if a HHEOD household has gross income over 200% the FPL, the household must pass a $3500 asset test. Non-BBCE states always have an asset test.", "https://fns-prod.azureedge.net/sites/default/files/resource-files/BBCEStatesChart%28May2020%29.pdf"],
+    ['Child Support Payments Treatment (CHILD SUPPORT)', "All states allow legally obligated child support payments to be a deduction from income to calculate net income (Net Income Test). Some states allow legally obligated child support payments to be excluded from gross income (Gross Income Test) as well. Treatment of exclusion offers expanded eligibility compared to deduction.", "https://fns-prod.azureedge.net/sites/default/files/snap/14-State-Options.pdf"],
+    ['Standard Medical Deduction (ST MED DED)', "All states allow HHEOD to deduct out-of-pocket medical expenses over $35 to a verified dollar amount. In states with a standard medical deduction, HHEOD with expenses over $35 can choose to take the standard medical deduction instead of calculating true expenses.", "https://fns-prod.azureedge.net/sites/default/files/snap/14-State-Options.pdf"],
+    ['Utility: Heating and Cooling (SUA / HCSUA)', "If a household pays utility bills for heating and cooling, or receives over $20 in heating assistance from LIHEAP, this deduction amount can be claimed (but no other utility deductions).", "https://www.federalregister.gov/documents/2019/10/03/2019-21287/supplemental-nutrition-assistance-program-standardization-of-state-heating-and-cooling-standard"],
+    ['Utility: Basic Utility Allowance (BUA)', "If a household pays for two or more utility bills, this deduction amount can be claimed (but no other utility deductions).", "https://www.federalregister.gov/documents/2019/10/03/2019-21287/supplemental-nutrition-assistance-program-standardization-of-state-heating-and-cooling-standard"],
+    ['Utility: Single Utility Allowance (ELECTRICITY / GAS / WATER / PHONE)', "If a household pays for only one utility bill, the associated deduction amount can be claimed. If the state has no BUA, multiple single utilities can be claimed.", "https://www.federalregister.gov/documents/2019/10/03/2019-21287/supplemental-nutrition-assistance-program-standardization-of-state-heating-and-cooling-standard"],
+    ['COVID Max-Allotment Adjustment (COVID)', "Many states are giving all SNAP recipients the maximum possible benefit amount for their household size due to COVID-19.", "https://www.fns.usda.gov/snap/covid-19-emergency-allotments-guidance"],
+
+
+];
+for (var i = 0; i < definitions.length; i++){
+    definitions_text += '<div class="pt-6 md:grid md:grid-cols-12 md:gap-8"><dt class="text-base font-medium text-gray-900 md:col-span-5">';
+    definitions_text +=  definitions[i][0];
+    definitions_text +=  '<a class="block mt-3 font-normal text-gray-600 text-sm" href="'+ definitions[i][2] + '">Ready More →</a>';
+    definitions_text +=  '</dt><dd class="mt-2 md:mt-0 md:col-span-7"><p class="text-base text-gray-500">';
+    definitions_text +=  definitions[i][1];
+    definitions_text += '</p></dd></div>';
+}
+$('#data-definitions').html(definitions_text);
+
 
 </script>
 
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
-<script src="data.js"></script>>
+<script src="data.js"></script>
 <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
 <script>
 $("#show-data-button").click(function(){
@@ -1372,3 +1386,9 @@ $("#show-data-button").click(function(){
 
 });
 </script>
+
+
+
+<!-- Logrocket -->
+<script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
+<script>window.LogRocket && window.LogRocket.init('rbzjjs/snap-screener');</script>
