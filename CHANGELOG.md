@@ -13,6 +13,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ### Added
 - SNAP Parameter definitions
+- State code definitions
 
 # 2021-01-30
 

@@ -57,10 +57,10 @@
                                 <a href="/" class="text-base font-medium pt-2 text-gray-500 hover:text-gray-900 ">
                                     Home
                                 </a>
-                                <a href="/?p=data" class="text-base font-medium pt-2 text-gray-500 hover:text-gray-900 ">
+                                <a href="?p=data" class="text-base font-medium pt-2 text-gray-500 hover:text-gray-900 ">
                                     Data
                                 </a>
-                                <a href="/?p=about" class="text-base font-medium pt-2 text-gray-500 hover:text-gray-900  ">
+                                <a href="?p=about" class="text-base font-medium pt-2 text-gray-500 hover:text-gray-900  ">
                                     About
                                 </a>
                                             
@@ -96,10 +96,10 @@
                                     <a href="/" class="divide-gray-50 pb-8 border-b text-base font-medium text-gray-900 hover:text-gray-700">
                                         Home
                                     </a>
-                                    <a href="/?p=data" class="divide-gray-50 pb-8 border-b text-base font-medium text-gray-900 hover:text-gray-700">
+                                    <a href="?p=data" class="divide-gray-50 pb-8 border-b text-base font-medium text-gray-900 hover:text-gray-700">
                                         Data
                                     </a>
-                                    <a href="/?p=about" class="divide-gray-4 pb-8 border-b text-base font-medium text-gray-900 hover:text-gray-700">
+                                    <a href="?p=about" class="divide-gray-4 pb-8 border-b text-base font-medium text-gray-900 hover:text-gray-700">
                                         About
                                     </a>
             
@@ -212,11 +212,26 @@
                         <button id='show-data-button' type="button" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Show Data
                         </button>
-                        </div>
                     </div>
 
                     <!-- Table -->
                     <div id='table-placeholder' class='mt-12'></div>
+
+                    <!-- Legend -->
+                    <div class="bg-white mt-24">
+                        <div class="text-2xl font-semibold text-gray-900  mb-3 pb-3 border-b">
+                            State Codes
+                        </div>
+                        <div class="mt-6">
+                            <dl class="space-y-8 divide-y divide-gray-200">
+
+                                <div id='state-definitions'></div>
+                    
+                            
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- End Legend -->
 
                 </div>  
             </div>  
@@ -417,20 +432,20 @@
             <!-- End Table -->
 
             <!-- Legend -->
-<div class="bg-white mt-24">
-      <div class="text-2xl font-bold text-gray-900  mb-3 pb-3 border-b-2">
-        Eligibility Parameters
-      </div>
-      <div class="mt-6">
-        <dl class="space-y-8 divide-y divide-gray-200">
+            <div class="bg-white mt-24">
+                <div class="text-2xl font-bold text-gray-900  mb-3 pb-3 border-b-2">
+                    Eligibility Parameters
+                </div>
+                <div class="mt-6">
+                    <dl class="space-y-8 divide-y divide-gray-200">
 
-            <div id='data-definitions'></div>
- 
-         
-        </dl>
-      </div>
-    </div>
-<!-- End Legend -->
+                        <div id='data-definitions'></div>
+            
+                    
+                    </dl>
+                </div>
+                </div>
+            <!-- End Legend -->
 
                 </div>
             </div>
@@ -790,7 +805,7 @@
                                   See the 2021 SNAP Eligibility Rules
                                 </p>
                                 <p class="mt-3 text-sm md:mt-0 md:ml-6">
-                                  <a href="/?p=data" class="whitespace-nowrap font-medium text-blue-700 hover:text-blue-600">View Data <span aria-hidden="true">&rarr;</span></a>
+                                  <a href="?p=data" class="whitespace-nowrap font-medium text-blue-700 hover:text-blue-600">View Data <span aria-hidden="true">&rarr;</span></a>
                                 </p>
                               </div>
                             </div>
@@ -1067,13 +1082,13 @@
                   </div>
             
                   <div class="px-5 py-2">
-                    <a href="/?p=data" class="text-base text-gray-500 hover:text-gray-900">
+                    <a href="?p=data" class="text-base text-gray-500 hover:text-gray-900">
                       Data
                     </a>
                   </div>
             
                   <div class="px-5 py-2">
-                    <a href="/?p=about" class="text-base text-gray-500 hover:text-gray-900">
+                    <a href="?p=about" class="text-base text-gray-500 hover:text-gray-900">
                       About
                     </a>
                   </div>
@@ -1255,7 +1270,7 @@ if (page == 'index'){
     $( "#p-index" ).show();
 };
 
-// Show definitions
+// Show variable definitions
 var definitions_text = '';
 var definitions = [
     ['Broad-Based Categorical Eligibility (BBCE)', "A policy that most states use to expand SNAP eligibility. Using BBCE, households can be approved for a low-value benefit (like a brochure) using a higher income limit ceiling. If the household is approved for the brochure, they are automatically eligible for SNAP and do not have to meet the federal SNAP gross income limit.", "https://fas.org/sgp/crs/misc/R42054.pdf"],
@@ -1281,6 +1296,24 @@ for (var i = 0; i < definitions.length; i++){
     definitions_text += '</p></dd></div>';
 }
 $('#data-definitions').html(definitions_text);
+
+// Show state definitions
+var definitions_text = '';
+var definitions = [
+    ['Household Size (HH)', "Some states have utility allotments dependent on household size. For example, Virginia has two utility allotment amounts: one for households with 1-3 members, and one for households with 4+ members. HH after a state code indicates that the values are dependent on household size.", "https://www.dss.virginia.gov/files/division/bp/fs/manual/P10.pdf"],
+    ['Alaska Region & Urban / Rural', "In Alaska, utility deductions depend on the region of the state. Minimum and maximum allotments depend on the population density of the area.", "http://dpaweb.hss.state.ak.us/e-forms/pdf/FSP-76.pdf"],
+    ['New Hampshire Dependent Child', "In New Hampshire, BBCE only applies to households with a dependent child. Otherwise, households must pass the standard federal non-BBCE income tests.", "https://nhfpi.org/resource/the-new-hampshire-food-stamp-program/"],
+    ['New York Area & Dependent Child & Earned Income', "In New York, there is a higher BBCE FPL factor if the household has a dependent child (DC) and a lower FPL factor if the household does not have a child but has earned income (EI). If the household has neither, the household will not qualify under BBCE. Additionally, utility allotments vary depending on whether the household is in NYC, Nassau and Suffolk counties (NAS), or the rest of New York State (XX).", "https://otda.ny.gov/programs/snap/"],
+];
+for (var i = 0; i < definitions.length; i++){
+    definitions_text += '<div class="pt-6 md:grid md:grid-cols-12 md:gap-8"><dt class="text-base font-medium text-gray-900 md:col-span-5">';
+    definitions_text +=  definitions[i][0];
+    definitions_text +=  '<a class="block mt-3 font-normal text-gray-600 text-sm" href="'+ definitions[i][2] + '">Ready More →</a>';
+    definitions_text +=  '</dt><dd class="mt-2 md:mt-0 md:col-span-7"><p class="text-base text-gray-500">';
+    definitions_text +=  definitions[i][1];
+    definitions_text += '</p></dd></div>';
+}
+$('#state-definitions').html(definitions_text);
 
 
 </script>
