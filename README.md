@@ -2,43 +2,48 @@
 
 ## Introduction
 
-This repo is a fork of [18F's Snap-JS-API-Prototype](https://github.com/18F/snap-js-api-prototype), with an HTML interface from [18F's Snap-JS-Prescreen-Prototypes](https://github.com/18F/snap-js-prescreener-prototypes) merged in to easily view and test the API.
+This is an open-source project to build a 50-state SNAP eligibility prescreener. You can view the final product [here](https://www.snapscreener.com/).
+
+This repo is a fork of [Snap-JS-API-Prototype](https://github.com/18F/snap-js-api-prototype) with an HTML interface from [Snap-JS-Prescreen-Prototypes](https://github.com/18F/snap-js-prescreener-prototypes). This fork has no affiliation with the original authors. You can read more about this project on our [about page](https://www.snapscreener.com/?p=about).
 
 ## Individual Screener
 
-You can view a demo for the [screener here](https://www.snapscreener.com/). This allows an individual to get an estimate of whether they are likely eligible, their potential SNAP amount, and the factors behind their decision.
+The [SNAP eligibility screener](https://www.snapscreener.com/) allows an individual to get an estimate of whether they are likely eligible for SNAP, their potential benefit, and how the decision was calculated.
 
-## Embedding Screener
+### Embedding Screener
 
-The goal for this project is to make the screener embeddable on any website. Here's how that might look:
+The screener can be embedded on any website. Here's how that might look:
 
 [Sample SNAP Screner Embedded](https://www.snapscreener.com/sample-embed)
 
 You can embed the screener using one line of code:
 
 ```
-<iframe id='snap-iframe' src="https://www.snapscreener.com/?state=PA" title="SNAP Screener"></iframe>
+<iframe id='snap-iframe' src="https://www.snapscreener.com/screener?state=PA" title="SNAP Screener"></iframe>
 ```
 
 There are few ways that you can customize the screener to best fit with your website. For example, if you wanted to embed the screener for PA on your website and link your organization's phone number and email, you could use the configuration here: 
 
-[Custom Pennsylvania SNAP Screener](https://www.snapscreener.com/?state=PA&phone=555-555-5555&email=help@example.com&debug=false&short=true)
+[Custom Pennsylvania SNAP Screener](https://www.snapscreener.com/screener?state=PA&org=ABCD&phone=555-555-5555&email=help@example.com&debug=false&short=true)
 
 To include this page directly on your website, you would place the URL into an iFrame:
 
 ```
-<iframe id='snap-iframe' src="https://www.snapscreener.com/?state=PA&phone=555-555-5555&email=help@example.com&debug=false&short=true" title="SNAP Screener"></iframe>
+<iframe id='snap-iframe' src="https://www.snapscreener.com/?state=PA&org=ABCD&phone=555-555-5555&email=help@example.com&debug=false&short=true" title="SNAP Screener"></iframe>
 ```
 
-All attributes are optional, with the exception of ``state``. Here all the attributes you can customize:
+All attributes are optional, with the exception of ``org`` and ``state``. Here all the attributes you can customize:
 
 | Attribute     | Description                                          | Required  |
 | ------------- |:---------------------------------------------------- | :-----:|
+| `org`         | Organization name                                    |   ✅   |
 | `state`       | State for screener                                   |   ✅   |
 | `email`       | Email address as the contact / support email         |   ❌   |
 | `phone`       | Phone number as the contact / support number         |   ❌   |
 | `debug`       | Show the debug information at the top (default=true) |   ❌   |
 | `short`       | Hide the non-required questions (default=false)      |   ❌   |
+
+Using the ``org`` argument will allow us to tell you how many individuals your organization was able to prescreen.
 
 ### Resizing iFrame
 
@@ -52,6 +57,10 @@ The calculator is already configured to respond to an [iFrame Resizing Library](
 <script src="https://www.snapscreener.com/shared/iframe/iframeResizer-screener.js"></script>
 ```
 
+## Data
+
+View the compiled eligibility parameters [here](https://www.snapscreener.com/?p=data).
+
 ## Building API
 
 All files and scripts needed to run the UI for using the API are in the ```docs``` folder. Building the minified, browser-ready Javascript with the command
@@ -62,12 +71,6 @@ npm run build
 
 will build the API into ```docs/api.js``` to place the API in a location accessible by Github pages.
 
-## Bulk Screener [Beta]
-
-For organizations that would like to screen clients in bulk, there is a [bulk screener here](https://www.snapscreener.com/bulk-screener). This allows you to upload a full CSV of client profiles, and adds a new column stating whether clients are "likely eligible" or not.
-
-The bulk screener is in beta mode and only supports some states. Please contact us if you are interested in this use case.
-
-## Questions / Issues
+## Questions / Issues / Feedback
 
 Please feel free to create an issue if need. Alternatively, you can email at info@snapscreener.com

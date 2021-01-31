@@ -15,6 +15,9 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - SNAP Parameter definitions
 - State code definitions
 
+### Changed
+- Updated Readme
+
 # 2021-01-30
 
 ### Added
