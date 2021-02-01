@@ -50,4 +50,13 @@ if (isDebug == 'false') {
 var isShort = urlParams.get('short');
 if (isShort == 'true') {
     document.getElementById('non-required-questions').style.display = 'none';
+    document.getElementById('show-optional-questions').style.display = 'none';
+}else if (isShort == 'false'){
+    document.getElementById('non-required-questions').style.display = '';
+    document.getElementById('show-optional-questions').style.display = 'none';
 };
+
+$( "#show-optional-questions" ).click(function() {
+    document.getElementById('non-required-questions').style.display = '';
+    document.getElementById('show-optional-questions').style.display = 'none';
+});

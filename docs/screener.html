@@ -410,7 +410,9 @@
             <input id="resources" name="resources" class="usa-input" />
           </div>
 
-          <div id='non-required-questions'>
+
+
+          <div id='non-required-questions' style='display:none;'>
             <label class="usa-label" for="dependent_care_costs">
               Dependent care costs
               <div id="dependent_care_costs_error_elem"></div>
@@ -515,6 +517,8 @@
 
           <!-- SUBMIT BUTTON -->
           <input id="prescreener-form-submit" class="usa-button" type="submit" value="Submit">
+          <div id="show-optional-questions" class="usa-button usa-button--outline">Add Deductions</div>
+
         </form>
         <section id="server-error-messages"></section>
         <section id="results-section" class="usa-prose result-section hidden" role="alert">
