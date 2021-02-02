@@ -22,14 +22,14 @@ You can embed the screener using one line of code:
 <iframe id='snap-iframe' src="https://www.snapscreener.com/screener?state=PA" title="SNAP Screener"></iframe>
 ```
 
-There are few ways that you can customize the screener to best fit with your website. For example, if you wanted to embed the screener for PA on your website and link your organization's phone number and email, you could use the configuration here: 
+There are few ways that you can customize the screener to best fit with your website. For example, if you wanted to embed the screener for PA on your website you could use the configuration here: 
 
-[Custom Pennsylvania SNAP Screener](https://www.snapscreener.com/screener?state=PA&org=ABCD&phone=555-555-5555&email=help@example.com&debug=false&short=true)
+[Custom Pennsylvania SNAP Screener](https://www.snapscreener.com/screener?state=PA&org=ABCD&debug=false&titles=false)
 
 To include this page directly on your website, you would place the URL into an iFrame:
 
 ```
-<iframe id='snap-iframe' src="https://www.snapscreener.com/?state=PA&org=ABCD&phone=555-555-5555&email=help@example.com&debug=false&short=true" title="SNAP Screener"></iframe>
+<iframe id='snap-iframe' src="https://www.snapscreener.com/screener?state=PA&org=ABCD&phone=555-555-5555&email=help@example.com&debug=false&short=true" title="SNAP Screener"></iframe>
 ```
 
 All attributes are optional, with the exception of ``org`` and ``state``. Here all the attributes you can customize:
@@ -38,7 +38,7 @@ All attributes are optional, with the exception of ``org`` and ``state``. Here a
 | ------------- |:---------------------------------------------------- | :-----:|
 | `org`         | Organization name                                    |   ✅   |
 | `state`       | State for screener                                   |   ✅   |
-| `titles`      | Hide titles on the top of the page (default=false)   |   ✅   |
+| `titles`      | Hide titles on the top of the page (default=false)   |   ❌   |
 | `debug`       | Show the debug information at the top (default=true) |   ❌   |
 | `short`       | Hide the non-required questions (default=false)      |   ❌   |
 | `email`       | Email address as the contact / support email         |   ❌   |
@@ -53,7 +53,7 @@ iFrames can be tricky to resize when embedded, and often result in double scroll
 The calculator is already configured to respond to an [iFrame Resizing Library](https://github.com/davidjbradshaw/iframe-resizer/). If you would like to automatically resize the iFrame as the screener expands, link the following two additional files after the iFrame. The first file is a library that can interpret resizing instructions sent from the screener. The second file activates the library on the ``#snap-iframe``.
 
 ```
-<iframe id='snap-iframe' src="https://www.snapscreener.com/?state=PA" title="SNAP Screener"></iframe>
+<iframe id='snap-iframe' src="https://www.snapscreener.com/screener?state=PA&org=ABCD&debug=false&titles=false" title="SNAP Screener"></iframe>
 <script src="https://www.snapscreener.com/shared/iframe/iframeResizer.min.js"></script>
 <script src="https://www.snapscreener.com/shared/iframe/iframeResizer-screener.js"></script>
 ```
