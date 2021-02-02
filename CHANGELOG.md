@@ -12,9 +12,13 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ### Added
 - Added a button to enable deductions on the form
+- Added an option to hide the titles
 
 ### Changed
 - Made the calculator short by default
+
+### Deleted
+- Removed food bank recommendations
 
 # 2021-01-31
 

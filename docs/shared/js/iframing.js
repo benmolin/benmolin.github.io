@@ -55,8 +55,14 @@ if (isShort == 'true') {
     document.getElementById('non-required-questions').style.display = '';
     document.getElementById('show-optional-questions').style.display = 'none';
 };
-
 $( "#show-optional-questions" ).click(function() {
     document.getElementById('non-required-questions').style.display = '';
     document.getElementById('show-optional-questions').style.display = 'none';
 });
+
+// Titles
+var showTitles = urlParams.get('titles');
+if (showTitles == 'false') {
+    document.getElementById('title-section').style.display = 'none';
+};
+
