@@ -8,6 +8,14 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 - Single utility allowance for states with no BUA
 
+# 2020-02-05
+
+### Added
+- Made the benefit amount bold
+
+### Changed
+- Had put the 15% boost message in the wrong location, wasn't showing it up for clients who didn't get max
+
 # 2020-02-01
 
 ### Added
