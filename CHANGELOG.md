@@ -8,6 +8,12 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 - Single utility allowance for states with no BUA
 
+# 2020-02-07
+
+### Changed
+- Removed "max-width" from prescreener UI
+- Added ```pattern="[0-9]*"``` for iPhone number pad
+
 # 2020-02-05
 
 ### Added
