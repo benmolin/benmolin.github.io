@@ -205,17 +205,30 @@
                     <div class="pb-5 border-b border-gray-200 sm:flex sm:items-center sm:justify-between">
                         <div class="-ml-2 -mt-2 flex flex-wrap items-baseline">
                             <h3 class="ml-2 mt-2 text-2xl leading-6 font-semibold text-gray-900">
-                              SNAP Eligibility Parameters
+                                SNAP Eligibility Parameters
                             </h3>
-                            <p class="ml-2 mt-1 text-sm text-gray-500 truncate">See data page for legend</p>
-                          </div>
-                        <button id='show-data-button' type="button" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Show Data
-                        </button>
+                            <p class="ml-2 mt-1 text-sm text-gray-500 truncate"></p>
+                        </div>
                     </div>
 
                     <!-- Table -->
                     <div id='table-placeholder' class='mt-12'></div>
+
+
+                    <!-- Legend -->
+                    <div class="bg-white mt-24">
+                        <div class="text-2xl font-bold text-gray-900  mb-3 pb-3 border-b-2">
+                            Eligibility Parameters
+                        </div>
+                        <div class="mt-6">
+                            <dl class="space-y-8 divide-y divide-gray-200">
+
+                                <div id='data-definitions'></div>
+                    
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- End Legend -->
 
                     <!-- Legend -->
                     <div class="bg-white mt-24">
@@ -227,7 +240,6 @@
 
                                 <div id='state-definitions'></div>
                     
-                            
                             </dl>
                         </div>
                     </div>
@@ -431,22 +443,7 @@
             </div>
             <!-- End Table -->
 
-            <!-- Legend -->
-            <div class="bg-white mt-24">
-                <div class="text-2xl font-bold text-gray-900  mb-3 pb-3 border-b-2">
-                    Eligibility Parameters
-                </div>
-                <div class="mt-6">
-                    <dl class="space-y-8 divide-y divide-gray-200">
-
-                        <div id='data-definitions'></div>
-            
-                    
-                    </dl>
-                </div>
-                </div>
-            <!-- End Legend -->
-
+        
                 </div>
             </div>
         </main>
@@ -1235,11 +1232,6 @@ $('#nav-header-close-button, #nav-header-open-button').on('click', function () {
 
 });
 
-// Slide in message
-$(document).ready(function () {
-    $("#top-message").delay(500).slideDown();
-});
-
 // On click "Find Eligibility" Button
 $('#homepage-screen-button').on('click', function () {
     var state = $('#select-state').find(":selected").val();
@@ -1322,9 +1314,10 @@ $('#state-definitions').html(definitions_text);
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
 <script src="data.js"></script>
 <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+
 <script>
-$("#show-data-button").click(function(){
-    $("#show-data-button").hide();
+if (page == 'table'){
+    
     var td = '<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">'
     var th = '<th class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">'
     var table = $('<table id="snap-table">').addClass('table-fixed min-w-full divide-y divide-gray-200 border border-gray-200 rounded-lg mt-12');
@@ -1417,7 +1410,7 @@ $("#show-data-button").click(function(){
         ]
     });
 
-});
+};
 </script>
 
 
