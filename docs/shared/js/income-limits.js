@@ -76,14 +76,14 @@ function showTestLimitsTables() {
             if (elderly == 1) {
                 if (asset_explain.search('200% of the federal poverty') > 0) {
                     AL_elderly = '$3500 (or meet gross income limit)';
-                } else if (asset_explain.search('does not have an asset test') > 0) {
+                } else if (asset_explain.search('household does not have to pass an asset test') > 0) {
                     AL_elderly = 'None';
                 } else {
                     AL_elderly = asset_limit;
                 };
             } else {
 
-                if (asset_explain.search('does not have an asset test') > 0) {
+                if (asset_explain.search('household is not held to an asset limit for SNAP eligibility') > 0) {
                     AL_limit = 'None';
                 } else {
                     AL_limit = asset_limit;

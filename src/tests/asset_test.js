@@ -50,7 +50,7 @@ export class AssetTest {
                 'name': 'Asset Test',
                 'result': true,
                 'explanation': [
-                    `${this.state_or_territory.substring(0, 2)} does not have an asset test for SNAP eligibility.`
+                    `This household is not held to an asset limit for SNAP eligibility.`
                 ],
                 'sort_order': 4,
                 'type': 'test'
