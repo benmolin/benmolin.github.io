@@ -81,7 +81,7 @@ export class SnapEstimateEntrypoint {
 
             // Count
             window.goatcounter.count({
-                path: this.raw_inputs.state_or_territory.substring(0, 2) + ' Screen',
+                path: this.raw_inputs.state_or_territory.substring(0, 2) + ' Screen | ' + org,
                 title: org,
                 event: true,
             })
