@@ -17,6 +17,9 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Move legend to table page
 - Changed wording about whether a state has an asset test. NY does... sometimes.
 
+### Added
+- Record organization name with each screen
+
 
 # 2020-02-07
 

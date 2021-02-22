@@ -59,7 +59,7 @@ export class SnapEstimateEntrypoint {
                     event: true,
                 })
             } catch (e) {
-                console.log('Not tracking, likely due to ad blocker');
+                console.log('Invalid Inputs - Not tracking, likely due to ad blocker');
             }
 
             // Send "invalid inputs" errors to the front-end:
@@ -72,13 +72,21 @@ export class SnapEstimateEntrypoint {
         // Count successful screen
         // Wrapped in try to avoid site breaking with adblock
         try {
+
+            // Get organization
+            var queryString = window.location.search;
+            var urlParams = new URLSearchParams(queryString);
+            var org = urlParams.get('org');
+            if (org == null){org = 'SNAPScreener'};
+
+            // Count
             window.goatcounter.count({
                 path: this.raw_inputs.state_or_territory.substring(0, 2) + ' Screen',
-                title: window.location.href,
+                title: org,
                 event: true,
             })
         } catch (e) {
-            console.log('Not tracking, likely due to ad blocker');
+            console.log('Valid Inputs - Not tracking, likely due to ad blocker');
         }
 
         const inputs = parser.inputs;
