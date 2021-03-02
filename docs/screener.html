@@ -394,6 +394,42 @@
             <input id="monthly_non_job_income" name="monthly_non_job_income" class="usa-input" pattern="[0-9]*"/>
           </div>
 
+
+
+          <!-- Only if they've gotten money from other sources -->
+          <fieldset id='unemployment_benefits_field' class="usa-fieldset d-none">
+            <legend>
+              Are you currently receiving unemployment benefits?
+              <span class="field-required">
+                *required
+              </span>
+              <div id="unemployment_benefits_error_elem"></div>
+            </legend>
+
+            <div class="label-sub-text">
+              The current $300 weekly increase to unemployment benefits will not be counted against you for SNAP eligibility.
+            </div>
+
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="input__unemployment_benefits_true" type="radio"
+                name="unemployment_benefits" value="true">
+              <label id="label__unemployment_benefits_true" class="usa-radio__label"
+                for="input__unemployment_benefits_true">
+                Yes
+              </label>
+            </div>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="input__unemployment_benefits_false" type="radio"
+                name="unemployment_benefits" value="false" checked>
+              <label id="label__unemployment_benefits_false" class="usa-radio__label"
+                for="input__unemployment_benefits_false">
+                No
+              </label>
+            </div>
+          </fieldset>
+
+
+
           <label class="usa-label" for="resources">
             Total resources
             <span class="field-required">
@@ -409,7 +445,7 @@
             <div class="dollar_sign">$</div>
             <input id="resources" name="resources" class="usa-input" pattern="[0-9]*"/>
           </div>
-
+          
 
 
           <div id='non-required-questions' style='display:none;'>

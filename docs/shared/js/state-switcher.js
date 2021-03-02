@@ -280,3 +280,24 @@ function stateSpecialRules(stateAbbr,
 $('.effects-state-rules').on('change', function () {
     applyStateRegionOrSizeRules();
 });
+
+$('#monthly_non_job_income').on('input',function(e){
+    if (($('#monthly_non_job_income').val() != 0) & ($('#monthly_non_job_income').val() != '')){
+
+        // If it currently is hidden, remove the input check
+        if ($("#unemployment_benefits_field").hasClass("d-none")){
+
+            $("#input__unemployment_benefits_true").prop('checked', false); 
+            $("#input__unemployment_benefits_false").prop('checked', false); 
+        };
+
+        // Show the field
+        $('#unemployment_benefits_field').removeClass('d-none');
+
+
+    }else{
+        $('#unemployment_benefits_field').addClass('d-none');
+        $("#input__unemployment_benefits_true").prop('checked', false); 
+        $("#input__unemployment_benefits_false").prop('checked', true); 
+    };
+});

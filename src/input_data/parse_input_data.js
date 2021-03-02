@@ -33,7 +33,8 @@ export class ParseInputs {
         ];
 
         const REQUIRED_BOOLEAN_INPUTS = [
-            'household_includes_elderly_or_disabled'
+            'household_includes_elderly_or_disabled',
+            'unemployment_benefits',
         ];
 
         const OPTIONAL_BOOLEAN_INPUTS = [

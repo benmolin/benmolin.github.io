@@ -10,6 +10,16 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 
 
+
+# 2020-03-1
+
+### Changed
+- Made the error messages full width
+
+### Added
+- New question about unemployment benefits. $300 weekly benefit excluded from gross income
+
+
 # 2020-02-21
 
 ### Changed

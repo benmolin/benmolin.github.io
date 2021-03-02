@@ -70,10 +70,12 @@ fieldset.usa-fieldset:not(:first-child) {
 
 fieldset.usa-fieldset legend {
   font-weight: bold;
+  width: 100%;
 }
 
 .usa-label {
   font-weight: bold;
+  max-width: none !important;
 }
 
 .usa-radio {

@@ -220,7 +220,14 @@
             if (jsonData['household_includes_elderly_or_disabled'] === undefined) {
                 errors.push({
                     name: 'household_includes_elderly_or_disabled',
-                    message: 'Select "yes" or "no" if your household includes someone who is 60 or older, or someone who is disabled',
+                    message: 'Select "yes" if your household includes someone who is 60 or older, or someone who is disabled',
+                });
+            }
+
+            if (jsonData['unemployment_benefits'] === undefined) {
+                errors.push({
+                    name: 'unemployment_benefits',
+                    message: 'Select "yes" if your household includes someone who is receiving unemployment benefits',
                 });
             }
 
@@ -563,6 +570,7 @@
 
     const radio_field_ids = [
         'household_includes_elderly_or_disabled',
+        'unemployment_benefits',
     ];
 
     for (let i = 0; i < radio_field_ids.length; i++) {

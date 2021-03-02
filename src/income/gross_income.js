@@ -4,6 +4,7 @@ export class GrossIncome {
         this.monthly_non_job_income = inputs.monthly_non_job_income;
         this.child_support_payments_treatment = inputs.child_support_payments_treatment;
         this.court_ordered_child_support_payments = inputs.court_ordered_child_support_payments;
+        this.unemployment_benefits = inputs.unemployment_benefits;
     }
 
     calculate() {
@@ -23,8 +24,22 @@ export class GrossIncome {
     }
 
     calculate_excluding_child_support() {
-        const monthly_income = this.monthly_job_income + this.monthly_non_job_income;
+
+
         const explanation = [];
+
+        if (this.unemployment_benefits){
+            this.monthly_non_job_income = this.monthly_non_job_income - 1200;
+
+            const unemployment_benefits_explanation = (
+                'The current $300 weekly increase to unemployment benefits ' +
+                'are counted as a gross income exclusion. The non-job income is ' +
+                'reduced by $1200 to exclude the additional unemployment benefits.'
+            );
+            explanation.push(unemployment_benefits_explanation);
+        };
+
+        const monthly_income = this.monthly_job_income + this.monthly_non_job_income;
 
         const child_support_payments_explanation = (
             'In this state, court-ordered child support payments are ' +
@@ -60,6 +75,17 @@ export class GrossIncome {
             'We start with calculating gross income. We find the household\'s gross income by adding up monthly income from both job and non-job sources.'
         );
         explanation.push(gross_income_intro);
+
+        if (this.unemployment_benefits){
+            this.monthly_non_job_income = this.monthly_non_job_income - 1200;
+
+            const unemployment_benefits_explanation = (
+                'The current $300 weekly increase to unemployment benefits ' +
+                'are counted as a gross income exclusion. The non-job income is ' +
+                'reduced by $1200 to exclude the additional unemployment benefits.'
+            );
+            explanation.push(unemployment_benefits_explanation);
+        };
 
         const monthly_income = this.monthly_job_income + this.monthly_non_job_income;
 
