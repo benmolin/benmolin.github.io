@@ -15,6 +15,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ### Changed
 - Made the error messages full width
+- Website now blue instead of indigo
 
 ### Added
 - New question about unemployment benefits. $300 weekly benefit excluded from gross income
