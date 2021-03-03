@@ -40,6 +40,7 @@ function showTestLimitsTables() {
 
                 // Resources
                 resources: 0,
+                unemployment_benefits: false,
 
                 // Constants here
                 monthly_non_job_income: 0,
