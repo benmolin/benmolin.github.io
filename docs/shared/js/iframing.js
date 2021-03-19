@@ -27,14 +27,21 @@ var contactEmail = urlParams.get('email');
 if (contactPhone == null) { contactPhone = '' };
 if (contactEmail == null) { contactEmail = '' };
 
-document.getElementsByClassName('hotline-number')[0].innerHTML = contactPhone;
-document.getElementsByClassName('hotline-number')[1].innerHTML = contactPhone;
-document.getElementsByClassName('hotline-email')[0].innerHTML = contactEmail;
-document.getElementsByClassName('hotline-email')[1].innerHTML = contactEmail;
+
+// Swap emails
+$(".hotline-wrapper:contains('{{HOTLINE_EMAIL}}')").each(function() {
+    $(this).html($(this).html().replace("{{HOTLINE_EMAIL}}", contactEmail));
+});
+$(".hotline-email a" ).html(contactEmail);
+
+// Swap numbers
+$(".hotline-wrapper:contains('{{HOTLINE_NUMBER}}')").each(function() {
+    $(this).html($(this).html().replace("{{HOTLINE_NUMBER}}", contactPhone));
+});
+$(".hotline-number a" ).html(contactPhone);
 
 if ((contactPhone == '') && (contactEmail == '')) {
     document.getElementsByClassName('hotline-wrapper')[0].style.display = 'none';
-    document.getElementById('snap-calculator-footer').style.display = 'none';
 } else if ((contactPhone == '') || (contactEmail == '')) {
     document.getElementsByClassName('hotline-or')[0].style.display = 'none';
     document.getElementsByClassName('hotline-or')[1].style.display = 'none';

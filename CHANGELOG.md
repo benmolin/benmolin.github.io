@@ -20,6 +20,10 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Added the copy link. Only works with ```debug != false```
 - Added Material Design Icons to license
 - Added citizenship question
+- Made hotline links clickable
+
+### Removed
+- Removed the "additional help" footer
 
 # 2020-03-1
 

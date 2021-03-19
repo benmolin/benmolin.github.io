@@ -383,14 +383,14 @@
           
           <div id="citizenship_info_box" class="usa-alert usa-alert--info usa-alert--slim hidden">
             <div class="usa-alert__body">
-              <p class="usa-alert__text">
+              <p class="usa-alert__text d-inline">
                 Your household may be eligible for SNAP, depending on your immigration status and the immigration status
                 of your household members.
-              <div class='hotline-wrapper'>
+              <div class='hotline-wrapper d-inline'>
                 Contact for more info:
-                <div class='hotline-number'>{{HOTLINE_NUMBER}}</div>
+                <div class='hotline-number'><a href="tel:{{HOTLINE_NUMBER}}">{{HOTLINE_NUMBER}}</a></div>
                 <div class='hotline-or'> or </div>
-                <div class='hotline-email'>{{HOTLINE_EMAIL}}</div>
+                <div class='hotline-email'><a href="mailto:{{HOTLINE_EMAIL}}">{{HOTLINE_EMAIL}}</a></div>
               </div>
             </div>
           </div>
@@ -614,14 +614,6 @@
       </div>
     </div>
   </div>
-  <footer id="snap-calculator-footer">
-    <div class='hotline-wrapper'>
-      Questions about your result? Confused about anything on this form? Reach out:
-      <div class='hotline-number'>{{HOTLINE_NUMBER}}</div>
-      <div class='hotline-or'> or </div>
-      <div class='hotline-email'>{{HOTLINE_EMAIL}}</div>
-    </div>
-  </footer>
 
   <footer class="debug-info usa-footer usa-footer--slim">
     <div class="grid-container usa-footer__return-to-top">

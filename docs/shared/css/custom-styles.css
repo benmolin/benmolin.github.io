@@ -146,25 +146,6 @@ fieldset.usa-fieldset legend {
   padding-bottom: 80px;
 }
 
-/* Footer styles */
-
-footer#snap-calculator-footer {
-  color: white;
-  background-color: #1B1349;
-  text-align: center;
-  width: 100%;
-  padding: 16px;
-}
-
-footer#snap-calculator-footer a {
-  color: white;
-}
-
-footer#snap-calculator-footer div {
-  margin: 16px 0;
-}
-
-
 /* Gross income dev table */
 .tests-table { 
     border-collapse: collapse; 
