@@ -78,7 +78,7 @@
         }
     };
 
-    const STATE_OPTIONS = {
+    var STATE_OPTIONS = {
         // For each state, an array of Object-shaped options.
         // `apply` options include URLs and descriptions of how a household can apply.
         // `other_resources` options include URLs and descriptions of non-SNAP food resources.
@@ -99,44 +99,29 @@
                     'description': 'Feeding America',
                 }
             ]
-        },
-        // 'VA': {
-        //     'apply': [
-        //         {
-        //             'url': 'https://commonhelp.dss.virginia.gov/CASWeb/faces/loginCAS.xhtml',
-        //             'description': 'Apply online using CommonHelp. (You may have to create an account to apply.)'
-        //         },
-        //         {
-        //             'url': 'https://www.dss.virginia.gov/localagency/index.cgi',
-        //             'description': 'Apply at a local Social Services office near you.',
-        //         }
-        //     ],
-        //     'other_resources': [
-        //         {
-        //             'url': 'https://www.foodpantries.org/st/virginia',
-        //             'description': 'Foodpantries.org',
-        //         },
-        //         {
-        //             'url': 'https://www.feedingamerica.org/find-your-local-foodbank',
-        //             'description': 'Feeding America',
-        //         }
-        //     ]
-        // },
-        // 'IL': {
-        //     'apply': [
-        //         {
-        //             'url': 'https://abe.illinois.gov/abe/access/',
-        //             'description': 'Apply online using ABE.',
-        //         }
-        //     ],
-        //     'other_resources': [
-        //         {
-        //             'url': 'https://www.dhs.state.il.us/page.aspx?item=31245',
-        //             'description': 'Food Connections',
-        //         }
-        //     ]
-        // }
+        }
     };
+
+    // Custom links
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString)
+
+    // Add custom apply url
+    if (urlParams.get('apply_url') != null){
+        STATE_OPTIONS.DEFAULT.apply.push({
+            'url': 'https://bit.ly/' + urlParams.get('apply_url'), // 38YIeHU
+            'description': urlParams.get('apply_desc').replace(/_/g, " ") // Apply_online_using_CommonHelp.
+        })
+    };
+
+    // Add custom resources url
+    if (urlParams.get('resources_url') != null){
+        STATE_OPTIONS.DEFAULT.other_resources.push({
+            'url': 'https://bit.ly/' + urlParams.get('resources_url'), // 3c1wqqk
+            'description': urlParams.get('resources_desc').replace(/_/g, " ") // Apply_at_a_local_Social_Services_office_near_you.
+        })
+    };
+
 
     // Shortcuts for showing/hiding specific elements on the page.
     const FORM_CONTROLS = {
@@ -466,7 +451,7 @@
 
                 html += FORM_SUBMIT_FUNCS['optionsHTML'](nextStepOptions['apply'], 'Ways to apply:');
 
-                // html += FORM_SUBMIT_FUNCS['optionsHTML'](nextStepOptions['other_resources'], 'Other resources for food assistance:');
+                html += FORM_SUBMIT_FUNCS['optionsHTML'](nextStepOptions['other_resources'], 'Other resources for food assistance:');
 
                 return html;
             }

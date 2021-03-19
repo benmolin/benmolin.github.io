@@ -21,6 +21,8 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Added Material Design Icons to license
 - Added citizenship question
 - Made hotline links clickable
+- Added food bank links
+- Allow new querystring options for apply and additional resources urls
 
 ### Removed
 - Removed the "additional help" footer
