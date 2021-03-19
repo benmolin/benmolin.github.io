@@ -48,6 +48,8 @@ export class SnapEstimateEntrypoint {
         const parser = new ParseInputs(this.raw_inputs);
         const inputs_valid = parser.inputs_valid();
 
+        CURRENT_PROFILE = this.raw_inputs;
+
         if (!inputs_valid) {
 
             // Count invalid screen
@@ -60,6 +62,7 @@ export class SnapEstimateEntrypoint {
                 })
             } catch (e) {
                 console.log('Invalid Inputs - Not tracking, likely due to ad blocker');
+                console.log(e);
             }
 
             // Send "invalid inputs" errors to the front-end:
@@ -87,6 +90,7 @@ export class SnapEstimateEntrypoint {
             })
         } catch (e) {
             console.log('Valid Inputs - Not tracking, likely due to ad blocker');
+            console.log(e);
         }
 
         const inputs = parser.inputs;

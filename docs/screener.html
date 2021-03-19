@@ -120,11 +120,11 @@
 
   <div id="main" class="grid-container">
     <div class="grid-row">
-      <div id='title-section' class="desktop:grid-col-8 desktop:grid-offset-2">
+      <div id='title-section' class="desktop:grid-col-10 desktop:grid-offset-1">
         <h1 class="title">Could you be eligible for help with your food budget?</h1>
         <p class="subtitle">Find out if you may be eligible for SNAP and an estimated amount of benefits you could
           receive.</p>
-        <div class='debug-info third-title'>This is not an application: <a href=' #footer-disclaimer'>see disclaimer</a>
+        <div class='debug-info third-title'>This is not an application. <a href='https://www.snapscreener.com/privacy' target="_blank" rel="noopener noreferrer" >See disclaimer and privacy policy.</a>
         </div>
       </div>
       <div id='no-state-selected' class="desktop:grid-col-6 desktop:grid-offset-3 d-none">
@@ -448,7 +448,7 @@
           
 
 
-          <div id='non-required-questions' style='display:none;'>
+          <div id='non-required-questions'>
             <label class="usa-label" for="dependent_care_costs">
               Dependent care costs
               <div id="dependent_care_costs_error_elem"></div>
@@ -553,7 +553,7 @@
 
           <!-- SUBMIT BUTTON -->
           <input id="prescreener-form-submit" class="usa-button" type="submit" value="Submit">
-          <div id="show-optional-questions" class="usa-button usa-button--outline">Add Deductions</div>
+          <div id="show-optional-questions" style='display:none' class="usa-button usa-button--outline">Add Deductions</div>
 
         </form>
         <section id="server-error-messages"></section>
@@ -652,7 +652,9 @@
     </div>
   </footer>
 
-
+  <!-- Copytext -->
+  <input type="text" value="Error - SNAP Results Did Not Copy" id="results-url" class='d-none'>
+  
   <!-- Goatcounter -->
   <script>
     window.goatcounter = { allow_frame: true }

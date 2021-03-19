@@ -358,6 +358,36 @@
             const resultHTML = FORM_SUBMIT_FUNCS['resultToHTML'](response);
             document.getElementById('results').innerHTML = resultHTML;
 
+            // Copy link to clipboard
+            $('#copy-link').on('click',function(e){
+
+                // Must be visible to copy
+                $('#copy-link-tag').removeClass('d-none');
+
+                // Remove any prefilled information
+                var RES_URL = window.location.href;
+                RES_URL = RES_URL.split('___PREFILLED___')[0]; 
+
+                // Append information to url as needed
+                if (RES_URL.includes('?') == false){
+                    RES_URL += '?';
+                } else if (RES_URL.substr(-1) != '&'){
+                    RES_URL += '&';
+                };
+
+                // Set the results link
+                $('#results-url').removeClass('d-none');
+                $('#results-url:text').val(RES_URL + '___PREFILLED___&' + $.param(CURRENT_PROFILE));
+
+                // Copy the results
+                var copyText = document.getElementById("results-url");
+                copyText.select();
+                copyText.setSelectionRange(0, 1000000);
+                document.execCommand("copy");
+                $('#results-url').addClass('d-none');
+
+            });
+
             const eligibilityExplanationHTML = FORM_SUBMIT_FUNCS['eligibilityExplanationToHTML'](response.eligibility_factors);
             document.getElementById('why-did-i-get-this-result').innerHTML = eligibilityExplanationHTML;
 
@@ -401,7 +431,16 @@
             return html;
         },
         'resultToHTML': (response) => {
-            let html = '<h2 id="results-section-title">Results:</h2>';
+            let html = '<h2 class="d-inline" id="results-section-title">Results:</h2>';
+
+            // Allow copying link to clipboard
+            var queryString = window.location.search;
+            var urlParams = new URLSearchParams(queryString)
+            var isDebug = urlParams.get('debug');
+            if (isDebug != 'false') {
+                html += '<div id="copy-link" class="d-inline" data-clipboard-target="#results-url"><svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="20"><path d="M0 0h24v24H0z" fill="none"/><path fill="#1b6aa5" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg><span id="copy-link-text">Copy Link to Results</span><span id="copy-link-tag" class="d-none usa-tag">Copied!</span></div>'
+            };
+
 
             const is_eligible = response.estimated_eligibility;
             const estimated_monthly_benefit = response.estimated_monthly_benefit;

@@ -9,7 +9,16 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
+# 2020-03-18
 
+### Changed
+- Calculator is now full by default. ```?short=true``` can go back to the toggle.
+- Link to disclaimer is now a ```_blank``` out to the full privacy policy and terms.
+- Titles on calculator are now larger
+
+### Added
+- Added the copy link. Only works with ```debug != false```
+- Added Material Design Icons to license
 
 # 2020-03-1
 

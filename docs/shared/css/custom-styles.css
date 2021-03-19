@@ -16,7 +16,7 @@
   text-align: center;
   margin: 20px 0 20px 0;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .subtitle {
@@ -108,7 +108,7 @@ fieldset.usa-fieldset legend {
 }
 
 /* Calculator results styles */
-#results-section-title {
+#results {
   margin-top: 1.5em;
 }
 
@@ -336,4 +336,31 @@ header{
 
 .no-underline{
   text-decoration: none;
+}
+
+.d-inline{
+  display: inline;
+}
+
+.d-none{
+  display: none;
+}
+
+#copy-link{
+  color: #1b6aa5;
+  margin-left: 12px;
+  cursor: pointer;
+  vertical-align: -2px;
+}
+
+#copy-link-text{
+  vertical-align: 3px;
+}
+
+
+#copy-link-tag{
+  margin-left: 4px;
+  vertical-align: 3px;
+  background-color: #059669 !important;
+  text-transform: none !important;
 }
