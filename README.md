@@ -57,7 +57,7 @@ iFrames can be tricky to resize when embedded, and often result in double scroll
 The calculator is already configured to respond to an [iFrame Resizing Library](https://github.com/davidjbradshaw/iframe-resizer/). If you would like to automatically resize the iFrame as the screener expands, link the following two additional files after the iFrame. The first file is a library that can interpret resizing instructions sent from the screener. The second file activates the library on the ``#snap-iframe``.
 
 ```
-<iframe id='snap-iframe' src="https://www.snapscreener.com/screener?state=PA&org=ABCD&debug=false&titles=false" title="SNAP Screener" style='margin-top:100px;width:100%;height:1500px;border:none;overflow-y:scroll;'></iframe>
+<iframe id='snap-iframe' src="https://www.snapscreener.com/screener?state=PA&org=ABCD&debug=false&titles=false" title="SNAP Screener" style='margin-top:20px;width:100%;height:2100px;border:none;overflow-y:scroll;'></iframe>
 <script src="https://www.snapscreener.com/shared/iframe/iframeResizer.min.js"></script>
 <script src="https://www.snapscreener.com/shared/iframe/iframeResizer-screener.js"></script>
 ```
@@ -65,9 +65,9 @@ The calculator is already configured to respond to an [iFrame Resizing Library](
 To style the iFrame, either use the style attribute directly on the iframe or include the following in your ```.css``` file.
 ```
 #snap-iframe{
-    margin-top: 100px;
+    margin-top: 20px;
     width:      100%;
-    height:     1500px;
+    height:     2100px;
     border:     none;
     overflow-y: scroll;
 }
