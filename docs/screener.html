@@ -38,7 +38,7 @@
 
 <body>
 
-  <header class="debug-info ">
+  <header class="debug-info d-none">
     <div id='main-header'>
       <div class='usa-nav-container'>
 
@@ -108,23 +108,15 @@
 
       </div>
     </div>
-    <!-- <div id='sub-header-message'>
-      👋 Attention nonprofits: this calculator is free-to-use and can be launched directly on your website!
-      <a href='https://airtable.com/shrOio07DfzOBCm5m'>Learn More →</a>
-    </div> -->
-    <!--
-    <div id='sub-header-warning'>
-      Demo mode. Not ready for production use.
-    </div> -->
   </header>
 
   <div id="main" class="grid-container">
     <div class="grid-row">
-      <div id='title-section' class="desktop:grid-col-10 desktop:grid-offset-1">
+      <div id='title-section' class="desktop:grid-col-10 desktop:grid-offset-1" style='display:none;'>
         <h1 class="title">Could you be eligible for help with your food budget?</h1>
         <p class="subtitle">Find out if you may be eligible for SNAP and an estimated amount of benefits you could
           receive.</p>
-        <div class='debug-info third-title'>This is not an application. <a href='https://www.snapscreener.com/privacy' target="_blank" rel="noopener noreferrer" >See disclaimer and privacy policy.</a>
+        <div class='third-title'>This is not an application. <a href='https://www.snapscreener.com/privacy' target="_blank" rel="noopener noreferrer" >See disclaimer and privacy policy.</a>
         </div>
       </div>
       <div id='no-state-selected' class="desktop:grid-col-6 desktop:grid-offset-3 d-none">
@@ -615,7 +607,7 @@
     </div>
   </div>
 
-  <footer class="debug-info usa-footer usa-footer--slim">
+  <footer class="debug-info d-none usa-footer usa-footer--slim">
     <div class="grid-container usa-footer__return-to-top">
       <a href="#">Return to top</a>
     </div>

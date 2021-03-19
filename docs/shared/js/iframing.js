@@ -49,8 +49,8 @@ if ((contactPhone == '') && (contactEmail == '')) {
 
 // Demo header
 var isDebug = urlParams.get('debug');
-if (isDebug == 'false') {
-    $('.debug-info').addClass('d-none');
+if (isDebug != 'false') {
+    $('.debug-info').removeClass('d-none');
 };
 
 // Short form
@@ -66,7 +66,7 @@ $( "#show-optional-questions" ).click(function() {
 
 // Titles
 var showTitles = urlParams.get('titles');
-if (showTitles == 'false') {
-    document.getElementById('title-section').style.display = 'none';
+if (showTitles != 'false') {
+    document.getElementById('title-section').style.display = '';
 };
 
