@@ -292,6 +292,10 @@ header{
   #main-header {
     height: 144px;
   }
+  .third-title a{
+    margin-top: 6px;
+    display: block;
+  }
 }
 
 
