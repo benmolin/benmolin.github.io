@@ -350,6 +350,37 @@
             </div>
           </fieldset>
 
+          <fieldset class="usa-fieldset">
+            <legend>
+              Is everyone on the application a U.S. citizen?
+              <span class="field-required">
+                *required
+              </span>
+              <div id="all_citizens_question_error_elem"></div>
+            </legend>
+
+            <div class="label-sub-text">
+              Immigrants <strong>can</strong> be eligible for SNAP, depending on their immigration status.
+            </div>
+
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="input__all_citizens_question_true" type="radio"
+                name="all_citizens_question" value="true">
+              <label id="label__all_citizens_question_true" class="usa-radio__label"
+                for="input__all_citizens_question_true">
+                Yes
+              </label>
+            </div>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="input__all_citizens_question_false" type="radio"
+                name="all_citizens_question" value="false">
+              <label id="label__all_citizens_question_false" class="usa-radio__label"
+                for="input__all_citizens_question_false">
+                No
+              </label>
+            </div>
+          </fieldset>
+          
           <div id="citizenship_info_box" class="usa-alert usa-alert--info usa-alert--slim hidden">
             <div class="usa-alert__body">
               <p class="usa-alert__text">

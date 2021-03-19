@@ -22,6 +22,10 @@ function isTrue(v){
     return (urlParams.get(v) == 'true');
 }
 
+function isFalse(v){
+    return (urlParams.get(v) == 'false');
+}
+
 // Prepop
 $(document).ready(function() {
     var queryString = window.location.search;
@@ -36,16 +40,23 @@ $(document).ready(function() {
     $('#ak_urban').val(urlParams.get('ak_urban'));
 
     $("#input__household_includes_dependent_child_true").prop("checked", isTrue('household_includes_dependent_child'));
-    $("#input__household_includes_dependent_child_false").prop("checked", !isTrue('household_includes_dependent_child'));
+    $("#input__household_includes_dependent_child_false").prop("checked", isFalse('household_includes_dependent_child'));
+
+
+    $("#input__all_citizens_question_true").prop("checked", isTrue('all_citizens_question'));
+    $("#input__all_citizens_question_false").prop("checked", isFalse('all_citizens_question'));
+    if (isFalse('all_citizens_question')){
+        $('#citizenship_info_box').removeClass('hidden');
+    };
 
     
     $("#input__unemployment_benefits_true").prop("checked", isTrue('unemployment_benefits'));
-    $("#input__unemployment_benefits_false").prop("checked", !isTrue('unemployment_benefits'));
+    $("#input__unemployment_benefits_false").prop("checked", isFalse('unemployment_benefits'));
 
     $('#resources').val(urlParams.get('resources'));
 
     $("#input__household_includes_elderly_or_disabled_true").prop("checked", isTrue('household_includes_elderly_or_disabled'));
-    $("#input__household_includes_elderly_or_disabled_false").prop("checked", !isTrue('household_includes_elderly_or_disabled'));
+    $("#input__household_includes_elderly_or_disabled_false").prop("checked", isFalse('household_includes_elderly_or_disabled'));
 
     $('#dependent_care_costs').val(urlParams.get('dependent_care_costs'));
     $('#medical_expenses_for_elderly_or_disabled').val(urlParams.get('medical_expenses_for_elderly_or_disabled'));

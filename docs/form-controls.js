@@ -231,6 +231,13 @@
                 });
             }
 
+            if (jsonData['all_citizens_question'] === undefined) {
+                errors.push({
+                    name: 'all_citizens_question',
+                    message: 'Select "yes" or "no" if everyone on the application is a U.S. citizen',
+                });
+            }
+
             // Validation for number fields:
             const number_field_ids = [
                 'monthly_job_income',
@@ -563,6 +570,15 @@
         FORM_SUBMIT_FUNCS['onSubmit']();
     });
 
+    // Set up toggle of citizenship infobox in response to citizenship question.
+    document.getElementById('input__all_citizens_question_true').addEventListener('change', () => {
+        FORM_CONTROLS['hideCitizenshipInfobox']();
+    });
+
+    document.getElementById('input__all_citizens_question_false').addEventListener('change', () => {
+        FORM_CONTROLS['showCitizenshipInfobox']();
+    });
+
     // Set up toggle of medical expenses question in response to elderly or disabled question result.
     document.getElementById('input__household_includes_elderly_or_disabled_true').addEventListener('change', () => {
         FORM_CONTROLS['showMedicalExpensesForElderlyOrDisabled']();
@@ -610,6 +626,7 @@
     const radio_field_ids = [
         'household_includes_elderly_or_disabled',
         'unemployment_benefits',
+        'all_citizens_question',
     ];
 
     for (let i = 0; i < radio_field_ids.length; i++) {

@@ -19,6 +19,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ### Added
 - Added the copy link. Only works with ```debug != false```
 - Added Material Design Icons to license
+- Added citizenship question
 
 # 2020-03-1
 
