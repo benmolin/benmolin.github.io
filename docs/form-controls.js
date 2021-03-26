@@ -108,7 +108,7 @@
 
     // Add custom apply url
     if (urlParams.get('apply_url') != null){
-        STATE_OPTIONS.DEFAULT.apply.push({
+        STATE_OPTIONS.DEFAULT.apply.unshift({
             'url': 'https://bit.ly/' + urlParams.get('apply_url'), // 38YIeHU
             'description': urlParams.get('apply_desc').replace(/_/g, " ") // Apply_online_using_CommonHelp.
         })
@@ -116,7 +116,7 @@
 
     // Add custom resources url
     if (urlParams.get('resources_url') != null){
-        STATE_OPTIONS.DEFAULT.other_resources.push({
+        STATE_OPTIONS.DEFAULT.other_resources.unshift({
             'url': 'https://bit.ly/' + urlParams.get('resources_url'), // 3c1wqqk
             'description': urlParams.get('resources_desc').replace(/_/g, " ") // Apply_at_a_local_Social_Services_office_near_you.
         })

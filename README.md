@@ -43,9 +43,9 @@ All attributes are optional, with the exception of ``org`` and ``state``. Here a
 | `short`       | Hide the non-required questions (default=false)      |   ❌   |
 | `email`       | Email address as the contact / support email         |   ❌   |
 | `phone`       | Phone number as the contact / support number         |   ❌   |
-| `apply_url`       | Custom link to apply. Must be a bitly link                         |   ❌   |
+| `apply_url`       | Custom link to apply. Must be a bit.ly link                         |   ❌   |
 | `apply_desc`      | Desc of custom apply link. Replace spaces with _                   |   ❌   |
-| `resources_url`   | Custom link for more resources. Must be a bitly link               |   ❌   |
+| `resources_url`   | Custom link for more resources. Must be a bit.ly link               |   ❌   |
 | `resources_desc`  | Desc of custom apply for more resources. Replace spaces with _     |   ❌   |
  
 Using the ``org`` argument will allow us to tell you how many individuals your organization was able to prescreen.
