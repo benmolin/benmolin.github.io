@@ -9,6 +9,11 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
+# 2020-03-31
+
+### Changed
+- Copy on citizenship info box
+
 # 2020-03-18
 
 ### Changed
