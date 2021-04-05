@@ -1,3 +1,3 @@
 iFrameResize({
-    log: true
+    log: false
 }, '#snap-iframe') 

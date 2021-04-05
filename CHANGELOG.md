@@ -9,6 +9,19 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
+# 2020-04-02
+
+### Changed
+- Updated the "Results" Emergency Allotment benefit with the new [March $95 EA rule](https://fns-prod.azureedge.net/sites/default/files/resource-files/snap-covid-emergency-allotments-phase-3-guidance.pdf)
+
+### Removed
+- Removed additional SNAP benefit calculation from "Why did I get this result"
+
+# 2020-04-03
+
+### Changed
+- Deactivated iFrame resize log
+
 # 2020-03-31
 
 ### Changed

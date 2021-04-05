@@ -458,20 +458,22 @@
 
             // SNAP JS API estimates household is eligible:
             html += '<p>You may be <b>eligible</b> for SNAP benefits.</p>';
+            html += `<p>If you apply and are approved, your benefit may be <b>$${estimated_monthly_benefit}</b> per month.</p>`;
+
+            // Calculate 15% boost
+            const estimated_monthly_benefit_plus15 = Math.round(estimated_monthly_benefit * 1.15);
+            const fifteen_boost_amount = estimated_monthly_benefit_plus15 - estimated_monthly_benefit;
+            const temp_max_allotment =  Math.round(1.15 * emergency_allotment_estimated_benefit);
+
+            // Calculate if $95 or max allotment is more
+            const additional_amount = Math.max(95, temp_max_allotment - estimated_monthly_benefit_plus15) + fifteen_boost_amount;
 
             // If emergency allotments are active, and estimated benefit is less than EA amount:
-            if (emergency_allotment_estimated_benefit && estimated_monthly_benefit !== emergency_allotment_estimated_benefit) {
-                const additional_amount = emergency_allotment_estimated_benefit - estimated_monthly_benefit;
-
+            if (emergency_allotment_estimated_benefit) {
                 html += (
-                    `<p>If you apply and are approved, your benefit may be <b>$${estimated_monthly_benefit}</b> per month.</p><p>Due to the current pandemic, you could receive an additional $${additional_amount} per month. This additional amount is temporary, and this benefit may have expired in your state.</p>`
+                    `<p>Due to the current pandemic, you could receive an additional $${additional_amount} per month. This additional amount is temporary, and some additional benefits may expire after June 30th.</p>`
                 );
-                // If no emergency allotments, or EA is the same as regular benefit amount:
-            } else {
-                html += `<p>If you apply and are approved, your benefit may be <b>$${estimated_monthly_benefit}</b> per month.</p>`;
-            }
-
-            html += `<p>Additionally, most people getting SNAP benefits will receive an additional 15% increase to their benefit amount from January 1st 2021 - June 30th 2021.</p>`;
+            };
 
             html += FORM_SUBMIT_FUNCS['optionsHTML'](nextStepOptions['apply'], 'Ways to apply:');
             return html;

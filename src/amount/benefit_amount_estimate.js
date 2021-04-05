@@ -96,20 +96,33 @@ export class BenefitAmountEstimate {
         if (estimated_benefit === max_allotment) {
             // With emergency allotments, household already receiving max benefit:
             explanation.push(
-                `This gives us an estimated monthly benefit of $${estimated_benefit}, which is the maximum benefit amount.`
+                `This gives us an estimated monthly benefit of <b>$${estimated_benefit}</b>, which is the maximum benefit amount.`
             );
         } else {
-            // With emergency allotments, household not already receiving max benefit:
-            if (this.covid) {
-                explanation.push(
-                    `This gives us an estimated monthly benefit of $${estimated_benefit}. SNAP emergency allotments appear to be active in your state, so if approved your benefit could temporarily be as much as $${max_allotment} per month.`
-                );
-            } else {
-                explanation.push(
-                    `This gives us an estimated monthly benefit of $${estimated_benefit}. SNAP emergency allotments appear to have expired in your state.`
-                );
-            };
-        }
+            explanation.push(
+                `This gives us an estimated monthly benefit of <b>$${estimated_benefit}</b>.`
+            );
+        };
+
+        // 15% COVID Increase
+        explanation.push(
+            `Due to the current pandemic, SNAP benefit amounts are temporarily increased. First, all base benefit amounts are increased by 15% until June 30th. So the new base benefit amount for this household is:`
+        );
+
+        const estimated_benefit_plus15 = Math.round(estimated_benefit * 1.15);
+        const fifteen_benefit_math = `$${estimated_benefit} &times; 115% = $${estimated_benefit_plus15} base benefit`;
+        explanation.push(fifteen_benefit_math);
+
+        // Emergency Allotment increase
+        explanation.push(
+            `Second, the household's benefit amount will be increased to 115% of the maximum allotment amount for the household size or increased by $95, whichever is a larger increase. Including the temporary increases to SNAP, the final estimated benefit would be:`
+        );
+
+        const temp_max_allotment =  Math.round(1.15 * max_allotment);
+        const ea_increase = Math.max(95, temp_max_allotment - estimated_benefit_plus15);
+        const final_amount = estimated_benefit_plus15 + ea_increase;
+        const ea_increase_math = `$${estimated_benefit_plus15} + $${ea_increase} = <b>$${final_amount} estimated benefit</b>`;
+        explanation.push(ea_increase_math);        
 
         return {
             'name': 'Benefit Amount',
