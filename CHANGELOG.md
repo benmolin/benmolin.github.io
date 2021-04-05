@@ -14,9 +14,6 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ### Changed
 - Updated the "Results" Emergency Allotment benefit with the new [March $95 EA rule](https://fns-prod.azureedge.net/sites/default/files/resource-files/snap-covid-emergency-allotments-phase-3-guidance.pdf)
 
-### Removed
-- Removed additional SNAP benefit calculation from "Why did I get this result"
-
 # 2020-04-03
 
 ### Changed
