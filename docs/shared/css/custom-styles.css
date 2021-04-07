@@ -279,7 +279,10 @@ header{
   }
 }
 
-
+/* USWDS Overrides */
+.usa-prose>p{
+  max-width: none;
+}
 
 /* Footer overrides */
 /* Colors MIT license via https://tailwindcss.com/docs/background-color#app  */

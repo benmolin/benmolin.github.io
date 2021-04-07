@@ -9,6 +9,12 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
+# 2020-04-07
+
+### Changed
+- Removed ```max-width``` from the "Why did I get this result?" sections to fix the tablet resolution
+
+
 # 2020-04-06
 
 ### Added
