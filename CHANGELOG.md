@@ -9,7 +9,12 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
-# 2020-04-02
+# 2020-04-06
+
+### Added
+- Added a [Polyfill Service](https://github.com/Financial-Times/polyfill-service/) to fix an issue with the query string parameters not working on IE
+
+# 2020-04-04
 
 ### Changed
 - Updated the "Results" Emergency Allotment benefit with the new [March $95 EA rule](https://fns-prod.azureedge.net/sites/default/files/resource-files/snap-covid-emergency-allotments-phase-3-guidance.pdf)
