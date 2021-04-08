@@ -180,7 +180,7 @@ function stateSpecialRules(stateAbbr,
     HAS_DEPENDENT_CHILD,
     NY_AREA, // NYC (NYC), Nassau + Suffolk (NAS), Other NYC (ONY) 
     AK_AREA, // Cental (C), Northern (N), Northwest (NW), SouthCentral (SC), SouthEast (SE), SouthWest (SW)
-    AK_URBAN, // Urban (U), Rural 1 (R1), Rural II (R2)
+    AK_URBAN // Urban (U), Rural 1 (R1), Rural II (R2)
 ) {
 
     // Fix for IE
