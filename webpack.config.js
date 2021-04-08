@@ -1,12 +1,6 @@
 const path = require('path');
 
-module.exports = {
-  entry: './src/snap_estimate_entrypoint.js',
-  output: {
-    filename: 'api.js',
-    path: path.resolve(__dirname, 'docs'),
-    library: 'SnapAPI',
-  },
+var config = {
   module: {
     rules: [
       {
@@ -20,5 +14,27 @@ module.exports = {
         }
       }
     ]
-  }
+  },
 };
+
+var appConfig = Object.assign({}, config, {
+  name: "api",
+  entry: './src/snap_estimate_entrypoint.js',
+  output: {
+    filename: 'api.js',
+    path: path.resolve(__dirname, 'docs'),
+    library: 'SnapAPI',
+  },
+});
+var formConfig = Object.assign({}, config,{
+  name: "form",
+  entry: './docs/form-controls.js',
+  output: {
+    filename: 'form-controls.bundle.js',
+    path: path.resolve(__dirname, 'docs/shared/js'),
+  },
+});
+
+module.exports = [
+  appConfig, formConfig,       
+];

@@ -17,6 +17,9 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Small note that the >115% max allotment may not yet be fully available in all states
 - Reformatted some functions (removing default parameters) for increased IE support
 
+### Added
+- Now using prescreener form web bundle (IE compatibility)
+- Updated the ```webpack.config.js``` to bundle both prescreener form and api
 
 # 2020-04-07
 
