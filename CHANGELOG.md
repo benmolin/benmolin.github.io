@@ -10,10 +10,12 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 
 
+
 # 2020-04-08
 
 ### Changed
 - Small note that the >115% max allotment may not yet be fully available in all states
+- Reformatted some functions (removing default parameters) for increased IE support
 
 
 # 2020-04-07

@@ -177,11 +177,17 @@ function applyStateRegionOrSizeRules() {
 // Apply state special rules
 function stateSpecialRules(stateAbbr,
     HH_SIZE,
-    HAS_DEPENDENT_CHILD = false,
-    NY_AREA = 'NYC', // NYC (NYC), Nassau + Suffolk (NAS), Other NYC (ONY) 
-    AK_AREA = 'C', // Cental (C), Northern (N), Northwest (NW), SouthCentral (SC), SouthEast (SE), SouthWest (SW)
-    AK_URBAN = 'U', // Urban (U), Rural 1 (R1), Rural II (R2)
+    HAS_DEPENDENT_CHILD,
+    NY_AREA, // NYC (NYC), Nassau + Suffolk (NAS), Other NYC (ONY) 
+    AK_AREA, // Cental (C), Northern (N), Northwest (NW), SouthCentral (SC), SouthEast (SE), SouthWest (SW)
+    AK_URBAN, // Urban (U), Rural 1 (R1), Rural II (R2)
 ) {
+
+    // Fix for IE
+    if(HAS_DEPENDENT_CHILD === undefined) {HAS_DEPENDENT_CHILD = false;}
+    if(NY_AREA === undefined) {NY_AREA = 'NYC';}
+    if(AK_AREA === undefined) {AK_AREA = 'C';}
+    if(AK_URBAN === undefined) {AK_URBAN = 'U';}
 
     $('#household_includes_dependent_child_field').addClass('d-none')
 
