@@ -471,7 +471,7 @@
             // If emergency allotments are active, and estimated benefit is less than EA amount:
             if (emergency_allotment_estimated_benefit) {
                 html += (
-                    `<p>Due to the current pandemic, you could receive an additional $${additional_amount} per month. This additional amount is temporary, and some additional benefits may expire after June 30th.</p>`
+                    `<p>Due to the current pandemic, you could receive an additional $${additional_amount} per month. This additional amount is temporary and may not be fully available in your state. Some additional benefits may expire after June 30th.</p>`
                 );
             };
 

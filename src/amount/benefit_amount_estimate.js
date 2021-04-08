@@ -115,7 +115,7 @@ export class BenefitAmountEstimate {
 
         // Emergency Allotment increase
         explanation.push(
-            `Second, the household's benefit amount will be increased to 115% of the maximum allotment amount for the household size or increased by $95, whichever is a larger increase. Including the temporary increases to SNAP, the final estimated benefit would be:`
+            `Second, the household's benefit amount will be increased to 115% of the maximum allotment amount for the household size or increased by $95, whichever is a larger increase. Amounts over 115% the maximum allotment may not yet be active in your state. Including the temporary increases to SNAP, the final estimated benefit would be:`
         );
 
         const temp_max_allotment =  Math.round(1.15 * max_allotment);

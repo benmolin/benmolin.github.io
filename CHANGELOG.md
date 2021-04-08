@@ -9,6 +9,13 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
+
+# 2020-04-08
+
+### Changed
+- Small note that the >115% max allotment may not yet be fully available in all states
+
+
 # 2020-04-07
 
 ### Changed
