@@ -18,10 +18,11 @@
   <!-- iFrame Resizer -->
   <script src="shared/iframe/iframeResizer.contentWindow.min.js"></script>
 
-
-  <!-- Logrocket -->
-  <script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
-  <script>window.LogRocket && window.LogRocket.init('rbzjjs/snap-screener');</script>
+  <!-- Load Sentry -->
+  <script
+  src="https://browser.sentry-cdn.com/6.2.5/bundle.min.js"
+  integrity="sha384-+0tgGyP4idWu9/NA6Jbmnj3SApxIg65/GR1zo3qSieRNyzmmDQ/5a1Yu6mfmUw+v"
+  crossorigin="anonymous"></script>
 
   <!-- Favicon -->
   <!--- Image from https://pixabay.com/vectors/market-icon-supermarket-store-food-5043905/ -->
@@ -37,6 +38,14 @@
 </head>
 
 <body>
+
+  <!-- Start Sentry -->
+  <script>
+      Sentry.init({
+        dsn: "https://ec572409bd9d45d1b223ce31bde3e4e1@o568896.ingest.sentry.io/5720570",
+        tracesSampleRate: 1.0,
+      });
+  </script>
 
   <header class="debug-info d-none">
     <div id='main-header'>
@@ -660,7 +669,7 @@
           eligibility and benefit amount is to apply.
           This website is not affiliated with any government organization or SNAP program.
           <br><br>
-          Last Updated: April 8th, 2021
+          Last Updated: April 14th, 2021
         </div>
       </div>
     </div>
@@ -687,6 +696,11 @@
 <script type="text/javascript" src="shared/js/iframing.js"></script>
 <script type="text/javascript" src="shared/js/test.js"></script>
 
+
+
+<!-- Logrocket -->
+<script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
+<script>window.LogRocket && window.LogRocket.init('rbzjjs/snap-screener');</script>
 
 
 </html>
