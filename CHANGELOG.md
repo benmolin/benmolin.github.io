@@ -10,6 +10,11 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 
 
+# 2020-04-14
+
+### Added
+- Added Sentry for debugging
+- Added Sentry to privacy policy
 
 # 2020-04-08
 
