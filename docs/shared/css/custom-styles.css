@@ -54,6 +54,16 @@
   margin-top: 8px;
 }
 
+/* Turn off number spinners */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
 /* Larger than default form */
 #prescreener-form.usa-form {
   max-width: none;

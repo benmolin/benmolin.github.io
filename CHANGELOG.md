@@ -9,6 +9,10 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
+# 2020-04-17
+
+### Changed
+- Inputs are now ```type='number' pattern="[0-9]*" step=".01" min="0"``` to prevent commas, fix decimals, prevent typos. No number spinners.
 
 # 2020-04-14
 

@@ -165,6 +165,9 @@
                             : jsonData[elem.name] = undefined;
                         break;
                     }
+                    case 'number':
+                        jsonData[elem.id] = elem.value;
+                        break;
                     case 'text':
                         jsonData[elem.id] = elem.value;
                         break;
