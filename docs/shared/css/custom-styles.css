@@ -65,7 +65,7 @@ input[type=number] {
     -moz-appearance:textfield;
 }
 /* Larger than default form */
-#prescreener-form.usa-form {
+#prescreener-form.usa-form, .usa-list li {
   max-width: none;
 }
 
@@ -330,6 +330,10 @@ header{
   width: 90%;
   cursor: pointer;
   margin: 0 auto;
+}
+
+.underline{
+  text-decoration: underline;
 }
 
 .no-underline{

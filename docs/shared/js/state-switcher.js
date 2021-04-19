@@ -307,3 +307,19 @@ $('#monthly_non_job_income').on('input',function(e){
         $("#input__unemployment_benefits_false").prop('checked', true); 
     };
 });
+
+// Show medical deductions list
+var MEDICAL_DEDUCTION_LIST_VISIBLE = false;
+$('#medical-deduction-list-button').on('click', function () {
+
+    if (MEDICAL_DEDUCTION_LIST_VISIBLE == false){
+        $('#medical-deduction-list').removeClass('hidden');
+        MEDICAL_DEDUCTION_LIST_VISIBLE = true;
+        $('#medical-deduction-list-button').text('Hide examples.')
+    }else{
+        $('#medical-deduction-list').addClass('hidden');
+        MEDICAL_DEDUCTION_LIST_VISIBLE = false;
+        $('#medical-deduction-list-button').text('Show examples.')
+    };
+
+});

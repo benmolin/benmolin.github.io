@@ -9,6 +9,12 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
+
+# 2020-04-18
+
+### Added
+- Added a list of example medical deductions following the outlined categories [here](https://www.law.cornell.edu/cfr/text/7/273.9)
+
 # 2020-04-17
 
 ### Changed

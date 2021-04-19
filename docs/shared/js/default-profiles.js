@@ -52,6 +52,10 @@ $(document).ready(function() {
     $("#input__household_includes_elderly_or_disabled_true").prop("checked", isTrue('household_includes_elderly_or_disabled'));
     $("#input__household_includes_elderly_or_disabled_false").prop("checked", isFalse('household_includes_elderly_or_disabled'));
 
+    if ($("#input__household_includes_elderly_or_disabled_true").prop("checked")){
+        $('#medical_expenses_for_elderly_or_disabled_question').removeClass('hidden');
+    };
+
     $('#dependent_care_costs').val(urlParams.get('dependent_care_costs'));
     $('#medical_expenses_for_elderly_or_disabled').val(urlParams.get('medical_expenses_for_elderly_or_disabled'));
     $('#court_ordered_child_support_payments').val(urlParams.get('court_ordered_child_support_payments'));
