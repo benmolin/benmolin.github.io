@@ -9,8 +9,10 @@ function setDefaultOne() {
     $('#prescreener-form-submit').click();
 };
 
-
-var CURRENT_PROFILE;
+var CURRENT_INPUTS = {};
+var CURRENT_PROFILE = {};
+CURRENT_PROFILE.session_id = Math.random().toString(36).substring(3);
+CURRENT_PROFILE.datetime = new Date().toLocaleString();
 
 function isTrue(v){
     return (urlParams.get(v) == 'true');

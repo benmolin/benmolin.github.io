@@ -9,6 +9,13 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
+# 2020-04-20
+
+### Changed
+- Set the default value to '?' on the NH question about dependent children (previously just True/False) 
+
+### Added
+- Allow organizations to configure a webhook to have the form data sent too
 
 # 2020-04-18
 

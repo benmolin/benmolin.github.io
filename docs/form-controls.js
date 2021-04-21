@@ -372,7 +372,7 @@
 
                 // Set the results link
                 $('#results-url').removeClass('d-none');
-                $('#results-url:text').val(RES_URL + '___PREFILLED___&' + $.param(CURRENT_PROFILE));
+                $('#results-url:text').val(RES_URL + '___PREFILLED___&' + $.param(CURRENT_INPUTS));
 
                 // Copy the results
                 var copyText = document.getElementById("results-url");
@@ -436,6 +436,13 @@
                 html += '<div id="copy-link" class="d-inline" data-clipboard-target="#results-url"><svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="20"><path d="M0 0h24v24H0z" fill="none"/><path fill="#1b6aa5" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg><span id="copy-link-text">Copy Link to Results</span><span id="copy-link-tag" class="d-none usa-tag">Copied!</span></div>'
             };
 
+            // Configure to send data to a webhook
+            CURRENT_PROFILE.estimated_eligibility = response.estimated_eligibility;
+            CURRENT_PROFILE.estimated_monthly_benefit = response.estimated_monthly_benefit;
+            var webhook = urlParams.get('webhook');
+            if (webhook != null) {
+                sendFormData(false);
+            };
 
             const is_eligible = response.estimated_eligibility;
             const estimated_monthly_benefit = response.estimated_monthly_benefit;

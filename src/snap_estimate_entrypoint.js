@@ -48,7 +48,8 @@ export class SnapEstimateEntrypoint {
         const parser = new ParseInputs(this.raw_inputs);
         const inputs_valid = parser.inputs_valid();
 
-        CURRENT_PROFILE = this.raw_inputs;
+        CURRENT_INPUTS = this.raw_inputs;
+        CURRENT_PROFILE = $.extend(CURRENT_PROFILE, this.raw_inputs);
 
         if (!inputs_valid) {
 

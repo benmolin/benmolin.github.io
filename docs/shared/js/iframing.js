@@ -70,3 +70,41 @@ if (showTitles != 'false') {
     document.getElementById('title-section').style.display = '';
 };
 
+// API
+var API_CALLS_REMAINING = 3;
+function sendFormData(contact_me){
+
+    if (contact_me == false){
+        API_CALLS_REMAINING = API_CALLS_REMAINING - 1;
+    };
+
+    if ((API_CALLS_REMAINING < 0) & (contact_me == false)){
+        console.log("Rate Limited");
+    }else{
+
+        CURRENT_PROFILE.contact_me = contact_me;
+        CURRENT_PROFILE.email = 'info@snapscreener.com';
+    
+        var WEBHOOK_URL = decodeURIComponent(urlParams.get('webhook'));
+    
+        // For security, all authorized webhooks must be listed here
+        var ALLOWED_ENDPOINTS = [
+            'https://hooks.zapier.com' + '/hooks/catch/9956374/ovmx2ja',
+        ];
+    
+        console.log($.inArray(WEBHOOK_URL, ALLOWED_ENDPOINTS));
+    
+        if ($.inArray(WEBHOOK_URL, ALLOWED_ENDPOINTS) != -1){
+    
+            $.ajax({
+                type: "POST",
+                url: WEBHOOK_URL,
+                data: CURRENT_PROFILE
+            });
+    
+        }else{
+            console.log('Unauthorized webhook. Please contact info@snapscreener.com for more information.');
+        };
+
+    };
+};
