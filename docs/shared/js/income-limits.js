@@ -72,7 +72,6 @@ function showTestLimitsTables() {
             // Asset Test
             var asset_explain = response['eligibility_factors'][5]['explanation'][0];
             var asset_limit = asset_explain.split(' ').pop().replace('.', '');
-            console.log(asset_explain);
 
             if (elderly == 1) {
                 if (asset_explain.search('200% of the federal poverty') > 0) {

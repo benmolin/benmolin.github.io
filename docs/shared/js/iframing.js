@@ -79,7 +79,7 @@ function sendFormData(contact_me){
     };
 
     if ((API_CALLS_REMAINING < 0) & (contact_me == false)){
-        console.log("Rate Limited");
+        console.log("SNAPScreener: Rate Limited");
     }else{
 
         CURRENT_PROFILE.contact_me = contact_me;
@@ -91,9 +91,7 @@ function sendFormData(contact_me){
         var ALLOWED_ENDPOINTS = [
             'https://hooks.zapier.com' + '/hooks/catch/9956374/ovmx2ja',
         ];
-    
-        console.log($.inArray(WEBHOOK_URL, ALLOWED_ENDPOINTS));
-    
+        
         if ($.inArray(WEBHOOK_URL, ALLOWED_ENDPOINTS) != -1){
     
             $.ajax({
@@ -103,7 +101,7 @@ function sendFormData(contact_me){
             });
     
         }else{
-            console.log('Unauthorized webhook. Please contact info@snapscreener.com for more information.');
+            console.log('SNAPScreener: Unauthorized webhook. Please contact info@snapscreener.com for more information.');
         };
 
     };

@@ -169,7 +169,7 @@ function applyStateRegionOrSizeRules() {
     $('#prescreener-form').attr('data-state-or-territory', stateKey);
 
 
-    console.log(HH_SIZE, stateKey, stateAbbr);
+    console.log("SNAPScreener:", HH_SIZE, stateKey, stateAbbr);
     showTestLimitsTables();
 
 };

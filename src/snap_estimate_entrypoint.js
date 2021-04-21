@@ -42,7 +42,7 @@ export class SnapEstimateEntrypoint {
         var queryString = window.location.search;
         var urlParams = new URLSearchParams(queryString);
         if (urlParams.get('test') != 'true') {
-            console.log('----Inputs----');
+            console.log('----SNAPScreener Inputs----');
             console.log(this.raw_inputs);
         };
         const parser = new ParseInputs(this.raw_inputs);
@@ -62,7 +62,7 @@ export class SnapEstimateEntrypoint {
                     event: true,
                 })
             } catch (e) {
-                console.log('Invalid Inputs - Not tracking, likely due to ad blocker');
+                console.log('SNAPScreener: Invalid Inputs - Not tracking, likely due to ad blocker');
                 console.log(e);
             }
 
@@ -90,7 +90,7 @@ export class SnapEstimateEntrypoint {
                 event: true,
             })
         } catch (e) {
-            console.log('Valid Inputs - Not tracking, likely due to ad blocker');
+            console.log('SNAPScreener: Valid Inputs - Not tracking, likely due to ad blocker');
             console.log(e);
         }
 

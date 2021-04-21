@@ -1180,7 +1180,6 @@ var NAV2 = false;
 var NAV_MOBILE_MENU = false;
 
 $('#nav-header-button-1').on('click', function () {
-    console.log('click 1', NAV1);
     if (NAV1) {
         $('#nav-header-menu-1').hide();
         NAV1 = false;
@@ -1194,7 +1193,6 @@ $('#nav-header-button-1').on('click', function () {
 
 
 $('#nav-header-button-2').on('click', function () {
-    console.log('click 2', NAV2);
     if (NAV2) {
         $('#nav-header-menu-2').hide();
         NAV2 = false;
@@ -1208,7 +1206,6 @@ $('#nav-header-button-2').on('click', function () {
 
 // Close dropdowns when click otherwhere on page
 $('#page-content, #nav-header-menu-1').on('click', function () {
-    console.log('click');
     // Nav 1
     $('#nav-header-menu-1').hide();
     NAV1 = false;
