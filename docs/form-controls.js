@@ -102,10 +102,6 @@
         }
     };
 
-    // Custom links
-    var queryString = window.location.search;
-    var urlParams = new URLSearchParams(queryString)
-
     // Add custom apply url
     if (urlParams.get('apply_url') != null){
         STATE_OPTIONS.DEFAULT.apply.unshift({
@@ -429,8 +425,6 @@
             let html = '<h2 class="d-inline" id="results-section-title">Results:</h2>';
 
             // Allow copying link to clipboard
-            var queryString = window.location.search;
-            var urlParams = new URLSearchParams(queryString)
             var isDebug = urlParams.get('debug');
             if (isDebug != 'false') {
                 html += '<div id="copy-link" class="d-inline" data-clipboard-target="#results-url"><svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="20"><path d="M0 0h24v24H0z" fill="none"/><path fill="#1b6aa5" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg><span id="copy-link-text">Copy Link to Results</span><span id="copy-link-tag" class="d-none usa-tag">Copied!</span></div>'

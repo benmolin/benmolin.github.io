@@ -9,6 +9,17 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
+# 2020-04-22
+
+### Removed
+- Removed bulk screener
+
+### Added
+- Logo
+
+### Changed
+- Removed some duplicate lines of code (URLSearchParams)
+
 # 2020-04-20
 
 ### Changed

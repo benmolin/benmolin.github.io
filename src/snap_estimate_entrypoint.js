@@ -39,8 +39,6 @@ export class SnapEstimateEntrypoint {
 
     calculate() {
 
-        var queryString = window.location.search;
-        var urlParams = new URLSearchParams(queryString);
         if (urlParams.get('test') != 'true') {
             console.log('----SNAPScreener Inputs----');
             console.log(this.raw_inputs);
@@ -78,8 +76,6 @@ export class SnapEstimateEntrypoint {
         try {
 
             // Get organization
-            var queryString = window.location.search;
-            var urlParams = new URLSearchParams(queryString);
             var org = urlParams.get('org');
             if (org == null){org = 'SNAPScreener'};
 

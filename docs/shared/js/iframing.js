@@ -1,6 +1,3 @@
-var queryString = window.location.search;
-var urlParams = new URLSearchParams(queryString);
-
 // State
 var stateFull;
 var stateAbbr = urlParams.get('state')
