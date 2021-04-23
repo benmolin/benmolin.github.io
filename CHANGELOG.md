@@ -16,6 +16,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ### Added
 - Logo
+- Check to make sure not-embedded screener can't be customized
 
 ### Changed
 - Removed some duplicate lines of code (URLSearchParams)
