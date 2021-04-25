@@ -8,12 +8,27 @@ try {
     var inFrame = true;
 };
 
+var inputEmail = urlParams.get('email_input');
+var inputPhone = urlParams.get('phone_input');
+var WEBHOOK_URL = decodeURIComponent(urlParams.get('webhook'));
+
 // If not in an iFrame, remove some parameters that can be customized
 if (inFrame == false){
-    urlParams.delete('email')
-    urlParams.delete('phone')
-    urlParams.delete('apply_url')
-    urlParams.delete('apply_desc')
-    urlParams.delete('resources_url')
-    urlParams.delete('resources_desc')
+    urlParams.delete('email');
+    urlParams.delete('phone');
+    urlParams.delete('apply_url');
+    urlParams.delete('apply_desc');
+    urlParams.delete('resources_url');
+    urlParams.delete('resources_desc');
+
+    if (inputEmail != null){
+        inputEmail = 'EXAMPLE: DO NOT ENTER REAL DATA (Use test@snapscreener.com';
+    };
+    if (inputPhone != null){
+        inputPhone = 'EXAMPLE: DO NOT ENTER REAL DATA (Use 123-456-7890)';
+    };
+    if (WEBHOOK_URL != ('https://hooks.zapier.com' + '/hooks/catch/9956374/ovmx2ja')){
+        WEBHOOK_URL = null;
+    };
+
 };

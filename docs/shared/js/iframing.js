@@ -17,13 +17,31 @@ if (stateAbbr != null) {
     });
 };
 
+// Phone and email fields
+if (WEBHOOK_URL != null){
+
+    // inputEmail and inputPhone are defined in base.js
+    
+    if (inputEmail != null){
+        $('#email_form_field_label').addClass('usa-label');
+        $('#email_form_field').removeClass('d-none');
+        $('#email_field_subtext').text(decodeURIComponent(inputEmail));
+    }
+    if (inputPhone != null){
+        $('#phone_form_field_label').addClass('usa-label');
+        $('#phone_form_field').removeClass('d-none');
+        $('#phone_field_subtext').text(decodeURIComponent(inputPhone));
+    }
+};
+$( ".usa-label" ).first().css("margin-top", "8px");
+
+
 // Phone number and email
 var contactPhone = urlParams.get('phone');
 var contactEmail = urlParams.get('email');
 
 if (contactPhone == null) { contactPhone = '' };
 if (contactEmail == null) { contactEmail = '' };
-
 
 // Swap emails
 $(".hotline-wrapper:contains('{{HOTLINE_EMAIL}}')").each(function() {
@@ -80,26 +98,12 @@ function sendFormData(contact_me){
     }else{
 
         CURRENT_PROFILE.contact_me = contact_me;
-        CURRENT_PROFILE.email = 'info@snapscreener.com';
-    
-        var WEBHOOK_URL = decodeURIComponent(urlParams.get('webhook'));
-    
-        // For security, all authorized webhooks must be listed here
-        var ALLOWED_ENDPOINTS = [
-            'https://hooks.zapier.com' + '/hooks/catch/9956374/ovmx2ja',
-        ];
         
-        if ($.inArray(WEBHOOK_URL, ALLOWED_ENDPOINTS) != -1){
-    
-            $.ajax({
-                type: "POST",
-                url: WEBHOOK_URL,
-                data: CURRENT_PROFILE
-            });
-    
-        }else{
-            console.log('SNAPScreener: Unauthorized webhook. Please contact info@snapscreener.com for more information.');
-        };
+        $.ajax({
+            type: "POST",
+            url: WEBHOOK_URL, // defined in base.js
+            data: CURRENT_PROFILE
+        });
 
     };
 };

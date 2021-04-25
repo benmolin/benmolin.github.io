@@ -50,10 +50,6 @@
   font-style: italic;
 }
 
-#household-size-label {
-  margin-top: 8px;
-}
-
 /* Turn off number spinners */
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {

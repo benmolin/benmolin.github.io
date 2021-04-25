@@ -191,7 +191,34 @@
         <div id="errors-header" class="usa-prose" aria-live="assertive" role="alert">
         </div>
         <form id="prescreener-form" class="usa-form" data-state-or-territory="VA" data-use-emergency-allotment="true">
-          <label class="usa-label" for="household_size" id="household-size-label">
+
+
+          <!-- Email field -->
+          <div id='email_form_field' class='d-none'>
+            <label id='email_form_field_label' for="email_field">
+              Email
+              <div id="email_field_error_elem"></div>
+            </label>
+            <div id='email_field_subtext' class="label-sub-text">
+              Please enter your email address.
+            </div>
+            <input id="email_field" name="email_field" class="usa-input" type='email' />
+          </div>
+
+          <!-- Phone field -->
+          <div id='phone_form_field' class='d-none'>
+            <label id='phone_form_field_label' for="phone_field">
+              Phone Number
+              <div id="phone_field_error_elem"></div>
+            </label>
+            <div id='phone_field_subtext' class="label-sub-text">
+              Please enter your phone number.
+            </div>
+            <input id="phone_field" name="phone_field" class="usa-input" type='tel' placeholder="123-456-7890" pattern="^[0-9-+\s()]*$" minlength="10" />
+          </div>  
+
+          <!-- Household size field -->
+          <label class="usa-label" for="household_size">
             Household size
             <span class="field-required">
               *required

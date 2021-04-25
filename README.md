@@ -47,9 +47,13 @@ All attributes are optional, with the exception of ``org`` and ``state``. Here a
 | `apply_desc`      | Desc of custom apply link. Replace spaces with _                   |   ❌   |
 | `resources_url`   | Custom link for more resources. Must be a bit.ly link               |   ❌   |
 | `resources_desc`  | Desc of custom apply for more resources. Replace spaces with _     |   ❌   |
-| `webhook`  | URL of webhook endpoint. *Needs activation by SnapScreener team    |   ❌   |
+| `webhook`  | URL of webhook endpoint. |   ❌   |
+| `email_input`  | Text of the email field (will activate field)     |   ❌   |
+| `phone_input`  | Text of the phone field (will activate field)     |   ❌   |
  
 Using the ``org`` argument will allow us to tell you how many individuals your organization was able to prescreen.
+
+Attributes listed after ``webhook`` only work if ``webhook`` exists. 
 
 ### Resizing iFrame
 

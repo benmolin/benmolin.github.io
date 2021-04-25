@@ -431,10 +431,13 @@
             };
 
             // Configure to send data to a webhook
-            CURRENT_PROFILE.estimated_eligibility = response.estimated_eligibility;
-            CURRENT_PROFILE.estimated_monthly_benefit = response.estimated_monthly_benefit;
-            var webhook = urlParams.get('webhook');
-            if (webhook != null) {
+            if (WEBHOOK_URL != null) { // defined in base.js
+                CURRENT_PROFILE.estimated_eligibility       = response.estimated_eligibility;
+                CURRENT_PROFILE.estimated_monthly_benefit   = response.estimated_monthly_benefit;
+                CURRENT_PROFILE.gross_income                = response.eligibility_factors[0].result;
+                CURRENT_PROFILE.net_income                  = response.eligibility_factors[1].result;
+                CURRENT_PROFILE.email                       = $('#email_field').val();
+                CURRENT_PROFILE.phone                       = $('#phone_field').val();
                 sendFormData(false);
             };
 

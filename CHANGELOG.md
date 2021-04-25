@@ -9,6 +9,19 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
+
+# 2020-04-25
+
+### Removed
+- No longer need to approve webhook urls if iFramed calculator
+
+### Added
+- Email field
+- Phone number field
+
+### Changed
+- Gross income and net income fields will now be sent in post request
+
 # 2020-04-22
 
 ### Removed
