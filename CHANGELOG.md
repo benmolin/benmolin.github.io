@@ -10,6 +10,12 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 
 
+# 2020-05-02
+
+### Changed
+- Moved Sentry first
+- "District Of Columbia" -> "District of Columbia"
+
 # 2020-04-25
 
 ### Removed
