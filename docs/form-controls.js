@@ -183,7 +183,7 @@
             if (jsonData['monthly_job_income'] === '') {
                 errors.push({
                     name: 'monthly_job_income',
-                    message: 'Enter monthly household pre-tax income from jobs or self-employment',
+                    message: 'Enter monthly household income before taxes from jobs or self-employment',
                 });
             }
 

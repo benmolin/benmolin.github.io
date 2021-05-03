@@ -27,7 +27,7 @@ if (inFrame == false){
     if (inputPhone != null){
         inputPhone = 'EXAMPLE: DO NOT ENTER REAL DATA (Use 123-456-7890)';
     };
-    if (WEBHOOK_URL != ('https://hooks.zapier.com' + '/hooks/catch/9956374/ovmx2ja')){
+    if (WEBHOOK_URL != ('https://hook.integromat.com/' + 'kc6a17za95xpw4gqcxcllzfbcibynud8')){
         WEBHOOK_URL = null;
     };
 
