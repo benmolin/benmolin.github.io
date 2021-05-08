@@ -8,6 +8,12 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Figure out whether BBCE states have different asset tests for HHEOD and not. If no, merge state options asset test variables.
 - Single utility allowance for states with no BUA
 
+
+# 2020-05-07
+
+### Changed
+- Re-ordered medical deductions list
+
 # 2020-05-03
 
 ### Changed
