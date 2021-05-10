@@ -9,6 +9,11 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
+# 2020-05-09
+
+### Add
+- List of contributors in about page
+
 # 2020-05-07
 
 ### Changed
