@@ -9,6 +9,12 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
+# 2020-05-10
+
+### Changed
+- Washingtonians -> DC residents 
+- Hawaiians -> Hawaii residents following [U.S. Government Publishing Office Style Manual](https://www.govinfo.gov/content/pkg/GPO-STYLEMANUAL-2016/pdf/GPO-STYLEMANUAL-2016.pdf)
+
 # 2020-05-09
 
 ### Add
