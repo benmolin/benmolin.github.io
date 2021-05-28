@@ -1,10 +1,12 @@
+<!DOCTYPE html>
 <html>
     <head>
         
         <!-- Meta -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <title>SNAP Eligibility</title>
+        <title>SNAP Eligibility Calculator - 50 State Food Stamp Prescreener</title>
+        <meta name="description" content="Find out if you may be eligible for food stamps and an estimated amount of benefits you could receive.">
 
         <!-- Tailwind -->
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
@@ -1246,12 +1248,20 @@ var urlParams = new URLSearchParams(queryString);
 var page = urlParams.get('p')
 
 if (page == 'index'){
+    document.title = "SNAP Eligibility Calculator - 50 State Food Stamp Prescreener";
+    $("meta[name='description']").attr('content', 'Find out if you may be eligible for food stamps and an estimated amount of benefits you could receive.');
     $( "#p-index" ).show();
 } else if (page == 'data'){
+    document.title = "50 State SNAP Data | SNAP Eligibility Calculator";
+    $("meta[name='description']").attr('content', 'SNAP eligibility data for all 50 states. BBCE, income limits, asset tests, medical deductions, and utility allowances - all compiled into one table.');
     $( "#p-data" ).show();
 } else if (page == 'table'){
+    $("meta[name='description']").attr('content', 'SNAP eligibility data for all 50 states. BBCE, income limits, asset tests, medical deductions, and utility allowances - all compiled into one table.');
+    document.title = "50 State SNAP Data | SNAP Eligibility Calculator";
     $( "#p-table" ).show();
 } else if (page == 'about'){
+    $("meta[name='description']").attr('content', 'Our mission is to help connect individuals to SNAP benefits and to make SNAP eligibility data more accessible. This is an open source project.');
+    document.title = "About SNAP Screener | SNAP Eligibility Calculator";
     $( "#p-about" ).show();
 } else{
     $( "#p-index" ).show();

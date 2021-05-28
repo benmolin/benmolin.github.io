@@ -1,4 +1,6 @@
 https://www.snapscreener.com
+https://www.snapscreener.com/?p=data
+https://www.snapscreener.com/?p=about
 https://www.snapscreener.com/screener?state=AL
 https://www.snapscreener.com/screener?state=AK
 https://www.snapscreener.com/screener?state=AZ
