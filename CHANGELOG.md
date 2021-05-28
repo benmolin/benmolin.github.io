@@ -9,6 +9,12 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
+
+# 2020-05-28
+
+### Changed
+- Page titles for SEO
+
 # 2020-05-10
 
 ### Changed

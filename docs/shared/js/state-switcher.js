@@ -135,7 +135,7 @@ function switchStateOnPage(stateAbbr) {
     };
 
     // Change the state 
-    $('title').text(stateFull + ' SNAP Screener'); // in the title
+    $('title').text(stateFull + ' SNAP Calculator - Food Stamp Eligibility in ' + stateFull); // in the title
     $('#main .title').text(stateDemonym + 's, could you be eligible for help with your food budget?') // In the header
     $("#dev-state-change").val(stateAbbr);
 };
