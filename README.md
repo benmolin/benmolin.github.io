@@ -40,6 +40,7 @@ All attributes are optional, with the exception of ``org`` and ``state``. Here a
 | `state`       | State for screener                                   |   ✅   |
 | `debug`       | Show the debug information at the top (default=true) |   ✅   |
 | `titles`      | Hide titles on the top of the page (default=false)   |   ❌   |
+| `student_question`      | ``true`` to add the student SNAP question  |   ❌   |
 | `short`       | Hide the non-required questions (default=false)      |   ❌   |
 | `email`       | Email address as the contact / support email         |   ❌   |
 | `phone`       | Phone number as the contact / support number         |   ❌   |
