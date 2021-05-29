@@ -98,6 +98,7 @@ export class SnapEstimate {
         this.unemployment_benefits = inputs.unemployment_benefits;
         this.household_size = inputs.household_size;
         this.household_includes_elderly_or_disabled = inputs.household_includes_elderly_or_disabled;
+        this.student = inputs.student;
         this.dependent_care_costs = inputs.dependent_care_costs;
         this.medical_expenses_for_elderly_or_disabled = inputs.medical_expenses_for_elderly_or_disabled;
         this.court_ordered_child_support_payments = inputs.court_ordered_child_support_payments;

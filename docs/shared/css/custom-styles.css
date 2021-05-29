@@ -362,3 +362,22 @@ header{
   background-color: #059669 !important;
   text-transform: none !important;
 }
+
+
+/* Student question */
+#student_info_box.usa-alert--info{
+  background-image: none;
+}
+#student_info_box.usa-alert{
+  padding-left: 0rem;
+  padding-right: .5rem;
+  padding-top: .125rem;
+  padding-bottom: 0;
+}
+#student_info_box.usa-alert ul {
+  padding-left: 0.3rem;
+}
+
+#student_info_box .usa-alert__text p{
+  margin-left: -16px;
+}

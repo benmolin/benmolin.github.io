@@ -10,6 +10,12 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 
 
+# 2020-05-29
+
+### Added
+- New student question. [FNS Source](https://www.fns.usda.gov/snap/students)
+- Student question is opt-in through ``&student_question=true`` as it is being tested
+
 # 2020-05-28
 
 ### Changed

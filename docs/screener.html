@@ -383,6 +383,67 @@
             </div>
           </fieldset>
 
+          <div id='student-question' class='hidden'>
+            <fieldset class="usa-label usa-fieldset">
+              <legend>
+                Is anyone in your household a college student or enrolled in another higher education program?
+                <span class="field-required">
+                  *required
+                </span>
+                <div id="student_error_elem"></div>
+              </legend>
+              <div class="usa-radio">
+                <input class="usa-radio__input" id="input__student_true" type="radio"
+                  name="student" value="true">
+                <label id="label__student_true" class="usa-radio__label"
+                  for="input__student_true">
+                  Yes
+                </label>
+              </div>
+              <div class="usa-radio">
+                <input class="usa-radio__input" id="input__student_false" type="radio"
+                  name="student" value="false">
+                <label id="label__student_false" class="usa-radio__label"
+                  for="input__student_false">
+                  No
+                </label>
+              </div>
+            </fieldset>
+            <div id="student_info_box" class="usa-alert usa-alert--info usa-alert--slim hidden">
+              <div class="usa-alert__body">
+                <div class="usa-alert__text d-inline">
+                  <p>
+                    Students attending an institution of higher education (like college, university, trade/technical school) are typically not eligible for SNAP <span class='underline'>unless</span> they meet one of the exemptions below:
+                  </p>
+                  <ul class="usa-list">
+                    <li>Enrolled half-time or less</li> 
+                    <li>Are under age 18 or are age 50 or older</li>
+                    <li>Unable to work for health reasons</li>
+                    <li>Work at least 20 hours a week in paid employment</li>
+                    <li>Participate in a state or federally financed work study program</li>
+                    <li>Participate in an on-the-job training program</li>
+                    <li>Care for a child under the age of 6</li>
+                    <li>Care for a child age 6 to 11 and lack the necessary child care enabling them to attend school and work</li>
+                    <li>Are a single parent enrolled full-time in college and taking care of a child under 12</li>
+                    <li>Receive Temporary Assistance for Needy Families (TANF) assistance</li>
+                    <li>Are enrolled in a TANF Job Opportunities and Basic Skills (JOBS) program</li>
+                    <li>Are in school through a state or federally approved employment and training program</li>
+                  </ul>
+                  <p>
+                    Due to the current pandemic, two other exemptions allow students to be eligible:
+                  </p>
+                  <ul class="usa-list">
+                    <li>Are <span class='underline'>eligible</span> to participate in state or federally financed work study</li> 
+                    <li>Have an Expected Family Contribution of $0 when applying for financial aid</li>
+                  </ul>
+                  <p>
+                    Non-eligible students should not be included on the application if the students are part of the household applying for SNAP. <a href='https://www.fns.usda.gov/snap/students' target='_blank' rel="nofollow noopener noreferrer">Read more</a>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <fieldset class="usa-fieldset">
             <legend>
               Is everyone on the application a U.S. citizen?
@@ -720,7 +781,7 @@
           eligibility and benefit amount is to apply.
           This website is not affiliated with any government organization or SNAP program.
           <br><br>
-          Last Updated: April 18th, 2021
+          Last Updated: May 29th, 2021
         </div>
       </div>
     </div>

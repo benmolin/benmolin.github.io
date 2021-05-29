@@ -68,6 +68,11 @@ if (isDebug != 'false') {
     $('.debug-info').removeClass('d-none');
 };
 
+// Student question
+if (urlParams.get('student_question') == 'true') {
+    $('#student-question').removeClass('hidden');
+};
+
 // Short form
 var isShort = urlParams.get('short');
 if (isShort == 'true') {

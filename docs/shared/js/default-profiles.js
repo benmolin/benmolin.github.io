@@ -43,6 +43,12 @@ $(document).ready(function() {
         $('#citizenship_info_box').removeClass('hidden');
     };
 
+    $("#input__student_true").prop("checked", isTrue('student'));
+    $("#input__student_false").prop("checked", isFalse('student'));
+    if (isTrue('student')){
+        $('#student_info_box').removeClass('hidden');
+    };
+
     
     $("#input__unemployment_benefits_true").prop("checked", isTrue('unemployment_benefits'));
     $("#input__unemployment_benefits_false").prop("checked", isFalse('unemployment_benefits'));

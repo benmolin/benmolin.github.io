@@ -123,6 +123,8 @@
     const FORM_CONTROLS = {
         'showCitizenshipInfobox': DOM_MANIPULATORS['showElem']('citizenship_info_box'),
         'hideCitizenshipInfobox': DOM_MANIPULATORS['hideElem']('citizenship_info_box'),
+        'showStudentInfobox': DOM_MANIPULATORS['showElem']('student_info_box'),
+        'hideStudentInfobox': DOM_MANIPULATORS['hideElem']('student_info_box'),
         'showMedicalExpensesForElderlyOrDisabled': DOM_MANIPULATORS['showElem']('medical_expenses_for_elderly_or_disabled_question'),
         'hideMedicalExpensesForElderlyOrDisabled': DOM_MANIPULATORS['hideElem']('medical_expenses_for_elderly_or_disabled_question'),
         'hideServerErrorMessages': DOM_MANIPULATORS['hideElem']('server-error-messages'),
@@ -218,8 +220,17 @@
             if (jsonData['all_citizens_question'] === undefined) {
                 errors.push({
                     name: 'all_citizens_question',
-                    message: 'Select "yes" or "no" if everyone on the application is a U.S. citizen',
+                    message: 'Select "yes" if everyone on the application is a U.S. citizen',
                 });
+            }
+
+            if (urlParams.get('student_question') == 'true'){
+                if (jsonData['student'] === undefined) {
+                    errors.push({
+                        name: 'student',
+                        message: 'Select "yes" if anyone on the application is a higher education student',
+                    });
+                };
             }
 
             // Validation for number fields:
@@ -564,6 +575,17 @@
         FORM_SUBMIT_FUNCS['onSubmit']();
     });
 
+    // Set up toggle of student infobox in response to student question.
+    if (urlParams.get('student_question') == 'true'){
+        document.getElementById('input__student_true').addEventListener('change', () => {
+            FORM_CONTROLS['showStudentInfobox']();
+        });
+    
+        document.getElementById('input__student_false').addEventListener('change', () => {
+            FORM_CONTROLS['hideStudentInfobox']();
+        });
+    };
+
     // Set up toggle of citizenship infobox in response to citizenship question.
     document.getElementById('input__all_citizens_question_true').addEventListener('change', () => {
         FORM_CONTROLS['hideCitizenshipInfobox']();
@@ -621,6 +643,7 @@
         'household_includes_elderly_or_disabled',
         'unemployment_benefits',
         'all_citizens_question',
+        'student',
     ];
 
     for (let i = 0; i < radio_field_ids.length; i++) {
