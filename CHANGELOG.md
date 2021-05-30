@@ -10,7 +10,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 
 
-# 2020-05-29
+# 2021-05-29
 
 ### Added
 - New student question. [FNS Source](https://www.fns.usda.gov/snap/students)
@@ -19,40 +19,40 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Calculator will not support non-citizen calculations in these states: Arizona, Guam, Idaho, Kansas, Maine, Massachusetts, Utah, Arkansas, Indiana, Kentucky, Nevada, North Carolina, Oregon 
 
 
-# 2020-05-28
+# 2021-05-28
 
 ### Changed
 - Page titles for SEO
 
-# 2020-05-10
+# 2021-05-10
 
 ### Changed
 - Washingtonians -> DC residents 
 - Hawaiians -> Hawaii residents following [U.S. Government Publishing Office Style Manual](https://www.govinfo.gov/content/pkg/GPO-STYLEMANUAL-2016/pdf/GPO-STYLEMANUAL-2016.pdf)
 
-# 2020-05-09
+# 2021-05-09
 
 ### Add
 - List of contributors in about page
 
-# 2020-05-07
+# 2021-05-07
 
 ### Changed
 - Re-ordered medical deductions list
 
-# 2020-05-03
+# 2021-05-03
 
 ### Changed
 - "pre-tax income" -> "income before taxes"
 - Demo webhooks from Zapier to Integromat
 
-# 2020-05-02
+# 2021-05-02
 
 ### Changed
 - Moved Sentry first
 - "District Of Columbia" -> "District of Columbia"
 
-# 2020-04-25
+# 2021-04-25
 
 ### Removed
 - No longer need to approve webhook urls if iFramed calculator
@@ -64,7 +64,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ### Changed
 - Gross income and net income fields will now be sent in post request
 
-# 2020-04-22
+# 2021-04-22
 
 ### Removed
 - Removed bulk screener
@@ -76,7 +76,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ### Changed
 - Removed some duplicate lines of code (URLSearchParams)
 
-# 2020-04-20
+# 2021-04-20
 
 ### Changed
 - Set the default value to '?' on the NH question about dependent children (previously just True/False) 
@@ -84,23 +84,23 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ### Added
 - Allow organizations to configure a webhook to have the form data sent too
 
-# 2020-04-18
+# 2021-04-18
 
 ### Added
 - Added a list of example medical deductions following the outlined categories [here](https://www.law.cornell.edu/cfr/text/7/273.9)
 
-# 2020-04-17
+# 2021-04-17
 
 ### Changed
 - Inputs are now ```type='number' pattern="[0-9]*" step=".01" min="0"``` to prevent commas, fix decimals, prevent typos. No number spinners.
 
-# 2020-04-14
+# 2021-04-14
 
 ### Added
 - Added Sentry for debugging
 - Added Sentry to privacy policy
 
-# 2020-04-08
+# 2021-04-08
 
 ### Changed
 - Small note that the >115% max allotment may not yet be fully available in all states
@@ -111,33 +111,33 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Now using prescreener form web bundle (IE compatibility)
 - Updated the ```webpack.config.js``` to bundle both prescreener form and api
 
-# 2020-04-07
+# 2021-04-07
 
 ### Changed
 - Removed ```max-width``` from the "Why did I get this result?" sections to fix the tablet resolution
 
 
-# 2020-04-06
+# 2021-04-06
 
 ### Added
 - Added a [Polyfill Service](https://github.com/Financial-Times/polyfill-service/) to fix an issue with the query string parameters not working on IE
 
-# 2020-04-04
+# 2021-04-04
 
 ### Changed
 - Updated the "Results" Emergency Allotment benefit with the new [March $95 EA rule](https://fns-prod.azureedge.net/sites/default/files/resource-files/snap-covid-emergency-allotments-phase-3-guidance.pdf)
 
-# 2020-04-03
+# 2021-04-03
 
 ### Changed
 - Deactivated iFrame resize log
 
-# 2020-03-31
+# 2021-03-31
 
 ### Changed
 - Copy on citizenship info box
 
-# 2020-03-18
+# 2021-03-18
 
 ### Changed
 - Calculator is now full by default. ```?short=true``` can go back to the toggle.
@@ -155,7 +155,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ### Removed
 - Removed the "additional help" footer
 
-# 2020-03-1
+# 2021-03-1
 
 ### Changed
 - Made the error messages full width
@@ -165,7 +165,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - New question about unemployment benefits. $300 weekly benefit excluded from gross income
 
 
-# 2020-02-21
+# 2021-02-21
 
 ### Changed
 - Made the table appear instantly
@@ -176,13 +176,13 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Record organization name with each screen
 
 
-# 2020-02-07
+# 2021-02-07
 
 ### Changed
 - Removed "max-width" from prescreener UI
 - Added ```pattern="[0-9]*"``` for iPhone number pad
 
-# 2020-02-05
+# 2021-02-05
 
 ### Added
 - Made the benefit amount bold
@@ -190,7 +190,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ### Changed
 - Had put the 15% boost message in the wrong location, wasn't showing it up for clients who didn't get max
 
-# 2020-02-01
+# 2021-02-01
 
 ### Added
 - Added a button to enable deductions on the form
