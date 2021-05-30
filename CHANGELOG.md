@@ -9,6 +9,10 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
+# 2021-05-30
+
+### Changed
+- Improved gross income calculations
 
 # 2021-05-29
 
