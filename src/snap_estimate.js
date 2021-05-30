@@ -107,6 +107,11 @@ export class SnapEstimate {
         this.rent_or_mortgage = inputs.rent_or_mortgage;
         this.homeowners_insurance_and_taxes = inputs.homeowners_insurance_and_taxes;
 
+        this.all_citizens = inputs.all_citizens;
+        this.noncitizen_number = inputs.noncitizen_number;
+        this.noncitizen_lpr_plus_criteria_number = inputs.noncitizen_lpr_plus_criteria_number;
+        this.noneligible_monthly_income = inputs.noneligible_monthly_income;
+
         this.utility_electricity = inputs.utility_electricity;
         this.utility_gas = inputs.utility_gas;
         this.utility_heating = inputs.utility_heating;

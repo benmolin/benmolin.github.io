@@ -123,6 +123,8 @@
     const FORM_CONTROLS = {
         'showCitizenshipInfobox': DOM_MANIPULATORS['showElem']('citizenship_info_box'),
         'hideCitizenshipInfobox': DOM_MANIPULATORS['hideElem']('citizenship_info_box'),
+        'showNonCitizenshipQuestions': DOM_MANIPULATORS['showElem']('noncitizen-questions'),
+        'hideNonCitizenshipQuestions': DOM_MANIPULATORS['hideElem']('noncitizen-questions'),
         'showStudentInfobox': DOM_MANIPULATORS['showElem']('student_info_box'),
         'hideStudentInfobox': DOM_MANIPULATORS['hideElem']('student_info_box'),
         'showMedicalExpensesForElderlyOrDisabled': DOM_MANIPULATORS['showElem']('medical_expenses_for_elderly_or_disabled_question'),
@@ -232,6 +234,53 @@
                     });
                 };
             }
+
+            if (urlParams.get('noncitizen_question') == 'true'){
+                if (jsonData['all_citizens_question'] === 'false'){
+                    
+                    if (jsonData['noncitizen_number'] === '') {
+                        errors.push({
+                            name: 'noncitizen_number',
+                            message: 'Select the number of non-citizens in the household',
+                        });
+                    }
+
+                    if (jsonData['noncitizen_lpr_plus_criteria_number'] === '') {
+                        errors.push({
+                            name: 'noncitizen_lpr_plus_criteria_number',
+                            message: 'Select the number of non-citizens that meet a status below',
+                        });
+                    }
+
+                    // Household size must be greater than or equal to number of non-citizens
+                    if (parseInt(jsonData['household_size']) < parseInt(jsonData['noncitizen_number'])){ 
+                        errors.push({
+                            name: 'noncitizen_number',
+                            message: 'The number of non-citizens should be less than or equal to the household size',
+                        });
+                    };  
+
+                    // Number of non-citizens must be greater than or equal to number of lpr plus criteria members
+                    if (parseInt(jsonData['noncitizen_number']) < parseInt(jsonData['noncitizen_lpr_plus_criteria_number'])){ 
+                        errors.push({
+                            name: 'noncitizen_lpr_plus_criteria_number',
+                            message: 'The number of non-citizens that meet a status below should be less than or equal to the number of non-citizens',
+                        });
+                    };  
+                    
+                    // If some are not eligible
+                    if (parseInt(jsonData['noncitizen_lpr_plus_criteria_number']) < parseInt(jsonData['noncitizen_number'])){                 
+                        if (jsonData['noneligible_monthly_income'] === '') {
+                            errors.push({
+                                name: 'noneligible_monthly_income',
+                                message: 'Enter monthly household income before taxes for non-eligible household member(s)',
+                            });
+                        };
+                    };   
+
+                };
+            };
+            
 
             // Validation for number fields:
             const number_field_ids = [
@@ -595,6 +644,50 @@
         FORM_CONTROLS['showCitizenshipInfobox']();
     });
 
+    // Noncitizen questions
+    if (urlParams.get('noncitizen_question') == 'true'){
+        document.getElementById('input__all_citizens_question_true').addEventListener('change', () => {
+            FORM_CONTROLS['hideNonCitizenshipQuestions']();
+        });
+    
+        document.getElementById('input__all_citizens_question_false').addEventListener('change', () => {
+            FORM_CONTROLS['showNonCitizenshipQuestions']();
+        });
+
+        document.getElementById('noncitizen_number').addEventListener('change', () => {
+            var NC_2 = $('#noncitizen_number').val();
+            if (NC_2 != ""){
+                $('#noncitizen-2 .nc-helper').text(NC_2 + ' ');
+            }else{
+                $('#noncitizen-2 .nc-helper').text('');
+            };
+        });
+
+        $('#noncitizen_number, #noncitizen_lpr_plus_criteria_number').on('change', function () {
+            var NC_2 = $('#noncitizen_number').val();
+            var NC_3 = $('#noncitizen_lpr_plus_criteria_number').val();
+            if ((NC_2 != "") & (NC_3 != "")){
+                
+                var NC_NE = parseInt(NC_2) - parseInt(NC_3)
+
+                // Show the next question if needed
+                if (NC_NE <= 0){
+                    $('#noncitizen-3').addClass('hidden');
+                    $('#noncitizenship_info_box').addClass('hidden');
+                } else{
+                    $('#noncitizen-3').removeClass('hidden');
+                    $('#noncitizenship_info_box').removeClass('hidden');
+                    $('#noncitizen-3 .nc-helper').text(NC_NE + ' ');
+                };
+
+            }else{
+                $('#noncitizen-3 .nc-helper').text('');
+            };
+
+        });
+
+    };
+
     // Set up toggle of medical expenses question in response to elderly or disabled question result.
     document.getElementById('input__household_includes_elderly_or_disabled_true').addEventListener('change', () => {
         FORM_CONTROLS['showMedicalExpensesForElderlyOrDisabled']();
@@ -606,6 +699,7 @@
 
     // Set up validation for number fields.
     const number_field_ids = [
+        'noneligible_monthly_income',
         'monthly_job_income',
         'monthly_non_job_income',
         'resources',
@@ -629,14 +723,24 @@
         }
     }
 
-    const select_field_id = 'household_size';
-    const select_elem = document.getElementById(select_field_id);
 
-    if (select_elem) {
-        select_elem.addEventListener('change', () => {
-            DOM_MANIPULATORS['clearClientErrorOnSelect'](select_field_id);
-            FORM_SUBMIT_FUNCS['checkForm']();
-        });
+    // Set up validation for select fields.
+    const select_field_ids = [
+        'household_size',
+        'noncitizen_number',
+        'noncitizen_lpr_plus_criteria_number',
+    ];
+
+    for (let i = 0; i < select_field_ids.length; i++) {
+        const select_field_id = select_field_ids[i];
+        const select_elem = document.getElementById(select_field_id);
+
+        if (select_elem) {
+            select_elem.addEventListener('change', () => {
+                DOM_MANIPULATORS['clearClientErrorOnSelect'](select_field_id);
+                FORM_SUBMIT_FUNCS['checkForm']();
+            });
+        }
     }
 
     const radio_field_ids = [

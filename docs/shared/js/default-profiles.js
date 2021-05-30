@@ -41,6 +41,13 @@ $(document).ready(function() {
     $("#input__all_citizens_question_false").prop("checked", isFalse('all_citizens_question'));
     if (isFalse('all_citizens_question')){
         $('#citizenship_info_box').removeClass('hidden');
+        $('#noncitizen-questions').removeClass('hidden');
+
+
+        $('#noncitizen_number').val(urlParams.get('noncitizen_number'));
+        $('#noncitizen_lpr_plus_criteria_number').val(urlParams.get('noncitizen_lpr_plus_criteria_number')).trigger("input");
+        $('#noneligible_monthly_income').val(urlParams.get('noneligible_monthly_income'));
+
     };
 
     $("#input__student_true").prop("checked", isTrue('student'));

@@ -15,6 +15,9 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ### Added
 - New student question. [FNS Source](https://www.fns.usda.gov/snap/students)
 - Student question is opt-in through ``&student_question=true`` as it is being tested
+- Preview questions only for non-citizen through ``&noncitizen_question=true``. [FNS Guide](https://fns-prod.azureedge.net/sites/default/files/resource-files/Non-Citizen%20Guidance_6-30-2011.pdf)
+- Calculator will not support non-citizen calculations in these states: Arizona, Guam, Idaho, Kansas, Maine, Massachusetts, Utah, Arkansas, Indiana, Kentucky, Nevada, North Carolina, Oregon 
+
 
 # 2020-05-28
 

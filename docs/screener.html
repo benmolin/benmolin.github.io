@@ -493,6 +493,98 @@
             </div>
           </div>
 
+          <div id='noncitizen-questions' class='hidden'>
+            <div id='noncitizen-1'>
+              <label class="usa-label" for="noncitizen_number">
+                How many people in your household are <u>not</u> US citizens?
+                <span class="field-required">
+                  *required
+                </span>
+                <div id="noncitizen_number_error_elem"></div> 
+              </label>
+              <select class="usa-select pointer" id="noncitizen_number" name="noncitizen_number">
+                <option value>- Select -</option>
+                <option value="1">1 person</option>
+                <option value="2">2 people</option>
+                <option value="3">3 people</option>
+                <option value="4">4 people</option>
+                <option value="5">5 people</option>
+                <option value="6">6 people</option>
+                <option value="7">7 people</option>
+                <option value="8">8 people</option>
+                <option value="9">9 people</option>
+                <option value="10">10 people</option>
+                <option value="11">11 people</option>
+                <option value="12">12 people</option>
+                <option value="13">13 people</option>
+                <option value="14">14 people</option>
+                <option value="15">15 people</option>
+              </select>
+            </div>
+  
+            <div id='noncitizen-2'>
+              <label class="usa-label" for="noncitizen_lpr_plus_criteria_number">
+                How many of the <span class='nc-helper'></span>non-US citizens in your household are lawful permanent residents <u>and</u> meet at least one of the following statuses:
+                <span class="field-required">
+                  *required
+                </span>       
+                <div id="noncitizen_lpr_plus_criteria_number_error_elem"></div>     
+              </label> 
+              <div class="label-sub-text">
+                <ul class="usa-list">
+                  <li>Are children under 18</li>
+                  <li>Have been lawful permanent residents for 5 years</li>
+                  <li>Have a disability</li>
+                </ul>
+                For a full list of statuses that allow a non-citizen to be eligible for SNAP, <a href='https://www.fns.usda.gov/snap/eligibility/citizen/non-citizen-policy' target='_blank' rel="nofollow noopener noreferrer">click here</a>.
+              </div>
+  
+              <select class="usa-select pointer" id="noncitizen_lpr_plus_criteria_number" name="noncitizen_lpr_plus_criteria_number">
+                <option value>- Select -</option>
+                <option value="1">1 person</option>
+                <option value="2">2 people</option>
+                <option value="3">3 people</option>
+                <option value="4">4 people</option>
+                <option value="5">5 people</option>
+                <option value="6">6 people</option>
+                <option value="7">7 people</option>
+                <option value="8">8 people</option>
+                <option value="9">9 people</option>
+                <option value="10">10 people</option>
+                <option value="11">11 people</option>
+                <option value="12">12 people</option>
+                <option value="13">13 people</option>
+                <option value="14">14 people</option>
+                <option value="15">15 people</option>
+              </select>
+            </div>
+  
+            <div id='noncitizen-3' class='hidden'>
+              <label class="usa-label" for="noneligible_monthly_income">
+                What is the <u>monthly combined total</u> income before taxes for the <span class='nc-helper'></span>non-eligible non-citizen household member(s)?
+                <span class="field-required">
+                  *required
+                </span>
+                <div id="noneligible_monthly_income_error_elem"></div>
+              </label>
+              <div class="label-sub-text">
+                While these members are not eligible for SNAP, their income still will be included on the application.
+              </div>
+              <div class="currency_field_wrapper">
+                <div class="dollar_sign">$</div>
+                <input id="noneligible_monthly_income" name="noneligible_monthly_income" class="usa-input" type='number' pattern="[0-9]*" step=".01" min="0" />
+              </div>
+            </div>
+
+            <div id="noncitizenship_info_box" class="usa-alert usa-alert--info usa-alert--slim hidden">
+              <div class="usa-alert__body">
+                <p class="usa-alert__text d-inline">
+                  Please answer the rest of the questions below for your <u>entire</u> household, including the income and expenses of any non-eligible non-citizen household members.
+              </div>
+            </div>
+
+          </div>
+         
           <label class="usa-label" for="monthly_job_income">
             <u>Monthly</u> household income before taxes from jobs or self-employment
             <span class="field-required">
