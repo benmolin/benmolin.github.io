@@ -29,6 +29,8 @@ export class NetIncome {
         this.standard_utility_allowances = inputs.standard_utility_allowances;
         this.child_support_payments_treatment = inputs.child_support_payments_treatment;
         this.court_ordered_child_support_payments = inputs.court_ordered_child_support_payments;
+        this.noneligible_monthly_income = inputs.noneligible_monthly_income;
+        this.noneligible_proration = inputs.noneligible_proration;
     }
 
     calculate() {
@@ -62,7 +64,9 @@ export class NetIncome {
         }).calculate();
 
         const earned_income_deduction = new EarnedIncomeDeduction({
-            'monthly_job_income': this.monthly_job_income
+            'monthly_job_income': this.monthly_job_income,
+            'noneligible_monthly_income': this.noneligible_monthly_income,
+            'noneligible_proration' : this.noneligible_proration,
         }).calculate();
 
         const dependent_care_deduction = new DependentCareDeduction({

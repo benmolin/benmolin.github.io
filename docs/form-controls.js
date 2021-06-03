@@ -219,9 +219,9 @@
                 });
             }
 
-            if (jsonData['all_citizens_question'] === undefined) {
+            if (jsonData['all_citizens'] === undefined) {
                 errors.push({
-                    name: 'all_citizens_question',
+                    name: 'all_citizens',
                     message: 'Select "yes" if everyone on the application is a U.S. citizen',
                 });
             }
@@ -236,7 +236,7 @@
             }
 
             if (urlParams.get('noncitizen_question') == 'true'){
-                if (jsonData['all_citizens_question'] === 'false'){
+                if (jsonData['all_citizens'] === 'false'){
                     
                     if (jsonData['noncitizen_number'] === '') {
                         errors.push({
@@ -260,6 +260,14 @@
                         });
                     };  
 
+                    // No member is eligible due to citizenship
+                    if (jsonData['household_size'] - (jsonData['noncitizen_number'] - jsonData['noncitizen_lpr_plus_criteria_number']) <= 0){ 
+                        errors.push({
+                            name: 'noncitizen_lpr_plus_criteria_number',
+                            message: 'All ' + jsonData['household_size'] + ' of the household members appear to be ineligible for SNAP based on citizenship status. Select at least one household member to be eligible to continue with the calculator.',
+                        });
+                    };  
+
                     // Number of non-citizens must be greater than or equal to number of lpr plus criteria members
                     if (parseInt(jsonData['noncitizen_number']) < parseInt(jsonData['noncitizen_lpr_plus_criteria_number'])){ 
                         errors.push({
@@ -273,7 +281,14 @@
                         if (jsonData['noneligible_monthly_income'] === '') {
                             errors.push({
                                 name: 'noneligible_monthly_income',
-                                message: 'Enter monthly household income before taxes for non-eligible household member(s)',
+                                message: 'Enter monthly household income before taxes for ineligible household member(s)',
+                            });
+                        };
+
+                        if (parseInt(jsonData['noneligible_monthly_income']) > (parseInt(jsonData['monthly_job_income']) + parseInt(jsonData['monthly_non_job_income']))) {
+                            errors.push({
+                                name: 'monthly_job_income',
+                                message: 'Monthly income (from jobs and other sources) of entire household including ineligible household members should be greater than income of ineligible household members alone.',
                             });
                         };
                     };   
@@ -604,14 +619,21 @@
             for (let i = 0; i < income_factors.length; i++) {
                 let income_factor = income_factors[i];
                 const name = income_factor.name;
-                const explanation_graphs = income_factor.explanation;
 
-                html += `<h3>${name}</h3>`;
+                // Return null to skip non-citizen calculations
+                if (income_factor.result != null){
 
-                for (var k = 0; k < explanation_graphs.length; k++) {
-                    let explanation_graph = explanation_graphs[k];
-                    html += `<p>${explanation_graph}</p>`;
-                }
+                    const explanation_graphs = income_factor.explanation;
+
+                    html += `<h3>${name}</h3>`;
+    
+                    for (var k = 0; k < explanation_graphs.length; k++) {
+                        let explanation_graph = explanation_graphs[k];
+                        html += `<p>${explanation_graph}</p>`;
+                    };
+
+                };
+
             }
 
             return html;
@@ -636,21 +658,21 @@
     };
 
     // Set up toggle of citizenship infobox in response to citizenship question.
-    document.getElementById('input__all_citizens_question_true').addEventListener('change', () => {
+    document.getElementById('input__all_citizens_true').addEventListener('change', () => {
         FORM_CONTROLS['hideCitizenshipInfobox']();
     });
 
-    document.getElementById('input__all_citizens_question_false').addEventListener('change', () => {
+    document.getElementById('input__all_citizens_false').addEventListener('change', () => {
         FORM_CONTROLS['showCitizenshipInfobox']();
     });
 
     // Noncitizen questions
     if (urlParams.get('noncitizen_question') == 'true'){
-        document.getElementById('input__all_citizens_question_true').addEventListener('change', () => {
+        document.getElementById('input__all_citizens_true').addEventListener('change', () => {
             FORM_CONTROLS['hideNonCitizenshipQuestions']();
         });
     
-        document.getElementById('input__all_citizens_question_false').addEventListener('change', () => {
+        document.getElementById('input__all_citizens_false').addEventListener('change', () => {
             FORM_CONTROLS['showNonCitizenshipQuestions']();
         });
 
@@ -673,15 +695,19 @@
                 // Show the next question if needed
                 if (NC_NE <= 0){
                     $('#noncitizen-3').addClass('hidden');
+                    $('#noncitizen-4').addClass('hidden');
                     $('#noncitizenship_info_box').addClass('hidden');
                 } else{
                     $('#noncitizen-3').removeClass('hidden');
+                    $('#noncitizen-4').removeClass('hidden');
                     $('#noncitizenship_info_box').removeClass('hidden');
                     $('#noncitizen-3 .nc-helper').text(NC_NE + ' ');
+                    $('#noncitizen-4 .nc-helper').text(NC_NE + ' ');
                 };
 
             }else{
                 $('#noncitizen-3 .nc-helper').text('');
+                $('#noncitizen-4 .nc-helper').text('');
             };
 
         });
@@ -717,7 +743,13 @@
 
         if (number_elem) {
             number_elem.addEventListener('input', (event) => {
-                DOM_MANIPULATORS['validateNumberField'](field_id)(event);
+
+                if (field_id.search('job_income') >= 0){
+                    DOM_MANIPULATORS['validateNumberField']('monthly_job_income')(event);
+                    DOM_MANIPULATORS['validateNumberField']('monthly_non_job_income')(event);
+                }else{
+                    DOM_MANIPULATORS['validateNumberField'](field_id)(event);
+                }
                 FORM_SUBMIT_FUNCS['checkForm']();
             });
         }
@@ -746,7 +778,7 @@
     const radio_field_ids = [
         'household_includes_elderly_or_disabled',
         'unemployment_benefits',
-        'all_citizens_question',
+        'all_citizens',
         'student',
     ];
 

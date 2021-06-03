@@ -3,6 +3,7 @@
 
 <head>
 
+  <meta charset="UTF-8">
   <title>SNAP Eligibility Calculator - 50 State Food Stamp Prescreener</title>
   <meta name="description" content="Find out if you may be eligible for food stamps and an estimated amount of benefits you could receive.">
   <meta property="og:title" content="SNAP Eligibility Calculator - 50 State Food Stamp Prescreener">
@@ -10,6 +11,7 @@
   <meta property="og:image" content="https://www.snapscreener.com/shared/favicon/logo.png">
   <meta property="og:type"  content="website">
   <meta name="twitter:card" content="summary">
+  
 
   <!-- Load Sentry -->
   <script
@@ -455,7 +457,7 @@
               <span class="field-required">
                 *required
               </span>
-              <div id="all_citizens_question_error_elem"></div>
+              <div id="all_citizens_error_elem"></div>
             </legend>
 
             <div class="label-sub-text">
@@ -463,18 +465,18 @@
             </div>
 
             <div class="usa-radio">
-              <input class="usa-radio__input" id="input__all_citizens_question_true" type="radio"
-                name="all_citizens_question" value="true">
-              <label id="label__all_citizens_question_true" class="usa-radio__label"
-                for="input__all_citizens_question_true">
+              <input class="usa-radio__input" id="input__all_citizens_true" type="radio"
+                name="all_citizens" value="true">
+              <label id="label__all_citizens_true" class="usa-radio__label"
+                for="input__all_citizens_true">
                 Yes
               </label>
             </div>
             <div class="usa-radio">
-              <input class="usa-radio__input" id="input__all_citizens_question_false" type="radio"
-                name="all_citizens_question" value="false">
-              <label id="label__all_citizens_question_false" class="usa-radio__label"
-                for="input__all_citizens_question_false">
+              <input class="usa-radio__input" id="input__all_citizens_false" type="radio"
+                name="all_citizens" value="false">
+              <label id="label__all_citizens_false" class="usa-radio__label"
+                for="input__all_citizens_false">
                 No
               </label>
             </div>
@@ -524,7 +526,7 @@
   
             <div id='noncitizen-2'>
               <label class="usa-label" for="noncitizen_lpr_plus_criteria_number">
-                How many of the <span class='nc-helper'></span>non-US citizens in your household are lawful permanent residents <u>and</u> meet at least one of the following statuses:
+                How many of the <span class='nc-helper'></span>non-US citizens in your household are Green Card holders <u>and</u> meet at least one of the following statuses:
                 <span class="field-required">
                   *required
                 </span>       
@@ -533,7 +535,7 @@
               <div class="label-sub-text">
                 <ul class="usa-list">
                   <li>Are children under 18</li>
-                  <li>Have been lawful permanent residents for 5 years</li>
+                  <li>Have been Green Card holders for 5 years</li>
                   <li>Have a disability</li>
                 </ul>
                 For a full list of statuses that allow a non-citizen to be eligible for SNAP, <a href='https://www.fns.usda.gov/snap/eligibility/citizen/non-citizen-policy' target='_blank' rel="nofollow noopener noreferrer">click here</a>.
@@ -541,6 +543,7 @@
   
               <select class="usa-select pointer" id="noncitizen_lpr_plus_criteria_number" name="noncitizen_lpr_plus_criteria_number">
                 <option value>- Select -</option>
+                <option value="0">0 people</option>
                 <option value="1">1 person</option>
                 <option value="2">2 people</option>
                 <option value="3">3 people</option>
@@ -561,7 +564,7 @@
   
             <div id='noncitizen-3' class='hidden'>
               <label class="usa-label" for="noneligible_monthly_income">
-                What is the <u>monthly combined total</u> income before taxes for the <span class='nc-helper'></span>non-eligible non-citizen household member(s)?
+                What is the <u>monthly combined total</u> income before taxes for the <span class='nc-helper'></span>ineligible non-citizen household member(s)?
                 <span class="field-required">
                   *required
                 </span>
@@ -579,7 +582,7 @@
             <div id="noncitizenship_info_box" class="usa-alert usa-alert--info usa-alert--slim hidden">
               <div class="usa-alert__body">
                 <p class="usa-alert__text d-inline">
-                  Please answer the rest of the questions below for your <u>entire</u> household, including the income and expenses of any non-eligible non-citizen household members.
+                  Please answer the rest of the questions below for your <u>entire</u> household, including the income and expenses of any ineligible non-citizen household members.
               </div>
             </div>
 

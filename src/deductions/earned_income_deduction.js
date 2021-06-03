@@ -1,10 +1,13 @@
 export class EarnedIncomeDeduction {
     constructor(inputs) {
         this.monthly_job_income = inputs.monthly_job_income;
+        this.noneligible_monthly_income = inputs.noneligible_monthly_income;
+        this.noneligible_proration = inputs.noneligible_proration;
     }
 
     calculate() {
-        const earned_income_deduction = Math.round(0.2 * this.monthly_job_income);
+        var earned_income = Math.max(0, Math.round(this.monthly_job_income - (this.noneligible_monthly_income * (1 - this.noneligible_proration))));
+        const earned_income_deduction = Math.round(0.2 * earned_income);
 
         const explanation = [
             (
@@ -12,7 +15,7 @@ export class EarnedIncomeDeduction {
             ),
             (''),
             (
-                `$${this.monthly_job_income} x 0.2 = $${earned_income_deduction} earned income deduction`
+                `$${earned_income} x 0.2 = $${earned_income_deduction} earned income deduction`
             )
         ];
 

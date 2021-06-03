@@ -4,7 +4,7 @@ function setDefaultOne() {
     $('#monthly_job_income').val('1000');
     $('#monthly_non_job_income').val('0');
     $('#resources').val('0');
-    $("#input__all_citizens_question_true").prop("checked", true);
+    $("#input__all_citizens_true").prop("checked", true);
     $("#input__unemployment_benefits_false").prop("checked", true);
     $('#prescreener-form-submit').click();
 };
@@ -37,9 +37,9 @@ $(document).ready(function() {
     $("#input__household_includes_dependent_child_false").prop("checked", isFalse('household_includes_dependent_child'));
 
 
-    $("#input__all_citizens_question_true").prop("checked", isTrue('all_citizens_question'));
-    $("#input__all_citizens_question_false").prop("checked", isFalse('all_citizens_question'));
-    if (isFalse('all_citizens_question')){
+    $("#input__all_citizens_true").prop("checked", isTrue('all_citizens'));
+    $("#input__all_citizens_false").prop("checked", isFalse('all_citizens'));
+    if (isFalse('all_citizens')){
         $('#citizenship_info_box').removeClass('hidden');
         $('#noncitizen-questions').removeClass('hidden');
 
@@ -47,6 +47,23 @@ $(document).ready(function() {
         $('#noncitizen_number').val(urlParams.get('noncitizen_number'));
         $('#noncitizen_lpr_plus_criteria_number').val(urlParams.get('noncitizen_lpr_plus_criteria_number')).trigger("input");
         $('#noneligible_monthly_income').val(urlParams.get('noneligible_monthly_income'));
+
+        var NC_2 = $('#noncitizen_number').val();
+        var NC_3 = $('#noncitizen_lpr_plus_criteria_number').val();
+        if ((NC_2 != "") & (NC_3 != "")){
+            
+            var NC_NE = parseInt(NC_2) - parseInt(NC_3)
+
+            // Show the next question if needed
+            if (NC_NE > 0){
+                $('#noncitizen-3').removeClass('hidden');
+                $('#noncitizen-4').removeClass('hidden');
+                $('#noncitizenship_info_box').removeClass('hidden');
+                $('#noncitizen-3 .nc-helper').text(NC_NE + ' ');
+                $('#noncitizen-4 .nc-helper').text(NC_NE + ' ');
+            };
+
+        }
 
     };
 

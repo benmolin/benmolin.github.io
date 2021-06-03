@@ -38,10 +38,14 @@ export class ParseInputs {
         ];
 
         const OPTIONAL_BOOLEAN_INPUTS = [
-            'use_emergency_allotment'
+            'use_emergency_allotment',
+            'all_citizens',
         ];
 
         const OPTIONAL_NUMBER_INPUTS = [
+            'noncitizen_number',
+            'noncitizen_lpr_plus_criteria_number',
+            'noneligible_monthly_income',
             'resources',
             'dependent_care_costs',
             'medical_expenses_for_elderly_or_disabled',

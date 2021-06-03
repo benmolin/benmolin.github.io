@@ -4,6 +4,7 @@ import { STATE_OPTIONS } from './program_data/state_options.js';
 
 import { NetIncome } from './income/net_income.js';
 import { GrossIncome } from './income/gross_income.js';
+import { NoncitizenCalc } from './income/noncitizen_calc.js';
 
 import { GrossIncomeTest } from './tests/gross_income_test.js';
 import { AssetTest } from './tests/asset_test.js';
@@ -38,6 +39,10 @@ interface SnapEstimateInputs {
     court_ordered_child_support_payments?: ?number;
     use_emergency_allotment: boolean;
     target_year: ?number;
+    all_citizens = boolean;
+    noncitizen_number = ?number;
+    noncitizen_lpr_plus_criteria_number = ?number;
+    noneligible_monthly_income = ?number;
 }
 */
 
@@ -64,6 +69,10 @@ export class SnapEstimate {
     utility_trash:  boolean;
     utility_water:  boolean;
     target_year: ?number;
+    all_citizens = boolean;
+    noncitizen_number = ?number;
+    noncitizen_lpr_plus_criteria_number = ?number;
+    noneligible_monthly_income = ?number;
 
     // State Options
     state_options: Object;
@@ -150,13 +159,24 @@ export class SnapEstimate {
 
         this.net_monthly_income_limit = new FetchIncomeLimit({
             'state_or_territory': this.state_or_territory,
-            'household_size': this.household_size,
+            'household_size': this.household_size - (this.noncitizen_number - this.noncitizen_lpr_plus_criteria_number),
             'target_year': this.target_year,
         }).income_limit_lookup();
     }
 
     calculate() {
-        // First, calculate gross income
+
+        // First, calculate non-citizen
+        const noncitizen_calculation = this.calculate_noncitizen();
+        this.noneligible_proration = noncitizen_calculation['noneligible_proration'];
+        this.noneligible_number = noncitizen_calculation['noneligible_number'];
+        this.household_size = this.household_size - this.noneligible_number;
+        this.court_ordered_child_support_payments = Math.round(noncitizen_calculation['court_ordered_child_support_payments']);
+        this.dependent_care_costs = Math.round(noncitizen_calculation['dependent_care_costs']);
+        this.rent_or_mortgage = Math.round(noncitizen_calculation['rent_or_mortgage']);
+        this.homeowners_insurance_and_taxes = Math.round(noncitizen_calculation['homeowners_insurance_and_taxes']);
+
+        // The, calculate gross income
         const gross_income_calculation = this.calculate_gross_income();
         this.gross_income = gross_income_calculation['result'];
 
@@ -193,6 +213,7 @@ export class SnapEstimate {
         this.emergency_allotment_estimated_benefit = benefit_amount_calculation.emergency_allotment_estimated_benefit;
 
         const eligibility_factors/*: Array<Array<string>> */ = [
+            noncitizen_calculation,
             gross_income_calculation,
             net_income_calculation,
             benefit_amount_calculation,
@@ -238,6 +259,23 @@ export class SnapEstimate {
         ];
     }
 
+    calculate_noncitizen() {
+        return new NoncitizenCalc({
+            'household_size': this.household_size,
+            'all_citizens': this.all_citizens,
+            'noncitizen_number': this.noncitizen_number,
+            'noncitizen_lpr_plus_criteria_number': this.noncitizen_lpr_plus_criteria_number,
+            'noneligible_monthly_income' : this.noneligible_monthly_income,
+
+            'medical_expenses_for_elderly_or_disabled' : this.medical_expenses_for_elderly_or_disabled,
+            'court_ordered_child_support_payments' : this.court_ordered_child_support_payments,
+            'dependent_care_costs' : this.dependent_care_costs,
+            'rent_or_mortgage' : this.rent_or_mortgage,
+            'homeowners_insurance_and_taxes' : this.homeowners_insurance_and_taxes,
+
+        }).calculate();
+    }
+
     calculate_gross_income() {
         return new GrossIncome({
             'monthly_job_income': this.monthly_job_income,
@@ -245,6 +283,8 @@ export class SnapEstimate {
             'court_ordered_child_support_payments': this.court_ordered_child_support_payments,
             'child_support_payments_treatment': this.child_support_payments_treatment,
             'unemployment_benefits' : this.unemployment_benefits,
+            'noneligible_monthly_income' : this.noneligible_monthly_income,
+            'noneligible_proration' : this.noneligible_proration,
         }).calculate();
     }
 
@@ -271,7 +311,8 @@ export class SnapEstimate {
             'utility_trash': this.utility_trash,
             'utility_water': this.utility_water,
 
-
+            'noneligible_monthly_income' : this.noneligible_monthly_income,
+            'noneligible_proration' : this.noneligible_proration,
 
             'standard_utility_allowances': this.standard_utility_allowances,
             'child_support_payments_treatment': this.child_support_payments_treatment,
