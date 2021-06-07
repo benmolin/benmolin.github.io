@@ -170,7 +170,7 @@ function applyStateRegionOrSizeRules() {
 
 
     console.log("SNAPScreener:", HH_SIZE, stateKey, stateAbbr);
-    showTestLimitsTables();
+    // showTestLimitsTables();
 
 };
 
