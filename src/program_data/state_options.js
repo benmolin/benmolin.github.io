@@ -2419,8 +2419,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
     },
     "VA_HH1_3": {
         "2021": {
-            "uses_bbce": false,
-            "gross_income_limit_factor": null,
+            "uses_bbce": true,
+            "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
@@ -2442,8 +2442,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
     },
     "VA_HH4_X": {
         "2021": {
-            "uses_bbce": false,
-            "gross_income_limit_factor": null,
+            "uses_bbce": true,
+            "gross_income_limit_factor": 2,
             "resource_limit_non_elderly_or_disabled": null,
             "resource_limit_elderly_or_disabled": null,
             "has_resource_limit_elderly_or_disabled_income_twice_fpl": null,
