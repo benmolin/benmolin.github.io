@@ -11,8 +11,12 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 # 2021-07-03
 
+### Added
+- End dates for $300 weekly pandemic unemployment increase
+
 ### Changed
 - Removed resource limit question for states with BBCE and no resource limits under and situation
+- If the $300 unemployment increase is over, hide the unemployment benefits question
 
 # 2021-07-01
 

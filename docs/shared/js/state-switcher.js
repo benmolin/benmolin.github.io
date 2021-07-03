@@ -149,6 +149,7 @@ $('#dev-state-change').on('change', function () {
 });
 
 var SET_RESOURCES_TO_ZERO = false;
+var SET_UNEMPLOYMENT_TO_FALSE = false;
 function applyStateRegionOrSizeRules() {
 
     // First, get current state
@@ -188,8 +189,25 @@ function applyStateRegionOrSizeRules() {
             };
     };
 
+    // States where $300 weekly unemployment benefit increase is over
+    if ((new Date() > new Date(STATE_OPTIONS[stateKey][2021]['unemployment']) | (STATE_OPTIONS[stateKey][2021]['unemployment'] == null))){
+        $("#input__unemployment_benefits_false").prop("checked", true);
+        $('#unemployment_benefits_field').addClass('hidden');
+        SET_UNEMPLOYMENT_TO_FALSE = true;
+    }else{
+        $('#unemployment_benefits_field').removeClass('hidden');
+
+        if (($('#monthly_non_job_income').val() != 0) & ($('#monthly_non_job_income').val() != '')){
+            $('#unemployment_benefits_field').removeClass('d-none');
+
+            if (SET_UNEMPLOYMENT_TO_FALSE == true){
+                $("#input__unemployment_benefits_false").prop('checked', false);
+            };
+        };
+    };
+
+
     console.log("SNAPScreener:", HH_SIZE, stateKey, stateAbbr);
-    // showTestLimitsTables();
 
 };
 
@@ -307,7 +325,7 @@ $('.effects-state-rules').on('change', function () {
 });
 
 $('#monthly_non_job_income').on('input',function(e){
-    if (($('#monthly_non_job_income').val() != 0) & ($('#monthly_non_job_income').val() != '')){
+    if (($('#monthly_non_job_income').val() != 0) & ($('#monthly_non_job_income').val() != '') & ($('#unemployment_benefits_field').hasClass('hidden') == false)){
 
         // If it currently is hidden, remove the input check
         if ($("#unemployment_benefits_field").hasClass("d-none")){

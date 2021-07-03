@@ -19,7 +19,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 41
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/19/2021"
         }
     },
     "AK_C_U": {
@@ -42,7 +43,8 @@ var STATE_OPTIONS = {
                 "TRASH": 39,
                 "PHONE": 34
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_N_U": {
@@ -65,7 +67,8 @@ var STATE_OPTIONS = {
                 "TRASH": 84,
                 "PHONE": 24
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_NW_U": {
@@ -88,7 +91,8 @@ var STATE_OPTIONS = {
                 "TRASH": 23,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SC_U": {
@@ -111,7 +115,8 @@ var STATE_OPTIONS = {
                 "TRASH": 47,
                 "PHONE": 23
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SE_U": {
@@ -134,7 +139,8 @@ var STATE_OPTIONS = {
                 "TRASH": 27,
                 "PHONE": 21
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SW_U": {
@@ -157,7 +163,8 @@ var STATE_OPTIONS = {
                 "TRASH": 13,
                 "PHONE": 20
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_C_R1": {
@@ -180,7 +187,8 @@ var STATE_OPTIONS = {
                 "TRASH": 39,
                 "PHONE": 34
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_N_R1": {
@@ -203,7 +211,8 @@ var STATE_OPTIONS = {
                 "TRASH": 84,
                 "PHONE": 24
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_NW_R1": {
@@ -226,7 +235,8 @@ var STATE_OPTIONS = {
                 "TRASH": 23,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SC_R1": {
@@ -249,7 +259,8 @@ var STATE_OPTIONS = {
                 "TRASH": 47,
                 "PHONE": 23
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SE_R1": {
@@ -272,7 +283,8 @@ var STATE_OPTIONS = {
                 "TRASH": 27,
                 "PHONE": 21
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SW_R1": {
@@ -295,7 +307,8 @@ var STATE_OPTIONS = {
                 "TRASH": 13,
                 "PHONE": 20
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_C_R2": {
@@ -318,7 +331,8 @@ var STATE_OPTIONS = {
                 "TRASH": 39,
                 "PHONE": 34
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_N_R2": {
@@ -341,7 +355,8 @@ var STATE_OPTIONS = {
                 "TRASH": 84,
                 "PHONE": 24
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_NW_R2": {
@@ -364,7 +379,8 @@ var STATE_OPTIONS = {
                 "TRASH": 23,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SC_R2": {
@@ -387,7 +403,8 @@ var STATE_OPTIONS = {
                 "TRASH": 47,
                 "PHONE": 23
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SE_R2": {
@@ -410,7 +427,8 @@ var STATE_OPTIONS = {
                 "TRASH": 27,
                 "PHONE": 21
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SW_R2": {
@@ -433,7 +451,8 @@ var STATE_OPTIONS = {
                 "TRASH": 13,
                 "PHONE": 20
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AZ_HH1_3": {
@@ -456,7 +475,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 41
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/10/2021"
         }
     },
     "AZ_HH4_X": {
@@ -479,7 +499,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 41
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/10/2021"
         }
     },
     "AR": {
@@ -502,7 +523,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 50
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/26/2021"
         }
     },
     "CA": {
@@ -525,7 +547,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 18
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "CO": {
@@ -548,7 +571,8 @@ var STATE_OPTIONS = {
                 "TRASH": 58,
                 "PHONE": 79
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "CT": {
@@ -571,7 +595,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 27
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "DE": {
@@ -594,7 +619,8 @@ var STATE_OPTIONS = {
                 "TRASH": 70,
                 "PHONE": 36
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "DC": {
@@ -617,7 +643,8 @@ var STATE_OPTIONS = {
                 "TRASH": 71,
                 "PHONE": 69
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "FL": {
@@ -640,7 +667,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 48
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/27/2021"
         }
     },
     "GA": {
@@ -663,7 +691,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 47
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/26/2021"
         }
     },
     "GU_HH1": {
@@ -686,7 +715,8 @@ var STATE_OPTIONS = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH2": {
@@ -709,7 +739,8 @@ var STATE_OPTIONS = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH3": {
@@ -732,7 +763,8 @@ var STATE_OPTIONS = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH4": {
@@ -755,7 +787,8 @@ var STATE_OPTIONS = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH5": {
@@ -778,7 +811,8 @@ var STATE_OPTIONS = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH6": {
@@ -801,7 +835,8 @@ var STATE_OPTIONS = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH7": {
@@ -824,7 +859,8 @@ var STATE_OPTIONS = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH8": {
@@ -847,7 +883,8 @@ var STATE_OPTIONS = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH9": {
@@ -870,7 +907,8 @@ var STATE_OPTIONS = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH10": {
@@ -893,7 +931,8 @@ var STATE_OPTIONS = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH11": {
@@ -916,7 +955,8 @@ var STATE_OPTIONS = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH12_X": {
@@ -939,7 +979,8 @@ var STATE_OPTIONS = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "HI_HH1": {
@@ -962,7 +1003,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "HI_HH2": {
@@ -985,7 +1027,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "HI_HH3": {
@@ -1008,7 +1051,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "HI_HH_4_5": {
@@ -1031,7 +1075,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "HI_HH_6": {
@@ -1054,7 +1099,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "HI_HH_7_X": {
@@ -1077,7 +1123,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "ID": {
@@ -1100,7 +1147,8 @@ var STATE_OPTIONS = {
                 "TRASH": 128,
                 "PHONE": 37
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/19/2021"
         }
     },
     "IL": {
@@ -1123,7 +1171,8 @@ var STATE_OPTIONS = {
                 "TRASH": 81,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "IN": {
@@ -1146,7 +1195,8 @@ var STATE_OPTIONS = {
                 "TRASH": 55,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "IA": {
@@ -1169,7 +1219,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 29
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "KS": {
@@ -1192,7 +1243,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 35
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "KY": {
@@ -1215,7 +1267,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 45
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "LA": {
@@ -1238,7 +1291,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 46
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/31/2021"
         }
     },
     "ME": {
@@ -1261,7 +1315,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 45
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "MD": {
@@ -1284,7 +1339,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 40
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "MA": {
@@ -1307,7 +1363,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 45
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "MI": {
@@ -1330,7 +1387,8 @@ var STATE_OPTIONS = {
                 "TRASH": 23,
                 "PHONE": 29
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "MN": {
@@ -1353,7 +1411,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 56
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "MS": {
@@ -1376,7 +1435,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 34
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "MO": {
@@ -1399,7 +1459,8 @@ var STATE_OPTIONS = {
                 "TRASH": 131,
                 "PHONE": 65
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "MT": {
@@ -1422,7 +1483,8 @@ var STATE_OPTIONS = {
                 "TRASH": 171,
                 "PHONE": 32
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/27/2021"
         }
     },
     "NE": {
@@ -1445,7 +1507,8 @@ var STATE_OPTIONS = {
                 "TRASH": 52,
                 "PHONE": 46
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/19/2021"
         }
     },
     "NV": {
@@ -1468,7 +1531,8 @@ var STATE_OPTIONS = {
                 "TRASH": 52,
                 "PHONE": 25
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NH_DC_T": {
@@ -1491,7 +1555,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 27
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/19/2021"
         }
     },
     "NH_DC_F": {
@@ -1514,7 +1579,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 27
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/19/2021"
         }
     },
     "NJ": {
@@ -1537,7 +1603,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 29
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NM": {
@@ -1560,7 +1627,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 48
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_NAS_DC": {
@@ -1583,7 +1651,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_NYC_DC": {
@@ -1606,7 +1675,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_ONY_DC": {
@@ -1629,7 +1699,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_NAS_EI": {
@@ -1652,7 +1723,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_NYC_EI": {
@@ -1675,7 +1747,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_ONY_EI": {
@@ -1698,7 +1771,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_NAS_XX": {
@@ -1721,7 +1795,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_NYC_XX": {
@@ -1744,7 +1819,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_ONY_XX": {
@@ -1767,7 +1843,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NC_HH1": {
@@ -1790,7 +1867,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NC_HH2": {
@@ -1813,7 +1891,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NC_HH3": {
@@ -1836,7 +1915,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NC_HH4": {
@@ -1859,7 +1939,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NC_HH5_X": {
@@ -1882,7 +1963,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "ND": {
@@ -1905,7 +1987,8 @@ var STATE_OPTIONS = {
                 "TRASH": 204,
                 "PHONE": 32
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/19/2021"
         }
     },
     "OH": {
@@ -1928,7 +2011,8 @@ var STATE_OPTIONS = {
                 "TRASH": 80,
                 "PHONE": 40
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/26/2021"
         }
     },
     "OK": {
@@ -1951,7 +2035,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 48
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/27/2021"
         }
     },
     "OR": {
@@ -1974,7 +2059,8 @@ var STATE_OPTIONS = {
                 "TRASH": 55,
                 "PHONE": 68
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "PA": {
@@ -1997,7 +2083,8 @@ var STATE_OPTIONS = {
                 "TRASH": 59,
                 "PHONE": 33
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "RI": {
@@ -2020,7 +2107,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 23
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "SC": {
@@ -2043,7 +2131,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 25
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/30/2021"
         }
     },
     "SD": {
@@ -2066,7 +2155,8 @@ var STATE_OPTIONS = {
                 "TRASH": 87,
                 "PHONE": 48
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/26/2021"
         }
     },
     "TN_HH1": {
@@ -2089,7 +2179,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH2": {
@@ -2112,7 +2203,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH3": {
@@ -2135,7 +2227,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH4": {
@@ -2158,7 +2251,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH5": {
@@ -2181,7 +2275,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH6": {
@@ -2204,7 +2299,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH7": {
@@ -2227,7 +2323,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH8": {
@@ -2250,7 +2347,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH9": {
@@ -2273,7 +2371,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH10_X": {
@@ -2296,7 +2395,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TX": {
@@ -2319,7 +2419,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 38
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/26/2021"
         }
     },
     "UT": {
@@ -2342,7 +2443,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 74
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/26/2021"
         }
     },
     "VT": {
@@ -2365,7 +2467,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 36
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "VI": {
@@ -2388,7 +2491,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 36
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "VA_HH1_3": {
@@ -2411,7 +2515,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 61
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "VA_HH4_X": {
@@ -2434,7 +2539,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 61
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "WA": {
@@ -2457,7 +2563,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 59
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "WV": {
@@ -2480,7 +2587,8 @@ var STATE_OPTIONS = {
                 "TRASH": 76,
                 "PHONE": 76
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/19/2021"
         }
     },
     "WI": {
@@ -2503,7 +2611,8 @@ var STATE_OPTIONS = {
                 "TRASH": 23,
                 "PHONE": 29
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "WY": {
@@ -2526,7 +2635,8 @@ var STATE_OPTIONS = {
                 "TRASH": 0,
                 "PHONE": 53
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/19/2021"
         }
     }
 };

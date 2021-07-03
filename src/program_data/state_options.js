@@ -45,7 +45,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 41
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/19/2021"
         }
     },
     "AK_C_U": {
@@ -68,7 +69,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 39,
                 "PHONE": 34
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_N_U": {
@@ -91,7 +93,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 84,
                 "PHONE": 24
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_NW_U": {
@@ -114,7 +117,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 23,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SC_U": {
@@ -137,7 +141,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 47,
                 "PHONE": 23
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SE_U": {
@@ -160,7 +165,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 27,
                 "PHONE": 21
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SW_U": {
@@ -183,7 +189,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 13,
                 "PHONE": 20
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_C_R1": {
@@ -206,7 +213,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 39,
                 "PHONE": 34
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_N_R1": {
@@ -229,7 +237,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 84,
                 "PHONE": 24
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_NW_R1": {
@@ -252,7 +261,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 23,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SC_R1": {
@@ -275,7 +285,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 47,
                 "PHONE": 23
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SE_R1": {
@@ -298,7 +309,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 27,
                 "PHONE": 21
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SW_R1": {
@@ -321,7 +333,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 13,
                 "PHONE": 20
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_C_R2": {
@@ -344,7 +357,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 39,
                 "PHONE": 34
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_N_R2": {
@@ -367,7 +381,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 84,
                 "PHONE": 24
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_NW_R2": {
@@ -390,7 +405,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 23,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SC_R2": {
@@ -413,7 +429,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 47,
                 "PHONE": 23
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SE_R2": {
@@ -436,7 +453,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 27,
                 "PHONE": 21
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AK_SW_R2": {
@@ -459,7 +477,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 13,
                 "PHONE": 20
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "AZ_HH1_3": {
@@ -482,7 +501,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 41
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/10/2021"
         }
     },
     "AZ_HH4_X": {
@@ -505,7 +525,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 41
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/10/2021"
         }
     },
     "AR": {
@@ -528,7 +549,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 50
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/26/2021"
         }
     },
     "CA": {
@@ -551,7 +573,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 18
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "CO": {
@@ -574,7 +597,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 58,
                 "PHONE": 79
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "CT": {
@@ -597,7 +621,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 27
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "DE": {
@@ -620,7 +645,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 70,
                 "PHONE": 36
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "DC": {
@@ -643,7 +669,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 71,
                 "PHONE": 69
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "FL": {
@@ -666,7 +693,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 48
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/27/2021"
         }
     },
     "GA": {
@@ -689,7 +717,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 47
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/26/2021"
         }
     },
     "GU_HH1": {
@@ -712,7 +741,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH2": {
@@ -735,7 +765,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH3": {
@@ -758,7 +789,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH4": {
@@ -781,7 +813,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH5": {
@@ -804,7 +837,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH6": {
@@ -827,7 +861,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH7": {
@@ -850,7 +885,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH8": {
@@ -873,7 +909,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH9": {
@@ -896,7 +933,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH10": {
@@ -919,7 +957,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH11": {
@@ -942,7 +981,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "GU_HH12_X": {
@@ -965,7 +1005,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 30,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": null
         }
     },
     "HI_HH1": {
@@ -988,7 +1029,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "HI_HH2": {
@@ -1011,7 +1053,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "HI_HH3": {
@@ -1034,7 +1077,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "HI_HH_4_5": {
@@ -1057,7 +1101,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "HI_HH_6": {
@@ -1080,7 +1125,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "HI_HH_7_X": {
@@ -1103,7 +1149,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "ID": {
@@ -1126,7 +1173,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 128,
                 "PHONE": 37
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/19/2021"
         }
     },
     "IL": {
@@ -1149,7 +1197,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 81,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "IN": {
@@ -1172,7 +1221,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 55,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "IA": {
@@ -1195,7 +1245,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 29
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "KS": {
@@ -1218,7 +1269,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 35
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "KY": {
@@ -1241,7 +1293,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 45
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "LA": {
@@ -1264,7 +1317,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 46
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/31/2021"
         }
     },
     "ME": {
@@ -1287,7 +1341,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 45
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "MD": {
@@ -1310,7 +1365,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 40
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "MA": {
@@ -1333,7 +1389,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 45
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "MI": {
@@ -1356,7 +1413,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 23,
                 "PHONE": 29
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "MN": {
@@ -1379,7 +1437,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 56
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "MS": {
@@ -1402,7 +1461,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 34
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "MO": {
@@ -1425,7 +1485,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 131,
                 "PHONE": 65
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/12/2021"
         }
     },
     "MT": {
@@ -1448,7 +1509,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 171,
                 "PHONE": 32
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/27/2021"
         }
     },
     "NE": {
@@ -1471,7 +1533,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 52,
                 "PHONE": 46
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/19/2021"
         }
     },
     "NV": {
@@ -1494,7 +1557,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 52,
                 "PHONE": 25
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NH_DC_T": {
@@ -1517,7 +1581,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 27
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/19/2021"
         }
     },
     "NH_DC_F": {
@@ -1540,7 +1605,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 27
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/19/2021"
         }
     },
     "NJ": {
@@ -1563,7 +1629,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 29
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NM": {
@@ -1586,7 +1653,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 48
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_NAS_DC": {
@@ -1609,7 +1677,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_NYC_DC": {
@@ -1632,7 +1701,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_ONY_DC": {
@@ -1655,7 +1725,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_NAS_EI": {
@@ -1678,7 +1749,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_NYC_EI": {
@@ -1701,7 +1773,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_ONY_EI": {
@@ -1724,7 +1797,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_NAS_XX": {
@@ -1747,7 +1821,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_NYC_XX": {
@@ -1770,7 +1845,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NY_ONY_XX": {
@@ -1793,7 +1869,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 30
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NC_HH1": {
@@ -1816,7 +1893,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NC_HH2": {
@@ -1839,7 +1917,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NC_HH3": {
@@ -1862,7 +1941,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NC_HH4": {
@@ -1885,7 +1965,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "NC_HH5_X": {
@@ -1908,7 +1989,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 31
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "ND": {
@@ -1931,7 +2013,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 204,
                 "PHONE": 32
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/19/2021"
         }
     },
     "OH": {
@@ -1954,7 +2037,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 80,
                 "PHONE": 40
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/26/2021"
         }
     },
     "OK": {
@@ -1977,7 +2061,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 48
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/27/2021"
         }
     },
     "OR": {
@@ -2000,7 +2085,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 55,
                 "PHONE": 68
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "PA": {
@@ -2023,7 +2109,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 59,
                 "PHONE": 33
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "RI": {
@@ -2046,7 +2133,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 23
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "SC": {
@@ -2069,7 +2157,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 25
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/30/2021"
         }
     },
     "SD": {
@@ -2092,7 +2181,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 87,
                 "PHONE": 48
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/26/2021"
         }
     },
     "TN_HH1": {
@@ -2115,7 +2205,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH2": {
@@ -2138,7 +2229,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH3": {
@@ -2161,7 +2253,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH4": {
@@ -2184,7 +2277,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH5": {
@@ -2207,7 +2301,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH6": {
@@ -2230,7 +2325,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH7": {
@@ -2253,7 +2349,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH8": {
@@ -2276,7 +2373,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH9": {
@@ -2299,7 +2397,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TN_HH10_X": {
@@ -2322,7 +2421,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 28
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "7/3/2021"
         }
     },
     "TX": {
@@ -2345,7 +2445,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 38
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/26/2021"
         }
     },
     "UT": {
@@ -2368,7 +2469,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 74
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/26/2021"
         }
     },
     "VT": {
@@ -2391,7 +2493,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 36
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "VI": {
@@ -2414,7 +2517,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 36
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "VA_HH1_3": {
@@ -2437,7 +2541,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 61
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "VA_HH4_X": {
@@ -2460,7 +2565,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 61
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "WA": {
@@ -2483,7 +2589,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 59
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "WV": {
@@ -2506,7 +2613,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 76,
                 "PHONE": 76
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/19/2021"
         }
     },
     "WI": {
@@ -2529,7 +2637,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 23,
                 "PHONE": 29
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "9/6/2021"
         }
     },
     "WY": {
@@ -2552,7 +2661,8 @@ export const STATE_OPTIONS /*: StateOptions */ = {
                 "TRASH": 0,
                 "PHONE": 53
             },
-            "covid": true
+            "covid": true,
+            "unemployment": "6/19/2021"
         }
     }
 };
