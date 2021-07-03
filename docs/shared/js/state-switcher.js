@@ -148,6 +148,7 @@ $('#dev-state-change').on('change', function () {
     switchStateOnPage(this.value);
 });
 
+var SET_RESOURCES_TO_ZERO = false;
 function applyStateRegionOrSizeRules() {
 
     // First, get current state
@@ -168,6 +169,24 @@ function applyStateRegionOrSizeRules() {
     var stateKey = stateSpecialRules(stateAbbr, HH_SIZE, HAS_DEPENDENT_CHILD);
     $('#prescreener-form').attr('data-state-or-territory', stateKey);
 
+    // No asset test states
+    if ((STATE_OPTIONS[stateKey][2021]['uses_bbce'] == true) && 
+        (STATE_OPTIONS[stateKey][2021]['resource_limit_non_elderly_or_disabled'] == null) &&
+        (STATE_OPTIONS[stateKey][2021]['resource_limit_elderly_or_disabled'] == null) &&
+        (STATE_OPTIONS[stateKey][2021]['has_resource_limit_elderly_or_disabled_income_twice_fpl'] == false)){
+
+            // Set resources to 0
+            SET_RESOURCES_TO_ZERO = true;
+            $('#resources').val(0);
+            $('#resources-field-wrapper').addClass('hidden');
+
+        }else{
+            $('#resources-field-wrapper').removeClass('hidden');
+            
+            if (SET_RESOURCES_TO_ZERO == true){
+                $('#resources').val('');
+            };
+    };
 
     console.log("SNAPScreener:", HH_SIZE, stateKey, stateAbbr);
     // showTestLimitsTables();
@@ -189,7 +208,7 @@ function stateSpecialRules(stateAbbr,
     if(AK_AREA === undefined) {AK_AREA = 'C';}
     if(AK_URBAN === undefined) {AK_URBAN = 'U';}
 
-    $('#household_includes_dependent_child_field').addClass('d-none')
+    $('#household_includes_dependent_child_field').addClass('d-none');
 
     // AK
     if (['AK'].indexOf(stateAbbr) > -1) {

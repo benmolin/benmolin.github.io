@@ -9,8 +9,12 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
+# 2021-07-03
 
-# 2022-07-01
+### Changed
+- Removed resource limit question for states with BBCE and no resource limits under and situation
+
+# 2021-07-01
 
 ### Changed
 - VA is now BBCE at 200% FPL [VA House Bill 1820](https://lis.virginia.gov/cgi-bin/legp604.exe?212+ful+HB1820)

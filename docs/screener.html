@@ -654,24 +654,24 @@
 
 
 
-          <label class="usa-label" for="resources">
-            Total resources
-            <span class="field-required">
-              *required
-            </span>
-            <div id="resources_error_elem"></div>
-          </label>
-          <div class="label-sub-text">
-            This means countable resources, like funds in bank accounts. A home is not counted as a resource.
-          </div>
-
-          <div class="currency_field_wrapper">
-            <div class="dollar_sign">$</div>
-            <input id="resources" name="resources" class="usa-input" type='number' pattern="[0-9]*" step=".01" min="0"/>
+          <div id='resources-field-wrapper'>
+            <label class="usa-label" for="resources">
+              Total resources
+              <span class="field-required">
+                *required
+              </span>
+              <div id="resources_error_elem"></div>
+            </label>
+            <div class="label-sub-text">
+              This means countable resources, like funds in bank accounts. A home is not counted as a resource.
+            </div>
+  
+            <div class="currency_field_wrapper">
+              <div class="dollar_sign">$</div>
+              <input id="resources" name="resources" class="usa-input" type='number' pattern="[0-9]*" step=".01" min="0"/>
+            </div>
           </div>
           
-
-
           <div id='non-required-questions'>
             <label class="usa-label" for="dependent_care_costs">
               Dependent care costs
@@ -881,7 +881,7 @@
           eligibility and benefit amount is to apply.
           This website is not affiliated with any government organization or SNAP program.
           <br><br>
-          Last Updated: June 30th, 2021
+          Last Updated: July 3rd, 2021
         </div>
       </div>
     </div>
@@ -903,9 +903,9 @@
 <script type="text/javascript" src="shared/js/base.js"></script>
 <script type="text/javascript" src="api.js"></script>
 <script type="text/javascript" src="shared/js/default-profiles.js"></script>
+<script type="text/javascript" src="data.js"></script>
 <script type="text/javascript" src="shared/js/state-switcher.js"></script>
 <script type="text/javascript" src="shared/js/form-controls.bundle.js"></script>
-<!-- <script type="text/javascript" src="shared/js/income-limits.js"></script> -->
 <script type="text/javascript" src="shared/js/iframing.js"></script>
 <script type="text/javascript" src="shared/js/test.js"></script>
 
