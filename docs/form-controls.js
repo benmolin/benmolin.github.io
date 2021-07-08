@@ -86,7 +86,7 @@
             'apply': [
                 {
                     'url': 'https://www.fns.usda.gov/snap/state-directory',
-                    'description': "Find your state's application on the SNAP State Directory."
+                    'description': "<span class='en'>Find your state's application on the SNAP State Directory.</span><span class='es'>Encuentre la solicitud de su estado en el Directorio Estatal de SNAP.</span>"
                 },
             ],
             'other_resources': [
@@ -180,49 +180,49 @@
             if (jsonData['household_size'] === '') {
                 errors.push({
                     name: 'household_size',
-                    message: 'Select a household size',
+                    message: '<span class="en">Select a household size</span><span class="es">Seleccione un tamaño del hogar</span>',
                 });
             }
 
             if (jsonData['monthly_job_income'] === '') {
                 errors.push({
                     name: 'monthly_job_income',
-                    message: 'Enter monthly household income before taxes from jobs or self-employment',
+                    message: '<span class="en">Enter monthly household income before taxes from jobs or self-employment</span><span class="es">Introduzca ingreso mensual del hogar por salario de trabajo o empleo por cuenta propia</span>',
                 });
             }
 
             if (jsonData['monthly_non_job_income'] === '') {
                 errors.push({
                     name: 'monthly_non_job_income',
-                    message: 'Enter monthly household income from other sources',
+                    message: '<span class="en">Enter monthly household income from other sources</span><span class="es">Introduzca ingreso mensual del hogar de otras fuentes</span>',
                 });
             }
 
             if (jsonData['resources'] === '') {
                 errors.push({
                     name: 'resources',
-                    message: 'Enter total resources amount',
+                    message: '<span class="en">Enter total resources amount</span><span class="es">Introduzca total de recursos</span>',
                 });
             }
 
             if (jsonData['household_includes_elderly_or_disabled'] === undefined) {
                 errors.push({
                     name: 'household_includes_elderly_or_disabled',
-                    message: 'Select "yes" if your household includes someone who is 60 or older, or someone who is disabled',
+                    message: '<span class="en">Select "yes" if your household includes someone who is 60 or older, or someone who is disabled</span><span class="es">Seleccione "sí" si su hogar incluye una persona que es de 60 años o mayor o alguien que está discapacitado</span>',
                 });
             }
 
             if (jsonData['unemployment_benefits'] === undefined) {
                 errors.push({
                     name: 'unemployment_benefits',
-                    message: 'Select "yes" if your household includes someone who is receiving unemployment benefits',
+                    message: '<span class="en">Select "yes" if your household includes someone who is receiving unemployment benefits</span><span class="es">Seleccione "sí" si está recibiendo beneficios de desempleo actualmente</span>',
                 });
             }
 
             if (jsonData['all_citizens'] === undefined) {
                 errors.push({
                     name: 'all_citizens',
-                    message: 'Select "yes" if everyone on the application is a U.S. citizen',
+                    message: '<span class="en">Select "yes" if everyone on the application is a U.S. citizen</span><span class="es">Seleccione "sí" si todas las personas que aparecen en la aplicación ciudadanos americanos</span>',
                 });
             }
 
@@ -230,7 +230,7 @@
                 if (jsonData['student'] === undefined) {
                     errors.push({
                         name: 'student',
-                        message: 'Select "yes" if anyone on the application is a higher education student',
+                        message: '<span class="en">Select "yes" if anyone on the application is a higher education student</span><span class="es"></span>',
                     });
                 };
             }
@@ -241,14 +241,14 @@
                     if (jsonData['noncitizen_number'] === '') {
                         errors.push({
                             name: 'noncitizen_number',
-                            message: 'Select the number of non-citizens in the household',
+                            message: '<span class="en">Select the number of non-citizens in the household</span><span class="es">Seleccione el número de no ciudadanos en el hogar</span>',
                         });
                     }
 
                     if (jsonData['noncitizen_lpr_plus_criteria_number'] === '') {
                         errors.push({
                             name: 'noncitizen_lpr_plus_criteria_number',
-                            message: 'Select the number of non-citizens that meet a status below',
+                            message: '<span class="en">Select the number of non-citizens that meet a status below</span><span class="es">Seleccione el número de no ciudadanos que cumplen con uno de los estados a continuación</span>',
                         });
                     }
 
@@ -256,7 +256,7 @@
                     if (parseInt(jsonData['household_size']) < parseInt(jsonData['noncitizen_number'])){ 
                         errors.push({
                             name: 'noncitizen_number',
-                            message: 'The number of non-citizens should be less than or equal to the household size',
+                            message: '<span class="en">The number of non-citizens should be less than or equal to the household size</span><span class="es">El número de no ciudadanos debe ser menor o igual al tamaño del hogar</span>',
                         });
                     };  
 
@@ -264,7 +264,7 @@
                     if (jsonData['household_size'] - (jsonData['noncitizen_number'] - jsonData['noncitizen_lpr_plus_criteria_number']) <= 0){ 
                         errors.push({
                             name: 'noncitizen_lpr_plus_criteria_number',
-                            message: 'All ' + jsonData['household_size'] + ' of the household members appear to be ineligible for SNAP based on citizenship status. Select at least one household member to be eligible to continue with the calculator.',
+                            message: '<span class="en">All ' + jsonData['household_size'] + ' of the household members appear to be ineligible for SNAP based on citizenship status. Select at least one household member to be eligible to continue with the calculator.</span><span class="es">Todos los ' + jsonData['household_size'] + ' miembros del hogar parecen no ser elegibles para SNAP según el estado de ciudadanía. Seleccione al menos un miembro del hogar para ser elegible para continuar con la calculadora.</span>',
                         });
                     };  
 
@@ -272,7 +272,7 @@
                     if (parseInt(jsonData['noncitizen_number']) < parseInt(jsonData['noncitizen_lpr_plus_criteria_number'])){ 
                         errors.push({
                             name: 'noncitizen_lpr_plus_criteria_number',
-                            message: 'The number of non-citizens that meet a status below should be less than or equal to the number of non-citizens',
+                            message: '<span class="en">The number of non-citizens that meet a status below should be less than or equal to the number of non-citizens</span><span class="es">El número de no ciudadanos que cumplen con uno de los estados a continuación debe ser menor o igual al número de no ciudadanos</span>',
                         });
                     };  
                     
@@ -281,14 +281,14 @@
                         if (jsonData['noneligible_monthly_income'] === '') {
                             errors.push({
                                 name: 'noneligible_monthly_income',
-                                message: 'Enter monthly household income before taxes for ineligible household member(s)',
+                                message: '<span class="en">Enter monthly household income before taxes for ineligible household member(s)</span><span class="es">Introduzca el ingreso mensual del hogar antes de los impuestos para los miembros del hogar no elegibles</span>',
                             });
                         };
 
                         if (parseInt(jsonData['noneligible_monthly_income']) > (parseInt(jsonData['monthly_job_income']) + parseInt(jsonData['monthly_non_job_income']))) {
                             errors.push({
                                 name: 'monthly_job_income',
-                                message: 'Monthly income (from jobs and other sources) of entire household including ineligible household members should be greater than income of ineligible household members alone.',
+                                message: '<span class="en">Monthly income (from jobs and other sources) of entire household including ineligible household members should be greater than income of ineligible household members alone.</span><span class="es">Los ingresos mensuales (de trabajos y otras fuentes) de todo el hogar, incluyendo a los miembros del hogar no elegibles, deben ser mayores que los ingresos de los miembros del hogar no elegibles por sí solos.</span>',
                             });
                         };
                     };   
@@ -497,12 +497,12 @@
             return html;
         },
         'resultToHTML': (response) => {
-            let html = '<h2 class="d-inline" id="results-section-title">Results:</h2>';
+            let html = '<h2 class="d-inline" id="results-section-title"><span class="en">Results:</span><span class="es">Los Resultados:</span></h2>';
 
             // Allow copying link to clipboard
             var isDebug = urlParams.get('debug');
             if (isDebug != 'false') {
-                html += '<div id="copy-link" class="d-inline" data-clipboard-target="#results-url"><svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="20"><path d="M0 0h24v24H0z" fill="none"/><path fill="#1b6aa5" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg><span id="copy-link-text">Copy Link to Results</span><span id="copy-link-tag" class="d-none usa-tag">Copied!</span></div>'
+                html += '<div id="copy-link" class="d-inline" data-clipboard-target="#results-url"><svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="20"><path d="M0 0h24v24H0z" fill="none"/><path fill="#1b6aa5" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg><span id="copy-link-text"><span class="en">Copy Link to Results</span><span class="es">Copiar Enlace a los Resultados</span><span id="copy-link-tag" class="d-none usa-tag"><span class="en">Copied!</span><span class="es">¡Copiada!</span></span></div>'
             };
 
             // Configure to send data to a webhook
@@ -527,20 +527,20 @@
             // SNAP JS API estimates household is ineligible:
             if (!is_eligible) {
                 html += (
-                    `<p>You <strong>might not</strong> be eligible for SNAP benefits.</p>
-                    <p>This result is only an estimate based on your inputs, not an official application or decision. <strong>You can still apply for SNAP benefits</strong>.</p>`
+                    `<span class="en"><p>You <strong>might not</strong> be eligible for SNAP benefits.</p>
+                    <p>This result is only an estimate based on your inputs, not an official application or decision. <strong>You can still apply for SNAP benefits</strong>.</p></span><span class="es"><p>Es posible que usted <strong>no sea elegible</strong> para los beneficios de SNAP.</p>
+                    <p>Este resultado es sólo un estimado basado en la información entrada, no es una aplicación oficial o decisión. <strong>Usted aún puede solicitar los beneficios de SNAP</strong></p></span>`
                 );
 
-                html += FORM_SUBMIT_FUNCS['optionsHTML'](nextStepOptions['apply'], 'Ways to apply:');
+                html += FORM_SUBMIT_FUNCS['optionsHTML'](nextStepOptions['apply'], '<span class="en">Ways to apply:</span><span class="es">Maneras de aplicar</span>');
 
-                html += FORM_SUBMIT_FUNCS['optionsHTML'](nextStepOptions['other_resources'], 'Other resources for food assistance:');
+                html += FORM_SUBMIT_FUNCS['optionsHTML'](nextStepOptions['other_resources'], '<span class="en">Other resources for food assistance:</span><span class="es">Otros recursos para asistencia de comida:</span>');
 
                 return html;
             }
 
             // SNAP JS API estimates household is eligible:
-            html += '<p>You may be <b>eligible</b> for SNAP benefits.</p>';
-            html += `<p>If you apply and are approved, your benefit may be <b>$${estimated_monthly_benefit}</b> per month.</p>`;
+            html += `<span class="en"><p>You may be <b>eligible</b> for SNAP benefits.</p><p>If you apply and are approved, your benefit may be <b>$${estimated_monthly_benefit}</b> per month.</p></span><span class="es"><p>Usted puede ser <b>elegible</b> para los beneficios de SNAP.</p><p>Si usted aplica y es aprobado, su beneficio puede ser de <b>$${estimated_monthly_benefit}</b> mensuales.</p></span>`;
 
             // Calculate 15% boost
             const estimated_monthly_benefit_plus15 = Math.round(estimated_monthly_benefit * 1.15);
@@ -553,11 +553,11 @@
             // If emergency allotments are active, and estimated benefit is less than EA amount:
             if (emergency_allotment_estimated_benefit) {
                 html += (
-                    `<p>Due to the current pandemic, you could receive an additional $${additional_amount} per month. This additional amount is temporary and may not be fully available in your state. Some additional benefits may expire after June 30th.</p>`
+                    `<span class="en"><p>Due to the current pandemic, you could receive an additional $${additional_amount} per month. This additional amount is temporary and may not be fully available in your state. Some additional benefits may expire after June 30th.</p></span><span class="es"><p>Debido a la pandemia actual, usted podría recibir $${additional_amount} adicionales por mes. Esta cantidad adicional es temporal y este beneficio puede haber expirado en su estado.</p></span>`
                 );
             };
 
-            html += FORM_SUBMIT_FUNCS['optionsHTML'](nextStepOptions['apply'], 'Ways to apply:');
+            html += FORM_SUBMIT_FUNCS['optionsHTML'](nextStepOptions['apply'], '<span class="en">Ways to apply:</span><span class="es">Maneras de aplicar</span>');
             return html;
         },
         'eligibilityExplanationToHTML': (eligibility_factors) => {
@@ -576,8 +576,9 @@
 
                 const name = eligibility_test.name;
                 const result_in_words = (eligibility_test.result)
-                    ? 'Pass'
-                    : 'Fail';
+                    ? '<span class="en">Pass</span><span class="es">Aprobado</span>'
+                    : '<span class="en">Fail</span><span class="es">Fallado</span>';
+
                 const result_span_class = (eligibility_test.result)
                     ? 'pass-green'
                     : 'fail-red';

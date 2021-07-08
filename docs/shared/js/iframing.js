@@ -56,16 +56,17 @@ $(".hotline-wrapper:contains('{{HOTLINE_NUMBER}}')").each(function() {
 $(".hotline-number a" ).html(contactPhone);
 
 if ((contactPhone == '') && (contactEmail == '')) {
-    document.getElementsByClassName('hotline-wrapper')[0].style.display = 'none';
+    $('.hotline-wrapper').css('display', 'none');
 } else if ((contactPhone == '') || (contactEmail == '')) {
-    document.getElementsByClassName('hotline-or')[0].style.display = 'none';
-    document.getElementsByClassName('hotline-or')[1].style.display = 'none';
+    $('.hotline-or').css('display', 'none');
 };
 
 // Demo header
 var isDebug = urlParams.get('debug');
 if (isDebug != 'false') {
     $('.debug-info').removeClass('d-none');
+} else if (isDebug == 'false'){
+    $('#lang-toggle').addClass('hidden');
 };
 
 // Student question

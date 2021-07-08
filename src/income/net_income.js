@@ -36,15 +36,15 @@ export class NetIncome {
     calculate() {
         let explanation = [];
         const explanation_intro = (
-            'Net income is equal to total gross monthly income, minus deductions.'
+            '<span class="en">Net income is equal to total gross monthly income, minus deductions.</span><span class="es">El ingreso neto es igual al total de los ingresos brutos mensuales, menos las deducciones.</span>'
         );
         explanation.push(explanation_intro);
 
         if (this.gross_income === 0) {
             return {
-                'name': 'Net Income',
+                'name': '<span class="en">Net Income</span><span class="es">Ingreso Neto</span>',
                 'result': 0,
-                'explanation': ['Since the household does not have income, net income is zero.'],
+                'explanation': ['<span class="en">Since the household does not have income, net income is zero.</span><span class="es">Dado que el hogar no tiene ingresos, el ingreso neto es cero.</span>'],
                 'sort_order': 1,
                 'type': 'income',
             };
@@ -52,7 +52,7 @@ export class NetIncome {
 
         // Start with gross income
         const income_explanation = (
-            `Let's start with total household income. This household's gross income is $${this.gross_income}.`
+            `<span class="en">Let's start with total household income. This household's gross income is</span><span class="es">Empecemos con el ingreso total del hogar. El ingreso bruto de este hogar es</span> $${this.gross_income}.`
         );
         explanation.push(income_explanation);
 
@@ -136,7 +136,7 @@ export class NetIncome {
         const total_deductions = total_deductions_before_shelter + shelter_deduction_result;
 
         const total_deductions_explanation = (
-            `Next, we add all applicable deductions together. The total of all deductions is <strong>$${total_deductions}</strong>.`
+            `<span class="en">Next, we add all applicable deductions together. The total of all deductions is</span><span class="es">A continuación, añadiremos todas las deducciones aplicables juntas. El total de las deducciones es</span> <strong>$${total_deductions}</strong>.`
         );
         explanation.push(total_deductions_explanation);
         explanation.push('');
@@ -148,12 +148,12 @@ export class NetIncome {
             : 0;
 
         const calculation_explanation = (
-            `Gross income (<strong>$${this.gross_income}</strong>) minus total deductions (<strong>$${total_deductions}</strong>) equals net income: <strong>$${result}.</strong>`
+            `<span class="en">Gross income (<strong>$${this.gross_income}</strong>) minus total deductions (<strong>$${total_deductions}</strong>) equals net income: <strong>$${result}.</strong></span><span class="es">Los ingresos brutos (<strong>$${this.gross_income}</strong>) menos las deducciones totales (<strong>$${total_deductions}</strong>) es igual a los ingresos netos: <strong>$${result}.</strong></span>`
         );
         explanation.push(calculation_explanation);
 
         return {
-            'name': 'Net Income',
+            'name': '<span class="en">Net Income</span><span class="es">Ingreso Neto</span>',
             'result': result,
             'explanation': explanation,
             'sort_order': 1,

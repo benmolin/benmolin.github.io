@@ -9,6 +9,11 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
+# 2021-07-08
+
+### Added
+- Full Spanish support on non-embedded screeners
+
 # 2021-07-03
 
 ### Added

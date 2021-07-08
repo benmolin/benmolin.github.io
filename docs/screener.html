@@ -41,7 +41,7 @@
 
 </head>
 
-<body>
+<body class='en-lang'>
 
   <!-- Start Sentry -->
   <script>
@@ -126,11 +126,78 @@
   <div id="main" class="grid-container">
     <div class="grid-row">
       <div id='title-section' class="desktop:grid-col-10 desktop:grid-offset-1" style='display:none;'>
-        <h1 class="title">Could you be eligible for help with your food budget?</h1>
-        <p class="subtitle">Find out if you may be eligible for SNAP and an estimated amount of benefits you could
-          receive.</p>
-        <div class='third-title'>This is not an application. <a href='https://www.snapscreener.com/privacy' target="_blank" rel="noopener noreferrer" >See disclaimer and privacy policy.</a>
+        <h1 class="title">
+          <span id='title-state'></span>
+          <span class='en'>could you be eligible for help with your food budget?</span>
+          <span class='es'>¿podrían ser ustedes elegibles para obtener ayuda con su presupuesto de comida?</span>
+        </h1>
+        <p class="subtitle">
+          <span class='en'>Find out if you may be eligible for SNAP and an estimated amount of benefits you could
+          receive.</span>
+          <span class='es'>Averigue si es posible que usted sea elegible para SNAP y la cantidad estimada de beneficios que usted podría recibir.</span>
+        </p>
+        <div class='third-title'>
+          <span class='en'>This is not an application. <a href='https://www.snapscreener.com/privacy' target="_blank" rel="noopener noreferrer" >See disclaimer and privacy policy.</a></span>
+          <span class='es'>Esto no es una aplicación. Vea la <a href='https://www.snapscreener.com/privacy' target="_blank" rel="noopener noreferrer" >exención de responsabilidad y política de privacidad</a>.</span>
         </div>
+
+        <div id='lang-toggle'>
+           <span class='lang-option lang-option-en active'>English</span>
+           <span class='lang-option lang-option-es'>Español</span>
+        </div>
+
+      <style>
+        #lang-toggle{    
+          padding-top: 24px;
+          text-align: center;
+        }
+        .lang-option{    
+          display: inline;
+          cursor: pointer;
+          padding: 8px;
+          padding-left: 12px;
+          padding-right: 12px;
+          border: 1px solid #D1D5DB;
+          border-radius: 4px;
+        }
+        .lang-option.active{
+          background-color: #2563EB;
+          color: white;
+        } 
+
+        .en-lang .es{
+          display: none;
+        }
+        .es-lang .en{
+          display: none;
+        }
+      </style>
+      <script>
+
+        function english(){
+         $('body').addClass('en-lang');
+         $('body').removeClass('es-lang');
+         $('.lang-option-es').removeClass('active');
+         $('.lang-option-en').addClass("active");
+        };
+
+        function spanish(){
+          $('body').addClass('es-lang');
+          $('body').removeClass('en-lang');
+          $('.lang-option-en').removeClass('active');
+          $('.lang-option-es').addClass("active");
+        };
+
+        $('.lang-option-es').click(function(){
+          spanish();
+        });
+        $('.lang-option-en').click(function(){
+          english();
+        });
+
+      </script>
+
+
       </div>
       <div id='no-state-selected' class="desktop:grid-col-6 desktop:grid-offset-3 d-none">
 
@@ -214,7 +281,7 @@
           <!-- Phone field -->
           <div id='phone_form_field' class='d-none'>
             <label id='phone_form_field_label' for="phone_field">
-              Phone Number
+              <span class='en'>Phone Number</span><span class='es'>Número de Teléfono</span>
               <div id="phone_field_error_elem"></div>
             </label>
             <div id='phone_field_subtext' class="label-sub-text">
@@ -225,53 +292,73 @@
 
           <!-- Household size field -->
           <label class="usa-label" for="household_size">
-            Household size
+            <span class='en'>Household size</span><span class='es'>Tamaño del hogar</span>
             <span class="field-required">
-              *required
+              <span class='en'>*required</span><span class='es'>*requerido</span>
             </span>
             <div id="household_size_error_elem"></div>
           </label>
           <div class="label-sub-text">
-            Your household is the people you live with and buy food with. Include children 21 or younger, parents, and
-            spouses if they live with you.
+            <span class='en'>Your household is the people you live with and buy food with. Include children 21 or younger, parents, and
+            spouses if they live with you.</span>
+            <span class='es'>Su hogar es las personas con quienes usted vive y quienes compran comida con usted. Incluya a los hijos de 21 años o menores, padres y cónyuges si viven con usted.</span>
           </div>
 
           <select class="usa-select effects-state-rules" id="household_size" name="household_size">
-            <option value>- Select -</option>
-            <option value="1">Just me</option>
-            <option value="2">2 people</option>
-            <option value="3">3 people</option>
-            <option value="4">4 people</option>
-            <option value="5">5 people</option>
-            <option value="6">6 people</option>
-            <option value="7">7 people</option>
-            <option value="8">8 people</option>
-            <option value="9">9 people</option>
-            <option value="10">10 people</option>
-            <option value="11">11 people</option>
-            <option value="12">12 people</option>
-            <option value="13">13 people</option>
-            <option value="14">14 people</option>
-            <option value="15">15 people</option>
+            <option class='en' value>- Select -</option>
+            <option class='en' value="1">Just me</option>
+            <option class='en' value="2">2 people</option>
+            <option class='en' value="3">3 people</option>
+            <option class='en' value="4">4 people</option>
+            <option class='en' value="5">5 people</option>
+            <option class='en' value="6">6 people</option>
+            <option class='en' value="7">7 people</option>
+            <option class='en' value="8">8 people</option>
+            <option class='en' value="9">9 people</option>
+            <option class='en' value="10">10 people</option>
+            <option class='en' value="11">11 people</option>
+            <option class='en' value="12">12 people</option>
+            <option class='en' value="13">13 people</option>
+            <option class='en' value="14">14 people</option>
+            <option class='en' value="15">15 people</option>
+            <option class='es' value>- Seleccione -</option>
+            <option class='es' value="1">Sólo yo</option>
+            <option class='es' value="2">2 personas</option>
+            <option class='es' value="3">3 personas</option>
+            <option class='es' value="4">4 personas</option>
+            <option class='es' value="5">5 personas</option>
+            <option class='es' value="6">6 personas</option>
+            <option class='es' value="7">7 personas</option>
+            <option class='es' value="8">8 personas</option>
+            <option class='es' value="9">9 personas</option>
+            <option class='es' value="10">10 personas</option>
+            <option class='es' value="11">11 personas</option>
+            <option class='es' value="12">12 personas</option>
+            <option class='es' value="13">13 personas</option>
+            <option class='es' value="14">14 personas</option>
+            <option class='es' value="15">15 personas</option>
           </select>
 
 
           <!-- AK Only -->
           <div id='ak_loc_field' class="d-none effects-state-rules">
             <label class="usa-label" for="ak_loc" id="ak_loc-label">
-              Region
+              <span class='en'>Region</span><span class='es'>Región</span>
               <span class="field-required">
-                *required
+                <span class='en'>*required</span><span class='es'>*requerido</span>
               </span>
               <div id="ak_loc_error_elem"></div>
             </label>
             <div class="label-sub-text">
-              Select which region of Alaska you live in. <a href='http://dpaweb.hss.state.ak.us/e-forms/pdf/FSP-76.pdf'
-                target='_blank' rel="nofollow noopener noreferrer">Not sure?</a>
+              <span class='en'>Select which region of Alaska you live in. <a href='http://dpaweb.hss.state.ak.us/e-forms/pdf/FSP-76.pdf'
+                target='_blank' rel="nofollow noopener noreferrer">Not sure?</a></span>
+              <span class='es'>Seleccione la región de Alaska en la que vive. <a href='http://dpaweb.hss.state.ak.us/e-forms/pdf/FSP-76.pdf'
+                target='_blank' rel="nofollow noopener noreferrer">¿No lo se?</a></span>
             </div>
 
             <select class="usa-select effects-state-rules" id="ak_loc" name="ak_loc">
-              <option value>- Select -</option>
+              <option class='en' value>- Select -</option>
+              <option class='es' value>- Seleccione -</option>
               <option value="C">Central</option>
               <option value="N">Northern</option>
               <option value="NW">Northwest</option>
@@ -284,20 +371,29 @@
           <!-- AK Only -->
           <div id='ak_urban_field' class="d-none effects-state-rules">
             <label class="usa-label" for="ak_urban" id="ak_urban-label">
-              Do you live in an urban or rural area?
+              <span class='en'>Do you live in an urban or rural area?</span>
+              <span class='es'>¿Usted vive en una zona urbana o rural?</span>
               <span class="field-required">
-                *required
+                <span class='en'>*required</span><span class='es'>*requerido</span>
               </span>
               <div id="ak_urban_error_elem"></div>
             </label>
             <div class="label-sub-text">
-              Select what type of city or village you live in. <a
+              <span class='en'>
+                Select what type of city or village you live in. <a
                 href='http://dpaweb.hss.state.ak.us/main/manual/FSP/addendum1.pdf' target='_blank'
                 rel="nofollow noopener noreferrer">Not sure?</a>
+              </span>
+              <span class='es'>
+                Seleccione en qué tipo de ciudad o pueblo vive. <a
+                href='http://dpaweb.hss.state.ak.us/main/manual/FSP/addendum1.pdf' target='_blank'
+                rel="nofollow noopener noreferrer">¿No lo se?</a>
+              </span>
             </div>
 
             <select class="usa-select effects-state-rules" id="ak_urban" name="ak_urban">
-              <option value>- Select -</option>
+              <option class='en' value>- Select -</option>
+              <option class='es' value>- Seleccione -</option>
               <option value="U">Urban</option>
               <option value="R1">Rural 1</option>
               <option value="R2">Rural 2</option>
@@ -307,30 +403,35 @@
           <!-- NY Only -->
           <div id='ny_loc_field' class="d-none effects-state-rules">
             <label class="usa-label" for="ny_loc" id="ny_loc-label">
-              Region
+              <span class='en'>Region</span><span class='es'>Región</span>
               <span class="field-required">
-                *required
+                <span class='en'>*required</span><span class='es'>*requerido</span>
               </span>
               <div id="ny_loc_error_elem"></div>
             </label>
             <div class="label-sub-text">
-              Select which region of New York you live in.
+              <span class='en'>Select which region of New York you live in.</span>
+              <span class='es'>Seleccione la región de New York en la que vive.</span>
             </div>
 
             <select class="usa-select effects-state-rules" id="ny_loc" name="ny_loc">
-              <option value>- Select -</option>
+              <option class='en' value>- Select -</option>
+              <option class='es' value>- Seleccione -</option>
               <option value="NYC">New York City</option>
-              <option value="NAS">Nassau and Suffolk Counties</option>
-              <option value="ONY">Rest of New York State</option>
+              <option class='en' value="NAS">Nassau and Suffolk Counties</option>
+              <option class='en' value="ONY">Rest of New York State</option>
+              <option class='es' value="NAS">Condados de Nassau y Suffolk</option>
+              <option class='es' value="ONY">Otro New York estado</option>
             </select>
           </div>
 
           <!-- NH only -->
           <fieldset id='household_includes_dependent_child_field' class="usa-fieldset d-none effects-state-rules">
             <legend>
-              Does your household include at least one dependent child?
+              <span class='en'>Does your household include at least one dependent child?</span>
+              <span class='es'>¿Su hogar incluye al menos un hijo dependiente?</span>
               <span class="field-required">
-                *required
+                <span class='en'>*required</span><span class='es'>*requerido</span>
               </span>
               <div id="household_includes_dependent_child"></div>
             </legend>
@@ -340,7 +441,7 @@
                 name="household_includes_dependent_child" value="true">
               <label id="label__household_includes_dependent_child_true" class="usa-radio__label"
                 for="input__household_includes_dependent_child_true">
-                Yes
+                <span class='en'>Yes</span><span class='es'>Sí</span>
               </label>
             </div>
             <div class="usa-radio">
@@ -365,9 +466,14 @@
 
           <fieldset class="usa-fieldset">
             <legend>
-              Does your household include someone who is 60 or older, or someone who is disabled?
+              <span class='en'>
+                Does your household include someone who is 60 or older, or someone who is disabled?
+              </span>
+              <span class='es'>
+                ¿Su hogar incluye una persona que es de 60 años o mayor o alguien que está discapacitado?
+              </span>
               <span class="field-required">
-                *required
+                <span class='en'>*required</span><span class='es'>*requerido</span>
               </span>
               <div id="household_includes_elderly_or_disabled_error_elem"></div>
             </legend>
@@ -377,7 +483,7 @@
                 name="household_includes_elderly_or_disabled" value="true">
               <label id="label__household_includes_elderly_or_disabled_true" class="usa-radio__label"
                 for="input__household_includes_elderly_or_disabled_true">
-                Yes
+                <span class='en'>Yes</span><span class='es'>Sí</span>
               </label>
             </div>
             <div class="usa-radio">
@@ -395,7 +501,7 @@
               <legend>
                 Is anyone in your household a college student or enrolled in another higher education program?
                 <span class="field-required">
-                  *required
+                  <span class='en'>*required</span><span class='es'>*requerido</span>
                 </span>
                 <div id="student_error_elem"></div>
               </legend>
@@ -404,7 +510,7 @@
                   name="student" value="true">
                 <label id="label__student_true" class="usa-radio__label"
                   for="input__student_true">
-                  Yes
+                  <span class='en'>Yes</span><span class='es'>Sí</span>
                 </label>
               </div>
               <div class="usa-radio">
@@ -453,15 +559,17 @@
 
           <fieldset class="usa-fieldset">
             <legend>
-              Is everyone on the application a U.S. citizen?
+              <span class='en'>Is everyone on the application a U.S. citizen?</span>
+              <span class='es'>¿Son todas las personas que aparecen en la aplicación ciudadanos americanos?</span>
               <span class="field-required">
-                *required
+                <span class='en'>*required</span><span class='es'>*requerido</span>
               </span>
               <div id="all_citizens_error_elem"></div>
             </legend>
 
             <div class="label-sub-text">
-              Immigrants <strong>can</strong> be eligible for SNAP, depending on their immigration status.
+              <span class='en'>Immigrants <strong>can</strong> be eligible for SNAP, depending on their immigration status.</span>
+              <span class='es'>Los inmigrantes pueden ser elegibles para SNAP, dependiendo de su estado migratorio.</span>
             </div>
 
             <div class="usa-radio">
@@ -469,7 +577,7 @@
                 name="all_citizens" value="true">
               <label id="label__all_citizens_true" class="usa-radio__label"
                 for="input__all_citizens_true">
-                Yes
+                <span class='en'>Yes</span><span class='es'>Sí</span>
               </label>
             </div>
             <div class="usa-radio">
@@ -485,11 +593,22 @@
           <div id="citizenship_info_box" class="usa-alert usa-alert--info usa-alert--slim hidden">
             <div class="usa-alert__body">
               <p class="usa-alert__text d-inline">
-                Your household may be eligible for SNAP, depending on your immigration/citizenship status or that of one or more of your household members. Please continue completing the calculator to check potential eligibility.
-              <div class='hotline-wrapper d-inline'>
+                <span class='en'>
+                  Your household may be eligible for SNAP, depending on your immigration/citizenship status or that of one or more of your household members. Please continue completing the calculator to check potential eligibility.
+                </span>
+                <span class='es'>
+                  Su hogar puede ser elegible para SNAP, dependiendo de su estado migratorio / de ciudadanía o el de los miembros de su hogar. Por favor, continúe completando la calculadora para verificar la posibilidad de elegibilidad.
+                </span>
+              <div class='en hotline-wrapper d-inline'>
                 Contact for more info:
                 <div class='hotline-number'><a href="tel:{{HOTLINE_NUMBER}}">{{HOTLINE_NUMBER}}</a></div>
                 <div class='hotline-or'> or </div>
+                <div class='hotline-email'><a href="mailto:{{HOTLINE_EMAIL}}">{{HOTLINE_EMAIL}}</a></div>
+              </div>
+              <div class='es hotline-wrapper d-inline'>
+                Comuníquese para obtener más información:
+                <div class='hotline-number'><a href="tel:{{HOTLINE_NUMBER}}">{{HOTLINE_NUMBER}}</a></div>
+                <div class='hotline-or'> ó </div>
                 <div class='hotline-email'><a href="mailto:{{HOTLINE_EMAIL}}">{{HOTLINE_EMAIL}}</a></div>
               </div>
             </div>
@@ -498,80 +617,140 @@
           <div id='noncitizen-questions' class='hidden'>
             <div id='noncitizen-1'>
               <label class="usa-label" for="noncitizen_number">
-                How many people in your household are <u>not</u> US citizens?
+                <span class='en'>
+                  How many people in your household are <u>not</u> US citizens?
+                </span>
+                <span class='es'>
+                  ¿Cuántas personas en su hogar no son ciudadanos americanos?
+                </span>
                 <span class="field-required">
-                  *required
+                  <span class='en'>*required</span><span class='es'>*requerido</span>
                 </span>
                 <div id="noncitizen_number_error_elem"></div> 
               </label>
               <select class="usa-select pointer" id="noncitizen_number" name="noncitizen_number">
-                <option value>- Select -</option>
-                <option value="1">1 person</option>
-                <option value="2">2 people</option>
-                <option value="3">3 people</option>
-                <option value="4">4 people</option>
-                <option value="5">5 people</option>
-                <option value="6">6 people</option>
-                <option value="7">7 people</option>
-                <option value="8">8 people</option>
-                <option value="9">9 people</option>
-                <option value="10">10 people</option>
-                <option value="11">11 people</option>
-                <option value="12">12 people</option>
-                <option value="13">13 people</option>
-                <option value="14">14 people</option>
-                <option value="15">15 people</option>
+                <option class='en' value>- Select -</option>
+                <option class='en' value="1">Just me</option>
+                <option class='en' value="2">2 people</option>
+                <option class='en' value="3">3 people</option>
+                <option class='en' value="4">4 people</option>
+                <option class='en' value="5">5 people</option>
+                <option class='en' value="6">6 people</option>
+                <option class='en' value="7">7 people</option>
+                <option class='en' value="8">8 people</option>
+                <option class='en' value="9">9 people</option>
+                <option class='en' value="10">10 people</option>
+                <option class='en' value="11">11 people</option>
+                <option class='en' value="12">12 people</option>
+                <option class='en' value="13">13 people</option>
+                <option class='en' value="14">14 people</option>
+                <option class='en' value="15">15 people</option>
+                <option class='es' value>- Seleccione -</option>
+                <option class='es' value="1">Sólo yo</option>
+                <option class='es' value="2">2 personas</option>
+                <option class='es' value="3">3 personas</option>
+                <option class='es' value="4">4 personas</option>
+                <option class='es' value="5">5 personas</option>
+                <option class='es' value="6">6 personas</option>
+                <option class='es' value="7">7 personas</option>
+                <option class='es' value="8">8 personas</option>
+                <option class='es' value="9">9 personas</option>
+                <option class='es' value="10">10 personas</option>
+                <option class='es' value="11">11 personas</option>
+                <option class='es' value="12">12 personas</option>
+                <option class='es' value="13">13 personas</option>
+                <option class='es' value="14">14 personas</option>
+                <option class='es' value="15">15 personas</option>
               </select>
             </div>
   
             <div id='noncitizen-2'>
               <label class="usa-label" for="noncitizen_lpr_plus_criteria_number">
-                How many of the <span class='nc-helper'></span>non-US citizens in your household are Green Card holders <u>and</u> meet at least one of the following statuses:
+                <span class='en'>
+                  How many of the <span class='nc-helper'></span>non-US citizens in your household are Green Card holders <u>and</u> meet at least one of the following statuses:
+                </span>
+                <span class='es'>
+                  Cuántos de los <span class='nc-helper'></span> no ciudadanos estadounidenses en su hogar son residentes y cumplen con al menos uno de los siguientes estados:
+                </span>
                 <span class="field-required">
-                  *required
+                  <span class='en'>*required</span><span class='es'>*requerido</span>
                 </span>       
                 <div id="noncitizen_lpr_plus_criteria_number_error_elem"></div>     
               </label> 
               <div class="label-sub-text">
                 <ul class="usa-list">
-                  <li>Are children under 18</li>
-                  <li>Have been Green Card holders for 5 years</li>
-                  <li>Have a disability</li>
+                  <li class='en'>Are children under 18</li>
+                  <li class='en'>Have been Green Card holders for 5 years</li>
+                  <li class='en'>Have a disability</li>
+                  <li class='es'>Son menores de 18 años</li>
+                  <li class='es'>Han sido residentes durante 5 años</li>
+                  <li class='es'>Tienen una discapacidad</li>
                 </ul>
-                For a full list of statuses that allow a non-citizen to be eligible for SNAP, <a href='https://www.fns.usda.gov/snap/eligibility/citizen/non-citizen-policy' target='_blank' rel="nofollow noopener noreferrer">click here</a>.
+                <span class='en'>
+                  For a full list of statuses that allow a non-citizen to be eligible for SNAP, <a href='https://www.fns.usda.gov/snap/eligibility/citizen/non-citizen-policy' target='_blank' rel="nofollow noopener noreferrer">click here</a>.
+                </span>
+                <span class='es'>
+                  Para obtener una lista completa de los estados que permiten que un no ciudadano sea elegible para SNAP, <a href='https://www.fns.usda.gov/snap/eligibility/citizen/non-citizen-policy' target='_blank' rel="nofollow noopener noreferrer">oprima aquí</a>.
+                </span>
+                
               </div>
   
               <select class="usa-select pointer" id="noncitizen_lpr_plus_criteria_number" name="noncitizen_lpr_plus_criteria_number">
-                <option value>- Select -</option>
-                <option value="0">0 people</option>
-                <option value="1">1 person</option>
-                <option value="2">2 people</option>
-                <option value="3">3 people</option>
-                <option value="4">4 people</option>
-                <option value="5">5 people</option>
-                <option value="6">6 people</option>
-                <option value="7">7 people</option>
-                <option value="8">8 people</option>
-                <option value="9">9 people</option>
-                <option value="10">10 people</option>
-                <option value="11">11 people</option>
-                <option value="12">12 people</option>
-                <option value="13">13 people</option>
-                <option value="14">14 people</option>
-                <option value="15">15 people</option>
+                <option class='en' value>- Select -</option>
+                <option class='en' value="1">Just me</option>
+                <option class='en' value="2">2 people</option>
+                <option class='en' value="3">3 people</option>
+                <option class='en' value="4">4 people</option>
+                <option class='en' value="5">5 people</option>
+                <option class='en' value="6">6 people</option>
+                <option class='en' value="7">7 people</option>
+                <option class='en' value="8">8 people</option>
+                <option class='en' value="9">9 people</option>
+                <option class='en' value="10">10 people</option>
+                <option class='en' value="11">11 people</option>
+                <option class='en' value="12">12 people</option>
+                <option class='en' value="13">13 people</option>
+                <option class='en' value="14">14 people</option>
+                <option class='en' value="15">15 people</option>
+                <option class='es' value>- Seleccione -</option>
+                <option class='es' value="1">Sólo yo</option>
+                <option class='es' value="2">2 personas</option>
+                <option class='es' value="3">3 personas</option>
+                <option class='es' value="4">4 personas</option>
+                <option class='es' value="5">5 personas</option>
+                <option class='es' value="6">6 personas</option>
+                <option class='es' value="7">7 personas</option>
+                <option class='es' value="8">8 personas</option>
+                <option class='es' value="9">9 personas</option>
+                <option class='es' value="10">10 personas</option>
+                <option class='es' value="11">11 personas</option>
+                <option class='es' value="12">12 personas</option>
+                <option class='es' value="13">13 personas</option>
+                <option class='es' value="14">14 personas</option>
+                <option class='es' value="15">15 personas</option>
               </select>
             </div>
   
             <div id='noncitizen-3' class='hidden'>
               <label class="usa-label" for="noneligible_monthly_income">
-                What is the <u>monthly combined total</u> income before taxes for the <span class='nc-helper'></span>ineligible non-citizen household member(s)?
+                <span class='en'>
+                  What is the <u>monthly combined total</u> income before taxes for the <span class='nc-helper'></span>ineligible non-citizen household member(s)?
+                </span>
+                <span class='es'>
+                  ¿Cuál es el <u>ingreso total mensual combinado</u> antes de los impuestos para los <span class='nc-helper'></span> miembros del hogar no ciudadanos no elegibles?
+                </span>
                 <span class="field-required">
-                  *required
+                  <span class='en'>*required</span><span class='es'>*requerido</span>
                 </span>
                 <div id="noneligible_monthly_income_error_elem"></div>
               </label>
               <div class="label-sub-text">
-                While these members are not eligible for SNAP, their income still will be included on the application.
+                <span class='en'>
+                  While these members are not eligible for SNAP, their income still will be included on the application.
+                </span>
+                <span class='es'>
+                  Si bien estos miembros no son elegibles para SNAP, sus ingresos aún serán incluidos en la solicitud.
+                </span>
               </div>
               <div class="currency_field_wrapper">
                 <div class="dollar_sign">$</div>
@@ -582,16 +761,26 @@
             <div id="noncitizenship_info_box" class="usa-alert usa-alert--info usa-alert--slim hidden">
               <div class="usa-alert__body">
                 <p class="usa-alert__text d-inline">
-                  Please answer the rest of the questions below for your <u>entire</u> household, including the income and expenses of any ineligible non-citizen household members.
+                  <span class='en'>
+                    Please answer the rest of the questions below for your <u>entire</u> household, including the income and expenses of any ineligible non-citizen household members.
+                  </span>
+                  <span class='es'>
+                    Por favor, responda el resto de las preguntas a continuación para <u>todo</u> su hogar, incluyendo los ingresos y gastos de cualquier miembro del hogar no ciudadano no elegible.
+                  </span>
               </div>
             </div>
 
           </div>
          
           <label class="usa-label" for="monthly_job_income">
-            <u>Monthly</u> household income before taxes from jobs or self-employment
+            <span class='en'>
+              <u>Monthly</u> household income before taxes from jobs or self-employment
+            </span>
+            <span class='es'>
+              Ingreso mensual del hogar, antes de los impuestos, por salario de trabajo o empleo por cuenta propia
+            </span>
             <span class="field-required">
-              *required
+              <span class='en'>*required</span><span class='es'>*requerido</span>
             </span>
             <div id="monthly_job_income_error_elem"></div>
           </label>
@@ -602,15 +791,25 @@
           </div>
 
           <label class="usa-label" for="monthly_non_job_income">
-            <u>Monthly</u> household income from other sources
+            <span class='en'>
+              <u>Monthly</u> household income from other sources
+            </span>
+            <span class='es'>
+              Ingreso <u>mensual</u> del hogar de otras fuentes
+            </span>
             <span class="field-required">
-              *required
+              <span class='en'>*required</span><span class='es'>*requerido</span>
             </span>
             <div id="monthly_non_job_income_error_elem"></div>
           </label>
           <div class="label-sub-text">
-            This includes Social Security, disability, Child Support, Worker's Comp, Unemployment, Pension Income, or
-            other sources of income.
+            <span class='en'>
+              This includes Social Security, disability, Child Support, Worker's Comp, Unemployment, Pension Income, or
+              other sources of income.
+            </span>
+            <span class='es'>
+              Esto incluye Seguro Social, discapacidad, manutención de menores, compensación al trabajador, desempleo, pensión u otras fuentes de ingresos.
+            </span>
           </div>
 
           <div class="currency_field_wrapper">
@@ -623,15 +822,23 @@
           <!-- Only if the household has non-job income -->
           <fieldset id='unemployment_benefits_field' class="usa-fieldset d-none">
             <legend>
-              Are you currently receiving unemployment benefits?
+              <span class='en'>
+                Are you currently receiving unemployment benefits?</span>
+              <span class='es'>
+                ¿Está recibiendo beneficios de desempleo actualmente?
+              </span>
               <span class="field-required">
-                *required
+                <span class='en'>*required</span><span class='es'>*requerido</span>
               </span>
               <div id="unemployment_benefits_error_elem"></div>
             </legend>
 
             <div class="label-sub-text">
-              The current $300 weekly increase to unemployment benefits will not be counted against you for SNAP eligibility.
+              <span class='en'>
+                The current $300 weekly increase to unemployment benefits will not be counted against you for SNAP eligibility.</span>
+              <span class='es'>
+                El aumento actual de $300 por semana a los beneficios de desempleo no se contará en su contra para la elegibilidad de SNAP.
+              </span>
             </div>
 
             <div class="usa-radio">
@@ -639,7 +846,7 @@
                 name="unemployment_benefits" value="true">
               <label id="label__unemployment_benefits_true" class="usa-radio__label"
                 for="input__unemployment_benefits_true">
-                Yes
+                <span class='en'>Yes</span><span class='es'>Sí</span>
               </label>
             </div>
             <div class="usa-radio">
@@ -656,14 +863,19 @@
 
           <div id='resources-field-wrapper'>
             <label class="usa-label" for="resources">
-              Total resources
+              <span class='en'>Total resources</span><span class='es'>Total de recursos</span>
               <span class="field-required">
-                *required
+                <span class='en'>*required</span><span class='es'>*requerido</span>
               </span>
               <div id="resources_error_elem"></div>
             </label>
             <div class="label-sub-text">
-              This means countable resources, like funds in bank accounts. A home is not counted as a resource.
+              <span class='en'>
+                This means countable resources, like funds in bank accounts. A home is not counted as a resource.
+              </span>
+              <span class='es'>
+                Esto significa recursos contables, como los fondos en las cuentas bancarias. Una casa no se cuenta como un recurso.
+              </span>
             </div>
   
             <div class="currency_field_wrapper">
@@ -674,12 +886,18 @@
           
           <div id='non-required-questions'>
             <label class="usa-label" for="dependent_care_costs">
-              Dependent care costs
+              <span class='en'>Dependent care costs</span>
+              <span class='es'>Los costos de cuidado de los dependientes</span>
               <div id="dependent_care_costs_error_elem"></div>
             </label>
             <div class="label-sub-text">
-              This includes the costs of daycare, babysitters, or other child care; fees for before-school and
-              after-school care; costs for special needs care.
+              <span class='en'>
+                This includes the costs of daycare, babysitters, or other child care; fees for before-school and
+                after-school care; costs for special needs care.
+              </span>
+              <span class='es'>
+                Esto incluye los gastos de guardería u otro cuidado de hijos; honorarios para el cuidado antes de la escuela y después de la escuela; los costos para los cuidados de necesidades especiales.
+              </span>
             </div>
             <div class="currency_field_wrapper">
               <div class="dollar_sign">$</div>
@@ -688,27 +906,53 @@
 
             <div id="medical_expenses_for_elderly_or_disabled_question" class="hidden">
               <label class="usa-label" for="medical_expenses_for_elderly_or_disabled">
-                Monthly out of pocket medical expenses for household members who are age 60 or older or disabled
+                <span class='en'>
+                  Monthly out of pocket medical expenses for household members who are age 60 or older or disabled
+                </span>
+                <span class='es'>
+                  Gastos médicos mensuales de bolsillo para los miembros del hogar que es de 60 años o mayor o con discapacidad
+                </span>
                 <div id="medical_expenses_for_elderly_or_disabled_error_elem"></div>
               </label>
               <div class="label-sub-text">
-                This includes most medical and dental expenses, such as doctor bills, prescription drugs and other over-the-counter medication when approved by a doctor. <a id='medical-deduction-list-button' class="usa-link" href="javascript:void(0);">Show examples.</a>
-                <div id='medical-deduction-list' class='hidden'>
-                  <ul class="usa-list">
-                    <li>Health and hospitalization insurance policy premiums</li>
-                    <li>Prescription and over-the-counter medications</li>
-                    <li>Medical and dental care (including psychotherapy and rehabilitation)</li>
-                    <li>Hospitalization or outpatient treatment, nursing care, and nursing home care</li>
-                    <li>Transportation and lodging to obtain medical treatment or services (like doctor visits)</li>
-                    <li>Medicare premiums (including cost-sharing or spend down expenses)</li>
-                    <li>Dentures, hearing aids, and prosthetics</li>
-                    <li>Eye glasses prescribed by a doctor</li>
-                    <li>Maintaining an attendant, homemaker, home health aide, or child care services, housekeeper, necessary due to age, infirmity, or illness</li>
-                    <li>Other medical equipment (like wheelchairs, CPAP machines, and blood glucose monitors)</li>
-                    <li>Securing and maintaining a seeing eye or hearing dog</li>
-                  </ul>
-                  <div>Other categories of medical expenses may be included. The verification process for medical expenses varies by state.</div>
-                </div>
+                <span class='en'>
+                  This includes most medical and dental expenses, such as doctor bills, prescription drugs and other over-the-counter medication when approved by a doctor. <a id='medical-deduction-list-button' class="usa-link" href="javascript:void(0);">Show examples.</a>
+                  <div id='medical-deduction-list' class='hidden'>
+                    <ul class="usa-list">
+                      <li>Health and hospitalization insurance policy premiums</li>
+                      <li>Prescription and over-the-counter medications</li>
+                      <li>Medical and dental care (including psychotherapy and rehabilitation)</li>
+                      <li>Hospitalization or outpatient treatment, nursing care, and nursing home care</li>
+                      <li>Transportation and lodging to obtain medical treatment or services (like doctor visits)</li>
+                      <li>Medicare premiums (including cost-sharing or spend down expenses)</li>
+                      <li>Dentures, hearing aids, and prosthetics</li>
+                      <li>Eye glasses prescribed by a doctor</li>
+                      <li>Maintaining an attendant, homemaker, home health aide, or child care services, housekeeper, necessary due to age, infirmity, or illness</li>
+                      <li>Other medical equipment (like wheelchairs, CPAP machines, and blood glucose monitors)</li>
+                      <li>Securing and maintaining a seeing eye or hearing dog</li>
+                    </ul>
+                    <div>Other categories of medical expenses may be included. The verification process for medical expenses varies by state.</div>
+                  </div>
+                </span>
+                <span class='es'>
+                  Esto incluye la mayoría de los gastos médicos y dentales, como facturas de médicos, medicamentos recetados y otros medicamentos de venta libre cuando son aprobados por un médico. <a id='medical-deduction-list-button-es' class="usa-link" href="javascript:void(0);">Mostrar ejemplos.</a>
+                  <div id='medical-deduction-list-es' class='hidden'>
+                    <ul class="usa-list">
+                      <li>Primas de pólizas de seguro de salud y hospitalización
+                      Medicamentos recetados y de venta libre</li>
+                      <li>Atención médica y dental (incluyendo psicoterapia y rehabilitación)
+                      Hospitalización o tratamiento ambulatorio, cuidado de enfermería y cuidado en hogares de ancianos</li>
+                      <li>Transporte y alojamiento para obtener tratamiento o servicios médicos (como visitas al médico)</li>
+                      <li>Primas de Medicare (incluidos los gastos compartidos o de reducción de gastos)</li>
+                      <li>Dentaduras postizas, audífonos y prótesis</li>
+                      <li>Anteojos recetados por un médico</li>
+                      <li>Mantener a un asistente, ama de casa, asistente de salud en el hogar o servicios de cuidado infantil,  ama de llaves, necesario debido a la edad, condición o enfermedad</li>
+                      <li>Otros equipos médicos (como sillas de ruedas, máquinas de CPAP y monitores de glucosa en la sangre)</li>
+                      <li>Asegurar y mantener un perro guía o un perro oyente</li>
+                    </ul>
+                    <div>Otras categorías de gastos médicos pueden ser incluidas. El proceso de verificación de los gastos médicos varía según el estado.</div>
+                  </div>
+                </span>
               </div>
 
               <div class="currency_field_wrapper">
@@ -719,7 +963,8 @@
             </div>
 
             <label class="usa-label" for="court_ordered_child_support_payments">
-              Monthly court-ordered child support payments
+              <span class='en'>Monthly court-ordered child support payments</span>
+              <span class='es'>Pagos mensuales de manutención de hijos ordenados por la corte</span>
               <div id="court_ordered_child_support_payments_error_elem"></div>
             </label>
 
@@ -730,7 +975,8 @@
             </div>
 
             <label class="usa-label" for="rent_or_mortgage">
-              Monthly rent or mortgage amount
+              <span class='en'>Monthly rent or mortgage amount</span>
+              <span class='es'>Alquiler mensual o cantidad de la hipoteca</span>
               <div id="rent_or_mortgage_error_elem"></div>
             </label>
 
@@ -740,7 +986,8 @@
             </div>
 
             <label class="usa-label" for="homeowners_insurance_and_taxes">
-              Monthly homeowners insurance and taxes
+              <span class='en'>Monthly homeowners insurance and taxes</span>
+              <span class='es'>Seguro de propietarios de viviendas e impuestos mensuales</span>
               <div id="homeowners_insurance_and_taxes_error_elem"></div>
             </label>
 
@@ -750,46 +997,79 @@
             </div>
 
 
-            <legend class="usa-label">Which of the following utility bills do you pay?</legend>
+            <legend class="usa-label">
+              <span class='en'>
+                Which of the following utility bills do you pay?
+              </span>
+              <span class='es'>
+                ¿Cuál de las siguientes facturas de servicios públicos usted paga?
+              </span>
+            </legend>
             <div class="label-sub-text">
-              Check utilities paid separately from your rent or mortgage. Check "Heating and
-              Cooling" if you received a payment over $20 from an energy assistance program, such as LIHEAP.
+              <span class='en'>
+                Check utilities paid separately from your rent or mortgage. Check "Heating and
+                Cooling" if you received a payment over $20 from an energy assistance program, such as LIHEAP.
+              </span>
+              <span class='es'>
+                Seleccione las utilidades pagadas por separado de su alquiler o hipoteca. Marque "Calefacción y refrigeración" si ha recibido un pago de más de $20 de parte de un programa de asistencia de energía, tal y como LIHEAP.
+              </span>
             </div>
             <fieldset class="usa-fieldset">
               <div class="usa-checkbox">
                 <input class="usa-checkbox__input" id="utility_heating" type="checkbox" name="utility_heating"
                   value="utility_heating">
-                <label class="usa-checkbox__label" for="utility_heating">Heating and Cooling</label>
+                <label class="usa-checkbox__label" for="utility_heating">
+                  <span class='en'>Heating and Cooling</span>
+                  <span class='es'>Calefacción y refrigeración</span>
+                </label>
               </div>
               <div class="usa-checkbox">
                 <input class="usa-checkbox__input" id="utility_electricity" type="checkbox" name="utility_electricity"
                   value="utility_electricity">
-                <label class="usa-checkbox__label" for="utility_electricity">Electricity</label>
+                <label class="usa-checkbox__label" for="utility_electricity">
+                  <span class='en'>Electricity</span>
+                  <span class='es'>Electricidad</span>
+                </label>
               </div>
               <div class="usa-checkbox">
                 <input class="usa-checkbox__input" id="utility_gas" type="checkbox" name="utility_gas"
                   value="utility_gas">
-                <label class="usa-checkbox__label" for="utility_gas">Gas and Fuel</label>
+                <label class="usa-checkbox__label" for="utility_gas">
+                  <span class='en'>Gas and Fuel</span>
+                  <span class='es'>Gas y combustible</span>
+                </label>
               </div>
               <div class="usa-checkbox">
                 <input class="usa-checkbox__input" id="utility_water" type="checkbox" name="utility_water"
                   value="utility_water">
-                <label class="usa-checkbox__label" for="utility_water">Water</label>
+                <label class="usa-checkbox__label" for="utility_water">
+                  <span class='en'>Water</span>
+                  <span class='es'>Agua</span>
+                </label>
               </div>
               <div class="usa-checkbox">
                 <input class="usa-checkbox__input" id="utility_sewage" type="checkbox" name="utility_sewage"
                   value="utility_sewage">
-                <label class="usa-checkbox__label" for="utility_sewage">Sewage</label>
+                <label class="usa-checkbox__label" for="utility_sewage">
+                  <span class='en'>Sewage</span>
+                  <span class='es'>Alcantarillado</span>
+                </label>  
               </div>
               <div class="usa-checkbox">
                 <input class="usa-checkbox__input" id="utility_trash" type="checkbox" name="utility_trash"
                   value="utility_trash">
-                <label class="usa-checkbox__label" for="utility_trash">Trash</label>
+                <label class="usa-checkbox__label" for="utility_trash">
+                  <span class='en'>Trash</span>
+                  <span class='es'>Basura</span>
+                </label>
               </div>
               <div class="usa-checkbox">
                 <input class="usa-checkbox__input" id="utility_phone" type="checkbox" name="utility_phone"
                   value="utility_phone">
-                <label class="usa-checkbox__label" for="utility_phone">Phone</label>
+                <label class="usa-checkbox__label" for="utility_phone">
+                  <span class='en'>Phone</span>
+                  <span class='es'>Teléfono</span>
+                </label>
               </div>
             </fieldset>
           </div>
@@ -806,7 +1086,8 @@
             <h2 class="usa-accordion__heading">
               <button id="why-did-i-get-this-result-button" class="usa-accordion__button" aria-expanded="false"
                 aria-controls="a1">
-                Why did I get this result?
+                <span class='en'>Why did I get this result?</span>
+                <span class='es'>¿Por qué este resultado?</span>
               </button>
             </h2>
             <div id="a1" class="usa-accordion__content usa-prose">
@@ -815,7 +1096,8 @@
             <h2 class="usa-accordion__heading">
               <button id="how-are-gross-and-net-income-calculated-button" class="usa-accordion__button"
                 aria-expanded="false" aria-controls="a2">
-                How are gross and net income calculated?
+                <span class='en'>How are gross and net income calculated?</span>
+                <span class='es'>Cómo se calculan los Ingresos Brutos y los Ingresos Netos?</span>
               </button>
             </h2>
             <div id="a2" class="usa-accordion__content usa-prose">
@@ -829,7 +1111,7 @@
 
   <footer class="debug-info d-none usa-footer usa-footer--slim">
     <div class="grid-container usa-footer__return-to-top">
-      <a href="#">Return to top</a>
+      <a href="#"><span class='en'>Return to top</span><span class='es'>Volver a la cima</span></a>
     </div>
     <div class="usa-footer__primary-section">
       <div class="usa-footer__primary-container grid-row">
@@ -839,15 +1121,6 @@
         <div class="mobile-lg:grid-col-8">
           <nav class="usa-footer__nav" aria-label="Footer navigation">
             <ul class="grid-row grid-gap">
-              <!-- Show Test Limits -->
-              <!-- <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-content">
-                <div class="usa-checkbox usa-footer__primary-link">
-                  <input class="usa-checkbox__input" id="show_test_limits" type="checkbox" name="show-test-limits"
-                    value="truth" onclick="showTestLimitsTables()">
-                  <label id='show-test-limits-footer' class="usa-checkbox__label" for="show_test_limits">Show Test
-                    Limits</label>
-                </div>
-              </li> -->
               <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-content">
                 <a class="usa-footer__primary-link" id='set-default-1' class='pointer' onclick="setDefaultOne()">Sample
                   Profile</a>
@@ -881,7 +1154,7 @@
           eligibility and benefit amount is to apply.
           This website is not affiliated with any government organization or SNAP program.
           <br><br>
-          Last Updated: July 3rd, 2021
+          Last Updated: July 8th, 2021
         </div>
       </div>
     </div>

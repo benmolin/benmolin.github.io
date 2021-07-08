@@ -29,13 +29,13 @@ export class AssetTest {
 
             // Asset test using $3,500
             const below_resource_limit = this.resources <= 3500;
-            let explanation = `Since this household has resources of $${this.resources}, it <strong>${below_resource_limit ? 'meets' : 'does not meet'}</strong> the asset test.`
+            let explanation = `<span class="en">Since this household has resources of $${this.resources}, it <strong>${below_resource_limit ? 'meets' : 'does not meet'}</strong> the asset test.</span><span class="es">Dado que este hogar tiene bienes de $${this.resources}, el mismo <strong>${below_resource_limit ? 'cumple' : 'no cumple'}</strong> con la prueba de recursos</span>`
 
             return {
-                'name': 'Asset Test',
+                'name': '<span class="en">Asset Test</span><span class="es">Prueba de Bienes</span>',
                 'result': below_resource_limit,
                 'explanation': [
-                    `Since the household includes an elderly or disabled member and has gross income above 200% of the federal poverty guidelines, ${this.state_or_territory.substring(0, 2)} requires the household pass a $3500 asset limit. ` + explanation
+                    `<span class="en">Since the household includes an elderly or disabled member and has gross income above 200% of the federal poverty guidelines, ${this.state_or_territory.substring(0, 2)} requires the household pass a $3500 asset limit.</span><span class="es">Dado que este hogar incluye un miembro anciano u discapacitado y tiene un ingreso bruto por encima del 200% del nivel federal de pobreza, ${this.state_or_territory.substring(0, 2)} requiere que la familia pase un límite de bienes de $3500.</span> ` + explanation
                 ],
                 'sort_order': 4,
                 'type': 'test'
@@ -47,10 +47,10 @@ export class AssetTest {
         if (!this.resource_limit_elderly_or_disabled &&
             !this.resource_limit_non_elderly_or_disabled) {
             return {
-                'name': 'Asset Test',
+                'name': '<span class="en">Asset Test</span><span class="es">Prueba de Bienes</span>',
                 'result': true,
                 'explanation': [
-                    `This household is not held to an asset limit for SNAP eligibility.`
+                    `<span class="en">This household is not held to an asset limit for SNAP eligibility.</span><span class="es">Este hogar no está sujeto a un límite de bienes para ser elegible para SNAP.</span>`
                 ],
                 'sort_order': 4,
                 'type': 'test'
@@ -65,18 +65,18 @@ export class AssetTest {
             if (this.household_includes_elderly_or_disabled) {
                 resource_limit = this.resource_limit_elderly_or_disabled;
                 explanation = [
-                    `Since the household includes an elderly or disabled member, the resource limit is $${resource_limit}.`
+                    `<span class="en">Since the household includes an elderly or disabled member, the resource limit is</span><span class="es">Dado que este hogar incluye un miembro anciano u discapacitado, el límite de bienes es de</span> $${resource_limit}.`
                 ];
             } else {
                 resource_limit = this.resource_limit_non_elderly_or_disabled;
                 explanation = [
-                    `Since the household does not include an elderly or disabled member, the resource limit is $${resource_limit}.`
+                    `<span class="en">Since the household does not include an elderly or disabled member, the resource limit is</span><span class="es">Dado que este hogar no incluye un miembro anciano u discapacitado, el límite de bienes es de</span> $${resource_limit}.`
                 ];
             }
         } else {
             resource_limit = this.resource_limit_elderly_or_disabled;
             explanation = [
-                `The resource limit is $${resource_limit}.`
+                `<span class="en">The resource limit is</span><span class="es">El límite de bienes es de</span> $${resource_limit}.`
             ];
         };
 
@@ -84,11 +84,11 @@ export class AssetTest {
 
         const below_resource_limit = this.resources <= resource_limit;
         explanation.push(
-            `Since this household has resources of $${this.resources}, it <strong>${below_resource_limit ? 'meets' : 'does not meet'}</strong> the asset test.`
+            `<span class="en">Since this household has resources of $${this.resources}, it <strong>${below_resource_limit ? 'meets' : 'does not meet'}</strong> the asset test.</span><span class="es">Dado que este hogar tiene recursos de $${this.resources}, el mismo <strong>${below_resource_limit ? 'cumple' : 'no cumple'}</strong> con la prueba de bienes.</span>`
         );
 
         return {
-            'name': 'Asset Test',
+            'name': '<span class="en">Asset Test</span><span class="es">Prueba de Bienes</span>',
             'result': below_resource_limit,
             'explanation': explanation,
             'sort_order': 4,

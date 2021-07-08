@@ -17,7 +17,7 @@ export class StandardDeduction {
         const result = deductions_api.calculate();
 
         const explanation = [
-            `Next, we need to take into account deductions. We start with a standard deduction of $${result}.`
+            `<span class="en">Next, we need to take into account deductions. We start with a standard deduction of</span><span class="es">A continuación, tenemos que tomar en cuenta las deducciones. Empezamos con una deducción estándar de</span> $${result}.`
         ];
 
         return {

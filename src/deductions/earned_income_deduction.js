@@ -11,11 +11,11 @@ export class EarnedIncomeDeduction {
 
         const explanation = [
             (
-                'Next, we add the earned income deduction. This is equal to 20% of income from jobs or self-employment: '
+                '<span class="en">Next, we add the earned income deduction. This is equal to 20% of income from jobs or self-employment:</span><span class="es">A continuación, añadimos la deducción por ingreso del trabajo. Esto es equivalente al 20% de los ingresos de trabajo o del trabajo por cuenta propia:</span>'
             ),
             (''),
             (
-                `$${earned_income} x 0.2 = $${earned_income_deduction} earned income deduction`
+                `$${earned_income} x 0.2 = $${earned_income_deduction} <span class="en">earned income deduction</span><span class="es">deducción por ingreso del trabajo</span>`
             )
         ];
 

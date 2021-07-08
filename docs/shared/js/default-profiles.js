@@ -24,6 +24,9 @@ function isFalse(v){
 
 // Prepop
 $(document).ready(function() {
+
+    english();
+    
     $('#household_size').val(urlParams.get('household_size'));
     $('#monthly_job_income').val(urlParams.get('monthly_job_income'));
     $('#monthly_non_job_income').val(urlParams.get('monthly_non_job_income')).trigger("input");

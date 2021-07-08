@@ -21,38 +21,32 @@ export class ShelterDeduction {
 
     calculate() {
         const explanation = [
-            'Next, we calculate the Excess Shelter Deduction. To calculate ' +
-            'this deduction, we need to find half of the household adjusted income. ' +
-            'Adjusted income is equal to gross income, minus all deductions calculated ' +
-            'up to this point.'
+            '<span class="en">Next, we calculate the Excess Shelter Deduction. To calculate this deduction, we need to find half of the household adjusted income. Adjusted income is equal to gross income, minus all deductions calculated up to this point.</span><span class="es">A continuación, se calcula la deducción de exceso de vivienda. Para calcular esta deducción, tenemos que encontrar la mitad del ingreso ajustado del hogar. El ingreso ajustado es igual al ingreso bruto, menos todas las deducciones calculadas hasta este punto.</span>'
         ];
 
         const half_adjusted_income = Math.round(this.adjusted_income / 2);
 
         const half_adjusted_income_explanation = (
-            `For this household, adjusted income is $${this.adjusted_income} ` +
-            `and half of adjusted income is $${half_adjusted_income}.`
+            `<span class="en">For this household, adjusted income is $${this.adjusted_income} and half of adjusted income is $${half_adjusted_income}.</span><span class="es">Para este hogar, el ingreso ajustado es $${this.adjusted_income} y la mitad del ingreso ajustado es $${half_adjusted_income}</span>`
         );
         explanation.push(half_adjusted_income_explanation);
 
         const shelter_costs_explanation = (
-            'Next, add up shelter costs by adding any costs of rent, mortgage ' +
-            'payments, homeowners insurance and property taxes, and utility costs. ' +
-            'Let\'s start with everything except utilities:'
+            `<span class="en">Next, add up shelter costs by adding any costs of rent, mortgage payments, homeowners insurance and property taxes, and utility costs. Let\'s start with everything except utilities:</span><span class="es">A continuación, sume los costos de vivienda añadiendo los costos de renta, pagos de hipoteca, seguros de propiedad y los impuestos de propiedad y costos de servicios públicos. Vamos a empezar con todo, excepto los servicios públicos:</span>`
         );
         explanation.push(shelter_costs_explanation);
 
         this.base_shelter_costs = this.rent_or_mortgage + this.homeowners_insurance_and_taxes;
 
         const shelter_costs_math_explanation = (
-            `$${this.rent_or_mortgage} rent or mortgage + ` +
-            `$${this.homeowners_insurance_and_taxes} homeowners insurance and taxes = ` +
+            `$${this.rent_or_mortgage} <span class="en">rent or mortgage</span><span class="es">Renta de o hipoteca</span> + ` +
+            `$${this.homeowners_insurance_and_taxes} <span class="en">homeowners insurance and taxes</span><span class="es">Seguros propietarios e impuestos</span> = ` +
             `$${this.base_shelter_costs}`
         );
         explanation.push(shelter_costs_math_explanation);
 
         // # Handle utilities:
-        explanation.push('Now let\'s factor in utility costs.');
+        explanation.push(`<span class="en">Now let\'s factor in utility costs.</span><span class="es">Ahora vamos a tomar en cuenta los costos de los servicios públicos.</span>`);
 
         const utility_costs = this.calculate_utility_costs();
         const shelter_costs = this.base_shelter_costs + utility_costs['result'];
@@ -61,8 +55,7 @@ export class ShelterDeduction {
 
         if (half_adjusted_income > shelter_costs) {
             explanation.push(
-                'In this case, shelter costs do not exceed half of adjusted income, ' +
-                'so the excess shelter deduction does not apply.'
+                `<span class="en">In this case, shelter costs do not exceed half of adjusted income, so the excess shelter deduction does not apply.</span><span class="es">En este caso, los costos de vivienda no superan la mitad de los costos ajustados, por lo que la deducción de exceso de vivienda no aplica.</span>`
             );
 
             return {
@@ -74,13 +67,12 @@ export class ShelterDeduction {
         const raw_deduction_amount = shelter_costs - half_adjusted_income;
 
         const excess_shelter_costs_math_intro = (
-            'Subtract half of adjusted income from shelter costs to find ' +
-            'the base deduction amount:'
+            `<span class="en">Subtract half of adjusted income from shelter costs to find the base deduction amount:</span><span class="es">Reste la mitad de los ingresos ajustados de los costos de vivienda para la cantidad base de la deducción:</span>`
         );
         explanation.push(excess_shelter_costs_math_intro);
 
         const excess_shelter_costs_math_explanation = (
-            `$${shelter_costs} shelter costs - $${half_adjusted_income} half of adjusted income = $${raw_deduction_amount} base deduction`
+            `$${shelter_costs} <span class="en">shelter costs</span><span class="es">gastos de vivienda</span> - $${half_adjusted_income} <span class="en">half of adjusted income</span><span class="es">mitad del ingreso ajustado</span> = $${raw_deduction_amount} <span class="en">base deduction</span><span class="es">base de la deducción</span>`
         );
         explanation.push(excess_shelter_costs_math_explanation);
 
@@ -88,7 +80,7 @@ export class ShelterDeduction {
         // the amount of the excess shelter deduction.
         if (this.household_includes_elderly_or_disabled) {
             explanation.push(
-                `Because the household includes an elderly or disabled household member, there is no limit to the excess shelter deduction amount, so the full deduction amount of $${raw_deduction_amount} applies.`
+                `<span class="en">Because the household includes an elderly or disabled household member, there is no limit to the excess shelter deduction amount, so the full deduction amount of $${raw_deduction_amount} applies.</span><span class="es">Debido a que el hogar incluye a un miembro anciano o discapacitado, no hay límite para el monto de la deducción de exceso de vivienda, por lo que se aplica el monto total de la deducción de $${raw_deduction_amount}</span>`
             );
 
             return {
@@ -107,7 +99,7 @@ export class ShelterDeduction {
 
         if (raw_deduction_amount > maximum_shelter_deduction) {
             explanation.push(
-                `In this case, the household has a maximum excess shelter deduction of $${maximum_shelter_deduction}, so the maximum deduction amount applies.`
+                `<span class="en">In this case, the household has a maximum excess shelter deduction of $${maximum_shelter_deduction}, so the maximum deduction amount applies.</span><span class="es">En este caso, el hogar tiene una deducción máxima por deducción de exceso de vivienda de $${maximum_shelter_deduction}, por lo que se aplica la cantidad máxima de deducción.</span>`
             );
 
             return {
@@ -145,8 +137,7 @@ export class ShelterDeduction {
             return {
                 'result': 0,
                 'explanation': (
-                    'In this case there is no deduction for utilities, likely ' +
-                    'because the household is not billed separately for utilities.'
+                    '<span class="en">In this case there is no deduction for utilities, likely because the household is not billed separately for utilities.</span><span class="es">En este caso no hay ninguna deducción por servicios públicos, probablemente debido a que la casa no recibe una factura por separado para los servicios públicos.</span>'
                 )
             };
         }
@@ -155,13 +146,13 @@ export class ShelterDeduction {
         // Start by listing the different utility groups
         // Our goal is to find out which the client is eligible for, then figure out which is the highest allowance
         const utility_profiles = [
-            [this.utility_heating, 'HEATING_AND_COOLING', 'heating and cooling'],
-            [this.utility_electricity, 'ELECTRICITY', 'electricity'],
-            [this.utility_gas, 'GAS', 'gas and fuel'],
-            [this.utility_phone, 'PHONE', 'phone'],
-            [this.utility_sewage, 'SEWAGE', 'sewage'],
-            [this.utility_trash, 'TRASH', 'trash'],
-            [this.utility_water, 'WATER', 'water'],
+            [this.utility_heating, 'HEATING_AND_COOLING', 'heating and cooling', 'calefacción y refrigeración'],
+            [this.utility_electricity, 'ELECTRICITY', 'electricity', 'electricidad'],
+            [this.utility_gas, 'GAS', 'gas and fuel', 'gas y combustible'],
+            [this.utility_phone, 'PHONE', 'phone', 'teléfono'],
+            [this.utility_sewage, 'SEWAGE', 'sewage', 'alcantarillado'],
+            [this.utility_trash, 'TRASH', 'trash', 'basura'],
+            [this.utility_water, 'WATER', 'water', 'agua'],
         ]
 
         // Running list of qualified utility amounts
@@ -173,7 +164,7 @@ export class ShelterDeduction {
             num_utilities_paid += utility_profiles[i][0];
         };
         if (num_utilities_paid >= 2) {
-            qualified_utility_amounts.push(['BASIC_LIMITED_ALLOWANCE', this.standard_utility_allowances['BASIC_LIMITED_ALLOWANCE'], 'basic']);
+            qualified_utility_amounts.push(['BASIC_LIMITED_ALLOWANCE', this.standard_utility_allowances['BASIC_LIMITED_ALLOWANCE'], 'basic', 'básico']);
         };
 
         // For the rest of the qualified utilities, add them to the qualified array
@@ -186,11 +177,13 @@ export class ShelterDeduction {
         // Finally, find the highest utility deduction
         // The reason we have to do this is some states do not have a BLA. Or the Phone is higher than the single utility.
         var utility_deduction_title = "None";
+        var utility_deduction_title_es = "Ninguno";
         var utility_deduction_amount = 0;
 
         for (var i = 0; i < qualified_utility_amounts.length; i++) {
             if (qualified_utility_amounts[i][1] > utility_deduction_amount) {
                 utility_deduction_title = qualified_utility_amounts[i][2];
+                utility_deduction_title_es = qualified_utility_amounts[i][3];
                 utility_deduction_amount = qualified_utility_amounts[i][1];
             };
         };
@@ -200,15 +193,14 @@ export class ShelterDeduction {
             return {
                 'result': 0,
                 'explanation': (
-                    'In this case there is no deduction for utilities, likely ' +
-                    'because this state only allows deductions for some utilities.'
+                    `<span class="en">In this case there is no deduction for utilities, likely because this state only allows deductions for some utilities.</span><span class="es">En este caso no hay ninguna deducción por los servicios públicos, probablemente porque este estado sólo permite deducciones de algunos servicios públicos.</span>`
                 )
             };
         };
 
         return {
             'result': utility_deduction_amount,
-            'explanation': `In this case, a ${utility_deduction_title} utility deduction of $${utility_deduction_amount} applies, so total shelter plus utilities costs come to $${utility_deduction_amount + this.base_shelter_costs}.`
+            'explanation': `<span class="en">In this case, a ${utility_deduction_title} utility deduction of $${utility_deduction_amount} applies, so total shelter plus utilities costs come to $${utility_deduction_amount + this.base_shelter_costs}.</span><span class="es">En este caso, una deducción del ${utility_deduction_title_es} de $${utility_deduction_amount} es aplicable, por lo tanto el total de la vivienda más los servicios públicos costes resultan en $${utility_deduction_amount + this.base_shelter_costs}.</span>`
         };
     }
 }

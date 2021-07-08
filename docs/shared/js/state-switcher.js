@@ -136,7 +136,7 @@ function switchStateOnPage(stateAbbr) {
 
     // Change the state 
     $('title').text(stateFull + ' SNAP Calculator - Food Stamp Eligibility in ' + stateFull); // in the title
-    $('#main .title').text(stateDemonym + 's, could you be eligible for help with your food budget?') // In the header
+    $('#title-state').text(stateDemonym + "s, "); // In the header
     $("#dev-state-change").val(stateAbbr);
 };
 
@@ -357,6 +357,21 @@ $('#medical-deduction-list-button').on('click', function () {
         $('#medical-deduction-list').addClass('hidden');
         MEDICAL_DEDUCTION_LIST_VISIBLE = false;
         $('#medical-deduction-list-button').text('Show examples.')
+    };
+
+});
+
+var MEDICAL_DEDUCTION_LIST_VISIBLE_ES = false;
+$('#medical-deduction-list-button-es').on('click', function () {
+
+    if (MEDICAL_DEDUCTION_LIST_VISIBLE_ES == false){
+        $('#medical-deduction-list-es').removeClass('hidden');
+        MEDICAL_DEDUCTION_LIST_VISIBLE_ES = true;
+        $('#medical-deduction-list-button-es').text('Ocultar ejemplos.')
+    }else{
+        $('#medical-deduction-list-es').addClass('hidden');
+        MEDICAL_DEDUCTION_LIST_VISIBLE_ES = false;
+        $('#medical-deduction-list-button-es').text('Mostrar ejemplos.')
     };
 
 });
