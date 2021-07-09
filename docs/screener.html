@@ -171,17 +171,63 @@
         .es-lang .en{
           display: none;
         }
+
+        select{
+          cursor: pointer;
+        }
       </style>
       <script>
 
         function english(){
-         $('body').addClass('en-lang');
-         $('body').removeClass('es-lang');
-         $('.lang-option-es').removeClass('active');
-         $('.lang-option-en').addClass("active");
+          $('select option:contains("- Seleccione -")').text('- Select -');
+          $('select option:contains("Sólo yo")').text('Just me');
+          $('select option:contains("10 personas")').text('10 people');
+          $('select option:contains("11 personas")').text('11 people');
+          $('select option:contains("12 personas")').text('12 people');
+          $('select option:contains("13 personas")').text('13 people');
+          $('select option:contains("14 personas")').text('14 people');
+          $('select option:contains("15 personas")').text('15 people');
+          $('select option:contains("2 personas")').text('2 people');
+          $('select option:contains("3 personas")').text('3 people');
+          $('select option:contains("4 personas")').text('4 people');
+          $('select option:contains("5 personas")').text('5 people');
+          $('select option:contains("6 personas")').text('6 people');
+          $('select option:contains("7 personas")').text('7 people');
+          $('select option:contains("8 personas")').text('8 people');
+          $('select option:contains("9 personas")').text('9 people');
+
+
+          $('select option:contains("Condados de Nassau y Suffolk")').text('Nassau and Suffolk Counties');
+          $('select option:contains("Otro New York estado")').text('Rest of New York State');
+
+          $('body').addClass('en-lang');
+          $('body').removeClass('es-lang');
+          $('.lang-option-es').removeClass('active');
+          $('.lang-option-en').addClass("active");
         };
 
         function spanish(){
+          $('select option:contains("- Select -")').text('- Seleccione -');
+          $('select option:contains("Just me")').text('Sólo yo');
+          $('select option:contains("10 people")').text('10 personas');
+          $('select option:contains("11 people")').text('11 personas');
+          $('select option:contains("12 people")').text('12 personas');
+          $('select option:contains("13 people")').text('13 personas');
+          $('select option:contains("14 people")').text('14 personas');
+          $('select option:contains("15 people")').text('15 personas');
+          $('select option:contains("2 people")').text('2 personas');
+          $('select option:contains("3 people")').text('3 personas');
+          $('select option:contains("4 people")').text('4 personas');
+          $('select option:contains("5 people")').text('5 personas');
+          $('select option:contains("6 people")').text('6 personas');
+          $('select option:contains("7 people")').text('7 personas');
+          $('select option:contains("8 people")').text('8 personas');
+          $('select option:contains("9 people")').text('9 personas');
+
+
+          $('select option:contains("Nassau and Suffolk Counties")').text('Condados de Nassau y Suffolk');
+          $('select option:contains("Rest of New York State")').text('Otro New York estado');
+          
           $('body').addClass('es-lang');
           $('body').removeClass('en-lang');
           $('.lang-option-en').removeClass('active');
@@ -305,38 +351,22 @@
           </div>
 
           <select class="usa-select effects-state-rules" id="household_size" name="household_size">
-            <option class='en' value>- Select -</option>
-            <option class='en' value="1">Just me</option>
-            <option class='en' value="2">2 people</option>
-            <option class='en' value="3">3 people</option>
-            <option class='en' value="4">4 people</option>
-            <option class='en' value="5">5 people</option>
-            <option class='en' value="6">6 people</option>
-            <option class='en' value="7">7 people</option>
-            <option class='en' value="8">8 people</option>
-            <option class='en' value="9">9 people</option>
-            <option class='en' value="10">10 people</option>
-            <option class='en' value="11">11 people</option>
-            <option class='en' value="12">12 people</option>
-            <option class='en' value="13">13 people</option>
-            <option class='en' value="14">14 people</option>
-            <option class='en' value="15">15 people</option>
-            <option class='es' value>- Seleccione -</option>
-            <option class='es' value="1">Sólo yo</option>
-            <option class='es' value="2">2 personas</option>
-            <option class='es' value="3">3 personas</option>
-            <option class='es' value="4">4 personas</option>
-            <option class='es' value="5">5 personas</option>
-            <option class='es' value="6">6 personas</option>
-            <option class='es' value="7">7 personas</option>
-            <option class='es' value="8">8 personas</option>
-            <option class='es' value="9">9 personas</option>
-            <option class='es' value="10">10 personas</option>
-            <option class='es' value="11">11 personas</option>
-            <option class='es' value="12">12 personas</option>
-            <option class='es' value="13">13 personas</option>
-            <option class='es' value="14">14 personas</option>
-            <option class='es' value="15">15 personas</option>
+            <option value>- Select -</option>
+            <option value="1">Just me</option>
+            <option value="2">2 people</option>
+            <option value="3">3 people</option>
+            <option value="4">4 people</option>
+            <option value="5">5 people</option>
+            <option value="6">6 people</option>
+            <option value="7">7 people</option>
+            <option value="8">8 people</option>
+            <option value="9">9 people</option>
+            <option value="10">10 people</option>
+            <option value="11">11 people</option>
+            <option value="12">12 people</option>
+            <option value="13">13 people</option>
+            <option value="14">14 people</option>
+            <option value="15">15 people</option>
           </select>
 
 
@@ -357,8 +387,7 @@
             </div>
 
             <select class="usa-select effects-state-rules" id="ak_loc" name="ak_loc">
-              <option class='en' value>- Select -</option>
-              <option class='es' value>- Seleccione -</option>
+              <option value>- Select -</option>
               <option value="C">Central</option>
               <option value="N">Northern</option>
               <option value="NW">Northwest</option>
@@ -392,8 +421,7 @@
             </div>
 
             <select class="usa-select effects-state-rules" id="ak_urban" name="ak_urban">
-              <option class='en' value>- Select -</option>
-              <option class='es' value>- Seleccione -</option>
+              <option value>- Select -</option>
               <option value="U">Urban</option>
               <option value="R1">Rural 1</option>
               <option value="R2">Rural 2</option>
@@ -415,13 +443,10 @@
             </div>
 
             <select class="usa-select effects-state-rules" id="ny_loc" name="ny_loc">
-              <option class='en' value>- Select -</option>
-              <option class='es' value>- Seleccione -</option>
+              <option value>- Select -</option>
               <option value="NYC">New York City</option>
-              <option class='en' value="NAS">Nassau and Suffolk Counties</option>
-              <option class='en' value="ONY">Rest of New York State</option>
-              <option class='es' value="NAS">Condados de Nassau y Suffolk</option>
-              <option class='es' value="ONY">Otro New York estado</option>
+              <option value="NAS">Nassau and Suffolk Counties</option>
+              <option value="ONY">Rest of New York State</option>
             </select>
           </div>
 
@@ -629,38 +654,22 @@
                 <div id="noncitizen_number_error_elem"></div> 
               </label>
               <select class="usa-select pointer" id="noncitizen_number" name="noncitizen_number">
-                <option class='en' value>- Select -</option>
-                <option class='en' value="1">Just me</option>
-                <option class='en' value="2">2 people</option>
-                <option class='en' value="3">3 people</option>
-                <option class='en' value="4">4 people</option>
-                <option class='en' value="5">5 people</option>
-                <option class='en' value="6">6 people</option>
-                <option class='en' value="7">7 people</option>
-                <option class='en' value="8">8 people</option>
-                <option class='en' value="9">9 people</option>
-                <option class='en' value="10">10 people</option>
-                <option class='en' value="11">11 people</option>
-                <option class='en' value="12">12 people</option>
-                <option class='en' value="13">13 people</option>
-                <option class='en' value="14">14 people</option>
-                <option class='en' value="15">15 people</option>
-                <option class='es' value>- Seleccione -</option>
-                <option class='es' value="1">Sólo yo</option>
-                <option class='es' value="2">2 personas</option>
-                <option class='es' value="3">3 personas</option>
-                <option class='es' value="4">4 personas</option>
-                <option class='es' value="5">5 personas</option>
-                <option class='es' value="6">6 personas</option>
-                <option class='es' value="7">7 personas</option>
-                <option class='es' value="8">8 personas</option>
-                <option class='es' value="9">9 personas</option>
-                <option class='es' value="10">10 personas</option>
-                <option class='es' value="11">11 personas</option>
-                <option class='es' value="12">12 personas</option>
-                <option class='es' value="13">13 personas</option>
-                <option class='es' value="14">14 personas</option>
-                <option class='es' value="15">15 personas</option>
+                <option value>- Select -</option>
+                <option value="1">Just me</option>
+                <option value="2">2 people</option>
+                <option value="3">3 people</option>
+                <option value="4">4 people</option>
+                <option value="5">5 people</option>
+                <option value="6">6 people</option>
+                <option value="7">7 people</option>
+                <option value="8">8 people</option>
+                <option value="9">9 people</option>
+                <option value="10">10 people</option>
+                <option value="11">11 people</option>
+                <option value="12">12 people</option>
+                <option value="13">13 people</option>
+                <option value="14">14 people</option>
+                <option value="15">15 people</option>
               </select>
             </div>
   
@@ -696,38 +705,22 @@
               </div>
   
               <select class="usa-select pointer" id="noncitizen_lpr_plus_criteria_number" name="noncitizen_lpr_plus_criteria_number">
-                <option class='en' value>- Select -</option>
-                <option class='en' value="1">Just me</option>
-                <option class='en' value="2">2 people</option>
-                <option class='en' value="3">3 people</option>
-                <option class='en' value="4">4 people</option>
-                <option class='en' value="5">5 people</option>
-                <option class='en' value="6">6 people</option>
-                <option class='en' value="7">7 people</option>
-                <option class='en' value="8">8 people</option>
-                <option class='en' value="9">9 people</option>
-                <option class='en' value="10">10 people</option>
-                <option class='en' value="11">11 people</option>
-                <option class='en' value="12">12 people</option>
-                <option class='en' value="13">13 people</option>
-                <option class='en' value="14">14 people</option>
-                <option class='en' value="15">15 people</option>
-                <option class='es' value>- Seleccione -</option>
-                <option class='es' value="1">Sólo yo</option>
-                <option class='es' value="2">2 personas</option>
-                <option class='es' value="3">3 personas</option>
-                <option class='es' value="4">4 personas</option>
-                <option class='es' value="5">5 personas</option>
-                <option class='es' value="6">6 personas</option>
-                <option class='es' value="7">7 personas</option>
-                <option class='es' value="8">8 personas</option>
-                <option class='es' value="9">9 personas</option>
-                <option class='es' value="10">10 personas</option>
-                <option class='es' value="11">11 personas</option>
-                <option class='es' value="12">12 personas</option>
-                <option class='es' value="13">13 personas</option>
-                <option class='es' value="14">14 personas</option>
-                <option class='es' value="15">15 personas</option>
+                <option value>- Select -</option>
+                <option value="1">Just me</option>
+                <option value="2">2 people</option>
+                <option value="3">3 people</option>
+                <option value="4">4 people</option>
+                <option value="5">5 people</option>
+                <option value="6">6 people</option>
+                <option value="7">7 people</option>
+                <option value="8">8 people</option>
+                <option value="9">9 people</option>
+                <option value="10">10 people</option>
+                <option value="11">11 people</option>
+                <option value="12">12 people</option>
+                <option value="13">13 people</option>
+                <option value="14">14 people</option>
+                <option value="15">15 people</option>
               </select>
             </div>
   
@@ -1154,7 +1147,7 @@
           eligibility and benefit amount is to apply.
           This website is not affiliated with any government organization or SNAP program.
           <br><br>
-          Last Updated: July 8th, 2021
+          Last Updated: July 9th, 2021
         </div>
       </div>
     </div>

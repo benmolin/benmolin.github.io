@@ -9,6 +9,12 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Single utility allowance for states with no BUA
 
 
+
+# 2021-07-09
+
+### Changed
+- Fixed the select input options translations -- weren't working on iPhone
+
 # 2021-07-08
 
 ### Added
