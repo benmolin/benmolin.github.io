@@ -12,6 +12,10 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 # 2021-07-09
 
+### Added
+- Titles and footers in Spanish
+- Spanish privacy policy
+
 ### Changed
 - Fixed the select input options translations -- weren't working on iPhone
 
