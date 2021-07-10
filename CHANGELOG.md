@@ -12,8 +12,9 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 # 2021-07-10
 
-### Change
+### Changed
 - Spanish appears on all calculators
+- New [Find Food Support](https://findfoodsupport.withgoogle.com/) resource link
 
 # 2021-07-09
 

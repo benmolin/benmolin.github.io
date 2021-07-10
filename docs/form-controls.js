@@ -91,8 +91,8 @@
             ],
             'other_resources': [
                 {
-                    'url': 'https://www.foodpantries.org/',
-                    'description': 'Foodpantries.org',
+                    'url': 'https://findfoodsupport.withgoogle.com/',
+                    'description': 'Find Food Support',
                 },
                 {
                     'url': 'https://www.feedingamerica.org/find-your-local-foodbank',
