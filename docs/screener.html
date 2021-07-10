@@ -181,12 +181,14 @@
         function english(){
           $('select option:contains("- Seleccione -")').text('- Select -');
           $('select option:contains("Sólo yo")').text('Just me');
+          $('select option:contains("1  persona")').text('1  person');
           $('select option:contains("10 personas")').text('10 people');
           $('select option:contains("11 personas")').text('11 people');
           $('select option:contains("12 personas")').text('12 people');
           $('select option:contains("13 personas")').text('13 people');
           $('select option:contains("14 personas")').text('14 people');
           $('select option:contains("15 personas")').text('15 people');
+          $('select option:contains("0 personas")').text('0 people');
           $('select option:contains("2 personas")').text('2 people');
           $('select option:contains("3 personas")').text('3 people');
           $('select option:contains("4 personas")').text('4 people');
@@ -209,12 +211,14 @@
         function spanish(){
           $('select option:contains("- Select -")').text('- Seleccione -');
           $('select option:contains("Just me")').text('Sólo yo');
+          $('select option:contains("1  person")').text('1  persona');
           $('select option:contains("10 people")').text('10 personas');
           $('select option:contains("11 people")').text('11 personas');
           $('select option:contains("12 people")').text('12 personas');
           $('select option:contains("13 people")').text('13 personas');
           $('select option:contains("14 people")').text('14 personas');
           $('select option:contains("15 people")').text('15 personas');
+          $('select option:contains("0 people")').text('0 personas');
           $('select option:contains("2 people")').text('2 personas');
           $('select option:contains("3 people")').text('3 personas');
           $('select option:contains("4 people")').text('4 personas');
@@ -655,7 +659,7 @@
               </label>
               <select class="usa-select pointer" id="noncitizen_number" name="noncitizen_number">
                 <option value>- Select -</option>
-                <option value="1">Just me</option>
+                <option value="1">1 person</option>
                 <option value="2">2 people</option>
                 <option value="3">3 people</option>
                 <option value="4">4 people</option>
@@ -706,7 +710,8 @@
   
               <select class="usa-select pointer" id="noncitizen_lpr_plus_criteria_number" name="noncitizen_lpr_plus_criteria_number">
                 <option value>- Select -</option>
-                <option value="1">Just me</option>
+                <option value="0">0 people</option>
+                <option value="1">1 person</option>
                 <option value="2">2 people</option>
                 <option value="3">3 people</option>
                 <option value="4">4 people</option>
@@ -739,10 +744,10 @@
               </label>
               <div class="label-sub-text">
                 <span class='en'>
-                  While these members are not eligible for SNAP, their income still will be included on the application.
+                  This includes income from jobs or self-employment, Social Security, disability, Child Support, Worker's Comp, Unemployment, Pension Income, or other sources of income. While these members are not eligible for SNAP, their income still will be included on the application.
                 </span>
                 <span class='es'>
-                  Si bien estos miembros no son elegibles para SNAP, sus ingresos aún serán incluidos en la solicitud.
+                  Esto incluye salario de trabajo o empleo por cuenta propia, Seguro Social, discapacidad, manutención de menores, compensación al trabajador, desempleo, pensión u otras fuentes de ingresos. Si bien estos miembros no son elegibles para SNAP, sus ingresos aún serán incluidos en la solicitud.
                 </span>
               </div>
               <div class="currency_field_wrapper">

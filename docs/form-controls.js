@@ -540,7 +540,14 @@
             }
 
             // SNAP JS API estimates household is eligible:
-            html += `<span class="en"><p>You may be <b>eligible</b> for SNAP benefits.</p><p>If you apply and are approved, your benefit may be <b>$${estimated_monthly_benefit}</b> per month.</p></span><span class="es"><p>Usted puede ser <b>elegible</b> para los beneficios de SNAP.</p><p>Si usted aplica y es aprobado, su beneficio puede ser de <b>$${estimated_monthly_benefit}</b> mensuales.</p></span>`;
+            html += `<span class="en"><p>You may be <b>eligible</b> for SNAP benefits.</p></span><span class="es"><p>Usted puede ser <b>elegible</b> para los beneficios de SNAP.</p></span>`
+
+            // Alert if not all members eligible
+            if (CURRENT_PROFILE.all_citizens == false){
+                html += `<span class="en"><p>It appears ${CURRENT_PROFILE.household_size - (CURRENT_PROFILE.noncitizen_number - CURRENT_PROFILE.noncitizen_lpr_plus_criteria_number)} of ${CURRENT_PROFILE.household_size} members of your household are eligible to receive SNAP based on citizenship status.</p></span><span class="es">Parece que ${CURRENT_PROFILE.household_size - (CURRENT_PROFILE.noncitizen_number - CURRENT_PROFILE.noncitizen_lpr_plus_criteria_number)} de ${CURRENT_PROFILE.household_size} miembros del hogar son elegibles para SNAP basado en su estado de ciudadanía</span>`
+            };
+
+            html += `<span class="en"><p>If you apply and are approved, your benefit may be <b>$${estimated_monthly_benefit}</b> per month.</p></span><span class="es"><p>Si usted aplica y es aprobado, su beneficio puede ser de <b>$${estimated_monthly_benefit}</b> mensuales.</p></span>`;
 
             // Calculate 15% boost
             const estimated_monthly_benefit_plus15 = Math.round(estimated_monthly_benefit * 1.15);
