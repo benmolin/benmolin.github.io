@@ -65,8 +65,6 @@ if ((contactPhone == '') && (contactEmail == '')) {
 var isDebug = urlParams.get('debug');
 if (isDebug != 'false') {
     $('.debug-info').removeClass('d-none');
-} else if (isDebug == 'false'){
-    $('#lang-toggle').addClass('hidden');
 };
 
 // Student question

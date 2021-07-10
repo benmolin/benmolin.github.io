@@ -10,6 +10,11 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 
 
+# 2021-07-10
+
+### Change
+- Spanish appears on all calculators
+
 # 2021-07-09
 
 ### Added
